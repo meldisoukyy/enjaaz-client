@@ -34,13 +34,13 @@ const Navbar = () => {
                     <div className="numbers">
                         <div className="num">
                             <div className="icon">
-                                <img src="../../../public/images/phoneNav.png" alt="" />
+                                <img src="/images/phoneNav.png" alt="" />
                             </div>
                             <p>0112634168</p>
                         </div>
                         <div className="num">
                             <div className="icon">
-                                <img src="../../../public/images/whatsappnav.png" alt="" />
+                                <img src="/images/whatsappnav.png" alt="" />
                             </div>
                             <p>+966502144449</p>
                         </div>
