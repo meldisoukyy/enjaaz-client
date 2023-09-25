@@ -56,7 +56,7 @@ const Circles = () => {
                                 <div className="center">
                                     <img
                                         loading="lazy"
-                                        src="../../../public/images/logoCircle.png"
+                                        src="/images/logoCircle.png"
                                         alt=""
                                         className="img"
                                     />
