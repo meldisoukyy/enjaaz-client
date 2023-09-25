@@ -1,0 +1,69 @@
+:root{
+    --mcolor:#2D1989;
+}
+*{
+    transition: 0.5s !important;
+}
+
+.offcanvas.offcanvas-end.show{
+    background-color: #2D1989 !important;
+}
+.closeBtn{
+    font-size: 24px;
+    color: white !important;
+    cursor: pointer;
+    
+}
+.app{
+    font-family: 'Changa', sans-serif;
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      
+      @media (min-width: 576px) {
+        .container {
+          max-width: 540px; /* Small devices (576px and up) */
+        }
+      }
+      
+      @media (min-width: 768px) {
+        .container {
+          max-width: 720px; /* Medium devices (768px and up) */
+        }
+      }
+      
+      @media (min-width: 992px) {
+        .container {
+          max-width: 1200px; /* Large devices (992px and up) */
+          padding-right: 25px;
+        padding-left: 25px;
+        }
+      }
+      
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 1200px; /* Extra-large devices (1200px and up) */
+          padding-right: 15px;
+        padding-left: 15px;
+        }
+      }
+    p{
+        margin-bottom: 0;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+
+    }
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+    li{
+        list-style: none;
+    }
+}
