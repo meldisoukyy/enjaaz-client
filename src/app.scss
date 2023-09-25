@@ -1,69 +1,147 @@
-:root{
-    --mcolor:#2D1989;
+@font-face {
+  font-family: "rptBold";
+  src: url("./fonts/rpt-Bold.ttf") format("truetype");
+  font-weight: normal; /* adjust as needed */
+  font-style: normal; /* adjust as needed */
 }
-*{
-    transition: 0.5s !important;
+@font-face {
+  font-family: "rptRegular";
+  src: url("./fonts/alfont_com_rpt-Regular.ttf") format("truetype");
+  font-weight: normal; /* adjust as needed */
+  font-style: normal; /* adjust as needed */
+}
+:root {
+  --mcolor: #2d1989;
+  --fb:  font-family: "rptBold", sans-serif;
+  --fr:  font-family: "rptRegular", sans-serif;
+  ;
 }
 
-.offcanvas.offcanvas-end.show{
-    background-color: #2D1989 !important;
+* {
+  transition: 0.5s !important;
 }
-.closeBtn{
-    font-size: 24px;
-    color: white !important;
+
+.offcanvas.offcanvas-end.show {
+  background-color: #2d1989 !important;
+}
+.closeBtn {
+  font-size: 24px;
+  color: white !important;
+  cursor: pointer;
+}
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+  padding: 0;
+  @media (max-width: 992px) {
+    display: flex;
+  }
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 5;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 5;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 5;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 5;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 5;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 5;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 5;
+}
+.sideLinks {
+  text-align: end;
+  padding: 0;
+  margin-bottom: 0;
+  font-family: "rptRegular", sans-serif;
+  li {
+    color: white;
+    list-style: none;
+    border-bottom: 1px solid white;
+    padding: 20px;
     cursor: pointer;
-    
+    font-weight: bold;
+    &:hover {
+      color: #02c1db;
+    }
+  }
 }
-.app{
-    font-family: 'Changa', sans-serif;
+.app {
     .container {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-      }
-      
-      @media (min-width: 576px) {
-        .container {
-          max-width: 540px; /* Small devices (576px and up) */
-        }
-      }
-      
-      @media (min-width: 768px) {
-        .container {
-          max-width: 720px; /* Medium devices (768px and up) */
-        }
-      }
-      
-      @media (min-width: 992px) {
-        .container {
-          max-width: 1200px; /* Large devices (992px and up) */
-          padding-right: 25px;
-        padding-left: 25px;
-        }
-      }
-      
-      @media (min-width: 1200px) {
-        .container {
-          max-width: 1200px; /* Extra-large devices (1200px and up) */
-          padding-right: 15px;
-        padding-left: 15px;
-        }
-      }
-    p{
-        margin-bottom: 0;
-    }
-    img{
-        width: 100%;
-        height: 100%;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px; /* Small devices (576px and up) */
     }
-    a{
-        color: inherit;
-        text-decoration: none;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px; /* Medium devices (768px and up) */
     }
-    li{
-        list-style: none;
+  }
+
+  @media (min-width: 992px) {
+    .container {
+      max-width: 1200px; /* Large devices (992px and up) */
+      padding-right: 25px;
+      padding-left: 25px;
     }
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1200px; /* Extra-large devices (1200px and up) */
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  li {
+    list-style: none;
+  }
 }

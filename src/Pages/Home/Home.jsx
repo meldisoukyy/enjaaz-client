@@ -1,8 +1,13 @@
 import React from 'react'
+import HeroSec from '../../Components/HeroSec/HeroSec'
+import Circles from '../../Components/Circles/Circles'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <HeroSec/>
+      <Circles/>
+    </div>
   )
 }
 
