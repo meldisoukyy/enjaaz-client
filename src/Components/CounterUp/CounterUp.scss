@@ -1,0 +1,34 @@
+.CounterUp{
+    direction: rtl;
+    padding-bottom: 60px;
+    .image{
+        width: 145px;
+        cursor: pointer;
+        &:hover{
+            scale: 1.1;
+            rotate: 360deg;
+        }
+    }
+    h1{
+        font-family: "rptBold", sans-serif;
+        margin-bottom: 0;
+        color: var(--mcolor);
+        font-size: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span{
+            font-size: 48px;
+            font-weight: 600;
+        }
+    }
+    p{
+        font-size: 32px;
+        font-family: "rptBold", sans-serif;
+    }
+    span{
+        font-family: "rptRegular", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}

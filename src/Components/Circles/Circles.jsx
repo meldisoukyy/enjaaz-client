@@ -5,12 +5,6 @@ const Circles = () => {
         <div className='Circles'>
             <section className="home-features">
                 <h2 className="section-title text-center mb-5">خدمات إنجاز</h2>
-                {/* <img
-                    loading="lazy"
-                    src="https://aait.sa/public/site/img/logo.png"
-                    alt=""
-                    className="title-logo"
-                /> */}
                 <div className="container">
                     <div className="row align-items-center justify-content-center">
                         <div className="col-12 col-lg-3">
@@ -18,7 +12,7 @@ const Circles = () => {
                                 <div className="img">
                                     <img
                                         loading="lazy"
-                                        src="/images/serveces.png"
+                                        src="/images/servicespic.png"
                                         alt=""
                                     />
                                 </div>
@@ -133,11 +127,11 @@ const Circles = () => {
                             <div className="img">
                                 <img
                                     loading="lazy"
-                                    src="/images/free.png"
+                                    src="/images/free2.png"
                                     alt=""
                                 />
                             </div>
-                            <p className="title w-100">الاستشارات المجانية</p>
+                            <p className="title w-100">خدمة جربني المجانية</p>
                         </div>
                     </div>
                 </div>

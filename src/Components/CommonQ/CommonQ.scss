@@ -1,0 +1,35 @@
+.CommonQ {
+  direction: rtl;
+  font-family: "rptRegular", sans-serif;
+  padding: 60px 0;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      color: var(--mcolor);
+      font-family: "rptBold", sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+    }
+    p {
+      cursor: pointer;
+      color: var(--mcolor);
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+  .bottom {
+    padding-top: 40px;
+    p {
+      font-size: 18px;
+      font-weight: 600;
+      @media (max-width: 992px) {
+        @media (max-width: 992px) {
+          text-align: center;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}

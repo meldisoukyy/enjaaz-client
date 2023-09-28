@@ -12,6 +12,8 @@
 }
 :root {
   --mcolor: #2d1989;
+  --scolor: #02c1db;
+
   --fb:  font-family: "rptBold", sans-serif;
   --fr:  font-family: "rptRegular", sans-serif;
   ;
@@ -21,6 +23,26 @@
   transition: 0.5s !important;
 }
 
+.accordion-item{
+  margin-bottom: 30px;
+  border: none !important;
+  // direction: rtl;
+}
+.accordion-button{
+  background-color: #2D188814 !important;
+  border-radius: 16px 16px 0 0 !important;
+  padding: 20px 60px !important;
+  
+}
+.accordion-button::after{
+  display: none;
+}
+.accordion-collapse{
+  border-radius: 0 0 16px 16px !important;
+  background-color: #2d1989 !important;
+  color: white;
+  padding: 10px 40px;
+}
 .offcanvas.offcanvas-end.show {
   background-color: #2d1989 !important;
 }

@@ -1,6 +1,4 @@
-.HeroSec{
-    
-    
+.SecondSlider{
     .arrow{
         color: var(--mcolor);
         font-size: 30px;
@@ -16,18 +14,22 @@
     .paging-item.active{
         circle{
             fill: var(--mcolor) !important;        }
-    }
-    /////
-    .slide .container{
-        display: flex;
-        justify-content: center;
-        align-items: end;
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-        height: 100vh;
-        width: 100%;
-        color: white;
+        }
+        /////
+        .slide .container{
+            direction: rtl;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+            height: 80vh;
+            width: 100%;
+            color: white;
+            @media (max-width:992px) {
+                align-items: center;
+            }
         &::before{
             content: '';
             position: absolute;
@@ -38,27 +40,40 @@
             top: 0;
             left: 0;
         }
-        @media (max-width:992px) {
-            align-items: center;
-        }
         h1{
-            font-size: 48px;
-            line-height: 60px;
+            font-size: 40px;
             font-weight: 600;
             letter-spacing: 0px;
             z-index: 1;
             margin-bottom: 0;
-            margin-top: 100px;
             font-family: "rptBold", sans-serif;
-            
+            margin-top: 100px;
+            @media (max-width:992px) {
+                font-size: 35px;
+                text-align: center;
+                margin-top: 0;
+            }
         }
         p{
             font-family: "rptRegular", sans-serif;
-            font-size: 20px;
+            font-size: 28px;
             line-height: 50px;
             font-weight: 600;
             letter-spacing: 0px;
             z-index: 1;
+            text-align: start;
+            @media (max-width:992px) {
+                font-size: 24px;
+                text-align: center;
+                line-height: 40px;
+            }
+            a{
+                letter-spacing: 0px;
+                color: var(--mcolor);
+                &:hover{
+                    opacity: 0.6;
+                }
+            }
         }
         .buttons{
             display: flex;
@@ -99,12 +114,12 @@
         }
     }
     .slide1{
-        background-image: url('./../../../public/images/1.png');
+        background-image: url('./../../../public/images/2ndslider1.png');
         background-size: cover;
         background-position: center;
     }
     .slide2{
-        background-image: url('./../../../public/images/2.png');
+        background-image: url('./../../../public/images/2ndslider2.png');
         background-size: cover;
         background-position: center;
     }

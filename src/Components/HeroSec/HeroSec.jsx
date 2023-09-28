@@ -1,6 +1,7 @@
 import React from 'react'
 import './HeroSec.scss'
-import Carousel from 'nuka-carousel'; import { AiOutlineArrowLeft } from 'react-icons/ai';
+import Carousel from 'nuka-carousel';
+ import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 const HeroSec = () => {
