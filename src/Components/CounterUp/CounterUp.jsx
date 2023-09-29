@@ -41,6 +41,7 @@ const CounterUp = () => {
                                 <CountUp
                                     start={0}
                                     end={500}
+                                    duration={5}
                                 />
                             )}
                             +</h1>
@@ -56,6 +57,7 @@ const CounterUp = () => {
                             <CountUp
                                 start={0}
                                 end={2263}
+                                duration={5}
                             />
                         )}+</h1>
                         <p>الاستشارات</p>
@@ -70,6 +72,7 @@ const CounterUp = () => {
                             <CountUp
                                 start={0}
                                 end={4952}
+                                duration={5}
                             />
                         )}+</h1>
                         <p>تقييمات إيجابية</p>
@@ -84,6 +87,7 @@ const CounterUp = () => {
                             <CountUp
                                 start={0}
                                 end={7542}
+                                duration={5}
                             />
                         )}+</h1>
                         <p>عدد العملاء</p>

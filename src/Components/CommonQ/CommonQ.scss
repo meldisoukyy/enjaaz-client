@@ -11,6 +11,12 @@
       font-family: "rptBold", sans-serif;
       font-size: 32px;
       font-weight: 700;
+      @media (max-width:992px) {
+          text-align: center;
+      }
+      @media (max-width:767px) {
+          font-size: 26px;
+      }
     }
     p {
       cursor: pointer;

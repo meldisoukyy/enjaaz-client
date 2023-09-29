@@ -1,0 +1,79 @@
+.Reviews {
+  padding: 60px 0;
+  .arrow {
+    color: var(--mcolor);
+    font-size: 30px !important;
+    margin: 30px;
+    cursor: pointer;
+    &:hover {
+      color: var(--scolor);
+    }
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  .paging-item.active {
+    button{
+      svg{
+        width: 13px;
+        height: 13px;
+      }
+    }
+    circle {
+      fill: var(--mcolor) !important;
+    }
+  }
+  .slider-control-bottomcenter{
+    ul{
+      top: 40px !important;
+    }
+  }
+  .paging-item {
+    padding-top: 40px;
+    button{
+      svg{
+        width: 7px;
+        height: 7px;
+      }
+    }
+  }
+  h1{
+    direction: rtl;
+  }
+  .slide {
+    padding: 40px 20px;
+    margin: 0px 15px;
+    border-radius: 16px;
+    cursor: grab;
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    width: 100%;
+    background-color: #d0caf1;
+    @media (max-width: 992px) {
+      align-items: center;
+    }
+    .image{
+        width: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .stars{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        color: gold;
+        font-size: 20px;
+    }
+    p{
+        font-family: "rptRegular", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+    }
+  }
+}

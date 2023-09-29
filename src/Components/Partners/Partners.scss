@@ -1,0 +1,18 @@
+.Partners {
+    padding: 60px 0;
+    direction: rtl;
+    
+    .image{
+        cursor: pointer;
+        height: 190px;
+        &:hover {
+          scale:1.1;
+        }
+        @media (max-width:767px) {
+          height: 150px;
+        }
+    }
+  img {
+    object-fit: contain;
+  }
+}
