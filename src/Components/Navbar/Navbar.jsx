@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './navbar.scss'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { AiOutlineClose } from 'react-icons/ai';
+import { NavLink } from 'react-router-dom';
 const Navbar = () => {
     const [isOpened, setIsOpened] = useState(false);
 
@@ -19,10 +20,15 @@ const Navbar = () => {
                     </div>
                     <p className='mb-0'>العربية</p>
                 </div>
-                <div className="bottom" onClick={handleShow} >
+                <div className="bottom"  >
                     <ul className="links">
-                        <li>الصفحة الرئيسية</li>
+                        <NavLink to="/">
+                            <li>الصفحة الرئيسية</li>
+                        </NavLink>
+                        <NavLink to="/about">
+                            
                         <li>نبذة عنا</li>
+                        </NavLink>
                         <li>خدمة جربني</li>
                         <li>دليل الخدمات</li>
                         <li>اتصل بنا</li>
@@ -92,8 +98,12 @@ const Navbar = () => {
                     </Offcanvas.Header>
                     <Offcanvas.Body>
                         <ul className="sideLinks">
+                        <NavLink to="/">
                             <li>الصفحة الرئيسية</li>
+                        </NavLink>
+                        <NavLink to="/about">
                             <li>نبذة عنا</li>
+                        </NavLink>
                             <li>خدمة جربني</li>
                             <li>دليل الخدمات</li>
                             <li>اتصل بنا</li>
