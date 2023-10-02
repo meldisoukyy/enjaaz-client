@@ -7,10 +7,10 @@
     justify-content: space-between;
     align-items: center;
     h1 {
-      color: var(--mcolor);
-      font-family: "rptBold", sans-serif;
-      font-size: 32px;
-      font-weight: 700;
+        font-size: 32px;
+        font-weight: 500;
+        font-family: "rptBold";
+        color: var(--mcolor);
       @media (max-width:992px) {
           text-align: center;
       }

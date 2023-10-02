@@ -4,6 +4,7 @@ import Footer from "./Components/Footer/Footer";
 import Home from "./Pages/Home/Home";
 import './app.scss';
 import About from "./Pages/About/About";
+import ServiceGuide from "./Pages/ServiceGuide/ServiceGuide";
 function App() {
   const Layout = () => {
     return (
@@ -19,6 +20,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />}/>
+        <Route path="/service-guide" element={<ServiceGuide />}/>
       </Route>
     </Routes>
   )

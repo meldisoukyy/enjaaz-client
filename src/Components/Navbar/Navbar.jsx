@@ -26,11 +26,12 @@ const Navbar = () => {
                             <li>الصفحة الرئيسية</li>
                         </NavLink>
                         <NavLink to="/about">
-                            
-                        <li>نبذة عنا</li>
+                            <li>نبذة عنا</li>
                         </NavLink>
                         <li>خدمة جربني</li>
-                        <li>دليل الخدمات</li>
+                        <NavLink to="/service-guide">
+                            <li>دليل الخدمات</li>
+                        </NavLink>
                         <li>اتصل بنا</li>
                         <li>الباقات</li>
                         <li>الأسئلة الشائعة</li>
@@ -98,12 +99,12 @@ const Navbar = () => {
                     </Offcanvas.Header>
                     <Offcanvas.Body>
                         <ul className="sideLinks">
-                        <NavLink to="/">
-                            <li>الصفحة الرئيسية</li>
-                        </NavLink>
-                        <NavLink to="/about">
-                            <li>نبذة عنا</li>
-                        </NavLink>
+                            <NavLink to="/">
+                                <li>الصفحة الرئيسية</li>
+                            </NavLink>
+                            <NavLink to="/about">
+                                <li>نبذة عنا</li>
+                            </NavLink>
                             <li>خدمة جربني</li>
                             <li>دليل الخدمات</li>
                             <li>اتصل بنا</li>
