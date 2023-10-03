@@ -5,6 +5,8 @@ import Home from "./Pages/Home/Home";
 import './app.scss';
 import About from "./Pages/About/About";
 import ServiceGuide from "./Pages/ServiceGuide/ServiceGuide";
+import CallUs from "./Pages/CallUs/CallUs";
+import Questions from "./Pages/Questions/Questions";
 function App() {
   const Layout = () => {
     return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/service-guide" element={<ServiceGuide />}/>
+        <Route path="/callus" element={<CallUs />}/>
+        <Route path="/questions" element={<Questions />}/>
       </Route>
     </Routes>
   )

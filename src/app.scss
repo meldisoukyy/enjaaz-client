@@ -13,10 +13,6 @@
 :root {
   --mcolor: #2d1989;
   --scolor: #02c1db;
-  
-  --fb:  font-family: "rptBold", sans-serif;
-  --fr:  font-family: "rptRegular", sans-serif;
-  ;
 }
 
 * {
@@ -27,25 +23,24 @@ a {
   color: inherit !important;
   text-decoration: none !important;
 }
-a.active{
+a.active {
   text-decoration: none !important;
   color: var(--scolor) !important;
 }
-.accordion-item{
+.accordion-item {
   margin-bottom: 30px;
   border: none !important;
   // direction: rtl;
 }
-.accordion-button{
-  background-color: #2D188814 !important;
+.accordion-button {
+  background-color: #2d188814 !important;
   border-radius: 16px 16px 0 0 !important;
   padding: 20px 60px !important;
-  
 }
-.accordion-button::after{
+.accordion-button::after {
   display: none;
 }
-.accordion-collapse{
+.accordion-collapse {
   border-radius: 0 0 16px 16px !important;
   background-color: #2d1989 !important;
   color: white;
@@ -125,7 +120,7 @@ a.active{
   }
 }
 .app {
-    .container {
+  .container {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -169,11 +164,11 @@ a.active{
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 20px;
-    @media (max-width:992px) {
-        text-align: center;
+    @media (max-width: 992px) {
+      text-align: center;
     }
-    @media (max-width:767px) {
-        font-size: 30px;
+    @media (max-width: 767px) {
+      font-size: 30px;
     }
   }
   img {
@@ -183,44 +178,124 @@ a.active{
   li {
     list-style: none;
   }
-  .buttons{
+  .buttons {
     display: flex;
     gap: 20px;
     font-family: "rptRegular", sans-serif;
-    .button{
-        font-size: 20px;
-        font-weight: 600;
-        padding: 15px 20px;
-        border: 3px solid white;
-        position: relative;
-        z-index: 1;
-        border-radius: 16px;
-        cursor: pointer;
-        @media (max-width:767px) {
-          font-size: 16px;
-        }
+    .button {
+      font-size: 20px;
+      font-weight: 600;
+      padding: 15px 20px;
+      border: 3px solid white;
+      position: relative;
+      z-index: 1;
+      border-radius: 16px;
+      cursor: pointer;
+      @media (max-width: 767px) {
+        font-size: 16px;
+      }
     }
-    .button1{
-        z-index: 1;
-        border-radius: 16px;
-        cursor: pointer;
-        &:hover{
-            // border-color: var(--mcolor);
-            background-color: white;
-            color:var(--mcolor) ;
-        }
-    }
-    .button2{
-        z-index: 1;
-        border-radius: 16px;
+    .button1 {
+      z-index: 1;
+      border-radius: 16px;
+      cursor: pointer;
+      &:hover {
+        // border-color: var(--mcolor);
         background-color: white;
-        color:var(--mcolor) ;
-        cursor: pointer;
-        &:hover{
-            // border-color: var(--mcolor);
-            background-color: var(--mcolor);
-            color:white ;
-        }
+        color: var(--mcolor);
+      }
     }
-}
+    .button2 {
+      z-index: 1;
+      border-radius: 16px;
+      background-color: white;
+      color: var(--mcolor);
+      cursor: pointer;
+      &:hover {
+        // border-color: var(--mcolor);
+        background-color: var(--mcolor);
+        color: white;
+      }
+    }
+  }
+  .EnjazzForm {
+    direction: rtl;
+    padding: 60px 0;
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      @media (max-width: 992px) {
+        align-items: center;
+      }
+      h1 {
+        font-size: 36px;
+        font-weight: 500;
+        font-family: "rptBold";
+        color: var(--mcolor);
+        @media (max-width: 992px) {
+          text-align: center;
+        }
+        @media (max-width: 767px) {
+          font-size: 29px;
+        }
+      }
+      p {
+        font-size: 24px;
+        font-weight: 500;
+        font-family: "rptBold";
+        color: black;
+        @media (max-width: 992px) {
+          text-align: center;
+        }
+        @media (max-width: 767px) {
+          font-size: 19px;
+        }
+      }
+      .EnjazzFormInputs {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        .EnjazzFormInput {
+          padding: 20px;
+          border-radius: 16px;
+          border: 1px solid #C9C7C7;
+          font-size: 20px;
+          font-weight: 500;
+          font-family: "rptBold";
+          max-width: 75%;
+          @media (max-width: 992px) {
+            width: 100%;
+            max-width: unset;
+          }
+          @media (max-width: 767px) {
+            font-size: 16px;
+          }
+          
+        }
+      }
+      .EnjazzFormBtn{
+        background-color: var(--mcolor);
+        padding: 15px 100px;
+        border-radius: 16px;
+        color: white;
+        font-weight: 500;
+        font-family: "rptBold";
+        font-size: 25px;
+        cursor: pointer;
+        width: fit-content;
+        border: 3px solid var(--mcolor);
+        &:hover {
+          border-color: var(--mcolor);
+          background-color: white;
+          color: var(--mcolor);
+        }
+        @media (max-width: 767px) {
+          font-size: 19px;
+          padding: 15px 50px;
+        }
+      }
+    }
+  }
 }

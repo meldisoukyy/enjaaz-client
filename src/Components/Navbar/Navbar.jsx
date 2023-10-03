@@ -32,9 +32,13 @@ const Navbar = () => {
                         <NavLink to="/service-guide">
                             <li>دليل الخدمات</li>
                         </NavLink>
-                        <li>اتصل بنا</li>
+                        <NavLink to="/callus">
+                            <li>اتصل بنا</li>
+                        </NavLink>
                         <li>الباقات</li>
-                        <li>الأسئلة الشائعة</li>
+                        <NavLink to="/questions">
+                            <li>الأسئلة الشائعة</li>
+                        </NavLink>
                         <li>انضم إلينا</li>
                         <li>العروض</li>
                     </ul>

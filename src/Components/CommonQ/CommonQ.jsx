@@ -1,7 +1,7 @@
 import React from 'react'
 import './CommonQ.scss'
 import Accordion from 'react-bootstrap/Accordion';
-const CommonQ = () => {
+const CommonQ = ({full}) => {
     return (
         <div className='CommonQ'>
             <div className="container">
@@ -9,7 +9,7 @@ const CommonQ = () => {
                     <h1>الأسئلة الشائعة</h1>
                     <p>{`كل الاسئلة >>`}</p>
                 </div>
-                <div className="bottom">
+                {!full&&(<div className="bottom">
                     <Accordion alwaysOpen>
                         <Accordion.Item eventKey="0">
                             <Accordion.Header>
@@ -50,7 +50,29 @@ const CommonQ = () => {
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
-                </div>
+                </div>)}
+                {full && (
+                    <div className="bottom">
+                        <Accordion alwaysOpen>
+                            {[...Array(7)].map((item, i) => {
+                                return (
+                                    <Accordion.Item eventKey={`${i}`}>
+                                        <Accordion.Header>
+                                            <p>
+                                                هل لدى انجاز خدمات عقود شهرية أو سنوية؟
+                                            </p>
+                                        </Accordion.Header>
+                                        <Accordion.Body>
+                                            <p>
+                                                لدينا باقات خدمات متنوعة تتناسب مع أنواع واحتياجات المنشآت المختلفة ويمكنكم الاطلاع عليها واختيار المناسب منها، كما تشرفنا بتوقيع عدة عقود مع شركات ومؤسسات ونتشرف دائما بخدمتكم
+                                            </p>
+                                        </Accordion.Body>
+                                    </Accordion.Item>
+                                )
+                            })}
+                        </Accordion>
+                    </div>
+                )}
             </div>
         </div>
     )
