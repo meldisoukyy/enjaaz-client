@@ -76,7 +76,6 @@ const ServicesPackage = () => {
                             <div className="bottom">
                             </div>
                         </div>
-                        
                     </div>
                 </div></div>
         </>

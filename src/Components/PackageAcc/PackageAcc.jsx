@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './PackageAcc.scss'
-import { TiTick } from 'react-icons/ti';
-import { BiPlus } from 'react-icons/bi';
-import { BiMinus } from 'react-icons/bi';
+import { BsCheck } from 'react-icons/bs';
+import { BsPlus } from 'react-icons/bs';
+import { BsDash } from 'react-icons/bs';
 
 const PackageAcc = ({title}) => {
     const [open, setopen] = useState(false)
@@ -11,12 +11,12 @@ const PackageAcc = ({title}) => {
             <div className="head" onClick={()=>setopen(!open)}>
                 <div className="left">
                     <div className="icon">
-                        <TiTick/>
+                        <BsCheck/>
                     </div>
                     <span>{title}</span>
                 </div>
                 <div className="right" >
-                    {open?<BiMinus/>:<BiPlus/>}
+                    {open?<BsDash/>:<BsPlus/>}
                 </div>
             </div>
             {open&&(
