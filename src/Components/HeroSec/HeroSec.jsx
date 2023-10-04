@@ -33,10 +33,10 @@ const HeroSec = () => {
                         <h1>شركة إنجاز للخدمات</h1>
                         <p>رواد ذوو خبرة في عالم الأعمال حيث نقدم حلول سريعة ومتكاملة</p>
                         <div className="buttons">
-                            <Link to='/shop'>
+                            <Link to='/freeconsulting'>
                                 <div className="button button1">استشارة مجانية</div>
                             </Link>
-                            <Link to='/shop'>
+                            <Link to='/askforaservice'>
                                 <div className="button button2">طلب خدمة</div>
                             </Link>
                         </div>
@@ -47,10 +47,10 @@ const HeroSec = () => {
                         <h1>شركة إنجاز للخدمات</h1>
                         <p>رواد ذوو خبرة في عالم الأعمال حيث نقدم حلول سريعة ومتكاملة</p>
                         <div className="buttons">
-                            <Link to='/shop'>
+                            <Link to='/freeconsulting'>
                                 <div className="button button1">استشارة مجانية</div>
                             </Link>
-                            <Link to='/shop'>
+                            <Link to='/askforaservice'>
                                 <div className="button button2">طلب خدمة</div>
                             </Link>
                         </div>
@@ -61,10 +61,10 @@ const HeroSec = () => {
                         <h1>شركة إنجاز للخدمات</h1>
                         <p>رواد ذوو خبرة في عالم الأعمال حيث نقدم حلول سريعة ومتكاملة</p>
                         <div className="buttons">
-                            <Link to='/shop'>
+                            <Link to='/freeconsulting'>
                                 <div className="button button1">استشارة مجانية</div>
                             </Link>
-                            <Link to='/shop'>
+                            <Link to='/askforaservice'>
                                 <div className="button button2">طلب خدمة</div>
                             </Link>
                         </div>

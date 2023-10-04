@@ -260,7 +260,7 @@ a.active {
         .EnjazzFormInput {
           padding: 20px;
           border-radius: 16px;
-          border: 1px solid #C9C7C7;
+          border: 1px solid #c9c7c7;
           font-size: 20px;
           font-weight: 500;
           font-family: "rptBold";
@@ -268,14 +268,56 @@ a.active {
           @media (max-width: 992px) {
             width: 100%;
             max-width: unset;
+            margin: auto;
           }
           @media (max-width: 767px) {
             font-size: 16px;
           }
-          
+        }
+        .EnjazzFormInputFile {
+          position: relative;
+          display: flex;
+          width: fit-content !important;
+          align-items: center;
+          gap: 13px;
+          @media (max-width: 767px) {
+            gap: 8px;
+          }
+          .icon {
+            width: 40px;
+            @media (max-width: 767px) {
+              width: 25px;
+              min-width: 25px;
+            }
+          }
+          p {
+            color: #969696;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: "rptBold";
+            @media (max-width: 767px) {
+              font-size: 16px;
+            }
+          }
+          span {
+            font-size: 15px;
+            font-weight: 500;
+            font-family: "rptBold";
+            @media (max-width: 767px) {
+              font-size: 13px;
+            }
+          }
+          input{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            right: 0;
+            opacity: 0;
+            cursor: pointer;
+          }
         }
       }
-      .EnjazzFormBtn{
+      .EnjazzFormBtn {
         background-color: var(--mcolor);
         padding: 15px 100px;
         border-radius: 16px;

@@ -16,6 +16,14 @@ const JoinUs = () => {
                         <input className='EnjazzFormInput' type="text" placeholder='المدينة' />
                         <input className='EnjazzFormInput' type="text" placeholder='نوع الشراكة' />
                         <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder='الملاحظات'></textarea>
+                        <div className="EnjazzFormInput EnjazzFormInputFile">
+                            <div className="icon">
+                                <img src="/images/upload.png" alt="" />
+                            </div>
+                            <p>رفع مستند</p>
+                            <span>(يمكنك رفع السيرةالذاتية أو البروفايل)</span>
+                            <input type="file" id="myfile" name="filename"/>
+                        </div>
                     </div>
                     <div className="EnjazzFormBtn">إرسال</div>
                 </div>

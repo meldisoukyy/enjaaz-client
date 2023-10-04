@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './navbar.scss'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { AiOutlineClose } from 'react-icons/ai';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 const Navbar = () => {
     const [isOpened, setIsOpened] = useState(false);
 
@@ -16,7 +16,9 @@ const Navbar = () => {
             <div className="container">
                 <div className="top d-flex justify-content-between align-items-end  pb-3">
                     <div className="image">
-                        <img src="/images/logo.png" alt="" />
+                        <Link to="/">
+                            <img src="/images/logo.png" alt="" />
+                        </Link>
                     </div>
                     <p className='mb-0'>العربية</p>
                 </div>
@@ -28,18 +30,24 @@ const Navbar = () => {
                         <NavLink to="/about">
                             <li>نبذة عنا</li>
                         </NavLink>
-                        <li>خدمة جربني</li>
+                        <NavLink to="/trymeservice">
+                            <li>خدمة جربني</li>
+                        </NavLink>
                         <NavLink to="/service-guide">
                             <li>دليل الخدمات</li>
                         </NavLink>
                         <NavLink to="/callus">
                             <li>اتصل بنا</li>
                         </NavLink>
-                        <li>الباقات</li>
+                        <NavLink to="/packages">
+                            <li>الباقات</li>
+                        </NavLink>
                         <NavLink to="/questions">
                             <li>الأسئلة الشائعة</li>
                         </NavLink>
-                        <li>انضم إلينا</li>
+                        <NavLink to="/joinus">
+                            <li>انضم إلينا</li>
+                        </NavLink>
                         <li>العروض</li>
                     </ul>
                     <div className="numbers">
@@ -104,18 +112,30 @@ const Navbar = () => {
                     <Offcanvas.Body>
                         <ul className="sideLinks">
                             <NavLink to="/">
-                                <li>الصفحة الرئيسية</li>
+                                <li onClick={() => handleClose()}>الصفحة الرئيسية</li>
                             </NavLink>
                             <NavLink to="/about">
-                                <li>نبذة عنا</li>
+                                <li onClick={() => handleClose()}>نبذة عنا</li>
                             </NavLink>
-                            <li>خدمة جربني</li>
-                            <li>دليل الخدمات</li>
-                            <li>اتصل بنا</li>
-                            <li>الباقات</li>
-                            <li>الأسئلة الشائعة</li>
-                            <li>انضم إلينا</li>
-                            <li>العروض</li>
+                            <NavLink to="/trymeservice">
+                                <li onClick={() => handleClose()}>خدمة جربني</li>
+                            </NavLink>
+                            <NavLink to="/service-guide">
+                                <li onClick={() => handleClose()}>دليل الخدمات</li>
+                            </NavLink>
+                            <NavLink to="/callus">
+                                <li onClick={() => handleClose()}>اتصل بنا</li>
+                            </NavLink>
+                            <NavLink to="/packages">
+                                <li onClick={() => handleClose()}>الباقات</li>
+                            </NavLink>
+                            <NavLink to="/questions">
+                                <li onClick={() => handleClose()}>الأسئلة الشائعة</li>
+                            </NavLink>
+                            <NavLink to="/joinus">
+                                <li onClick={() => handleClose()}>انضم إلينا</li>
+                            </NavLink>
+                            <li onClick={() => handleClose()}>العروض</li>
                         </ul>
                     </Offcanvas.Body>
                 </Offcanvas>
