@@ -32,7 +32,9 @@ const Packages = () => {
                                 </div>
                                 <p>وهي باقة متخصصة في تقديم حلاً متكاملاً لإدارة الرواتب والمزايا للشركات، مما يساعدها على تحقيق كفاءة أعلى وتركيز أفضل على نمو أعمالها.</p>
                             </div>
-                            <div className="btn">باقة إدارة الأجور</div>
+                            <Link to='/wagemanagment'>
+                                <div className="btn">باقة إدارة الأجور</div>
+                            </Link>
                         </div>
                         <div className="pack">
                             <div className="top">
@@ -41,7 +43,9 @@ const Packages = () => {
                                 </div>
                                 <p>تحتاج الشركات بشكل حاسم إلى الخدمات القانونية بمختلف أشكالها نظرًا للتعقيدات المتزايدة في البيئة التشريعية والتنظيمية.</p>
                             </div>
-                            <div className="btn">باقة الخدمات القانونية</div>
+                            <Link to='/legalservices'>
+                                <div className="btn">باقة الخدمات القانونية</div>
+                            </Link>
                         </div>
                         <div className="pack">
                             <div className="top">
@@ -50,7 +54,9 @@ const Packages = () => {
                                 </div>
                                 <p>تهدف هذه الخدمة من تعزيز الهوية الفريدة التي تميز الشركة عن منافسيها في السوق، فهي تلعب دورًا حاسمًا في بناء الثقة والولاء لدى العملاء، وزيادة الوعي بالشركة، وتحقيق النجاح في السوق.</p>
                             </div>
-                            <div className="btn">باقة خدمات التصميم</div>
+                            <Link to='/designservices'>
+                                <div className="btn">باقة خدمات التصميم</div>
+                            </Link>
                         </div>
                         <div className="pack">
                             <div className="top">
@@ -59,12 +65,14 @@ const Packages = () => {
                                 </div>
                                 <p>خدمات التسويق تشمل مجموعة من الأنشطة والاستراتيجيات التي تهدف إلى تعزيز منتجات أو خدمات أو علامات تجارية معينة وزيادة وعي الجمهور بها.</p>
                             </div>
-                            <div className="btn">باقة خدمات التسويق</div>
+                            <Link to='/marketingservices'>
+                                <div className="btn">باقة خدمات التسويق</div>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </div>
-            <CommonQ/>
+            <CommonQ />
         </>
     )
 }

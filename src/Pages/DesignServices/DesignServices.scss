@@ -1,0 +1,86 @@
+.DesignServices {
+  padding: 60px 0;
+  direction: rtl;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    h1 {
+      font-size: 36px;
+      font-weight: 500;
+      font-family: "rptBold";
+      color: var(--mcolor);
+      @media (max-width: 992px) {
+        text-align: center;
+      }
+      @media (max-width: 767px) {
+        font-size: 29px;
+      }
+    }
+    p {
+      font-size: 24px;
+      font-weight: 500;
+      font-family: "rptBold";
+      color: black;
+      @media (max-width: 992px) {
+        text-align: center;
+      }
+      @media (max-width: 767px) {
+        font-size: 19px;
+      }
+    }
+    .packs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 13px;
+      @media (max-width: 500px) {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+    }
+    .pack {
+      border-radius: 16px;
+      border: 1px solid var(--mcolor);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px;
+      gap: 15px;
+      h1 {
+        font-size: 32px;
+
+        font-weight: 500;
+        font-family: "rptBold";
+        color: var(--mcolor);
+        text-align: center;
+        @media (max-width: 767px) {
+          font-size: 29px;
+        }
+      }
+      p {
+        font-size: 20px;
+        font-weight: 500;
+        font-family: "rptBold";
+        color: #807f7f;
+        @media (max-width: 992px) {
+          text-align: center;
+        }
+        @media (max-width: 767px) {
+          font-size: 18px;
+        }
+      }
+      span {
+        font-size: 20px;
+        font-weight: 500;
+        font-family: "rptBold";
+        color: var(--scolor);
+        text-align: center;
+        cursor: pointer;
+        text-decoration: underline;
+        @media (max-width: 767px) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

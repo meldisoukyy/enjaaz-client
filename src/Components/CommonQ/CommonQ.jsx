@@ -7,7 +7,10 @@ const CommonQ = ({full}) => {
             <div className="container">
                 <div className="top">
                     <h1>الأسئلة الشائعة</h1>
+                    {!full&&(
+
                     <p>{`كل الاسئلة >>`}</p>
+                    )}
                 </div>
                 {!full&&(<div className="bottom">
                     <Accordion alwaysOpen>

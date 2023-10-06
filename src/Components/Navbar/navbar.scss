@@ -36,6 +36,19 @@
       @media (max-width: 992px) {
         display: none;
       }
+      a{
+        display: flex;
+        align-items: center;
+      }
+      .sale{
+        background-color: red;
+        padding: 5px 15px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white !important;
+      }
       li {
         text-align: center;
         cursor: pointer;

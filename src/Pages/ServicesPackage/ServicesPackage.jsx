@@ -2,6 +2,7 @@ import React from 'react'
 import './ServicesPackage.scss'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import PackageAcc from '../../Components/PackageAcc/PackageAcc'
+import Calculator from '../../Components/Calculator/Calculator'
 
 const ServicesPackage = () => {
     return (
@@ -26,6 +27,7 @@ const ServicesPackage = () => {
                                 })}
                             </div>
                             <div className="bottom">
+                            اشترك الآن
                             </div>
                         </div>
                         <div className="pack ">
@@ -42,6 +44,7 @@ const ServicesPackage = () => {
                                 })}
                             </div>
                             <div className="bottom">
+                            اشترك الآن
                             </div>
                         </div>
                         <div className="pack ">
@@ -58,6 +61,7 @@ const ServicesPackage = () => {
                                 })}
                             </div>
                             <div className="bottom">
+                            اشترك الآن
                             </div>
                         </div>
                         <div className="pack ">
@@ -74,9 +78,11 @@ const ServicesPackage = () => {
                                 })}
                             </div>
                             <div className="bottom">
+                            اشترك الآن
                             </div>
                         </div>
                     </div>
+                    {/* <Calculator/> */}
                 </div></div>
         </>
     )
