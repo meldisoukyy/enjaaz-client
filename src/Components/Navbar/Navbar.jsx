@@ -14,7 +14,7 @@ const Navbar = () => {
     const handleShow = () => setIsOpened(true);
     const { lang, setlang, t, i18n } = useMyContext();
     return (
-        <div className='Navbar pt-5' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
+        <div className='Navbar pt-5' style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
             <div className="container">
                 <div className="top d-flex justify-content-between align-items-end  pb-3">
                     <div className="image">
@@ -142,7 +142,9 @@ const Navbar = () => {
                             <NavLink to="/joinus">
                                 <li onClick={() => handleClose()}>انضم إلينا</li>
                             </NavLink>
-                            <li className='sale' onClick={() => handleClose()}>العروض</li>
+                            <NavLink to="/offers">
+                                <li className='sale' onClick={() => handleClose()}>العروض</li>
+                            </NavLink>
                         </ul>
                     </Offcanvas.Body>
                 </Offcanvas>
