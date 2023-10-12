@@ -14,7 +14,7 @@ const ServicesPackage = () => {
             <div className='ServicesPackage' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}><div className="container">
                     <h1>باقات إدارة الخدمات</h1>
                     <p>لدينا درجات مختلفة تصنف الخدمة المتعلقة بالاحتياج المتخصص، وتهدف لتقديم أفضل خدمة للمتخصص.</p>
-                    <h1 className='text-center py-5'>باقات إدارة الخدمات</h1>
+                    <h2 className='section-title text-center my-5'>باقات إدارة الخدمات</h2>
                     <div className="packs">
                         <div className="pack ">
                             <div className="top">

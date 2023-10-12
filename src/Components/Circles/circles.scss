@@ -1,7 +1,13 @@
 .section-title{
   font-family: "rptBold", sans-serif;
   font-size: 36px;
-  color: #2C1E8B;
+  background-color: var(--mcolor);
+  color: white;
+  padding: 10px 20px;
+  width: fit-content;
+  text-align: center;
+  margin: auto;
+  border-radius: 16px;
 }
 .Circles {
   .home-features {

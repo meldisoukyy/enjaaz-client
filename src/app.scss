@@ -202,7 +202,12 @@ a.active {
     margin-bottom: 0;
   }
   .secH {
-    color: var(--mcolor);
+    color: white;
+    border-radius: 16px;
+    padding: 10px 20px;
+    width: fit-content;
+    margin-left: auto;
+    background-color: var(--mcolor);
     font-family: "rptBold", sans-serif;
     font-size: 32px;
     font-weight: 700;

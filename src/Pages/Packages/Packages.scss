@@ -9,10 +9,11 @@
       font-size: 36px;
       font-weight: 500;
       font-family: "rptBold";
-      color: var(--mcolor);
+      margin: unset;
       @media (max-width: 992px) {
-        text-align: center !important;
+        margin: auto;
       }
+      
       @media (max-width: 767px) {
         font-size: 29px;
       }
@@ -22,6 +23,7 @@
       font-weight: 500;
       font-family: "rptBold";
       color: black;
+      margin-bottom: 25px;
       @media (max-width: 992px) {
         text-align: center !important;
       }
@@ -46,15 +48,48 @@
       align-items: center;
       justify-content: space-between;
       gap: 50px;
-      .top{
+      &:hover {
+        background-color: var(--mcolor);
+        p {
+          color: #d0cfcf;
+        }
+        svg {
+          path.pathTran {
+            fill: transparent;
+            stroke: white;
+          }
+          path {
+            fill: white;
+          }
+        }
+        .btn {
+          border: 2px solid;
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          border-radius: 16px;
+          border: 2px solid white;
+
+          cursor: pointer;
+          background-color: var(--mcolor);
+          color: white;
+          text-align: center !important;
+          &:hover {
+            background-color: white;
+            color: var(--mcolor);
+            // border-color: var(--mcolor);
+          }
+        }
+      }
+      .top {
         display: flex;
         flex-direction: column;
         gap: 20px;
         align-items: center;
       }
-      .btn{
+      .btn {
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 500;
         padding: 10px 20px;
         border: 2px solid var(--mcolor);
         position: relative;
@@ -68,14 +103,16 @@
         &:hover {
           background-color: var(--mcolor);
           color: white;
-          border: 2px solid white;
           // border-color: var(--mcolor);
         }
       }
       .image {
         width: 175px;
-        @media (max-width:767px) {
-            width: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 767px) {
+          width: 130px;
         }
       }
       p {
@@ -83,7 +120,7 @@
         font-weight: 500;
         font-family: rptBold;
         color: #8a8a8a;
-        text-align: center !important;
+        text-align: justify;
       }
     }
   }

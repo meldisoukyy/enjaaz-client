@@ -1,5 +1,14 @@
 {
   "nav": {
-    "lang":"English"
+    "lang": "English",
+    "home": "Home",
+    "about": "About us",
+    "tryMe": "Try me service",
+    "guide": "Services guide",
+    "call": "Call us",
+    "packages": "",
+    "CQ": "",
+    "joinus": "",
+    "offers": ""
   }
 }

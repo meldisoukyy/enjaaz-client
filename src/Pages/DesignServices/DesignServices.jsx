@@ -64,7 +64,7 @@ const DesignServices = () => {
             <div className='DesignServices'  style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}><div className="container">
                 <h1>باقة خدمات التصميم</h1>
                 <p>تهدف هذه الخدمة من تعزيز الهوية الفريدة التي تميز الشركة عن منافسيها في السوق، فهي تلعب دورًا حاسمًا في بناء الثقة والولاء لدى العملاء، وزيادة الوعي بالشركة، وتحقيق النجاح في السوق.</p>
-                <h1 className='text-center py-5'>باقة خدمات التصميم</h1>
+                <h2 className='section-title text-center my-5'>باقة خدمات التصميم</h2>
                 <div className="packs">
                     {data.map((item, i) => {
                         return (

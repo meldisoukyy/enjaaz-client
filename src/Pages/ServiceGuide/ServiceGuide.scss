@@ -26,9 +26,10 @@
       font-size: 32px;
       font-weight: 500;
       font-family: "rptBold";
-      color: var(--mcolor);
+      color: white;
+      margin: unset;
       @media (max-width: 992px) {
-        text-align: center !important;
+        margin: auto;
       }
       @media (max-width: 767px) {
         font-size: 29px;

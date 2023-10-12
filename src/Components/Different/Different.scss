@@ -1,56 +1,74 @@
-.Different{
-    direction: rtl;
-    padding: 65px 0;
-    font-family: "rptRegular", sans-serif;
-    font-weight: 600;
-    @media (min-width:993px) { 
-        .Diffcard:nth-child(odd){
-            background-color: #2D1888;
-        }
-        .Diffcard:nth-child(even){
-            background-color: #263496;
-        }
+.Different {
+  direction: rtl;
+  padding: 65px 0;
+  font-family: "rptRegular", sans-serif;
+  font-weight: 600;
+  @media (min-width: 993px) {
+    .Diffcard:nth-child(odd) {
+      background-color: #2d1888;
     }
-    @media (max-width:992px) { 
-        .Diffcard:nth-child(1){
-            background-color: #2D1888;
-        }
-        .Diffcard:nth-child(4){
-            background-color: #2D1888;
-        }
-        .Diffcard:nth-child(2){
-            background-color: #263496;
-        }
-        .Diffcard:nth-child(3){
-            background-color: #263496;
-        }
+    .Diffcard:nth-child(even) {
+      background-color: #263496;
     }
-    @media (max-width:767px) { 
-        .Diffcard:nth-child(odd){
-            background-color: #2D1888;
-        }
-        .Diffcard:nth-child(even){
-            background-color: #263496;
-        }
+  }
+  @media (max-width: 992px) {
+    .Diffcard:nth-child(1) {
+      background-color: #2d1888;
     }
-    .Diffcard{
-        color: white;
-        padding: 40px 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center !important;
-        gap: 20px;
-        .image{
-            width: 80px;
-            img{}
-        }
-        h2{
-            font-size: 28px;
-        }
-        p{
-            font-size: 14px;
-        }
+    .Diffcard:nth-child(4) {
+      background-color: #2d1888;
     }
+    .Diffcard:nth-child(2) {
+      background-color: #263496;
+    }
+    .Diffcard:nth-child(3) {
+      background-color: #263496;
+    }
+  }
+  @media (max-width: 767px) {
+    .Diffcard:nth-child(odd) {
+      background-color: #2d1888;
+    }
+    .Diffcard:nth-child(even) {
+      background-color: #263496;
+    }
+  }
+  .Diffcard {
+    color: white;
+    padding: 40px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+    border: 2px solid var(--mcolor);
+    gap: 20px;
+    cursor: pointer;
+    &:hover {
+        background-color: white;
+      .image {
+        svg {
+          path {
+            fill: var(--mcolor);
+          }
+          path.pathFill {
+            fill: transparent !important;
+            stroke: var(--mcolor);
+          }
+        }
+      }
+      h2,p{
+        color: var(--mcolor);
+      }
+    }
+    .image {
+      width: 80px;
+    }
+    h2 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
 }

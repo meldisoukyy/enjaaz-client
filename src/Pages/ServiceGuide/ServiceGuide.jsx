@@ -29,7 +29,7 @@ const ServiceGuide = () => {
             <CommonHead title="دليل الخدمات" path="الصفحة الرئيسية \" />
             <div className="guide">
                 <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
-                    <h1>دليل خدمات إنجاز</h1>
+                    <h1 className='section-title'>دليل خدمات إنجاز</h1>
                     <div className="items">
                         {data.map((item) => {
                             return (

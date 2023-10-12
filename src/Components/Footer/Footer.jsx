@@ -1,10 +1,14 @@
-import { useMyContext } from '../../context/MyContext';
-import './Footer.scss'
+import { Link } from "react-router-dom";
+import { useMyContext } from "../../context/MyContext";
+import "./Footer.scss";
 const Footer = () => {
   const { lang, setlang, t, i18n } = useMyContext();
   return (
-    <div className='Footer'>
-      <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
+    <div className="Footer">
+      <div
+        className="container"
+        style={lang === "ar" ? { direction: "rtl" } : { direction: "ltr" }}
+      >
         <div className="top">
           <h1>اشترك في النشرة الإخبارية</h1>
           <div className="footer-form">
@@ -19,31 +23,45 @@ const Footer = () => {
                 <img src="/images/logo.png" alt="" />
               </div>
               <h1>شركة إنجاز للخدمات</h1>
-              <p>مع أكثر الكوادر تميّزاً نبتكر الأفكار ونلفت الأنظار، وذلك تقديم خدمة مهنية مبهرة تتمتع بجودة عالمية، كي نمنح الفرصة لعملائنا بالنمو والتطور والتفرّد بالأداء في عالم الأعمال.</p>
+              <p>
+                مع أكثر الكوادر تميّزاً نبتكر الأفكار ونلفت الأنظار، وذلك تقديم
+                خدمة مهنية مبهرة تتمتع بجودة عالمية، كي نمنح الفرصة لعملائنا
+                بالنمو والتطور والتفرّد بالأداء في عالم الأعمال.
+              </p>
             </div>
             <div className="part col-lg-4 col-md-6 mb-4 mb-lg-0">
               <h1>روابط هامة</h1>
               <ul>
-                <li>
-                   طلب خدمة
-                  <div className="arrow"></div>
-                </li>
-                <li>
-                   من نحن؟
-                  <div className="arrow"></div>
+                <Link to="/askforaservice">
+                  <li>
+                    طلب خدمة
+                    <div className="arrow"></div>
                   </li>
-                <li>
-                   الأسئلة الشائعة
-                  <div className="arrow"></div>
+                </Link>
+                <Link to="/about">
+                  <li>
+                    من نحن؟
+                    <div className="arrow"></div>
                   </li>
-                <li>
-                   اتصل بنا
-                  <div className="arrow"></div>
+                </Link>
+                <Link to='/questions'>
+                  <li>
+                    الأسئلة الشائعة
+                    <div className="arrow"></div>
                   </li>
-                <li>
-                   انضم إلينا
-                  <div className="arrow"></div>
+                </Link>
+                <Link to='/callus'>
+                  <li>
+                    اتصل بنا
+                    <div className="arrow"></div>
                   </li>
+                </Link>
+                <Link to='/joinus'>
+                  <li>
+                    انضم إلينا
+                    <div className="arrow"></div>
+                  </li>
+                </Link>
               </ul>
             </div>
             <div className="part col-lg-4 col-md-6 mb-4 mb-lg-0">
@@ -101,7 +119,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

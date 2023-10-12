@@ -1,8 +1,8 @@
-import {Route,Routes,Outlet,} from "react-router-dom";
+import { Route, Routes, Outlet } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Pages/Home/Home";
-import './app.scss';
+import "./app.scss";
 import About from "./Pages/About/About";
 import ServiceGuide from "./Pages/ServiceGuide/ServiceGuide";
 import CallUs from "./Pages/CallUs/CallUs";
@@ -21,7 +21,7 @@ import Offers from "./Pages/Offers/Offers";
 import Loader from "./Components/Loader/Loader";
 import { useEffect, useState } from "react";
 function App() {
-  const [isPageLoaded, setIsPageLoaded] = useState(true);
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   // useEffect(() => {
   //   window.addEventListener('load', () => {
@@ -35,47 +35,54 @@ function App() {
   //     });
   //   };
   // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsPageLoaded(true);
+    }, 3000);
+  }, []);
+
   const Layout = () => {
     return (
       <div className="app">
-        {!isPageLoaded?(
-
-        <Loader/>
-        ):(<>
-        <Navbar />
-        <Outlet />
-        <Footer />
-        <a className="whatsapp">
-          <div className="image">
-            <img src="/images/whatsappi.png" alt="" />
-          </div>
-        </a>
-        </>)}
+        {!isPageLoaded ? (
+          <Loader />
+        ) : (
+          <>
+            <Navbar />
+            <Outlet />
+            <Footer />
+            <a className="whatsapp" href="https://wa.me/01004993015">
+              <div className="image">
+                <img src="/images/whatsappi.png" alt="" />
+              </div>
+            </a>
+          </>
+        )}
       </div>
     );
   };
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route path="/" element={<Home />}/>
-        <Route path="/about" element={<About />}/>
-        <Route path="/packages" element={<Packages />}/>
-        <Route path="/servicespackage" element={<ServicesPackage />}/>
-        <Route path="/wagemanagment" element={<WageManagment />}/>
-        <Route path="/legalservices" element={<LegalServices />}/>
-        <Route path="/designservices" element={<DesignServices />}/>
-        <Route path="/marketingservices" element={<MarketingServices />}/>
-        <Route path="/offers" element={<Offers />}/>
-        <Route path="/callus" element={<CallUs />}/>
-        <Route path="/service-guide" element={<ServiceGuide />}/>
-        <Route path="/questions" element={<Questions />}/>
-        <Route path="/joinus" element={<JoinUs />}/>
-        <Route path="/askforaservice" element={<AskForAService />}/>
-        <Route path="/freeconsulting" element={<FreeConsulting />}/>
-        <Route path="/trymeservice" element={<TryMeService />}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/packages" element={<Packages />} />
+        <Route path="/servicespackage" element={<ServicesPackage />} />
+        <Route path="/wagemanagment" element={<WageManagment />} />
+        <Route path="/legalservices" element={<LegalServices />} />
+        <Route path="/designservices" element={<DesignServices />} />
+        <Route path="/marketingservices" element={<MarketingServices />} />
+        <Route path="/offers" element={<Offers />} />
+        <Route path="/callus" element={<CallUs />} />
+        <Route path="/service-guide" element={<ServiceGuide />} />
+        <Route path="/questions" element={<Questions />} />
+        <Route path="/joinus" element={<JoinUs />} />
+        <Route path="/askforaservice" element={<AskForAService />} />
+        <Route path="/freeconsulting" element={<FreeConsulting />} />
+        <Route path="/trymeservice" element={<TryMeService />} />
       </Route>
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;
