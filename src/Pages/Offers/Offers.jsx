@@ -1,7 +1,10 @@
 import React from 'react'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import './Offers.scss'
+import { useMyContext } from '../../context/MyContext';
 const Offers = () => {
+    const { lang, setlang, t, i18n } = useMyContext();
+
     const data = [
         {
             img: '/images/1offer.png',
@@ -37,7 +40,7 @@ const Offers = () => {
     return (
         <>
             <CommonHead title="العروض" path="الصفحة الرئيسية \" />
-            <div className='Offers'>
+            <div className='Offers' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                 <div className="container">
                     <h1>عروضنا</h1>
                     <h1 className='text-center py-5'>العروض  الحالية</h1>

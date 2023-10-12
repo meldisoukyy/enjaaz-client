@@ -14,7 +14,6 @@ const HeroSec = () => {
                 slidesToShow={1}
                 animation={'fade'}
                 speed={1000}
-                pauseOnHover={true}
                 dragging={true}
                 autoplay={true}
                 autoplayInterval={3000}

@@ -120,12 +120,13 @@ a.active {
   }
 }
 .app {
+  
   .whatsapp {
     background-color: var(--mcolor);
     position: fixed;
     top: 30%;
     padding: 10px;
-    left: 0;
+    left: 15px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -207,7 +208,7 @@ a.active {
     font-weight: 700;
     margin-bottom: 20px;
     @media (max-width: 992px) {
-      text-align: center;
+      text-align: center !important;
     }
     @media (max-width: 767px) {
       font-size: 30px;
@@ -276,7 +277,7 @@ a.active {
         font-family: "rptBold";
         color: var(--mcolor);
         @media (max-width: 992px) {
-          text-align: center;
+          text-align: center !important;
         }
         @media (max-width: 767px) {
           font-size: 29px;
@@ -288,7 +289,7 @@ a.active {
         font-family: "rptBold";
         color: black;
         @media (max-width: 992px) {
-          text-align: center;
+          text-align: center !important;
         }
         @media (max-width: 767px) {
           font-size: 19px;

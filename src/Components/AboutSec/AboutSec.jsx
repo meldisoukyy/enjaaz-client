@@ -1,9 +1,12 @@
 import React from 'react'
 import './AboutSec.scss'
+import { useMyContext } from '../../context/MyContext';
 const AboutSec = () => {
+  const { lang, setlang, t, i18n } = useMyContext();
+
   return (
     <div className='AboutSec'>
-        <div className="container">
+        <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
             <h1>من هي إنجاز للخدمات؟</h1>
             <div className='image'>
                 <img src="/images/1.png" alt="" />

@@ -1,11 +1,14 @@
 import React from 'react'
 import CommonHead from '../../Components/CommonHead/CommonHead'
+import { useMyContext } from '../../context/MyContext';
 
 const JoinUs = () => {
+    const { lang, setlang, t, i18n } = useMyContext();
+
     return (
         <div>
             <CommonHead title="انضم إلينا" path="الصفحة الرئيسية \" />
-            <div className="EnjazzForm">
+            <div className="EnjazzForm" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                 <div className="container">
                     <h1>انضم إلينا</h1>
                     <p>يسعدنا تعاونكم معنا لذا لا تتردد في أن تكون من شركاء نجاحنا.</p>

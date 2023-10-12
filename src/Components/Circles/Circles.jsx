@@ -117,19 +117,19 @@ const Circles = () => {
                             <div className="img">
                                 <img
                                     loading="lazy"
-                                    src="/images/money.png"
-                                    alt=""
-                                />
-                            </div>
-                            <p className="title w-100">تخفيف الاعباء الماليه</p>
-                        </div>
-                        <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column">
-                            <div className="img">
-                                <img
-                                    loading="lazy"
                                     src="/images/free2.png"
                                     alt=""
                                 />
+                            </div>
+                            <p className="title w-100">تخفيف الاعباء المالية</p>
+                        </div>
+                        <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column">
+                            <div className="img">
+                                {/* <img
+                                    loading="lazy"
+                                    src="/images/money.png"
+                                    alt=""
+                                /> */}
                             </div>
                             <p className="title w-100">خدمة جربني المجانية</p>
                         </div>

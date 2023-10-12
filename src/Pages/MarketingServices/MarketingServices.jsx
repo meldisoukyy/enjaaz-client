@@ -1,7 +1,10 @@
 import React from 'react'
 import './../DesignServices/DesignServices.scss'
 import CommonHead from '../../Components/CommonHead/CommonHead'
+import { useMyContext } from '../../context/MyContext';
 const MarketingServices = () => {
+    const { lang, setlang, t, i18n } = useMyContext();
+
     const data = [
         {
             arTitle: 'التسويق الرقمي',
@@ -57,7 +60,7 @@ const MarketingServices = () => {
     return (
         <>
             <CommonHead title="باقة خدمات التسويق" path="الصفحة الرئيسية \ الباقات \" />
-            <div className='DesignServices'><div className="container">
+            <div className='DesignServices' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}><div className="container">
                 <h1>باقة خدمات التسويق</h1>
                 <p>خدمات التسويق تشمل مجموعة من الأنشطة والاستراتيجيات التي تهدف إلى تعزيز منتجات أو خدمات أو علامات تجارية معينة وزيادة وعي الجمهور بها</p>
                 <h1 className='text-center py-5'>باقة خدمات التسويق</h1>

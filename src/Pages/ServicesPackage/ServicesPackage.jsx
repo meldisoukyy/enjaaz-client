@@ -3,12 +3,15 @@ import './ServicesPackage.scss'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import PackageAcc from '../../Components/PackageAcc/PackageAcc'
 import Calculator from '../../Components/Calculator/Calculator'
+import { useMyContext } from '../../context/MyContext'
 
 const ServicesPackage = () => {
+    const { lang, setlang, t, i18n } = useMyContext();
+
     return (
         <>
             <CommonHead title="باقة إدارة الخدمات" path="الصفحة الرئيسية \ الباقات \" />
-            <div className='ServicesPackage'><div className="container">
+            <div className='ServicesPackage' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}><div className="container">
                     <h1>باقات إدارة الخدمات</h1>
                     <p>لدينا درجات مختلفة تصنف الخدمة المتعلقة بالاحتياج المتخصص، وتهدف لتقديم أفضل خدمة للمتخصص.</p>
                     <h1 className='text-center py-5'>باقات إدارة الخدمات</h1>

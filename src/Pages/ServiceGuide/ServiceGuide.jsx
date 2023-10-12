@@ -2,6 +2,7 @@ import React from 'react'
 import './ServiceGuide.scss'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import CommonQ from '../../Components/CommonQ/CommonQ'
+import { useMyContext } from '../../context/MyContext'
 const ServiceGuide = () => {
     const data = [
         "خدامات إدارة الرواتب نظام حماية الأجور (الشهري)",
@@ -21,11 +22,13 @@ const ServiceGuide = () => {
         "خدمات التسويق الالكتروني",
         "خدمات التسجيل للعمالة ذات المهن العليا",
     ]
+    const { lang, setlang, t, i18n } = useMyContext();
+
     return (
         <div className='ServiceGuide'>
             <CommonHead title="دليل الخدمات" path="الصفحة الرئيسية \" />
             <div className="guide">
-                <div className="container">
+                <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                     <h1>دليل خدمات إنجاز</h1>
                     <div className="items">
                         {data.map((item) => {

@@ -1,12 +1,15 @@
 import React from 'react'
 import './callUs.scss'
 import CommonHead from '../../Components/CommonHead/CommonHead'
+import { useMyContext } from '../../context/MyContext';
 const CallUs = () => {
+    const { lang, setlang, t, i18n } = useMyContext();
+
     return (
         <div className='CallUs'>
             <CommonHead title="اتصل بنا" path="الصفحة الرئيسية \" />
             <div className="Map">
-                <div className="container">
+                <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                     <div className="top">
                         <div className="row gap-3">
                             <div className="col item">
@@ -34,7 +37,7 @@ const CallUs = () => {
                     </div>
                 </div>
             </div>
-            <div className="EnjazzForm">
+            <div className="EnjazzForm" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                 <div className="container">
                     <h1>اتصل بنا</h1>
                     <p>نحن هنا من أجلك لذا لا تتردد في الاتصال بنا وسوف نبذل كل جهدنا للتواصل معك في أقرب وقت.</p>

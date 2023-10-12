@@ -9,13 +9,11 @@ const MyContextProvidor = ({ children }) => {
   //Start language Setting
   let localLang = localStorage.getItem("lang");
   const [lang, setlang] = useState(localLang?localLang: "ar");
+  const { t, i18n } = useTranslation();
   useEffect(() => {
+    i18n.changeLanguage(lang)
     localStorage.setItem("lang", lang);
   }, [lang]);
-  useEffect(() => {
-    localStorage.setItem("lang", lang);
-  }, []);
-  const { t, i18n } = useTranslation();
   //End language Setting
 
 

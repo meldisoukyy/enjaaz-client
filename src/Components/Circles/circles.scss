@@ -54,7 +54,7 @@
     font-size: 22px;
     font-weight: 600;
     color: #ffffff;
-    text-align: center;
+    text-align: center !important;
   }
   /* home features //=============================*/
   .home-features {
@@ -188,7 +188,7 @@
   .home-features .feature-box {
     width: 115px;
     margin-bottom: 50px;
-    text-align: center;
+    text-align: center !important;
     padding: 5px;
   }
   @media (max-width: 992px) {
@@ -355,7 +355,7 @@
   .web-design-video .title {
     font-weight: 500;
     font-size: 32px;
-    text-align: center;
+    text-align: center !important;
     color: #6dbe0a;
   }
   .web-design-video iframe {

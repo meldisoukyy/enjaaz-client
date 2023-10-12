@@ -3,7 +3,7 @@ import './Different.scss'
 const Different = () => {
     return (
         <div className='Different'>
-            <h2 className="section-title text-center mb-5">خدمات إنجاز</h2>
+            <h2 className="section-title text-center mb-5">لماذا انجاز</h2>
 
             <div className="container">
                 <div className="row">

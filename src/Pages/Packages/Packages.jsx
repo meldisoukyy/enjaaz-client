@@ -3,12 +3,15 @@ import './Packages.scss'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import CommonQ from '../../Components/CommonQ/CommonQ'
 import { Link } from 'react-router-dom'
+import { useMyContext } from '../../context/MyContext'
 
 const Packages = () => {
+    const { lang, setlang, t, i18n } = useMyContext();
+
     return (
         <>
             <CommonHead title="الباقات" path="الصفحة الرئيسية \" />
-            <div className='Packages'>
+            <div className='Packages' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                 <div className="container">
                     <h1>باقات إنجاز</h1>
                     <p>نُقدر احتياج العملاء بحسب حجم شركاتهم، لذا نقدم أسعاراً تناسب تلبية الاحتياج بأعلى الإمكانات وبجودة عالمية.</p>
@@ -36,7 +39,7 @@ const Packages = () => {
                                 <div className="btn">باقة إدارة الأجور</div>
                             </Link>
                         </div>
-                        <div className="pack">
+                        {/* <div className="pack">
                             <div className="top">
                                 <div className="image">
                                     <img src="/images/packages/3.png" alt="" />
@@ -46,7 +49,7 @@ const Packages = () => {
                             <Link to='/legalservices'>
                                 <div className="btn">باقة الخدمات القانونية</div>
                             </Link>
-                        </div>
+                        </div> */}
                         <div className="pack">
                             <div className="top">
                                 <div className="image">

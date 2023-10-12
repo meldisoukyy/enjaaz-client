@@ -4,9 +4,10 @@ import './Reviews.scss'
 import { Link } from 'react-router-dom'
 import { AiFillStar, AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import { AiOutlineStar } from 'react-icons/ai';
+import { useMyContext } from '../../context/MyContext';
 const Reviews = () => {
     const [num, setNum] = useState(3);
-
+    const { lang, setlang, t, i18n } = useMyContext();
     useEffect(() => {
       const screenWidth = window.innerWidth;
   
@@ -38,8 +39,8 @@ const Reviews = () => {
     }, []);
   return (
     <div className='Reviews'>
-        <div className="container">
-        <h1 className='secH'>آراء العملاء</h1>
+        <div className="container" >
+        <h1 className='secH' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>آراء العملاء</h1>
 
         <Carousel
                 wrapAround={true}

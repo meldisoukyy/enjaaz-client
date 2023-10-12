@@ -1,8 +1,10 @@
+import { useMyContext } from '../../context/MyContext';
 import './Footer.scss'
 const Footer = () => {
+  const { lang, setlang, t, i18n } = useMyContext();
   return (
     <div className='Footer'>
-      <div className="container">
+      <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
         <div className="top">
           <h1>اشترك في النشرة الإخبارية</h1>
           <div className="footer-form">

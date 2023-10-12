@@ -11,7 +11,7 @@
       font-family: "rptBold";
       color: var(--mcolor);
       @media (max-width: 992px) {
-        text-align: center;
+        text-align: center !important;
       }
       @media (max-width: 767px) {
         font-size: 29px;
@@ -23,7 +23,7 @@
       font-family: "rptBold";
       color: black;
       @media (max-width: 992px) {
-        text-align: center;
+        text-align: center !important;
       }
       @media (max-width: 767px) {
         font-size: 19px;
@@ -52,7 +52,7 @@
         font-weight: 500;
         font-family: "rptBold";
         color: var(--mcolor);
-        text-align: center;
+        text-align: center !important;
         @media (max-width: 767px) {
           font-size: 29px;
         }
@@ -63,7 +63,7 @@
         font-family: "rptBold";
         color: #807f7f;
         @media (max-width: 992px) {
-          text-align: center;
+          text-align: center !important;
         }
         @media (max-width: 767px) {
           font-size: 18px;
@@ -74,7 +74,7 @@
         font-weight: 500;
         font-family: "rptBold";
         color: var(--scolor);
-        text-align: center;
+        text-align: center !important;
         cursor: pointer;
         text-decoration: underline;
         @media (max-width: 767px) {

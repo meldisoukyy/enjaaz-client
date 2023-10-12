@@ -23,7 +23,7 @@
       font-family: "rptBold";
       color: var(--mcolor);
       @media (max-width: 992px) {
-        text-align: center;
+        text-align: center !important;
       }
       @media (max-width: 767px) {
         font-size: 29px;
@@ -35,7 +35,7 @@
       font-family: "rptBold";
       color: black;
       @media (max-width: 992px) {
-        text-align: center;
+        text-align: center !important;
       }
       @media (max-width: 767px) {
         font-size: 19px;

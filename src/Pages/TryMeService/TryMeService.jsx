@@ -1,11 +1,14 @@
 import React from 'react'
 import CommonHead from '../../Components/CommonHead/CommonHead'
+import { useMyContext } from '../../context/MyContext';
 
 const TryMeService = () => {
+    const { lang, setlang, t, i18n } = useMyContext();
+
     return (
         <div>
             <CommonHead title="خدمة جربني" path="الصفحة الرئيسية \" />
-            <div className="EnjazzForm">
+            <div className="EnjazzForm" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                 <div className="container">
                     <h1>خدمة جربني</h1>
                     <p>خدمة جربني هي خدمة مجانية تقدمها إنجاز لعملائها ، وتتيح لك كحد أقصي خدمتين مجانًا.</p>
