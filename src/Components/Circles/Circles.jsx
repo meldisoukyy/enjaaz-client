@@ -12,7 +12,7 @@ const Circles = () => {
                                 <div className="img">
                                     <img
                                         loading="lazy"
-                                        src="/images/servicespic.png"
+                                        src="/images/updateS1.png"
                                         alt=""
                                     />
                                 </div>
@@ -125,11 +125,11 @@ const Circles = () => {
                         </div>
                         <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column">
                             <div className="img">
-                                {/* <img
+                                <img
                                     loading="lazy"
-                                    src="/images/money.png"
+                                    src="/images/updatef.png"
                                     alt=""
-                                /> */}
+                                />
                             </div>
                             <p className="title w-100">خدمة جربني المجانية</p>
                         </div>
