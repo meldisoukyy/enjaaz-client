@@ -4,8 +4,9 @@ import Carousel from 'nuka-carousel';
  import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import { useMyContext } from '../../context/MyContext';
 const HeroSec = () => {
-
+    const { lang, setlang, t, i18n } = useMyContext();
     return (
         <div className='HeroSec'>
             <Carousel
@@ -29,7 +30,7 @@ const HeroSec = () => {
                 )}
             >
                 <div className="slide slide1">
-                    <div className="container">
+                    <div className="container" style={lang === "ar" ? {direction: 'ltr'} : {direction: 'rtl'}}>
                         <h1>شركة إنجاز للخدمات</h1>
                         <p>رواد ذوو خبرة في عالم الأعمال حيث نقدم حلول سريعة ومتكاملة</p>
                         <div className="buttons">
@@ -43,7 +44,7 @@ const HeroSec = () => {
                     </div>
                 </div>
                 <div className="slide slide2">
-                    <div className="container">
+                    <div className="container" style={lang === "ar" ? {direction: 'ltr'} : {direction: 'rtl'}}>
                         <h1>شركة إنجاز للخدمات</h1>
                         <p>رواد ذوو خبرة في عالم الأعمال حيث نقدم حلول سريعة ومتكاملة</p>
                         <div className="buttons">
@@ -57,7 +58,7 @@ const HeroSec = () => {
                     </div>
                 </div>
                 <div className="slide slide3">
-                    <div className="container">
+                    <div className="container" style={lang === "ar" ? {direction: 'ltr'} : {direction: 'rtl'}}>
                         <h1>شركة إنجاز للخدمات</h1>
                         <p>رواد ذوو خبرة في عالم الأعمال حيث نقدم حلول سريعة ومتكاملة</p>
                         <div className="buttons">

@@ -1,10 +1,13 @@
 import React from 'react'
 import './CommonQ.scss'
 import Accordion from 'react-bootstrap/Accordion';
+import { useMyContext } from '../../context/MyContext';
 const CommonQ = ({full}) => {
+    const { lang, setlang, t, i18n } = useMyContext();
+
     return (
         <div className='CommonQ'>
-            <div className="container">
+            <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                 <div className="top">
                     <h1>الأسئلة الشائعة</h1>
                     {!full&&(

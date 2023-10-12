@@ -2,8 +2,11 @@ import React from 'react'
 import Carousel from 'nuka-carousel';
 import './SecondSlider.scss'
 import { Link } from 'react-router-dom';
+import { useMyContext } from '../../context/MyContext';
 
 const SecondSlider = () => {
+    const { lang, setlang, t, i18n } = useMyContext();
+
     return (
         <div className='SecondSlider'>
             <Carousel
@@ -27,7 +30,7 @@ const SecondSlider = () => {
                 )}
             >
                 <div className="slide slide1">
-                    <div className="container">
+                    <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                         <h1>
                             يمكنك طلب استشارة مجانية
                         </h1>
@@ -36,7 +39,7 @@ const SecondSlider = () => {
                     </div>
                 </div>
                 <div className="slide slide2">
-                    <div className="container">
+                    <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                         <h1>
                             يمكنك طلب استشارة مجانية
                         </h1>
