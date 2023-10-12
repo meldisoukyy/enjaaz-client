@@ -12,6 +12,7 @@ const TryMeService = () => {
                 <div className="container">
                     <h1 className='section-title'>خدمة جربني</h1>
                     <p>خدمة جربني هي خدمة مجانية تقدمها إنجاز لعملائها ، وتتيح لك كحد أقصي خدمتين مجانًا.</p>
+                    <span>* يمكنك التواصل معنا عن طريق الواتساب او ملئ البيانات الاتية</span>
                     <div className="EnjazzFormInputs">
                     <input className='EnjazzFormInput' type="text" placeholder='اسم المنشأة / الاسم بالكامل' />
                         <input className='EnjazzFormInput' type="text" placeholder='البريد الإلكتروني' />
