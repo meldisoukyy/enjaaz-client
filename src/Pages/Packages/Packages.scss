@@ -69,7 +69,7 @@
           width: 100%;
           border-radius: 16px;
           border: 2px solid white;
-
+          
           cursor: pointer;
           background-color: var(--mcolor);
           color: white;
@@ -96,6 +96,8 @@
         z-index: 1;
         width: 100%;
         border-radius: 16px;
+        font-weight: 500;
+        font-family: "rptBold";
         cursor: pointer;
         background-color: white;
         color: var(--mcolor);

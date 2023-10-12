@@ -25,9 +25,9 @@
     font-weight: 300;
   }
   .text-focus-in {
-    -webkit-animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    -webkit-animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53)
       infinite both;
-    animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite
+    animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite
       both;
   }
   @-webkit-keyframes text-focus-in {
@@ -36,10 +36,20 @@
       filter: blur(12px);
       opacity: 0;
     }
-    100% {
+    30% {
       -webkit-filter: blur(0px);
       filter: blur(0px);
       opacity: 1;
+    }
+    70% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+    100% {
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
     }
   }
   @keyframes text-focus-in {
@@ -48,10 +58,20 @@
       filter: blur(12px);
       opacity: 0;
     }
-    100% {
+    30% {
       -webkit-filter: blur(0px);
       filter: blur(0px);
       opacity: 1;
+    }
+    70% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+    100% {
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
     }
   }
 
