@@ -2,6 +2,7 @@ import React from 'react'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import './Offers.scss'
 import { useMyContext } from '../../context/MyContext';
+import { Link } from 'react-router-dom';
 const Offers = () => {
     const { lang, setlang, t, i18n } = useMyContext();
 
@@ -43,7 +44,7 @@ const Offers = () => {
             <div className='Offers' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                 <div className="container">
                     <h1>عروضنا</h1>
-                    <h1 className='text-center py-5'>العروض  الحالية</h1>
+                    <h2 className='section-title text-center my-5'>العروض  الحالية</h2>
                     <div className="packs">
                         {data.map((item, i) => {
                             return (
@@ -56,9 +57,11 @@ const Offers = () => {
                                         <span>{item.p1} ر.س</span>
                                         <span>{item.p2} ر.س</span>
                                     </div>
-                                    <div className="bottom">
-                                        اشترك الآن
-                                    </div>
+                                    <Link to='/askforaservice'>
+                                        <div className="bottom">
+                                            اشترك الآن
+                                        </div>
+                                    </Link>
                                 </div>
                             )
                         })}

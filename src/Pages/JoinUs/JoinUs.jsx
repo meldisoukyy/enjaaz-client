@@ -10,7 +10,7 @@ const JoinUs = () => {
             <CommonHead title="انضم إلينا" path="الصفحة الرئيسية \" />
             <div className="EnjazzForm" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                 <div className="container">
-                    <h1>انضم إلينا</h1>
+                    <h1 className='section-title'>انضم إلينا</h1>
                     <p>يسعدنا تعاونكم معنا لذا لا تتردد في أن تكون من شركاء نجاحنا.</p>
                     <div className="EnjazzFormInputs">
                         <input className='EnjazzFormInput' type="text" placeholder='اسم المنشأة / الاسم بالكامل' />

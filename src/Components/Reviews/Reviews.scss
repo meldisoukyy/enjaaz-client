@@ -1,5 +1,10 @@
 .Reviews {
   padding: 60px 0;
+  .container{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+  }
   .arrow {
     color: var(--mcolor);
     font-size: 30px !important;

@@ -10,7 +10,7 @@ const TryMeService = () => {
             <CommonHead title="خدمة جربني" path="الصفحة الرئيسية \" />
             <div className="EnjazzForm" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                 <div className="container">
-                    <h1>خدمة جربني</h1>
+                    <h1 className='section-title'>خدمة جربني</h1>
                     <p>خدمة جربني هي خدمة مجانية تقدمها إنجاز لعملائها ، وتتيح لك كحد أقصي خدمتين مجانًا.</p>
                     <div className="EnjazzFormInputs">
                     <input className='EnjazzFormInput' type="text" placeholder='اسم المنشأة / الاسم بالكامل' />

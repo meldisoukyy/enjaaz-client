@@ -5,11 +5,11 @@ import { BrowserRouter } from 'react-router-dom'
 import "./i18n";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyContextProvidor from './context/MyContext.jsx';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
     <MyContextProvidor>
-
       <App />
     </MyContextProvidor>
     </BrowserRouter>

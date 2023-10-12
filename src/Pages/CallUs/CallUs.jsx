@@ -39,7 +39,7 @@ const CallUs = () => {
             </div>
             <div className="EnjazzForm" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                 <div className="container">
-                    <h1>اتصل بنا</h1>
+                    <h1 className='section-title'>اتصل بنا</h1>
                     <p>نحن هنا من أجلك لذا لا تتردد في الاتصال بنا وسوف نبذل كل جهدنا للتواصل معك في أقرب وقت.</p>
                     <div className="EnjazzFormInputs">
                         <input className='EnjazzFormInput' type="text" placeholder='اسم المنشأة / الاسم بالكامل' />

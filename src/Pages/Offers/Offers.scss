@@ -97,7 +97,15 @@
         font-family: "rptBold";
         font-size: 20px;
         cursor: pointer;
-        background: linear-gradient(180deg, #221074 19.4%, #06b1d3 100%);
+        background-size: 100% 300%;
+        background-image: linear-gradient(
+          to bottom,
+          #221074, #06b1d3,#221074, #06b1d3
+        );
+        &:hover {
+          background-position: 0% 99%;
+          transition: all 0.6s ease-in-out;
+        }
       }
     }
   }

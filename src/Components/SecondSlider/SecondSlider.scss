@@ -54,10 +54,28 @@
                 margin-top: 0;
             }
         }
+        a{
+            letter-spacing: 0px;
+            border: 3px solid white;
+            padding: 10px 20px;
+            border-radius: 16px;
+            &:hover{
+                background-color: var(--mcolor);
+                span{
+                    color:white;
+                }
+            }
+            span{
+                color: white;
+                @media (max-width:992px) {
+                    display: block;
+                }
+            }
+        }
         p{
             font-family: "rptRegular", sans-serif;
             font-size: 28px;
-            line-height: 50px;
+            line-height: 60px;
             font-weight: 600;
             letter-spacing: 0px;
             z-index: 1;
@@ -67,18 +85,7 @@
                 text-align: center !important;
                 line-height: 40px;
             }
-            a{
-                letter-spacing: 0px;
-                span{
-                    color: var(--mcolor);
-                    &:hover{
-                        opacity: 0.6;
-                    }
-                    @media (max-width:992px) {
-                        display: block;
-                    }
-                }
-            }
+            
         }
         .buttons{
             display: flex;

@@ -92,6 +92,12 @@
         }
       }
       .bottom {
+        a{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         width: calc(100% - 50px);
         margin: 0px 25px 15px 25px;
         padding: 10px 0;

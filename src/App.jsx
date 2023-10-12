@@ -1,4 +1,4 @@
-import { Route, Routes, Outlet } from "react-router-dom";
+import { Route, Routes, Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Pages/Home/Home";
@@ -22,6 +22,10 @@ import Loader from "./Components/Loader/Loader";
 import { useEffect, useState } from "react";
 function App() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
+const location=useLocation().pathname
+useEffect(() => {
+  window.scrollTo(0,0)
+}, [location])
 
   // useEffect(() => {
   //   window.addEventListener('load', () => {

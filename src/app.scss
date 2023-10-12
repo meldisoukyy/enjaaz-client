@@ -205,12 +205,12 @@ a.active {
     color: white;
     border-radius: 16px;
     padding: 10px 20px;
-    width: fit-content;
-    margin-left: auto;
+    width: max-content;
     background-color: var(--mcolor);
     font-family: "rptBold", sans-serif;
     font-size: 32px;
     font-weight: 700;
+    margin: auto;
     margin-bottom: 20px;
     @media (max-width: 992px) {
       text-align: center !important;
@@ -280,7 +280,7 @@ a.active {
         font-size: 36px;
         font-weight: 500;
         font-family: "rptBold";
-        color: var(--mcolor);
+        margin: unset;
         @media (max-width: 992px) {
           text-align: center !important;
         }

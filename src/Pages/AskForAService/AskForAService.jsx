@@ -7,7 +7,7 @@ const AskForAService = () => {
             <CommonHead title="طلب خدمة" path="الصفحة الرئيسية \" />
             <div className="EnjazzForm">
                 <div className="container">
-                    <h1>طلب خدمة</h1>
+                    <h1 className='section-title'>طلب خدمة</h1>
                     <p>نحن هنا من أجلك لذا لا تتردد في الاتصال بنا وسوف نبذل كل جهدنا للتواصل معك في أقرب وقت.</p>
                     <div className="EnjazzFormInputs">
                         <input className='EnjazzFormInput' type="text" placeholder='اسم المنشأة / الاسم بالكامل' />

@@ -7,7 +7,7 @@ const AboutSec = () => {
   return (
     <div className='AboutSec'>
         <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
-            <h1>من هي إنجاز للخدمات؟</h1>
+            <h1 className='section-title'>من هي إنجاز للخدمات؟</h1>
             <div className='image'>
                 <img src="/images/1.png" alt="" />
             </div>
