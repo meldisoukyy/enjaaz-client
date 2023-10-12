@@ -45,8 +45,10 @@ const CallUs = () => {
 
                     <div className="EnjazzFormInputs">
                         <input className='EnjazzFormInput' type="text" placeholder='اسم المنشأة / الاسم بالكامل' />
+                        <span style={{color:'red', marginTop:'-10px'}}>* مطلوب</span>
                         <input className='EnjazzFormInput' type="text" placeholder='البريد الإلكتروني' />
                         <input className='EnjazzFormInput' type="text" placeholder='رقم الجوال' />
+                        <span style={{color:'red', marginTop:'-10px'}}>* مطلوب</span>
                         <input className='EnjazzFormInput' type="text" placeholder='سبب التواصل' />
                         <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder='التفاصيل'></textarea>
                     </div>

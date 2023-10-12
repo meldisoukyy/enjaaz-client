@@ -16,10 +16,15 @@ const JoinUs = () => {
 
                     <div className="EnjazzFormInputs">
                         <input className='EnjazzFormInput' type="text" placeholder='اسم المنشأة / الاسم بالكامل' />
+                        <span style={{color:'red', marginTop:'-10px'}}>* مطلوب</span>
                         <input className='EnjazzFormInput' type="text" placeholder='البريد الإلكتروني' />
                         <input className='EnjazzFormInput' type="text" placeholder='رقم الجوال' />
+                        <span style={{color:'red', marginTop:'-10px'}}>* مطلوب</span>
+
                         <input className='EnjazzFormInput' type="text" placeholder='المدينة' />
                         <input className='EnjazzFormInput' type="text" placeholder='نوع الشراكة' />
+                        <span style={{color:'red', marginTop:'-10px'}}>* مطلوب</span>
+
                         <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder='الملاحظات'></textarea>
                         <div className="EnjazzFormInput EnjazzFormInputFile">
                             <div className="icon">
