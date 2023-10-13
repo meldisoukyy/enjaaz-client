@@ -91,6 +91,93 @@
     "h4": "Our Mission",
     "p3": "We continuously make efforts to build strong foundations in the areas of innovation and improving the services we offer. We are committed to exploring new opportunities and providing ideal solutions, in addition to investing and offering consultations that enhance efficiency and effectiveness. We aim to build strong cooperative relationships with companies, ministries, and relevant government entities, with the goal of being essential players in the success and prosperity of our clients."
 }
+,
+"Tryme": {
+  "h1": "Try Me Service",
+  "path": "Home Page /",
+  "h2": "Try Me Service",
+  "p1": "Try Me Service is a free service provided by Enjaaz to its customers, allowing you to use up to two free services.",
+  "p2": "* You can contact us via WhatsApp or by filling out the following information"
+},
+"form": {
+  "required": "* Required",
+  "p1": "* You can contact us via WhatsApp or by filling out the following information",
+  "fullName": "Entity / Full Name",
+  "email": "Email",
+  "phone": "Mobile Number",
+  "city": "City",
+  "reason": "Reason for Contact",
+  "typeS": "Service Type",
+  "typeC": "Partnership Type",
+  "details": "Request Details",
+  "details2": "Details",
+  "details3": "Notes",
+  "upload": "Upload Document",
+  "upload2": "(You can upload your resume or profile)",
+  "send": "Send"
+},
+"guide": {
+  "h1": "Service Guide",
+  "path": "Home Page /",
+  "h2": "Enjaaz Service Guide"
+},
+"callus": {
+  "h1": "Contact Us",
+  "path": "Home Page /",
+  "h2": "Contact Us",
+  "address": "Head Office - Riyadh - Northern Ring Road",
+  "p": "We are here for you, so feel free to contact us, and we will make every effort to get in touch with you as soon as possible."
+},
+"joinus": {
+  "h1": "Join Us",
+  "path": "Home Page /",
+  "h2": "Join Us",
+  "p": "We are delighted to collaborate with you, so don't hesitate to become our partners in success."
+},
+"packages": {
+  "h1": "Packages",
+  "path": "Home Page /",
+  "h2": "Enjaaz Packages",
+  "p": "We appreciate the needs of our customers according to the size of their companies, so we offer prices that meet the needs with the highest capabilities and international quality.",
+  "p1": "We have different grades that classify the service related to the specialized needs, aiming to provide the best service for specialists.",
+  "btn1": "Service Management Package",
+  "p2": "This package is specialized in providing a complete solution for managing salaries and benefits for companies, helping them achieve higher efficiency and better focus on their business growth.",
+  "btn2": "Payroll Management Package",
+  "p3": "This service aims to enhance the unique identity that distinguishes the company from its competitors in the market. It plays a crucial role in building trust and loyalty with customers, increasing awareness of the company, and achieving success in the market.",
+  "btn3": "Design Services Package",
+  "p4": "Marketing services include a range of activities and strategies aimed at promoting specific products, services, or brands and increasing public awareness of them.",
+  "btn4": "Marketing Services Package"
+},
+"package1": {
+  "h1": "Service Management Package",
+  "path": "Home Page / Packages /",
+  "h2": "Service Management Package",
+  "p": "We have different grades that classify the service related to the specialized needs, aiming to provide the best service for specialists.",
+  "h3": "Service Management Package"
+},
+"package2": {
+  "h1": "Payroll Management Package",
+  "path": "Home Page / Packages /",
+  "h2": "Payroll Management Package",
+  "p": "This package is specialized in providing a complete solution for managing salaries and benefits for companies, helping them achieve higher efficiency and better focus on their business growth.",
+  "h3": "Payroll Management Package"
+},
+"package3": {
+  "h1": "Design Services Package",
+  "path": "Home Page / Packages /",
+  "h2": "Design Services Package",
+  "p": "This service aims to enhance the unique identity that distinguishes the company from its competitors in the market. It plays a crucial role in building trust and loyalty with customers, increasing awareness of the company, and achieving success in the market.",
+  "h3": "Design Services Package",
+  "p2": "These are just a few examples of the design services available and can be customized according to the needs of clients and different industries."
+},
+"package4": {
+  "h1": "Marketing Services Package",
+  "path": "Home Page / Packages /",
+  "h2": "Marketing Services Package",
+  "p": "Marketing services include a range of activities and strategies aimed at promoting specific products, services, or brands and increasing public awareness of them.",
+  "h3": "Marketing Services Package",
+  "p2": "Marketing services play a crucial role in promoting the success of companies, increasing their sales, and building strong relationships with customers. These services vary according to the needs of clients and different industries."
+}
 
   
 }

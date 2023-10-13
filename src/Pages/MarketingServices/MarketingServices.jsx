@@ -63,7 +63,7 @@ const MarketingServices = () => {
             <div className='DesignServices' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}><div className="container">
                 <h1>باقة خدمات التسويق</h1>
                 <p>خدمات التسويق تشمل مجموعة من الأنشطة والاستراتيجيات التي تهدف إلى تعزيز منتجات أو خدمات أو علامات تجارية معينة وزيادة وعي الجمهور بها</p>
-                <h2 className='section-title text-center py-5'>باقة خدمات التسويق</h2>
+                <h2 className='section-title text-center my-5'>باقة خدمات التسويق</h2>
                 <div className="packs">
                     {data.map((item, i) => {
                         return (
