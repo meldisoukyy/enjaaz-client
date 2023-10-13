@@ -146,6 +146,9 @@
       &:last-child{
         text-align: center !important;
       }
+      @media (max-width: 767px) {
+        text-align: center;
+      }
     }
     
   }

@@ -6,7 +6,7 @@ import { useMyContext } from '../../context/MyContext';
 const DesignServices = () => {
     const { lang, setlang, t, i18n } = useMyContext();
 
-    const data = [
+    const data =lang === "ar" ? [
         {
             arTitle: 'تصميم الشعار',
             enTitle: 'Logo Design',
@@ -57,14 +57,65 @@ const DesignServices = () => {
             enTitle: 'Animation Design',
             p: 'إنشاء رسوم متحركة وفيديوهات توضيحية لتوصيل رسائل أو شرح منتجات'
         },
-    ]
+    ]:[
+        {
+            arTitle: 'تصميم الشعار',
+            enTitle: 'Logo Design',
+            p: 'Creating a distinctive logo that reflects the brand identity and is easily recognizable.'
+        },
+        {
+            arTitle: 'تصميم المواقع الإلكترونية',
+            enTitle: 'Web Design',
+            p: 'Creating an attractive and user-friendly web design to enhance the user experience and content appeal.'
+        },
+        {
+            arTitle: 'تصميم الجرافيكس',
+            enTitle: 'Graphic Design',
+            p: 'Creating marketing materials such as brochures, flyers, and digital ads with attractive and creative designs.'
+        },
+        {
+            arTitle: 'تصميم العبوات والتغليف',
+            enTitle: 'Packaging Design',
+            p: 'Designing product packaging in a way that makes it eye-catching on the shelves and helps market the product.'
+        },
+        {
+            arTitle: 'تصميم الملصقات واللافتات',
+            enTitle: 'Poster and Signage Design',
+            p: 'Creating an attractive and user-friendly web design to enhance the user experience and content appeal.'
+        },
+        {
+            arTitle: 'تصميم الهوية البصرية',
+            enTitle: 'Visual Identity Design',
+            p: 'Developing a comprehensive brand identity, including the logo, colors, patterns, and icons.'
+        },
+        {
+            arTitle: 'تصميم واجهات المستخدم',
+            enTitle: 'UI/UX Design',
+            p: 'Designing attractive and user-friendly user interfaces for mobile applications or websites.'
+        },
+        {
+            arTitle: 'تصميم الكتب والمجلات',
+            enTitle: 'Book and Magazine Design',
+            p: 'Designing book and magazine pages in an aesthetic and organized manner.'
+        },
+        {
+            arTitle: 'تصميم الشعارات الشخصية',
+            enTitle: 'Personal Branding',
+            p: 'Developing a visual identity for individuals to distinguish them in their professional fields.'
+        },
+        {
+            arTitle: 'تصميم الرسوم المتحركة',
+            enTitle: 'Animation Design',
+            p: 'Creating animations and explanatory videos to convey messages or explain products.'
+        },
+    ];
     return (
         <>
-            <CommonHead title="باقة خدمات التصميم" path="الصفحة الرئيسية \ الباقات \" />
+            <CommonHead title={t('package3.h1')} path={t('package3.path')} />
             <div className='DesignServices'  style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}><div className="container">
-                <h1>باقة خدمات التصميم</h1>
-                <p>تهدف هذه الخدمة من تعزيز الهوية الفريدة التي تميز الشركة عن منافسيها في السوق، فهي تلعب دورًا حاسمًا في بناء الثقة والولاء لدى العملاء، وزيادة الوعي بالشركة، وتحقيق النجاح في السوق.</p>
-                <h2 className='section-title text-center my-5'>باقة خدمات التصميم</h2>
+                <h1>{t('package3.h2')}</h1>
+                <p>{t('package3.p')}</p>
+                <h2 className='section-title text-center my-5'>{t('package3.h3')}</h2>
                 <div className="packs">
                     {data.map((item, i) => {
                         return (
@@ -72,13 +123,13 @@ const DesignServices = () => {
                                 <h1>{item.arTitle}</h1>
                                 <h1>{item.enTitle}</h1>
                                 <p>{item.p}</p>
-                                <span>اشترك الآن</span>
+                                <span>{t('subsc.h1')}</span>
                             </div>
                         )
                     })}
 
                 </div>
-                <p className='pt-5'>هذه مجرد أمثلة قليلة من خدمات التصميم المتاحة، ويمكن تخصيصها حسب احتياجات العملاء والصناعات المختلفة.</p>
+                <p className='pt-5'>{t('package3.p2')}</p>
             </div></div>
         </>
     )

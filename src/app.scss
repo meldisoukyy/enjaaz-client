@@ -209,7 +209,7 @@ a.active {
     background-color: var(--mcolor);
     font-family: "rptBold", sans-serif;
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 500;
     margin: auto;
     margin-bottom: 20px;
     @media (max-width: 992px) {
@@ -241,6 +241,7 @@ a.active {
       cursor: pointer;
       @media (max-width: 767px) {
         font-size: 16px;
+        text-align: center;
       }
     }
     .button1 {
@@ -293,6 +294,9 @@ a.active {
           font-family: "rptBold";
           font-size: 18px;
           color: #6b6b6b;
+          @media (max-width: 992px) {
+            text-align: center !important;
+          }
       }
       p {
         font-size: 24px;

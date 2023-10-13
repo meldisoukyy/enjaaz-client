@@ -10,17 +10,14 @@ const Packages = () => {
 
   return (
     <>
-      <CommonHead title="الباقات" path="الصفحة الرئيسية \" />
+      <CommonHead title={t('packages.h1')} path={t('packages.path')} />
       <div
         className="Packages"
         style={lang === "ar" ? { direction: "rtl" } : { direction: "ltr" }}
       >
         <div className="container">
-          <h1 className="section-title">باقات إنجاز</h1>
-          <p>
-            نُقدر احتياج العملاء بحسب حجم شركاتهم، لذا نقدم أسعاراً تناسب تلبية
-            الاحتياج بأعلى الإمكانات وبجودة عالمية.
-          </p>
+          <h1 className="section-title">{t('packages.h2')}</h1>
+          <p>{t('packages.p')}</p>
 
           <div className="packs">
             <div className="pack ">
@@ -40,13 +37,10 @@ const Packages = () => {
                     />
                   </svg>
                 </div>
-                <p>
-                  لدينا درجات مختلفة تصنف الخدمة المتعلقة بالاحتياج المتخصص،
-                  وتهدف لتقديم أفضل خدمة للمتخصص.
-                </p>
+                <p>{t('packages.p1')}</p>
               </div>
               <Link to="/servicespackage">
-                <div className="btn">باقة إدارة الخدمات</div>
+                <div className="btn">{t('packages.btn1')}</div>
               </Link>
             </div>
             <div className="pack">
@@ -66,14 +60,10 @@ const Packages = () => {
                     />
                   </svg>
                 </div>
-                <p>
-                  وهي باقة متخصصة في تقديم حلاً متكاملاً لإدارة الرواتب والمزايا
-                  للشركات، مما يساعدها على تحقيق كفاءة أعلى وتركيز أفضل على نمو
-                  أعمالها.
-                </p>
+                <p>{t('packages.p2')}</p>
               </div>
               <Link to="/wagemanagment">
-                <div className="btn">باقة إدارة الأجور</div>
+                <div className="btn">{t('packages.btn2')}</div>
               </Link>
             </div>
             {/* <div className="pack">
@@ -116,14 +106,10 @@ const Packages = () => {
                     />
                   </svg>
                 </div>
-                <p>
-                  تهدف هذه الخدمة من تعزيز الهوية الفريدة التي تميز الشركة عن
-                  منافسيها في السوق، فهي تلعب دورًا حاسمًا في بناء الثقة والولاء
-                  لدى العملاء، وزيادة الوعي بالشركة، وتحقيق النجاح في السوق.
-                </p>
+                <p>{t('packages.p3')}</p>
               </div>
               <Link to="/designservices">
-                <div className="btn">باقة خدمات التصميم</div>
+                <div className="btn">{t('packages.btn3')}</div>
               </Link>
             </div>
             <div className="pack">
@@ -143,14 +129,10 @@ const Packages = () => {
                     />
                   </svg>
                 </div>
-                <p>
-                  خدمات التسويق تشمل مجموعة من الأنشطة والاستراتيجيات التي تهدف
-                  إلى تعزيز منتجات أو خدمات أو علامات تجارية معينة وزيادة وعي
-                  الجمهور بها.
-                </p>
+                <p>{t('packages.p4')}</p>
               </div>
               <Link to="/marketingservices">
-                <div className="btn">باقة خدمات التسويق</div>
+                <div className="btn">{t('packages.btn4')}</div>
               </Link>
             </div>
           </div>

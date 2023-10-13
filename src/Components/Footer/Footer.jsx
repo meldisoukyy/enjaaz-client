@@ -10,10 +10,10 @@ const Footer = () => {
         style={lang === "ar" ? { direction: "rtl" } : { direction: "ltr" }}
       >
         <div className="top">
-          <h1>اشترك في النشرة الإخبارية</h1>
+          <h1>{t('footer.toph1')}</h1>
           <div className="footer-form">
-            <input type="email" placeholder="البريد الإلكتروني" />
-            <div>اشترك الآن</div>
+            <input type="email" placeholder={t('footer.topemail')} />
+            <div>{t('footer.topbtn')}</div>
           </div>
         </div>
         <div className="center">
@@ -22,55 +22,51 @@ const Footer = () => {
               <div className="image">
                 <img src="/images/logo.png" alt="" />
               </div>
-              <h1>شركة إنجاز للخدمات</h1>
-              <p>
-                مع أكثر الكوادر تميّزاً نبتكر الأفكار ونلفت الأنظار، وذلك تقديم
-                خدمة مهنية مبهرة تتمتع بجودة عالمية، كي نمنح الفرصة لعملائنا
-                بالنمو والتطور والتفرّد بالأداء في عالم الأعمال.
-              </p>
+              <h1>{t('footer.bottomh1')}</h1>
+              <p>{t('footer.bottomp1')}</p>
             </div>
             <div className="part col-lg-4 col-md-6 mb-4 mb-lg-0">
-              <h1>روابط هامة</h1>
+              <h1>{t('footer.bottomh2')}</h1>
               <ul>
                 <Link to="/askforaservice">
                   <li>
-                    طلب خدمة
+                    {t('footer.ul1')}
                     <div className="arrow"></div>
                   </li>
                 </Link>
                 <Link to="/about">
                   <li>
-                    من نحن؟
+                    {t('footer.ul2')}
                     <div className="arrow"></div>
                   </li>
                 </Link>
                 <Link to='/questions'>
                   <li>
-                    الأسئلة الشائعة
+                    {t('footer.ul3')}
                     <div className="arrow"></div>
                   </li>
                 </Link>
                 <Link to='/callus'>
                   <li>
-                    اتصل بنا
+                    {t('footer.ul4')}
                     <div className="arrow"></div>
                   </li>
                 </Link>
                 <Link to='/joinus'>
                   <li>
-                    انضم إلينا
+                    {t('footer.ul5')}
                     <div className="arrow"></div>
                   </li>
                 </Link>
               </ul>
             </div>
             <div className="part col-lg-4 col-md-6 mb-4 mb-lg-0">
-              <h1>اتصل بنا</h1>
+              <h1>{t('footer.bottomh3')}</h1>
               <div className="item">
                 <div className="icon">
                   <img src="/images/footer1.png" alt="" />
                 </div>
-                <span>المركز الرئيسي - الرياض - طريق الدائري الشمالي</span>
+                <span>{t('footer.address')}</span>
               </div>
               <div className="item">
                 <div className="icon">
@@ -114,8 +110,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="bottom">
-          <p>شركة إنجاز للخدمات شركة موثقة برقم ضريبي: 300629475600003</p>
-          <p>جميع الحقوق محفوظة لشركة إنجاز للخدمات 2023 ©</p>
+          <p>{t('footer.bottomp5')}</p>
+          <p>{t('footer.bottomp6')}</p>
         </div>
       </div>
     </div>

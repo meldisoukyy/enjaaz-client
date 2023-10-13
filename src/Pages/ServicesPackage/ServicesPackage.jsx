@@ -11,11 +11,11 @@ const ServicesPackage = () => {
 
     return (
         <>
-            <CommonHead title="باقة إدارة الخدمات" path="الصفحة الرئيسية \ الباقات \" />
+            <CommonHead title={t('package1.h1')} path={t('package1.path')} />
             <div className='ServicesPackage' style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}><div className="container">
-                <h1>باقات إدارة الخدمات</h1>
-                <p>لدينا درجات مختلفة تصنف الخدمة المتعلقة بالاحتياج المتخصص، وتهدف لتقديم أفضل خدمة للمتخصص.</p>
-                <h2 className='section-title text-center my-5'>باقات إدارة الخدمات</h2>
+                <h1>{t('package1.h2')}</h1>
+                <p>{t('package1.p')}</p>
+                <h2 className='section-title text-center my-5'>{t('package1.h3')}</h2>
                 <div className="packs">
                     <div className="pack ">
                         <div className="top">
@@ -32,9 +32,7 @@ const ServicesPackage = () => {
                         </div>
                         <div className="bottom">
                         <Link to='/askforaservice'>
-                                <div>
-                                    اشترك الآن
-                                </div>
+                                <div>{t('subsc.h1')}</div>
                             </Link>                        </div>
                     </div>
                     <div className="pack ">
@@ -52,9 +50,7 @@ const ServicesPackage = () => {
                         </div>
                         <div className="bottom">
                         <Link to='/askforaservice'>
-                                <div>
-                                    اشترك الآن
-                                </div>
+                                <div>{t('subsc.h1')}</div>
                             </Link>
                         </div>
                     </div>
@@ -73,9 +69,7 @@ const ServicesPackage = () => {
                         </div>
                         <div className="bottom">
                         <Link to='/askforaservice'>
-                                <div>
-                                    اشترك الآن
-                                </div>
+                                <div>{t('subsc.h1')}</div>
                             </Link>                        </div>
                     </div>
                     <div className="pack ">
@@ -93,9 +87,7 @@ const ServicesPackage = () => {
                         </div>
                         <div className="bottom">
                             <Link to='/askforaservice'>
-                                <div>
-                                    اشترك الآن
-                                </div>
+                                <div>{t('subsc.h1')}</div>
                             </Link>
                         </div>
                     </div>

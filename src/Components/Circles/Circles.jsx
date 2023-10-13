@@ -1,10 +1,13 @@
 import React from 'react'
 import './circles.scss'
+import { useMyContext } from '../../context/MyContext';
 const Circles = () => {
+    const { lang, setlang, t, i18n } = useMyContext();
+
     return (
         <div className='Circles'>
             <section className="home-features">
-                <h2 className="section-title text-center mb-5">خدمات إنجاز</h2>
+                <h2 className="section-title text-center mb-5">{t('circles.h1')}</h2>
                 <div className="container">
                     <div className="row align-items-center justify-content-center">
                         <div className="col-12 col-lg-3">
@@ -16,7 +19,7 @@ const Circles = () => {
                                         alt=""
                                     />
                                 </div>
-                                <p className="title text-center">إدارة الخدمات</p>
+                                <p className="title text-center">{t('circles.c1')}</p>
                             </div>
                             <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center">
                                 <div className="img">
@@ -26,7 +29,7 @@ const Circles = () => {
                                         alt=""
                                     />
                                 </div>
-                                <p className="title text-center">تسجيل علامة تجارية</p>
+                                <p className="title text-center">{t('circles.c2')}</p>
                             </div>
                             <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-end">
                                 <div className="img">
@@ -36,7 +39,7 @@ const Circles = () => {
                                         alt=""
                                     />
                                 </div>
-                                <p className="title text-center">تأسيس المنشآت</p>
+                                <p className="title text-center">{t('circles.c3')}</p>
                             </div>
                         </div>
                         <div className="col-12 col-md-8 col-lg-6">
@@ -87,7 +90,7 @@ const Circles = () => {
                                         alt=""
                                     />
                                 </div>
-                                <p className="title text-center text-lg-start">الاستشارات القانونية</p>
+                                <p className="title text-center text-lg-start">{t('circles.c4')}</p>
                             </div>
                             <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center">
                                 <div className="img">
@@ -97,7 +100,7 @@ const Circles = () => {
                                         alt=""
                                     />
                                 </div>
-                                <p className="title">جميع الخدمات الحكومية</p>
+                                <p className="title">{t('circles.c5')}</p>
                             </div>
                             <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-start">
                                 <div className="img">
@@ -107,7 +110,7 @@ const Circles = () => {
                                         alt=""
                                     />
                                 </div>
-                                <p className="title text-center text-lg-start">حماية الأجور</p>
+                                <p className="title text-center text-lg-start">{t('circles.c6')}</p>
                             </div>
                         </div>
                     </div>
@@ -121,7 +124,7 @@ const Circles = () => {
                                     alt=""
                                 />
                             </div>
-                            <p className="title w-100">تخفيف الاعباء المالية</p>
+                            <p className="title w-100">{t('circles.c7')}</p>
                         </div>
                         <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column">
                             <div className="img">
@@ -131,7 +134,7 @@ const Circles = () => {
                                     alt=""
                                 />
                             </div>
-                            <p className="title w-100">خدمة جربني المجانية</p>
+                            <p className="title w-100">{t('circles.c8')}</p>
                         </div>
                     </div>
                 </div>

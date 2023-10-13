@@ -8,7 +8,7 @@ const Partners = () => {
   return (
     <div className='Partners'>
         <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
-            <h1 className='secH'>شركاء النجاح</h1>
+            <h1 className='secH'>{t('partners.h1')}</h1>
             <div className="row d-flex justify-content-evenly">
                 {data.map((item)=>{
                     return(

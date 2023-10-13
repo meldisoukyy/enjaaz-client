@@ -7,16 +7,16 @@ const CallUs = () => {
 
     return (
         <div className='CallUs'>
-            <CommonHead title="اتصل بنا" path="الصفحة الرئيسية \" />
+            <CommonHead title={t('callus.h1')} path={t('callus.path')} />
             <div className="Map">
-                <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
+                <div className="container" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
                     <div className="top">
                         <div className="row gap-3">
                             <div className="col item">
                                 <div className="icon">
                                     <img src="/images/carbon_home.png" alt="" />
                                 </div>
-                                <span>المركز الرئيسي - الرياض - طريق الدائري الشمالي</span>
+                                <span>{t('callus.address')}</span>
                             </div>
                             <div className="col item">
                                 <div className="icon">
@@ -37,22 +37,22 @@ const CallUs = () => {
                     </div>
                 </div>
             </div>
-            <div className="EnjazzForm" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
+            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
                 <div className="container">
-                    <h1 className='section-title'>اتصل بنا</h1>
-                    <p>نحن هنا من أجلك لذا لا تتردد في الاتصال بنا وسوف نبذل كل جهدنا للتواصل معك في أقرب وقت.</p>
-                    <span>* يمكنك التواصل معنا عن طريق الواتساب او ملئ البيانات الاتية</span>
+                    <h1 className='section-title'>{t('callus.h2')}</h1>
+                    <p>{t('callus.p')}</p>
+                    <span>{t('form.p1')}</span>
 
                     <div className="EnjazzFormInputs">
-                        <input className='EnjazzFormInput' type="text" placeholder='اسم المنشأة / الاسم بالكامل' />
-                        <span style={{color:'red', marginTop:'-10px'}}>* مطلوب</span>
-                        <input className='EnjazzFormInput' type="text" placeholder='البريد الإلكتروني' />
-                        <input className='EnjazzFormInput' type="text" placeholder='رقم الجوال' />
-                        <span style={{color:'red', marginTop:'-10px'}}>* مطلوب</span>
-                        <input className='EnjazzFormInput' type="text" placeholder='سبب التواصل' />
-                        <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder='التفاصيل'></textarea>
+                        <input className='EnjazzFormInput' type="text" placeholder={t('form.fullName')} />
+                        <span style={{ color: 'red', marginTop: '-10px' }}>{t('form.required')}</span>
+                        <input className='EnjazzFormInput' type="text" placeholder={t('form.email')} />
+                        <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} />
+                        <span style={{ color: 'red', marginTop: '-10px' }}>{t('form.required')}</span>
+                        <input className='EnjazzFormInput' type="text" placeholder={t('form.reason')} />
+                        <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details2')}></textarea>
                     </div>
-                    <div className="EnjazzFormBtn">إرسال</div>
+                    <div className="EnjazzFormBtn">{t('form.send')}</div>
                 </div>
             </div>
         </div>

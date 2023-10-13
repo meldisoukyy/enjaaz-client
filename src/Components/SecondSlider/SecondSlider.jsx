@@ -31,19 +31,18 @@ const SecondSlider = () => {
             >
                 <div className="slide slide1">
                     <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
-                        <h1>
-                            يمكنك طلب استشارة مجانية
-                        </h1>
-                        <p>نوفر لمنشأتكم خدمة استشارات الأعمال وذلك بهدف التوجيه ووضع سير إدارة المنشأة على الطريق الصحيح مما يدعم نمو نشاطك في بيئة عمل متزنة وهادئة . <Link to="/askforaservice"><span>اطلب الآن</span></Link></p>
-
+                        <h1>{t('SS.h1')}</h1>
+                        <p>{t('SS.p1')}</p>
+                        <Link to="/askforaservice"><span>{t('SS.btn')}</span></Link>
                     </div>
                 </div>
                 <div className="slide slide2">
                     <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                         <h1>
-                            يمكنك طلب استشارة مجانية
+                            {t('SS.h2')}
                         </h1>
-                        <p>نوفر لمنشأتكم خدمة استشارات الأعمال وذلك بهدف التوجيه ووضع سير إدارة المنشأة على الطريق الصحيح مما يدعم نمو نشاطك في بيئة عمل متزنة وهادئة . <Link to="/askforaservice"><span>اطلب الآن</span></Link></p>
+                        <p>{t('SS.p2')}</p>
+                        <Link to="/askforaservice"><span>{t('SS.btn')}</span></Link>
                     </div>
                 </div>
 

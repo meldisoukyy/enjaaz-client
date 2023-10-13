@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './CounterUp.scss'
 import CountUp from 'react-countup';
+import { useMyContext } from "../../context/MyContext";
 const CounterUp = () => {
+    const { lang, setlang, t, i18n } = useMyContext();
     const [scrolledToSection, setScrolledToSection] = useState(false);
     const scrolled = useRef()
     const handleScroll = () => {
@@ -45,8 +47,8 @@ const CounterUp = () => {
                                 />
                             )}
                             +</h1>
-                        <p>خدمة</p>
-                        <span>اكثر من 500 خدمة للمنشأت</span>
+                        <p>{t('count.h1')}</p>
+                        <span>{t('count.h11')}</span>
                     </div>
                     <div className="col-lg-3 col-md-6 d-flex flex-column gap-3 justify-content-center align-items-center mt-4">
                         <div className="image">
@@ -60,8 +62,8 @@ const CounterUp = () => {
                                 duration={5}
                             />
                         )}+</h1>
-                        <p>الاستشارات</p>
-                        <span>اكثر من 2263+</span>
+                        <p>{t('count.h2')}</p>
+                        <span>{t('count.h22')}</span>
                     </div>
                     <div className="col-lg-3 col-md-6 d-flex flex-column gap-3 justify-content-center align-items-center mt-4">
                         <div className="image">
@@ -75,8 +77,8 @@ const CounterUp = () => {
                                 duration={5}
                             />
                         )}+</h1>
-                        <p>تقييمات إيجابية</p>
-                        <span>تقيمات نعتز بها</span>
+                        <p>{t('count.h3')}</p>
+                        <span>{t('count.h33')}</span>
                     </div>
                     <div className="col-lg-3 col-md-6 d-flex flex-column gap-3 justify-content-center align-items-center mt-4">
                         <div className="image">
@@ -90,8 +92,8 @@ const CounterUp = () => {
                                 duration={5}
                             />
                         )}+</h1>
-                        <p>عدد العملاء</p>
-                        <span>العملاء المهتمين</span>
+                        <p>{t('count.h4')}</p>
+                        <span>{t('count.h44')}</span>
                     </div>
                 </div>
             </div>

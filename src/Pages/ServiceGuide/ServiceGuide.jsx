@@ -4,7 +4,9 @@ import CommonHead from '../../Components/CommonHead/CommonHead'
 import CommonQ from '../../Components/CommonQ/CommonQ'
 import { useMyContext } from '../../context/MyContext'
 const ServiceGuide = () => {
-    const data = [
+    const { lang, setlang, t, i18n } = useMyContext();
+
+    const data = lang === "ar" ?[
         "خدامات إدارة الرواتب نظام حماية الأجور (الشهري)",
         "خدامات إدارة الرواتب نظام حماية الأجور(السنوي)",
         "خدمات تأسيس المؤسسات والشركات",
@@ -21,8 +23,7 @@ const ServiceGuide = () => {
         "خدمات التصميم",
         "خدمات التسويق الالكتروني",
         "خدمات التسجيل للعمالة ذات المهن العليا",
-    ]
-    const dataEn = [
+    ]:[
         "Salary Management Services Wage Protection System (Monthly)",
         "Salary Management Services Wage Protection System (Yearly)",
         "Incorporation Services for Institutions and Companies",
@@ -40,15 +41,12 @@ const ServiceGuide = () => {
         "Digital Marketing Services",
         "Registration Services for High-Profile Skilled Workers",
     ];
-    
-    const { lang, setlang, t, i18n } = useMyContext();
-
     return (
         <div className='ServiceGuide'>
-            <CommonHead title="دليل الخدمات" path="الصفحة الرئيسية \" />
+            <CommonHead title={t('guide.h1')} path={t('guide.path')} />
             <div className="guide">
                 <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
-                    <h1 className='section-title'>دليل خدمات إنجاز</h1>
+                    <h1 className='section-title'>{t('guide.h2')}</h1>
                     <div className="items">
                         {data.map((item) => {
                             return (

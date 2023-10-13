@@ -13,10 +13,10 @@ const CommonQ = ({ full }) => {
         style={lang === "ar" ? { direction: "rtl" } : { direction: "ltr" }}
       >
         <div className="top">
-          <h1 className="section-title">الأسئلة الشائعة</h1>
+          <h1 className="section-title">{t('cq.h1')}</h1>
           {!full && (
             <Link to="/questions">
-              <p>{`كل الاسئلة >>`}</p>
+              <p>{`${t('cq.p1')} >>`}</p>
             </Link>
           )}
         </div>

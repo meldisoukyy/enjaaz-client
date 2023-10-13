@@ -1,5 +1,5 @@
 .CommonHead {
-  height: 450px;
+  height: 550px;
   background: linear-gradient(180deg, #221074 19.4%, #06b1d3 100%);
   color: white;
   direction: rtl;
@@ -11,6 +11,7 @@
     justify-content: center;
     @media (max-width: 767px) {
       align-items: center;
+
     }
     h1 {
       margin-top: 150px;
@@ -18,13 +19,25 @@
       font-size: 36px;
       font-weight: 500;
       font-family: "rptBold";
+      @media (max-width: 767px) {
+        text-align: center;
+      }
     }
-    p {
-      color: #c7c5c5;
-      font-size: 20px;
-      font-weight: 700;
-      font-family: "rptRegular";
+    .path {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      @media (max-width: 767px) {
+      flex-direction: column;
+    }
+      p {
+        color: #c7c5c5;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: "rptRegular";
+      }
       span {
+        font-family: "rptRegular";
         color: #fff;
         font-size: 20px;
         font-weight: 700;

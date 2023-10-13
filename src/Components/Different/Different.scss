@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center !important;
     border: 2px solid var(--mcolor);
     gap: 20px;
@@ -63,6 +63,7 @@
     }
     .image {
       width: 80px;
+      height: 80px;
     }
     h2 {
       font-size: 28px;

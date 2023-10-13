@@ -8,11 +8,11 @@ const WageManagment = () => {
 
     return (
         <>
-            <CommonHead title="باقة إدارة الأجور" path="الصفحة الرئيسية \ الباقات \" />
+            <CommonHead title={t('package2.h1')} path={t('package2.path')} />
             <div className='WageManagment' style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}><div className="container">
-                <h1>باقة إدارة الأجور</h1>
-                <p>وهي باقة متخصصة في تقديم حلاً متكاملاً لإدارة الرواتب والمزايا للشركات، مما يساعدها على تحقيق كفاءة أعلى وتركيز أفضل على نمو أعمالها</p>
-                <h2 className='section-title text-center my-5'>باقة إدارة الأجور</h2>
+                <h1>{t('package2.h2')}</h1>
+                <p>{t('package2.p')}</p>
+                <h2 className='section-title text-center my-5'>{t('package2.h3')}</h2>
                 <div className="packs">
                     {[...Array(8)].map((item) => {
                         return (
@@ -25,9 +25,7 @@ const WageManagment = () => {
                                 </div>
                                 <div className="bottom">
                                     <Link to='/askforaservice'>
-                                        <div>
-                                            اشترك الآن
-                                        </div>
+                                        <div>{t('subsc.h1')}</div>
                                     </Link>                                </div>
                             </div>
                         )

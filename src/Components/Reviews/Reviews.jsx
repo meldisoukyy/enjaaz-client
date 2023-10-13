@@ -40,7 +40,7 @@ const Reviews = () => {
   return (
     <div className='Reviews'>
         <div className="container" >
-        <h1 className='secH' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>آراء العملاء</h1>
+        <h1 className='secH' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>{t('reviews.h1')}</h1>
 
         <Carousel
                 wrapAround={true}

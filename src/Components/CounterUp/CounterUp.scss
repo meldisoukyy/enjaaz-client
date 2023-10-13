@@ -1,6 +1,10 @@
 .CounterUp{
     direction: rtl;
     padding-bottom: 60px;
+.row{
+    display: flex;
+    align-items: start;
+}    
     .image{
         width: 145px;
         cursor: pointer;
@@ -25,10 +29,12 @@
     p{
         font-size: 32px;
         font-family: "rptBold", sans-serif;
+        text-align: center;
     }
     span{
         font-family: "rptRegular", sans-serif;
         font-size: 20px;
         font-weight: 600;
+        text-align: center;
     }
 }

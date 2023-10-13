@@ -1,9 +1,11 @@
 import React from "react";
 import "./Different.scss";
+import { useMyContext } from "../../context/MyContext";
 const Different = () => {
+  const { lang, setlang, t, i18n } = useMyContext();
   return (
     <div className="Different">
-      <h2 className="section-title text-center mb-5">لماذا انجاز</h2>
+      <h2 className="section-title text-center mb-5">{t('why.head')}</h2>
 
       <div className="container">
         <div className="row">
@@ -23,11 +25,8 @@ const Different = () => {
                 />
               </svg>
             </div>
-            <h2>تجربة واعية</h2>
-            <p>
-              9 سنوات من الخبرة، امتلكنا خلالها الخبرة العميقة ومئات التجارب
-              الناجحة ونمنح عملائنا وعياً وفهماً لتفاصيل مجالنا.
-            </p>
+            <h2>{t('why.h1')}</h2>
+            <p>{t('why.p1')}</p>
           </div>
           <div className="Diffcard col-lg-3 col-md-6 col-12">
             <div className="image">
@@ -45,11 +44,8 @@ const Different = () => {
                 />
               </svg>
             </div>
-            <h2>تفرد مخصص</h2>
-            <p>
-              أنت لديك احتياجات فريدة، ونحن نلتزم بتقديم حلول مخصصة تناسب
-              احتياجاتك تماماً.
-            </p>
+            <h2>{t('why.h2')}</h2>
+            <p>{t('why.p2')}</p>
           </div>
           <div className="Diffcard col-lg-3 col-md-6 col-12">
             <div className="image">
@@ -79,11 +75,8 @@ const Different = () => {
                 />
               </svg>
             </div>
-            <h2>تميز الجودة</h2>
-            <p>
-              نحن ملتزمون بتقديم أعلى مستويات الجودة في كل جانب من جوانب خدماتنا
-              المتنوعة.
-            </p>
+            <h2>{t('why.h3')}</h2>
+            <p>{t('why.p3')}</p>
           </div>
           <div className="Diffcard col-lg-3 col-md-6 col-12">
             <div className="image">
@@ -101,11 +94,8 @@ const Different = () => {
                 />
               </svg>
             </div>
-            <h2>شراكة طويلة الأمد</h2>
-            <p>
-              نؤمن بأن علاقتنا معك ليست مجرد تعامل بل شراكة حتى تحقيق النجاح
-              المشترك.
-            </p>
+            <h2>{t('why.h4')}</h2>
+            <p>{t('why.p4')}</p>
           </div>
         </div>
       </div>

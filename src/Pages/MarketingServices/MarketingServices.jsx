@@ -5,7 +5,7 @@ import { useMyContext } from '../../context/MyContext';
 const MarketingServices = () => {
     const { lang, setlang, t, i18n } = useMyContext();
 
-    const data = [
+    const data =lang === "ar" ? [
         {
             arTitle: 'التسويق الرقمي',
             enTitle: 'Digital Marketing',
@@ -56,14 +56,65 @@ const MarketingServices = () => {
             enTitle: 'Location-Based Marketing',
             p: 'استخدام تقنيات تحديد المواقع لتوجيه العروض والإعلانات إلى الجمهور في مواقع معينة.'
         },
+    ]:[
+        {
+            arTitle: 'التسويق الرقمي',
+            enTitle: 'Digital Marketing',
+            p: 'Aims to reach the target audience and promote products or services through social media channels.'
+        },
+        {
+            arTitle: 'الإعلان والعلاقات العامة',
+            enTitle: 'Advertising and Public Relations',
+            p: 'Creating advertising campaigns and managing media and press relations to increase media presence and audience engagement.'
+        },
+        {
+            arTitle: 'تسويق المحتوى',
+            enTitle: 'Content Marketing',
+            p: 'Creating high-quality content such as articles, blogs, and videos to attract and educate the audience and enhance the brand.'
+        },
+        {
+            arTitle: 'تسويق وسائل التواصل',
+            enTitle: 'Social Media Marketing',
+            p: 'Using social media platforms to interact with the audience and distribute marketing content.'
+        },
+        {
+            arTitle: 'التسويق بالبريد الإلكتروني',
+            enTitle: 'Email Marketing',
+            p: 'Sending email messages to the customer database to promote products or services and enhance communication.'
+        },
+        {
+            arTitle: 'البحث عن الكلمات الرئيسية',
+            enTitle: 'Keyword Research',
+            p: 'Researching the keywords and phrases used by the audience for online search and improving the company\'s ranking in search engine results.'
+        },
+        {
+            arTitle: 'تسويق التأثير',
+            enTitle: 'Influencer Marketing',
+            p: 'Collaborating with digital influencers or personalities on social media to promote products or services.'
+        },
+        {
+            arTitle: 'التسويق التجريبي',
+            enTitle: 'Experiential Marketing',
+            p: 'Creating interactive customer experiences to promote the brand and convey a specific message.'
+        },
+        {
+            arTitle: 'البحث السوقي',
+            enTitle: 'Market Research',
+            p: 'Gathering and analyzing data about the market and customers to understand audience needs and guide marketing strategies.'
+        },
+        {
+            arTitle: 'تسويق المواقع',
+            enTitle: 'Location-Based Marketing',
+            p: 'Using location-based targeting techniques to deliver offers and advertisements to audiences in specific locations.'
+        },
     ]
     return (
         <>
-            <CommonHead title="باقة خدمات التسويق" path="الصفحة الرئيسية \ الباقات \" />
+            <CommonHead title={t('package4.h1')} path={t('package4.path')} />
             <div className='DesignServices' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}><div className="container">
-                <h1>باقة خدمات التسويق</h1>
-                <p>خدمات التسويق تشمل مجموعة من الأنشطة والاستراتيجيات التي تهدف إلى تعزيز منتجات أو خدمات أو علامات تجارية معينة وزيادة وعي الجمهور بها</p>
-                <h2 className='section-title text-center my-5'>باقة خدمات التسويق</h2>
+                <h1>{t('package4.h2')}</h1>
+                <p>{t('package4.p')}</p>
+                <h2 className='section-title text-center my-5'>{t('package4.h3')}</h2>
                 <div className="packs">
                     {data.map((item, i) => {
                         return (
@@ -71,13 +122,13 @@ const MarketingServices = () => {
                                 <h1>{item.arTitle}</h1>
                                 <h1>{item.enTitle}</h1>
                                 <p>{item.p}</p>
-                                <span>اشترك الآن</span>
+                                <span>{t('subsc.h1')}</span>
                             </div>
                         )
                     })}
 
                 </div>
-                <p className='pt-5'>تلعب خدمات التسويق دورًا حاسمًا في تعزيز نجاح الشركات وزيادة مبيعاتها وبناء علاقات قوية مع العملاء. تتنوع هذه الخدمات وفقًا لاحتياجات العملاء والصناعات المختلفة.</p>
+                <p className='pt-5'>{t('package4.p2')}</p>
             </div></div>
         </>
     )

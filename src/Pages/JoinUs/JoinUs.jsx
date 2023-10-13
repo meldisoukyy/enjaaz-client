@@ -7,35 +7,35 @@ const JoinUs = () => {
 
     return (
         <div>
-            <CommonHead title="انضم إلينا" path="الصفحة الرئيسية \" />
+            <CommonHead title={t('joinus.h1')} path={t('joinus.path')} />
             <div className="EnjazzForm" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                 <div className="container">
-                    <h1 className='section-title'>انضم إلينا</h1>
-                    <p>يسعدنا تعاونكم معنا لذا لا تتردد في أن تكون من شركاء نجاحنا.</p>
-                    <span>* يمكنك التواصل معنا عن طريق الواتساب او ملئ البيانات الاتية</span>
+                    <h1 className='section-title'>{t('joinus.h2')}</h1>
+                    <p>{t('joinus.p')}</p>
+                    <span>{t('form.p1')}</span>
 
                     <div className="EnjazzFormInputs">
-                        <input className='EnjazzFormInput' type="text" placeholder='اسم المنشأة / الاسم بالكامل' />
-                        <span style={{color:'red', marginTop:'-10px'}}>* مطلوب</span>
-                        <input className='EnjazzFormInput' type="text" placeholder='البريد الإلكتروني' />
-                        <input className='EnjazzFormInput' type="text" placeholder='رقم الجوال' />
-                        <span style={{color:'red', marginTop:'-10px'}}>* مطلوب</span>
+                        <input className='EnjazzFormInput' type="text" placeholder={t('form.fullName')} />
+                        <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span>
+                        <input className='EnjazzFormInput' type="text" placeholder={t('form.email')} />
+                        <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} />
+                        <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span>
 
-                        <input className='EnjazzFormInput' type="text" placeholder='المدينة' />
-                        <input className='EnjazzFormInput' type="text" placeholder='نوع الشراكة' />
-                        <span style={{color:'red', marginTop:'-10px'}}>* مطلوب</span>
+                        <input className='EnjazzFormInput' type="text" placeholder={t('form.city')} />
+                        <input className='EnjazzFormInput' type="text" placeholder={t('form.typeC')} />
+                        <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span>
 
-                        <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder='الملاحظات'></textarea>
+                        <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details3')}></textarea>
                         <div className="EnjazzFormInput EnjazzFormInputFile">
                             <div className="icon">
                                 <img src="/images/upload.png" alt="" />
                             </div>
-                            <p>رفع مستند</p>
-                            <span>(يمكنك رفع السيرةالذاتية أو البروفايل)</span>
+                            <p>{t('form.upload')}</p>
+                            <span>{t('form.upload2')}</span>
                             <input type="file" id="myfile" name="filename"/>
                         </div>
                     </div>
-                    <div className="EnjazzFormBtn">إرسال</div>
+                    <div className="EnjazzFormBtn">{t('form.send')}</div>
                 </div>
             </div>
         </div>

@@ -7,29 +7,32 @@ const CommonHead = ({ title, path }) => {
   const { lang, setlang, t, i18n } = useMyContext();
 
   return (
-    <div className="CommonHead" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
+    <div className="CommonHead" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
       <div className="container">
         <h1>{title}</h1>
         {lang === "ar" ? (
-
-        <p>{path}
-          <span>{title}</span>
-        </p>
+          <div className="path">
+            <p>{path}
+            </p>
+            <span>{title}</span>
+          </div>
         ) : (
-        <p style={{color:'#fff'}}>{title}
-          <span style={{color:'#c7c5c5'}}>{path}</span>
-        </p>
+          <div className="path">
+            <p style={{ color: '#c7c5c5' }}>{path}
+            </p>
+            <span style={{ color: '#fff' }}>{title}</span>
+          </div>
 
         )}
         <div className="buttons">
           {location !== "/freeconsulting" && (
             <Link to="/freeconsulting">
-              <div className="button button2">استشارة مجانية</div>
+              <div className="button button2">{t('carousel1.btn1')}</div>
             </Link>
           )}
           {location !== "/askforaservice" && (
             <Link to="/askforaservice">
-              <div className="button button1">طلب خدمة</div>
+              <div className="button button1">{t('carousel1.btn2')}</div>
             </Link>
           )}
         </div>

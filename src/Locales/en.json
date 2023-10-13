@@ -40,7 +40,7 @@
     "btn": "Order now"
   },
   "why": {
-    "head": "Why Enjaaz ?",
+    "head": "? Why Enjazz",
     "h1": "Conscious experience",
     "h2": "Custom uniqueness",
     "h3": "Quality Excellence",
@@ -52,14 +52,20 @@
   },
   "cq": {
     "h1": "Frequently Asked Questions",
+    "path": "Home /",
     "p1": "All Questions"
   },
   "count": {
-    "1": "Service",
-    "2": "Consultations",
-    "3": "Positive Evaluations",
-    "4": "Number of Customers"
-  },
+    "h1": "Service",
+    "h2": "Consultations",
+    "h3": "Positive Reviews",
+    "h4": "Number of Customers",
+    "h11": "Over 500 Services for Businesses",
+    "h22": "Over +2263",
+    "h33": "Reviews We're Proud Of",
+    "h44": "Interested Customers"
+}
+,
   "partners": {
     "h1": "Success Partners"
   },
@@ -70,21 +76,24 @@
     "toph1": "Subscribe to the Newsletter",
     "topemail": "Email",
     "topbtn": "Subscribe Now",
-    "bottomh1": "Achievement Company for Services",
-    "bottomp1": "With the most distinguished staff, we innovate ideas and draw attention by providing a professional service of global quality. This is to give our clients the opportunity to grow, develop, and excel in the business world.",
+    "bottomh1": "Enjaaz Services Company",
+    "bottomp1": "With the most distinguished workforce, we innovate ideas and capture attention by providing a professional, impressive service of international quality, giving our clients the opportunity to grow, evolve, and excel in the business world.",
     "bottomh2": "Important Links",
-    "ul1": "Request a Service",
+    "ul1": "Request Service",
     "ul2": "About Us",
     "ul3": "Frequently Asked Questions",
     "ul4": "Contact Us",
     "ul5": "Join Us",
     "bottomh3": "Contact Us",
-    "address": "Main Office - Riyadh - Northern Ring Road"
-  },
+    "address": "Main Office - Riyadh - Northern Ring Road",
+    "bottomp5": "Enjaaz Services Company, a registered company with tax number: 300629475600003",
+    "bottomp6": "All rights reserved for Enjaaz Services Company 2023 ©"
+}
+,
   "aboutus": {
     "h1": "About Us",
     "path": "Home /",
-    "h2": "Who is Enjaaz for Services?",
+    "h2": "Who is Enjaaz for Services ?",
     "p1": "Enjaaz Company was founded in 2014 and specializes in providing services for all businesses, projects, facilities, and companies. Our company offers effective guidance and comprehensive, fast solutions to meet the needs of institutions and companies. Our qualified team excels in designing strategic plans aimed at accelerating the problem-solving process. Additionally, we pay special attention to training and qualifying the workforce in these institutions.",
     "h3": "Our Vision",
     "p2": "We are dedicated to achieving a prestigious position in the field of quality and professionalism in our services. We strive to be pioneers in this sector in our country. As a multi-service company, we work with all our strength and harness all our resources to satisfy our customers and motivate our employees. Together, we aim to achieve excellence and innovation.",
@@ -177,6 +186,9 @@
   "p": "Marketing services include a range of activities and strategies aimed at promoting specific products, services, or brands and increasing public awareness of them.",
   "h3": "Marketing Services Package",
   "p2": "Marketing services play a crucial role in promoting the success of companies, increasing their sales, and building strong relationships with customers. These services vary according to the needs of clients and different industries."
+},
+"subsc": {
+  "h1": "Subscribe Now"
 }
 
   
