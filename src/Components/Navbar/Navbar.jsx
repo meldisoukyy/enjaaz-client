@@ -30,31 +30,31 @@ const Navbar = () => {
                 <div className="bottom"  >
                     <ul className="links">
                         <NavLink to="/">
-                            <li>الصفحة الرئيسية</li>
+                            <li>{t('nav.home')}</li>
                         </NavLink>
                         <NavLink to="/about">
-                            <li>نبذة عنا</li>
+                            <li>{t('nav.about')}</li>
                         </NavLink>
                         <NavLink to="/trymeservice">
-                            <li>خدمة جربني</li>
+                            <li>{t('nav.tryMe')}</li>
                         </NavLink>
                         <NavLink to="/service-guide">
-                            <li>دليل الخدمات</li>
+                            <li>{t('nav.guide')}</li>
                         </NavLink>
                         <NavLink to="/callus">
-                            <li>اتصل بنا</li>
+                            <li>{t('nav.call')}</li>
                         </NavLink>
                         <NavLink to="/packages">
-                            <li>الباقات</li>
+                            <li>{t('nav.packages')}</li>
                         </NavLink>
                         <NavLink to="/questions">
-                            <li>الأسئلة الشائعة</li>
+                            <li>{t('nav.CQ')}</li>
                         </NavLink>
                         <NavLink to="/joinus">
-                            <li>انضم إلينا</li>
+                            <li>{t('nav.joinus')}</li>
                         </NavLink>
                         <NavLink to="/offers">
-                            <li className='sale'>العروض</li>
+                            <li className='sale'>{t('nav.offers')}</li>
                         </NavLink>
                     </ul>
                     <div className="numbers">
@@ -119,31 +119,31 @@ const Navbar = () => {
                     <Offcanvas.Body>
                         <ul className="sideLinks">
                             <NavLink to="/">
-                                <li onClick={() => handleClose()}>الصفحة الرئيسية</li>
+                                <li onClick={() => handleClose()}>{t('nav.home')}</li>
                             </NavLink>
                             <NavLink to="/about">
-                                <li onClick={() => handleClose()}>نبذة عنا</li>
+                                <li onClick={() => handleClose()}>{t('nav.about')}</li>
                             </NavLink>
                             <NavLink to="/trymeservice">
-                                <li onClick={() => handleClose()}>خدمة جربني</li>
+                                <li onClick={() => handleClose()}>{t('nav.tryMe')}</li>
                             </NavLink>
                             <NavLink to="/service-guide">
-                                <li onClick={() => handleClose()}>دليل الخدمات</li>
+                                <li onClick={() => handleClose()}>{t('nav.guide')}</li>
                             </NavLink>
                             <NavLink to="/callus">
-                                <li onClick={() => handleClose()}>اتصل بنا</li>
+                                <li onClick={() => handleClose()}>{t('nav.call')}</li>
                             </NavLink>
                             <NavLink to="/packages">
-                                <li onClick={() => handleClose()}>الباقات</li>
+                                <li onClick={() => handleClose()}>{t('nav.packages')}</li>
                             </NavLink>
                             <NavLink to="/questions">
-                                <li onClick={() => handleClose()}>الأسئلة الشائعة</li>
+                                <li onClick={() => handleClose()}>{t('nav.CQ')}</li>
                             </NavLink>
                             <NavLink to="/joinus">
-                                <li onClick={() => handleClose()}>انضم إلينا</li>
+                                <li onClick={() => handleClose()}>{t('nav.joinus')}</li>
                             </NavLink>
                             <NavLink to="/offers">
-                                <li className='sale' onClick={() => handleClose()}>العروض</li>
+                                <li className='sale' onClick={() => handleClose()}>{t('nav.offers')}</li>
                             </NavLink>
                         </ul>
                     </Offcanvas.Body>

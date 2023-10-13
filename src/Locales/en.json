@@ -2,13 +2,95 @@
   "nav": {
     "lang": "العربية",
     "home": "Home",
-    "about": "About us",
-    "tryMe": "Try me service",
-    "guide": "Services guide",
-    "call": "Call us",
-    "packages": "",
-    "CQ": "",
-    "joinus": "",
-    "offers": ""
-  }
+    "about": "About Us",
+    "tryMe": "Try Me Service",
+    "guide": "Services Guide",
+    "call": "Call Us",
+    "packages": "Packages",
+    "CQ": "Common Questions",
+    "joinus": "Join Us",
+    "offers": "Offers"
+  },
+  "carousel1": {
+    "h1": "Enjaaz Company For Services",
+    "h2": "Enjaaz Company For Services",
+    "h3": "Enjaaz Company For Services",
+    "p1": "Experienced pioneers in the business world, where we provide fast and integrated solutions",
+    "p2": "Experienced pioneers in the business world, where we provide fast and integrated solutions",
+    "p3": "Experienced pioneers in the business world, where we provide fast and integrated solutions",
+    "btn1": "Free consultation",
+    "btn2": "Request A Service"
+  },
+  "circles": {
+    "h1": "Enjaaz Services",
+    "c1": "Service Management",
+    "c2": "Register a trademark",
+    "c3": "Establishment Of Facilities",
+    "c4": "Legal Advice",
+    "c5": "All Government Services",
+    "c6": "Wage Protection",
+    "c7": "Reducing Financial Burdens",
+    "c8": "Free Try Me Service"
+  },
+  "SS": {
+    "h1": "You can request a free consultation",
+    "h2": "You can request a free consultation",
+    "p1": "We provide your facility with a business consulting service with the aim of guiding and putting the facility’s management on the right path, which supports the growth of your activity in a balanced and calm work environment.",
+    "p2": "We provide your facility with a business consulting service with the aim of guiding and putting the facility’s management on the right path, which supports the growth of your activity in a balanced and calm work environment.",
+    "btn": "Order now"
+  },
+  "why": {
+    "head": "Why Enjaaz ?",
+    "h1": "Conscious experience",
+    "h2": "Custom uniqueness",
+    "h3": "Quality Excellence",
+    "h4": "Long-term partnership",
+    "p1": "9 years of experience, during which we have deep experience and hundreds of successful experiences, and we give our customers awareness and understanding of the details of our field.",
+    "p2": "You have unique needs, and we are committed to providing customized solutions that perfectly fit your needs.",
+    "p3": "We are committed to providing the highest levels of quality in every aspect of our diverse services.",
+    "p4": "We believe that our relationship with you is not just a transaction, but rather a partnership until we achieve mutual success."
+  },
+  "cq": {
+    "h1": "Frequently Asked Questions",
+    "p1": "All Questions"
+  },
+  "count": {
+    "1": "Service",
+    "2": "Consultations",
+    "3": "Positive Evaluations",
+    "4": "Number of Customers"
+  },
+  "partners": {
+    "h1": "Success Partners"
+  },
+  "reviews": {
+    "h1": "Customer Reviews"
+  },
+  "footer": {
+    "toph1": "Subscribe to the Newsletter",
+    "topemail": "Email",
+    "topbtn": "Subscribe Now",
+    "bottomh1": "Achievement Company for Services",
+    "bottomp1": "With the most distinguished staff, we innovate ideas and draw attention by providing a professional service of global quality. This is to give our clients the opportunity to grow, develop, and excel in the business world.",
+    "bottomh2": "Important Links",
+    "ul1": "Request a Service",
+    "ul2": "About Us",
+    "ul3": "Frequently Asked Questions",
+    "ul4": "Contact Us",
+    "ul5": "Join Us",
+    "bottomh3": "Contact Us",
+    "address": "Main Office - Riyadh - Northern Ring Road"
+  },
+  "aboutus": {
+    "h1": "About Us",
+    "path": "Home /",
+    "h2": "Who is Enjaaz for Services?",
+    "p1": "Enjaaz Company was founded in 2014 and specializes in providing services for all businesses, projects, facilities, and companies. Our company offers effective guidance and comprehensive, fast solutions to meet the needs of institutions and companies. Our qualified team excels in designing strategic plans aimed at accelerating the problem-solving process. Additionally, we pay special attention to training and qualifying the workforce in these institutions.",
+    "h3": "Our Vision",
+    "p2": "We are dedicated to achieving a prestigious position in the field of quality and professionalism in our services. We strive to be pioneers in this sector in our country. As a multi-service company, we work with all our strength and harness all our resources to satisfy our customers and motivate our employees. Together, we aim to achieve excellence and innovation.",
+    "h4": "Our Mission",
+    "p3": "We continuously make efforts to build strong foundations in the areas of innovation and improving the services we offer. We are committed to exploring new opportunities and providing ideal solutions, in addition to investing and offering consultations that enhance efficiency and effectiveness. We aim to build strong cooperative relationships with companies, ministries, and relevant government entities, with the goal of being essential players in the success and prosperity of our clients."
+}
+
+  
 }

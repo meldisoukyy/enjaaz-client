@@ -22,6 +22,25 @@ const ServiceGuide = () => {
         "خدمات التسويق الالكتروني",
         "خدمات التسجيل للعمالة ذات المهن العليا",
     ]
+    const dataEn = [
+        "Salary Management Services Wage Protection System (Monthly)",
+        "Salary Management Services Wage Protection System (Yearly)",
+        "Incorporation Services for Institutions and Companies",
+        "Legal Entity Transformation Services for Establishments",
+        "Ownership Transfer Services for Establishments and Companies",
+        "Financial Burden Relief Services for Establishments",
+        "Zakat and Taxation Services",
+        "Direct Support Services for Government Ministries' Issues",
+        "Salary Management Services Wage Protection System (Monthly)",
+        "Cooperative Insurance Services for Establishments",
+        "Trademark Registration",
+        "Electronic Services Management",
+        "Business Consultation Services",
+        "Design Services",
+        "Digital Marketing Services",
+        "Registration Services for High-Profile Skilled Workers",
+    ];
+    
     const { lang, setlang, t, i18n } = useMyContext();
 
     return (
