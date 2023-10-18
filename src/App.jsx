@@ -20,12 +20,17 @@ import MarketingServices from "./Pages/MarketingServices/MarketingServices";
 import Offers from "./Pages/Offers/Offers";
 import Loader from "./Components/Loader/Loader";
 import { useEffect, useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 function App() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 const location=useLocation().pathname
 useEffect(() => {
   window.scrollTo(0,0)
 }, [location])
+useEffect(() => {
+  AOS.init();
+}, []);
 
   // useEffect(() => {
   //   window.addEventListener('load', () => {
@@ -55,7 +60,7 @@ useEffect(() => {
             <Navbar />
             <Outlet />
             <Footer />
-            <a className="whatsapp" href="https://wa.me/01004993015">
+            <a className="whatsapp" href="https://wa.me/01004993015" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
               <div className="image">
                 <img src="/images/whatsappi.png" alt="" />
               </div>
