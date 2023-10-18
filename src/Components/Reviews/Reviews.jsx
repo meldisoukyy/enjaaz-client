@@ -5,9 +5,14 @@ import { Link } from 'react-router-dom'
 import { AiFillStar, AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import { AiOutlineStar } from 'react-icons/ai';
 import { useMyContext } from '../../context/MyContext';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Reviews = () => {
     const [num, setNum] = useState(3);
     const { lang, setlang, t, i18n } = useMyContext();
+    useEffect(() => {
+      AOS.init();
+    }, []);
     useEffect(() => {
       const screenWidth = window.innerWidth;
   
@@ -38,7 +43,7 @@ const Reviews = () => {
       };
     }, []);
   return (
-    <div className='Reviews'>
+    <div className='Reviews' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
         <div className="container" >
         <h1 className='secH' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>{t('reviews.h1')}</h1>
 

@@ -61,6 +61,7 @@
     font-weight: 600;
     color: #ffffff;
     text-align: center !important;
+    
   }
   /* home features //=============================*/
   .home-features {
@@ -143,12 +144,13 @@
     transform: translate(-50%, -50%);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    border: 2px solid transparent;
+    border: 3px solid transparent;
     border-top-color: #2D1989;
     border-bottom-color: #2D1989;
     border-radius: 50%;
-    animation: rotateCenter 8s infinite forwards linear;
+    animation: rotateCenter 12s infinite forwards linear;
   }
+ 
   .home-features .features-circles .arounds img {
     width: 100%;
   }
@@ -170,11 +172,11 @@
     transform: translate(-50%, -50%);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    border: 2px solid transparent;
+    border: 3px solid transparent;
     border-top-color: #2D1989;
     border-bottom-color: #2D1989;
     border-radius: 50%;
-    animation: rotateCenterReverce 8s infinite forwards linear;
+    animation: rotateCenterReverce 12s infinite forwards linear;
   }
   .home-features .features-circles .arounds .around .around .around::before {
     display: none;
@@ -189,7 +191,7 @@
     border-top-color: #2D1989;
     border-bottom-color: #2D1989;
     display: block;
-    animation: rotateCenter 8s infinite forwards linear;
+    animation: rotateCenter 12s infinite forwards linear;
   }
   .home-features .feature-box {
     width: 115px;
@@ -207,6 +209,11 @@
   }
   .home-features .feature-box .img:hover::before {
     left: 0;
+    scale: 1.2;
+    
+  }
+  .home-features .feature-box .img:hover {
+    rotate: 360deg;
   }
   .home-features .feature-box .img {
     position: relative;
@@ -226,7 +233,7 @@
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.43);
     pointer-events: none;
-    transition: 0.3s ease-out;
+    transition: 0.6s ease-out;
   }
   .home-features .feature-box .img img {
     width: 100%;
@@ -239,6 +246,9 @@
     font-weight: 600;
     font-size: 24px;
     margin-top: 10px;
+    @media (max-width:767px) {
+      font-size: 20px;
+    }
 
   }
   @media (max-width: 767px) {
@@ -302,19 +312,19 @@
     }
   }
   @keyframes rotateCenter {
-    from {
+    0% ,20%,40%,60%,80%,100% {
       transform: translate(-50%, -50%) rotate(0);
     }
-    to {
-      transform: translate(-50%, -50%) rotate(360deg);
+    10% ,30%,50%,70%,90% {
+      transform: translate(-50%, -50%) rotate(90deg);
     }
   }
   @keyframes rotateCenterReverce {
-    from {
+    0% ,20%,40%,60%,80%,100% {
       transform: translate(-50%, -50%) rotate(0);
     }
-    to {
-      transform: translate(-50%, -50%) rotate(-360deg);
+    10% ,30%,50%,70%,90% {
+      transform: translate(-50%, -50%) rotate(-90deg);
     }
   }
   .flash-awamer {

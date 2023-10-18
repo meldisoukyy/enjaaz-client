@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./CommonQ.scss";
 import Accordion from "react-bootstrap/Accordion";
 import { useMyContext } from "../../context/MyContext";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 const CommonQ = ({ full }) => {
   const { lang, setlang, t, i18n } = useMyContext();
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className="CommonQ">
+    <div className="CommonQ" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='200'>
       <div
         className="container"
         style={lang === "ar" ? { direction: "rtl" } : { direction: "ltr" }}
@@ -21,9 +25,9 @@ const CommonQ = ({ full }) => {
           )}
         </div>
         {!full && (
-          <div className="bottom">
+          <div className="bottom" >
             <Accordion alwaysOpen>
-              <Accordion.Item eventKey="0">
+              <Accordion.Item eventKey="0" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                 <Accordion.Header>
                   <p>ما هي أنواع المنشآت التي تقدم انجاز الخدمات لها؟</p>
                 </Accordion.Header>
@@ -35,7 +39,7 @@ const CommonQ = ({ full }) => {
                   </p>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="1">
+              <Accordion.Item eventKey="1" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                 <Accordion.Header>
                   <p>
                     هل تقدم إنجاز خدمات بإدارة الخدمات الإلكترونيّة لجميع
@@ -49,7 +53,7 @@ const CommonQ = ({ full }) => {
                   </p>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="2">
+              <Accordion.Item eventKey="2" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                 <Accordion.Header>
                   <p>هل لدى انجاز خدمات عقود شهرية أو سنوية؟</p>
                 </Accordion.Header>
@@ -65,11 +69,11 @@ const CommonQ = ({ full }) => {
           </div>
         )}
         {full && (
-          <div className="bottom">
+          <div className="bottom" >
             <Accordion alwaysOpen>
               {[...Array(7)].map((item, i) => {
                 return (
-                  <Accordion.Item eventKey={`${i}`}>
+                  <Accordion.Item eventKey={`${i}`} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                     <Accordion.Header>
                       <p>هل لدى انجاز خدمات عقود شهرية أو سنوية؟</p>
                     </Accordion.Header>

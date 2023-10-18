@@ -14,9 +14,13 @@
   --mcolor: #2d1989;
   --scolor: #02c1db;
 }
+.offcanvas{
 
-* {
   transition: 0.5s !important;
+  
+}
+*{
+  transition: 0.5s;
 }
 
 a {
@@ -120,7 +124,6 @@ a.active {
   }
 }
 .app {
-  
   .whatsapp {
     background-color: var(--mcolor);
     position: fixed;
@@ -132,27 +135,38 @@ a.active {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    &:hover .image{
-      animation: shake 0.8s infinite ;
+    &:hover .image {
+      animation: shake 0.8s infinite;
     }
+
     @keyframes shake {
-      0% { 
-        rotate: 0deg;
+      0%,
+      100% {
+        transform: rotate(0deg);
+        transform-origin: 50% 0;
       }
-      25% { 
-        rotate: 45deg;
+      10% {
+        transform: rotate(2deg);
       }
-      // 50% { 
-      //   rotate: 0deg;
-      //  }
-      75% { 
-        rotate: -25deg;
-       }
-      100% { 
-        rotate: 0deg;
+      20%,
+      40%,
+      60% {
+        transform: rotate(-4deg);
+      }
+      30%,
+      50%,
+      70% {
+        transform: rotate(4deg);
+      }
+      80% {
+        transform: rotate(-2deg);
+      }
+      90% {
+        transform: rotate(2deg);
       }
     }
-    .image{
+
+    .image {
       width: 35px;
       height: auto;
     }
@@ -161,7 +175,6 @@ a.active {
       height: 50px;
       padding: 10px;
     }
-  
   }
   .container {
     width: 100%;
@@ -289,14 +302,14 @@ a.active {
           font-size: 29px;
         }
       }
-      span{
+      span {
         font-weight: 500;
-          font-family: "rptBold";
-          font-size: 18px;
-          color: #6b6b6b;
-          @media (max-width: 992px) {
-            text-align: center !important;
-          }
+        font-family: "rptBold";
+        font-size: 18px;
+        color: #6b6b6b;
+        @media (max-width: 992px) {
+          text-align: center !important;
+        }
       }
       p {
         font-size: 24px;

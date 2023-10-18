@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Partners.scss'
 import { useMyContext } from '../../context/MyContext';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Partners = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-
+    useEffect(() => {
+        AOS.init();
+      }, []);
     const data=["/images/partners/1partners.png","/images/partners/2partners.png","/images/partners/3partners.png","/images/partners/4partners.png","/images/partners/5partners.png","/images/partners/6partners.png","/images/partners/7partners.png",]
   return (
-    <div className='Partners'>
+    <div className='Partners' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
         <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
             <h1 className='secH'>{t('partners.h1')}</h1>
             <div className="row d-flex justify-content-evenly">

@@ -21,7 +21,7 @@ import Offers from "./Pages/Offers/Offers";
 import Loader from "./Components/Loader/Loader";
 import { useEffect, useState } from "react";
 function App() {
-  const [isPageLoaded, setIsPageLoaded] = useState(true);
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
 const location=useLocation().pathname
 useEffect(() => {
   window.scrollTo(0,0)
@@ -40,9 +40,9 @@ useEffect(() => {
   //   };
   // }, []);
   useEffect(() => {
-    // setTimeout(() => {
-    //   setIsPageLoaded(true);
-    // }, 3000);
+    setTimeout(() => {
+      setIsPageLoaded(true);
+    }, 3000);
   }, []);
 
   const Layout = () => {

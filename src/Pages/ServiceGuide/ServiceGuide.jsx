@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './ServiceGuide.scss'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import CommonQ from '../../Components/CommonQ/CommonQ'
 import { useMyContext } from '../../context/MyContext'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 const ServiceGuide = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-
+    useEffect(() => {
+        AOS.init();
+      }, []);
     const data = lang === "ar" ?[
         "خدامات إدارة الرواتب نظام حماية الأجور (الشهري)",
         "خدامات إدارة الرواتب نظام حماية الأجور(السنوي)",
@@ -42,9 +46,9 @@ const ServiceGuide = () => {
         "Registration Services for High-Profile Skilled Workers",
     ];
     return (
-        <div className='ServiceGuide'>
+        <div className='ServiceGuide' >
             <CommonHead title={t('guide.h1')} path={t('guide.path')} />
-            <div className="guide">
+            <div className="guide" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
                 <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                     <h1 className='section-title'>{t('guide.h2')}</h1>
                     <div className="items">

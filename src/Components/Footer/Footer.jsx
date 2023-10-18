@@ -1,12 +1,19 @@
 import { Link } from "react-router-dom";
 import { useMyContext } from "../../context/MyContext";
 import "./Footer.scss";
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Footer = () => {
   const { lang, setlang, t, i18n } = useMyContext();
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className="Footer">
+    <div className="Footer" >
       <div
         className="container"
+        data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'
         style={lang === "ar" ? { direction: "rtl" } : { direction: "ltr" }}
       >
         <div className="top">

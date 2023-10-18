@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Different.scss";
 import { useMyContext } from "../../context/MyContext";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 const Different = () => {
   const { lang, setlang, t, i18n } = useMyContext();
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className="Different">
+    <div className="Different" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='200'>
       <h2 className="section-title text-center mb-5">{t('why.head')}</h2>
 
       <div className="container">
         <div className="row">
-          <div className="Diffcard col-lg-3 col-md-6 col-12">
+          <div className="Diffcard col-lg-3 col-md-6 col-12" >
             <div className="image">
               {/* <img src="/images/1st1st.png" alt="" /> */}
               <svg
@@ -28,7 +33,7 @@ const Different = () => {
             <h2>{t('why.h1')}</h2>
             <p>{t('why.p1')}</p>
           </div>
-          <div className="Diffcard col-lg-3 col-md-6 col-12">
+          <div className="Diffcard col-lg-3 col-md-6 col-12" >
             <div className="image">
               {/* <img src="/images/2st2st.png" alt="" /> */}
               <svg
@@ -47,7 +52,7 @@ const Different = () => {
             <h2>{t('why.h2')}</h2>
             <p>{t('why.p2')}</p>
           </div>
-          <div className="Diffcard col-lg-3 col-md-6 col-12">
+          <div className="Diffcard col-lg-3 col-md-6 col-12" >
             <div className="image">
               {/* <img src="/images/3333.png" alt="" /> */}
               <svg
@@ -78,7 +83,7 @@ const Different = () => {
             <h2>{t('why.h3')}</h2>
             <p>{t('why.p3')}</p>
           </div>
-          <div className="Diffcard col-lg-3 col-md-6 col-12">
+          <div className="Diffcard col-lg-3 col-md-6 col-12" >
             <div className="image">
               {/* <img src="/images/4444.png" alt="" /> */}
               <svg

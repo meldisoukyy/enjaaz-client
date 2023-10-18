@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CommonHead from '../../Components/CommonHead/CommonHead'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const FreeConsulting = () => {
+    useEffect(() => {
+        AOS.init();
+      }, []);
     return (
         <div>
             <CommonHead title="استشارة مجانية" path="الصفحة الرئيسية \" />
-            <div className="EnjazzForm">
+            <div className="EnjazzForm" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
                 <div className="container">
                     <h1 className='section-title'>طلب استشارة مجانية</h1>
                     <p>نوفر لمنشأتكم خدمة استشارات الأعمال وذلك بهدف التوجيه ووضع سير إدارة المنشأة على الطريق الصحيح مما يدعم نمو نشاطك في بيئة عمل متزنة وهادئة .</p>

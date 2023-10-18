@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './navbar.scss'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { AiOutlineClose } from 'react-icons/ai';
 import { Link, NavLink } from 'react-router-dom';
 import { useMyContext } from '../../context/MyContext';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 const Navbar = () => {
+    useEffect(() => {
+        AOS.init();
+      }, []);
     const [isOpened, setIsOpened] = useState(false);
 
     const toggleMenu = () => {
@@ -14,7 +19,7 @@ const Navbar = () => {
     const handleShow = () => setIsOpened(true);
     const { lang, setlang, t, i18n } = useMyContext();
     return (
-        <div className='Navbar pt-5' style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
+        <div className='Navbar pt-5' style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
             <div className="container">
                 <div className="top d-flex justify-content-between align-items-end  pb-3">
                     <div className="image">
@@ -62,7 +67,7 @@ const Navbar = () => {
                             <div className="icon">
                                 <img src="/images/phoneNav.png" alt="" />
                             </div>
-                            <p>0112634168</p>
+                            <p>920013581</p>
                         </div>
                         <div className="num">
                             <div className="icon">
@@ -144,6 +149,12 @@ const Navbar = () => {
                             </NavLink>
                             <NavLink to="/offers">
                                 <li className='sale' onClick={() => handleClose()}>{t('nav.offers')}</li>
+                            </NavLink>
+                            <NavLink to="/offers">
+                                <li className='sale' onClick={() => {
+                                    setlang(lang === "ar" ? "en" : "ar"),
+                                        i18n.changeLanguage(lang === "en" ? "ar" : "en");
+                                ;handleClose()}}>{t('nav.lang')}</li>
                             </NavLink>
                         </ul>
                     </Offcanvas.Body>

@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import './Offers.scss'
 import { useMyContext } from '../../context/MyContext';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 const Offers = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-
+    useEffect(() => {
+        AOS.init();
+      }, []);
     const data = [
         {
             img: '/images/1offer.png',
@@ -41,14 +45,14 @@ const Offers = () => {
     return (
         <>
             <CommonHead title="العروض" path="الصفحة الرئيسية \" />
-            <div className='Offers' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
+            <div className='Offers' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
                 <div className="container">
                     <h1>عروضنا</h1>
                     <h2 className='section-title text-center my-5'>العروض  الحالية</h2>
                     <div className="packs">
                         {data.map((item, i) => {
                             return (
-                                <div className="pack" key={i}>
+                                <div className="pack" key={i} data-aos="fade-in" data-aos-duration="2000" data-aos-delay={`${(i + 1) * 50}`}>
                                     <div className="image">
                                         <img src={item.img} alt="" />
                                     </div>

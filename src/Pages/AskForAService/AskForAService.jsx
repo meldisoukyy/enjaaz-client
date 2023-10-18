@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CommonHead from '../../Components/CommonHead/CommonHead'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 const AskForAService = () => {
+    useEffect(() => {
+        AOS.init();
+      }, []);
     return (
         <div>
             <CommonHead title="طلب خدمة" path="الصفحة الرئيسية \" />
-            <div className="EnjazzForm">
+            <div className="EnjazzForm" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
                 <div className="container">
                     <h1 className='section-title'>طلب خدمة</h1>
                     <p>نحن هنا من أجلك لذا لا تتردد في الاتصال بنا وسوف نبذل كل جهدنا للتواصل معك في أقرب وقت.</p>

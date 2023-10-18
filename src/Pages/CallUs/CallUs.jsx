@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './callUs.scss'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import { useMyContext } from '../../context/MyContext';
 const CallUs = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-
+    useEffect(() => {
+        AOS.init();
+      }, []);
     return (
         <div className='CallUs'>
             <CommonHead title={t('callus.h1')} path={t('callus.path')} />
-            <div className="Map">
+            <div className="Map" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
                 <div className="container" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
                     <div className="top">
                         <div className="row gap-3">
@@ -37,7 +41,7 @@ const CallUs = () => {
                     </div>
                 </div>
             </div>
-            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
+            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
                 <div className="container">
                     <h1 className='section-title'>{t('callus.h2')}</h1>
                     <p>{t('callus.p')}</p>

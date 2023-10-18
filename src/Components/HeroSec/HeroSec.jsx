@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './HeroSec.scss'
 import Carousel from 'nuka-carousel';
  import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { useMyContext } from '../../context/MyContext';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 const HeroSec = () => {
     const { lang, setlang, t, i18n } = useMyContext();
+    useEffect(() => {
+        AOS.init();
+      }, []);
     return (
         <div className='HeroSec'>
             <Carousel
@@ -31,9 +36,9 @@ const HeroSec = () => {
             >
                 <div className="slide slide1">
                     <div className="container" style={lang === "ar" ? {direction: 'ltr'} : {direction: 'rtl'}}>
-                        <h1>{t('carousel1.h1')}</h1>
-                        <p>{t('carousel1.p1')}</p>
-                        <div className="buttons">
+                        <h1 data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>{t('carousel1.h1')}</h1>
+                        <p data-aos="fade-in" data-aos-duration="2000" data-aos-delay='600'>{t('carousel1.p1')}</p>
+                        <div className="buttons" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='700'>
                             <Link to='/freeconsulting'>
                                 <div className="button button1">{t('carousel1.btn1')}</div>
                             </Link>
@@ -45,9 +50,9 @@ const HeroSec = () => {
                 </div>
                 <div className="slide slide2">
                     <div className="container" style={lang === "ar" ? {direction: 'ltr'} : {direction: 'rtl'}}>
-                        <h1>{t('carousel1.h2')}</h1>
-                        <p>{t('carousel1.p2')}</p>
-                        <div className="buttons">
+                        <h1 data-aos-duration="2000" data-aos-delay='500'>{t('carousel1.h2')}</h1>
+                        <p data-aos-duration="2000" data-aos-delay='600'>{t('carousel1.p2')}</p>
+                        <div className="buttons" data-aos-duration="2000" data-aos-delay='700'>
                             <Link to='/freeconsulting'>
                                 <div className="button button1">{t('carousel1.btn1')}</div>
                             </Link>
@@ -59,9 +64,9 @@ const HeroSec = () => {
                 </div>
                 <div className="slide slide3">
                     <div className="container" style={lang === "ar" ? {direction: 'ltr'} : {direction: 'rtl'}}>
-                        <h1>{t('carousel1.h3')}</h1>
-                        <p>{t('carousel1.p3')}</p>
-                        <div className="buttons">
+                        <h1 data-aos-duration="2000" data-aos-delay='500'>{t('carousel1.h3')}</h1>
+                        <p data-aos-duration="2000" data-aos-delay='600'>{t('carousel1.p3')}</p>
+                        <div className="buttons" data-aos-duration="2000" data-aos-delay='700'>
                             <Link to='/freeconsulting'>
                                 <div className="button button1">{t('carousel1.btn1')}</div>
                             </Link>

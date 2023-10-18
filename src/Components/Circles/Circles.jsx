@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './circles.scss'
 import { useMyContext } from '../../context/MyContext';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Circles = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-
+    useEffect(() => {
+        AOS.init();
+      }, []);
     return (
-        <div className='Circles'>
+        <div className='Circles' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
             <section className="home-features">
                 <h2 className="section-title text-center mb-5">{t('circles.h1')}</h2>
                 <div className="container">
                     <div className="row align-items-center justify-content-center">
                         <div className="col-12 col-lg-3">
-                            <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-end">
+                            <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-end" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
                                     <img
                                         loading="lazy"
@@ -21,7 +25,7 @@ const Circles = () => {
                                 </div>
                                 <p className="title text-center">{t('circles.c1')}</p>
                             </div>
-                            <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center">
+                            <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
                                     <img
                                         loading="lazy"
@@ -31,7 +35,7 @@ const Circles = () => {
                                 </div>
                                 <p className="title text-center">{t('circles.c2')}</p>
                             </div>
-                            <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-end">
+                            <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-end" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
                                     <img
                                         loading="lazy"
@@ -43,7 +47,7 @@ const Circles = () => {
                             </div>
                         </div>
                         <div className="col-12 col-md-8 col-lg-6">
-                            <div className="features-circles">
+                            <div className="features-circles" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <img
                                     loading="lazy"
                                     src="https://aait.sa/public/site/img/empty.png"
@@ -64,7 +68,7 @@ const Circles = () => {
                                         className="empty"
                                     />
                                 </div>
-                                <span className="arounds">
+                                <span className="arounds" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <img
                                         loading="lazy"
                                         src="https://aait.sa/public/site/img/empty.png"
@@ -82,7 +86,7 @@ const Circles = () => {
                             </div>
                         </div>
                         <div className="col-12 col-lg-3 f-flex">
-                            <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-start">
+                            <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-start" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
                                     <img
                                         loading="lazy"
@@ -92,7 +96,7 @@ const Circles = () => {
                                 </div>
                                 <p className="title text-center text-lg-start">{t('circles.c4')}</p>
                             </div>
-                            <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center">
+                            <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
                                     <img
                                         loading="lazy"
@@ -102,7 +106,7 @@ const Circles = () => {
                                 </div>
                                 <p className="title">{t('circles.c5')}</p>
                             </div>
-                            <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-start">
+                            <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-start" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
                                     <img
                                         loading="lazy"
@@ -116,7 +120,7 @@ const Circles = () => {
                     </div>
                     <div className="d-flex justify-content-evenly">
                         
-                        <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column">
+                        <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                             <div className="img">
                                 <img
                                     loading="lazy"
@@ -126,7 +130,7 @@ const Circles = () => {
                             </div>
                             <p className="title w-100">{t('circles.c7')}</p>
                         </div>
-                        <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column">
+                        <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                             <div className="img">
                                 <img
                                     loading="lazy"
