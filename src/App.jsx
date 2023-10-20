@@ -22,6 +22,7 @@ import Loader from "./Components/Loader/Loader";
 import { useEffect, useState } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import DedicatedAsk from "./Pages/DedicatedAsk/DedicatedAsk";
 function App() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 const location=useLocation().pathname
@@ -44,10 +45,15 @@ useEffect(() => {
   //     });
   //   };
   // }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsPageLoaded(true);
+  //   }, 3000);
+  // }, []);
   useEffect(() => {
-    setTimeout(() => {
+    window.onload = () => {
       setIsPageLoaded(true);
-    }, 3000);
+    };
   }, []);
 
   const Layout = () => {
@@ -87,6 +93,7 @@ useEffect(() => {
         <Route path="/questions" element={<Questions />} />
         <Route path="/joinus" element={<JoinUs />} />
         <Route path="/askforaservice" element={<AskForAService />} />
+        <Route path="/askforaservice/:id" element={<DedicatedAsk />} />
         <Route path="/freeconsulting" element={<FreeConsulting />} />
         <Route path="/trymeservice" element={<TryMeService />} />
       </Route>

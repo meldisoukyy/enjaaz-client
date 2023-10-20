@@ -1,13 +1,13 @@
 export const PartnersApi = () => {
-    return fetch('https://enjaaz.com.sa/api/partners/', {
+    return fetch('https://5275-41-238-120-134.ngrok-free.app/', {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
     }).then((response) => {
-        return response.json();
+        return response;
     });
 };
 export const QuestionsApi = () => {
-    return fetch('https://enjaaz.com.sa/api/questions/', {
+    return fetch('https://server.enjaaz.com.sa/api/questions/', {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
     }).then((response) => {
@@ -15,7 +15,7 @@ export const QuestionsApi = () => {
     });
 };
 export const PopularQuestionsApi = () => {
-    return fetch('https://enjaaz.com.sa/api/questions/popular/', {
+    return fetch('https://server.enjaaz.com.sa/api/questions/popular/', {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
     }).then((response) => {
@@ -23,7 +23,7 @@ export const PopularQuestionsApi = () => {
     });
 };
 export const ReviewsApi = () => {
-    return fetch('https://enjaaz.com.sa/api/reviews/', {
+    return fetch('https://server.enjaaz.com.sa/api/reviews/', {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
     }).then((response) => {
@@ -31,7 +31,7 @@ export const ReviewsApi = () => {
     });
 };
 export const StatisticsApi = () => {
-    return fetch('https://enjaaz.com.sa/api/statistics/', {
+    return fetch('https://server.enjaaz.com.sa/api/statistics/', {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
     }).then((response) => {
@@ -39,7 +39,7 @@ export const StatisticsApi = () => {
     });
 };
 export const SignupApiApi = (email, username, password) => {
-    return fetch('https://enjaaz.com.sa/api/subscribers/', {
+    return fetch('https://server.enjaaz.com.sa/api/subscribers/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
