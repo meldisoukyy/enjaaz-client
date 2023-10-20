@@ -41,14 +41,14 @@
   },
   "why": {
     "head": "? Why Enjazz",
-    "h1": "Conscious experience",
-    "h2": "Custom uniqueness",
+    "h1": "Conscious Experience",
+    "h2": "Tailored Uniqueness",
     "h3": "Quality Excellence",
-    "h4": "Long-term partnership",
-    "p1": "9 years of experience, during which we have deep experience and hundreds of successful experiences, and we give our customers awareness and understanding of the details of our field.",
-    "p2": "You have unique needs, and we are committed to providing customized solutions that perfectly fit your needs.",
-    "p3": "We are committed to providing the highest levels of quality in every aspect of our diverse services.",
-    "p4": "We believe that our relationship with you is not just a transaction, but rather a partnership until we achieve mutual success."
+    "h4": "Long-term Collaboration",
+    "p1": "With 9 years of experience, we have gained extensive knowledge and completed hundreds of projects, providing our clients with awareness and a comprehensive understanding of our industry.",
+    "p2": "Your requirements are distinct, and we are committed to offering customized solutions that precisely match your expectations.",
+    "p3": "We are devoted to delivering the highest standards of quality across all aspects of our diverse services.",
+    "p4": "We view our relationship with you as more than just a transaction; it's a partnership aimed at mutual success."
   },
   "cq": {
     "h1": "Frequently Asked Questions",
@@ -93,12 +93,12 @@
   "aboutus": {
     "h1": "About Us",
     "path": "Home /",
-    "h2": "Who is Enjaaz for Services ?",
-    "p1": "Enjaaz Company was founded in 2014 and specializes in providing services for all businesses, projects, facilities, and companies. Our company offers effective guidance and comprehensive, fast solutions to meet the needs of institutions and companies. Our qualified team excels in designing strategic plans aimed at accelerating the problem-solving process. Additionally, we pay special attention to training and qualifying the workforce in these institutions.",
+    "h2": "Who Are We ?",
+    "p1": "Founded in 2014, Enjaaz Company is a specialist in catering to the requirements of businesses, projects, institutions, and corporations. Our company extends adept guidance and rapid, all-encompassing solutions meticulously tailored to fulfill the demands of establishments and enterprises. Our accomplished team excels in crafting systematic strategies to expedite the resolution of challenges. Furthermore, we underscore the significance of nurturing and honing the workforce within these entities.",
     "h3": "Our Vision",
-    "p2": "We are dedicated to achieving a prestigious position in the field of quality and professionalism in our services. We strive to be pioneers in this sector in our country. As a multi-service company, we work with all our strength and harness all our resources to satisfy our customers and motivate our employees. Together, we aim to achieve excellence and innovation.",
+    "p2": "Founded in 2014, Enjaaz Company is a specialist in catering to the requirements of businesses, projects, institutions, and corporations. Our company extends adept guidance and rapid, all-encompassing solutions meticulously tailored to fulfill the demands of establishments and enterprises. Our accomplished team excels in crafting systematic strategies to expedite the resolution of challenges. Furthermore, we underscore the significance of nurturing and honing the workforce within these entities.",
     "h4": "Our Mission",
-    "p3": "We continuously make efforts to build strong foundations in the areas of innovation and improving the services we offer. We are committed to exploring new opportunities and providing ideal solutions, in addition to investing and offering consultations that enhance efficiency and effectiveness. We aim to build strong cooperative relationships with companies, ministries, and relevant government entities, with the goal of being essential players in the success and prosperity of our clients."
+    "p3": "Our unwavering efforts are directed towards constructing robust pillars in the domains of innovation and service augmentation. We are dedicated to actively seeking out novel prospects and delivering the utmost solutions. Additionally, we allocate resources to furnish consultations that amplify efficiency and efficacy. We aspire to foster resilient collaborative bonds with corporations, ministries, and pertinent governmental bodies. Our objective revolves around playing pivotal roles in driving the accomplishments and advancement of our valued clientele."
 }
 ,
 "Tryme": {
@@ -147,14 +147,14 @@
   "h1": "Packages",
   "path": "Home Page /",
   "h2": "Enjaaz Packages",
-  "p": "We appreciate the needs of our customers according to the size of their companies, so we offer prices that meet the needs with the highest capabilities and international quality.",
+  "p": "Because of the scale of our clients' businesses, we understand their specific demands. As a result, we provide customised pricing that is aligned with satisfying their objectives to the greatest extent possible while keeping worldwide quality standards.",
   "p1": "We have different grades that classify the service related to the specialized needs, aiming to provide the best service for specialists.",
   "btn1": "Service Management Package",
-  "p2": "This package is specialized in providing a complete solution for managing salaries and benefits for companies, helping them achieve higher efficiency and better focus on their business growth.",
+  "p2": "This specialized package offers a comprehensive solution for companies to efficiently manage their payroll and benefits, enabling them to achieve higher efficiency and better focus on business growth.",
   "btn2": "Payroll Management Package",
-  "p3": "This service aims to enhance the unique identity that distinguishes the company from its competitors in the market. It plays a crucial role in building trust and loyalty with customers, increasing awareness of the company, and achieving success in the market.",
+  "p3": "This service aims to enhance the unique identity that distinguishes a company from its competitors in the market. It plays a pivotal role in building trust, and customer loyalty, increasing brand awareness, and achieving success in the market.",
   "btn3": "Design Services Package",
-  "p4": "Marketing services include a range of activities and strategies aimed at promoting specific products, services, or brands and increasing public awareness of them.",
+  "p4": "Marketing services encompass a range of activities and strategies aimed at promoting specific products, services, or brands and increasing audience awareness",
   "btn4": "Marketing Services Package"
 },
 "package1": {
@@ -168,22 +168,22 @@
   "h1": "Payroll Management Package",
   "path": "Home Page / Packages /",
   "h2": "Payroll Management Package",
-  "p": "This package is specialized in providing a complete solution for managing salaries and benefits for companies, helping them achieve higher efficiency and better focus on their business growth.",
+  "p": "This specialized package offers a comprehensive solution for companies to efficiently manage their payroll and benefits, enabling them to achieve higher efficiency and better focus on business growth.",
   "h3": "Payroll Management Package"
 },
 "package3": {
-  "h1": "Design Services Package",
+  "h1": "Design and Branding Services Package",
   "path": "Home Page / Packages /",
-  "h2": "Design Services Package",
-  "p": "This service aims to enhance the unique identity that distinguishes the company from its competitors in the market. It plays a crucial role in building trust and loyalty with customers, increasing awareness of the company, and achieving success in the market.",
-  "h3": "Design Services Package",
+  "h2": "Design and Branding Services Package",
+  "p": "This service aims to enhance the unique identity that distinguishes a company from its competitors in the market. It plays a pivotal role in building trust, and customer loyalty, increasing brand awareness, and achieving success in the market.",
+  "h3": "Design and Branding Services Package",
   "p2": "These are just a few examples of the design services available and can be customized according to the needs of clients and different industries."
 },
 "package4": {
   "h1": "Marketing Services Package",
   "path": "Home Page / Packages /",
   "h2": "Marketing Services Package",
-  "p": "Marketing services include a range of activities and strategies aimed at promoting specific products, services, or brands and increasing public awareness of them.",
+  "p": "Marketing services encompass a range of activities and strategies aimed at promoting specific products, services, or brands and increasing audience awareness",
   "h3": "Marketing Services Package",
   "p2": "Marketing services play a crucial role in promoting the success of companies, increasing their sales, and building strong relationships with customers. These services vary according to the needs of clients and different industries."
 },

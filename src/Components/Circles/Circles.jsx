@@ -47,7 +47,7 @@ const Circles = () => {
                             </div>
                         </div>
                         <div className="col-12 col-md-8 col-lg-6">
-                            <div className="features-circles" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                            <div className="features-circles" >
                                 <img
                                     loading="lazy"
                                     src="https://aait.sa/public/site/img/empty.png"
@@ -68,7 +68,7 @@ const Circles = () => {
                                         className="empty"
                                     />
                                 </div>
-                                <span className="arounds" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                                <span className="arounds">
                                     <img
                                         loading="lazy"
                                         src="https://aait.sa/public/site/img/empty.png"

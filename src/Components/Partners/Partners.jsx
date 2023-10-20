@@ -3,10 +3,14 @@ import './Partners.scss'
 import { useMyContext } from '../../context/MyContext';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { PartnersApi } from '../../Apis/Apis';
 const Partners = () => {
     const { lang, setlang, t, i18n } = useMyContext();
     useEffect(() => {
         AOS.init();
+      }, []);
+    useEffect(() => {
+        PartnersApi().then((res)=>console.log(res))
       }, []);
     const data=["/images/partners/1partners.png","/images/partners/2partners.png","/images/partners/3partners.png","/images/partners/4partners.png","/images/partners/5partners.png","/images/partners/6partners.png","/images/partners/7partners.png",]
   return (
