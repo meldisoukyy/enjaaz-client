@@ -27,7 +27,7 @@ const CallUs = () => {
     const handleSubmit = () => {
         if (name !== '' && mobile !== '' && isEmailValid(email)) {
             console.log(name,email,mobile,reason,message)
-            ContactUsApi(name,email,mobile,reason,message).then((res) => { console.log(res); setdata(res); }).then(()=>data&&Swal.fire({
+            ContactUsApi(name,email,mobile,reason,message).then((res) => { console.log(res); setdata(res); }).then(()=>data.id&&Swal.fire({
                 title: lang === "ar" ? 'تم' : 'Submited',
                 text: lang === "ar" ?'تم ارسال البيانات بنجاح':'Data was sent successfully',
                 icon: 'success',
