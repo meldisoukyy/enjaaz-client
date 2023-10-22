@@ -66,7 +66,7 @@ useEffect(() => {
             <Navbar />
             <Outlet />
             <Footer />
-            <a className="whatsapp" href="https://wa.me/01004993015" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
+            <a className="whatsapp" href="https://wa.me/+966502144449" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
               <div className="image">
                 <img src="/images/whatsappi.png" alt="" />
               </div>

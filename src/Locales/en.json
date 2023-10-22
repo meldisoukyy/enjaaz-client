@@ -130,6 +130,18 @@
   "path": "Home Page /",
   "h2": "Enjaaz Service Guide"
 },
+"askService": {
+  "h1": "Request A Service",
+  "path": "Home Page /",
+  "p": "We are here for you so do not hesitate to contact us and we will do our best to contact you as soon as possible."
+}
+,
+"FreeConsulting": {
+  "h1": "Free Consulting",
+  "h2": "Request A Free Consulting",
+  "path": "Home Page /",
+  "p": "We provide your facility with a business consulting service with the aim of guiding it and its administrative path on the right path, which supports your activity in a balanced and purposeful work environment."
+},
 "callus": {
   "h1": "Contact Us",
   "path": "Home Page /",

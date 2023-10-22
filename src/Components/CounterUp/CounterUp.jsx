@@ -4,6 +4,7 @@ import CountUp from 'react-countup';
 import { useMyContext } from "../../context/MyContext";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import { StatisticsApi } from '../../Apis/Apis';
 const CounterUp = () => {
     const { lang, setlang, t, i18n } = useMyContext();
     const [scrolledToSection, setScrolledToSection] = useState(false);
@@ -34,6 +35,10 @@ const CounterUp = () => {
     useEffect(() => {
         AOS.init();
       }, []);
+      const [data, setdata] = useState([])
+    useEffect(() => {
+        StatisticsApi().then((res)=>{setdata(res)})
+      }, []);
     return (
         <div className='CounterUp' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
             <div className="container">
@@ -47,7 +52,7 @@ const CounterUp = () => {
 
                                 <CountUp
                                     start={0}
-                                    end={500}
+                                    end={data.services}
                                     duration={5}
                                 />
                             )}
@@ -63,7 +68,7 @@ const CounterUp = () => {
 
                             <CountUp
                                 start={0}
-                                end={2263}
+                                end={data.consultations}
                                 duration={5}
                             />
                         )}+</h1>
@@ -78,7 +83,7 @@ const CounterUp = () => {
 
                             <CountUp
                                 start={0}
-                                end={4952}
+                                end={data.reviews}
                                 duration={5}
                             />
                         )}+</h1>
@@ -93,7 +98,7 @@ const CounterUp = () => {
 
                             <CountUp
                                 start={0}
-                                end={7542}
+                                end={data.customers}
                                 duration={5}
                             />
                         )}+</h1>

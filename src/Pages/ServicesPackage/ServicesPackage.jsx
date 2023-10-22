@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './ServicesPackage.scss'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import PackageAcc from '../../Components/PackageAcc/PackageAcc'
@@ -7,11 +7,16 @@ import { useMyContext } from '../../context/MyContext'
 import { Link } from 'react-router-dom'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import { ServiceManagemenApi } from '../../Apis/Apis'
 const ServicesPackage = () => {
     const { lang, setlang, t, i18n } = useMyContext();
     useEffect(() => {
         AOS.init();
       }, []);
+    //   const [data, setdata] = useState([])
+    // useEffect(() => {
+    //     ServiceManagemenApi().then((res)=>{console.log(res);setdata(res)})
+    //   }, []);
     return (
         <>
             <CommonHead title={t('package1.h1')} path={t('package1.path')} />

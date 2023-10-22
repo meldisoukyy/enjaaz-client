@@ -7,6 +7,7 @@ import { AiOutlineStar } from 'react-icons/ai';
 import { useMyContext } from '../../context/MyContext';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ReviewsApi } from '../../Apis/Apis';
 const Reviews = () => {
     const [num, setNum] = useState(3);
     const { lang, setlang, t, i18n } = useMyContext();
@@ -42,6 +43,10 @@ const Reviews = () => {
         window.removeEventListener('resize', handleResize);
       };
     }, []);
+    const [data, setdata] = useState([])
+    useEffect(() => {
+      ReviewsApi().then((res)=>{setdata(res)})
+      }, []);
   return (
     <div className='Reviews' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
         <div className="container" >
@@ -49,10 +54,10 @@ const Reviews = () => {
 
         <Carousel
                 wrapAround={true}
-                slidesToShow={num}
+                slidesToShow={num==1?num:data&&data.length==2?2:data&&data.length==1?1:num}
                 animation={'fade'}
                 speed={1000}
-                pauseOnHover={true}
+                pauseOnHover={false}
                 dragging={true}
                 autoplay={true}
                 autoplayInterval={3000}
@@ -67,20 +72,18 @@ const Reviews = () => {
                     </div>
                 )}
             >
-                {[...Array(7)].map((item)=>{
+                {data.map((item,i)=>{
                     return(
                         <div className="slide">
                             <div className="image">
-                                <img src="/images/wired-outline-21-avatar.webp" alt="" />
+                                <img src={item.image?item.image:"/images/wired-outline-21-avatar.webp"} alt="" />
                             </div>
                             <div className="stars">
-                                <div className="star"><AiFillStar/></div>
-                                <div className="star"><AiFillStar/></div>
-                                <div className="star"><AiFillStar/></div>
-                                <div className="star"><AiFillStar/></div>
-                                <div className="star"><AiFillStar/></div>
+                              {[...Array(5)].map((star,i)=>{
+                                return i+1<=item.rating?(<div className="star"><AiFillStar/></div>):(<div className="star"><AiOutlineStar/></div>)
+                              })}
                             </div>
-                            <p>تقدم "إنجاز" جميع الخدمات الإلكترونية للمنشآت الإلكترونية حيث تمتلك فريق عمل ذو خبرة عالية،</p>
+                            <p>{lang === "ar" ?item.review_ar:item.review_en}</p>
                         </div>
                     )
                 })}

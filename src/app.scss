@@ -14,12 +14,10 @@
   --mcolor: #2d1989;
   --scolor: #02c1db;
 }
-.offcanvas{
-
+.offcanvas {
   transition: 0.5s !important;
-  
 }
-*{
+* {
   transition: 0.5s;
 }
 
@@ -283,6 +281,20 @@ a.active {
   .EnjazzForm {
     direction: rtl;
     padding: 60px 0;
+    p {
+      font-size: 24px;
+      font-weight: 500;
+      font-family: "rptBold";
+      color: black;
+      padding: 40px 10px;
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      @media (max-width: 767px) {
+        font-size: 19px;
+        width: 95%;
+      }
+    }
     .container {
       display: flex;
       flex-direction: column;
@@ -316,6 +328,9 @@ a.active {
         font-weight: 500;
         font-family: "rptBold";
         color: black;
+        padding: unset;
+        text-align: start;
+        margin: unset;
         @media (max-width: 992px) {
           text-align: center !important;
         }
@@ -328,6 +343,18 @@ a.active {
         flex-direction: column;
         gap: 15px;
         width: 100%;
+        select {
+          appearance: none; /* Hide the default arrow */
+          background-position: center;
+          background: url("./../public/images/down.png") no-repeat right center; /* Add a custom arrow */
+          background-size: 26px; /* Set the size of the custom arrow */
+          background-position-x: 20px;
+          option {
+            font-family: "rptBold" !important;
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
         .EnjazzFormInput {
           padding: 20px;
           border-radius: 16px;
@@ -366,6 +393,7 @@ a.active {
             font-size: 20px;
             font-weight: 500;
             font-family: "rptBold";
+            width: fit-content;
             @media (max-width: 767px) {
               font-size: 16px;
             }

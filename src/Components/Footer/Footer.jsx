@@ -1,14 +1,32 @@
 import { Link } from "react-router-dom";
 import { useMyContext } from "../../context/MyContext";
 import "./Footer.scss";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { SubscribersApi } from "../../Apis/Apis";
 const Footer = () => {
   const { lang, setlang, t, i18n } = useMyContext();
   useEffect(() => {
     AOS.init();
   }, []);
+  const [email, setemail] = useState('')
+  const [error, seterror] = useState('')
+  const [data, setdata] = useState([])
+  function isEmailValid(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  }
+  
+  
+  const handleSubmit=()=>{
+    if (isEmailValid(email)) {
+      SubscribersApi(email).then((res)=>{console.log(res);setdata(res)})
+      seterror('')
+    } else {
+      lang === "ar" ?seterror('أدخل بريد الكتروني صالح'):seterror('Enter a valid email')
+    }
+  }
   return (
     <div className="Footer" >
       <div
@@ -19,8 +37,13 @@ const Footer = () => {
         <div className="top">
           <h1>{t('footer.toph1')}</h1>
           <div className="footer-form">
-            <input type="email" placeholder={t('footer.topemail')} />
-            <div>{t('footer.topbtn')}</div>
+            <span className="email">
+            <input type="email2" placeholder={t('footer.topemail')} onChange={(e)=>setemail(e.target.value)} />
+              {error!==''&&(
+                <p className="text-danger pt-2">{error}</p>
+              )}
+            </span>
+            <div onClick={()=>handleSubmit()}>{t('footer.topbtn')}</div>
           </div>
         </div>
         <div className="center">

@@ -1,14 +1,50 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './callUs.scss'
 import AOS from 'aos';
+import Swal from 'sweetalert2'
 import 'aos/dist/aos.css'; 
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import { useMyContext } from '../../context/MyContext';
+import { ContactUsApi } from '../../Apis/Apis';
 const CallUs = () => {
     const { lang, setlang, t, i18n } = useMyContext();
     useEffect(() => {
         AOS.init();
       }, []);
+      const [name, setname] = useState('')
+    const [email, setemail] = useState('')
+    const [mobile, setmobile] = useState('')
+    const [reason, setreason] = useState('')
+    const [message, setmessage] = useState('')
+
+    const [data, setdata] = useState([])
+
+    function isEmailValid(email) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    }
+
+    const handleSubmit = () => {
+        if (name !== '' && mobile !== '' && isEmailValid(email)) {
+            console.log(name,email,mobile,reason,message)
+            ContactUsApi(name,email,mobile,reason,message).then((res) => { console.log(res); setdata(res); }).then(()=>data&&Swal.fire({
+                title: lang === "ar" ? 'تم' : 'Submited',
+                text: lang === "ar" ?'تم ارسال البيانات بنجاح':'Data was sent successfully',
+                icon: 'success',
+                timer: 2000,
+                confirmButtonText: lang === "ar" ?'الرجوع':'Return'
+            }))
+        }
+        else {
+            Swal.fire({
+                title: lang === "ar" ? '! خطأ' : 'Error!',
+                text: lang === "ar" ?`${name === ''?"لم يتم ادخال الاسم .":""} ${mobile === ''?"لم يتم ادخال رقم الهاتف .":""} ${!isEmailValid(email)?"البريد الالكتروني غير صالح":""}`:`${name === ''?"The Name is Missing .":""}${mobile === ''?"The Mobile is Missing .":""}${!isEmailValid(email)?"The Email isn't valid .":""}`,
+                icon: 'error',
+                timer: 2000,
+                confirmButtonText: lang === "ar" ?'الرجوع':'Return'
+            })
+        }
+    }
     return (
         <div className='CallUs'>
             <CommonHead title={t('callus.h1')} path={t('callus.path')} />
@@ -48,15 +84,15 @@ const CallUs = () => {
                     <span>{t('form.p1')}</span>
 
                     <div className="EnjazzFormInputs">
-                        <input className='EnjazzFormInput' type="text" placeholder={t('form.fullName')} />
+                        <input className='EnjazzFormInput' type="text" placeholder={t('form.fullName')} onChange={(e) => setname(e.target.value)} />
                         <span style={{ color: 'red', marginTop: '-10px' }}>{t('form.required')}</span>
-                        <input className='EnjazzFormInput' type="text" placeholder={t('form.email')} />
-                        <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} />
+                        <input className='EnjazzFormInput' type="text" placeholder={t('form.email')} onChange={(e) => setemail(e.target.value)} />
+                        <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} />
                         <span style={{ color: 'red', marginTop: '-10px' }}>{t('form.required')}</span>
-                        <input className='EnjazzFormInput' type="text" placeholder={t('form.reason')} />
-                        <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details2')}></textarea>
+                        <input className='EnjazzFormInput' type="text" placeholder={t('form.reason')} onChange={(e) => setreason(e.target.value)} />
+                        <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details2')} onChange={(e) => setmessage(e.target.value)}></textarea>
                     </div>
-                    <div className="EnjazzFormBtn">{t('form.send')}</div>
+                    <div className="EnjazzFormBtn" onClick={() => handleSubmit()}>{t('form.send')}</div>
                 </div>
             </div>
         </div>
