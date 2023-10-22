@@ -6,6 +6,9 @@
     font-size: 28px;
     font-weight: 700;
     color: white;
+    @media (max-width:767px) {
+      text-align: center;
+    }
   }
   .top {
     display: flex;
@@ -69,6 +72,9 @@
       color: #fff;
       font-size: 28px;
       font-weight: 700;
+      @media (max-width:767px) {
+        text-align: center;
+      }
     }
     .part {
       display: flex;
