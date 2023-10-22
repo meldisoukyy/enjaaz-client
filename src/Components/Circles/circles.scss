@@ -68,6 +68,9 @@
     background-color: #f9feff;
     padding: 100px 0;
     overflow: hidden;
+    a{
+      width: 100%;
+    }
   }
   @media (max-width: 576px) {
     .home-features {
@@ -198,12 +201,13 @@
     margin-bottom: 50px;
     text-align: center !important;
     padding: 5px;
+    flex: 1;
   }
-  @media (max-width: 992px) {
-    .home-features .feature-box {
-      max-width: 30%;
-    }
-  }
+  // @media (max-width: 992px) {
+  //   .home-features .feature-box {
+  //     max-width: 30%;
+  //   }
+  // }
   .home-features .feature-box:last-child {
     margin-bottom: 0;
   }
@@ -222,6 +226,8 @@
     width: 115px;
     max-width: 100%;
     cursor: pointer;
+    @media (max-width: 767px) {
+          max-width: 90px;}
   }
   .home-features .feature-box .img::before {
     content: "";
