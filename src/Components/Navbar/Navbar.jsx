@@ -150,12 +150,10 @@ const Navbar = () => {
                             <NavLink to="/offers">
                                 <li className='sale' onClick={() => handleClose()}>{t('nav.offers')}</li>
                             </NavLink>
-                            <NavLink to="/offers">
                                 <li className='sale' onClick={() => {
                                     setlang(lang === "ar" ? "en" : "ar"),
                                         i18n.changeLanguage(lang === "en" ? "ar" : "en");
                                 ;handleClose()}}>{t('nav.lang')}</li>
-                            </NavLink>
                         </ul>
                     </Offcanvas.Body>
                 </Offcanvas>

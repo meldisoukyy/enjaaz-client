@@ -12,7 +12,7 @@ const Circles = () => {
     return (
         <div className='Circles' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
             <section className="home-features">
-                <h2 className="section-title text-center mb-5">{t('circles.h1')}</h2>
+                <h2 className="section-title3 text-center mb-5">{t('circles.h1')}</h2>
                 <div className="container">
                     <div className="row align-items-center justify-content-center">
                         <div className="col-12 col-lg-3">

@@ -94,7 +94,7 @@ const DedicatedAsk = () => {
                 <h1 className='section-title3'>{lang === "ar" ? namear[id][1] : nameen[id][1]}</h1>
                 <p>{lang === "ar" ? namear[id][2] : nameen[id][2]}</p>
                 <div className="container">
-                    <h1 className='section-title'>{t('askService.h1')}</h1>
+                    <h1 className='section-title3'>{t('askService.h1')}</h1>
                     <p>{t('askService.p')}</p>
                     <span>{t('form.p1')}</span>
 

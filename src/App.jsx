@@ -58,7 +58,7 @@ useEffect(() => {
     window.addEventListener('load', handleLoad);
   setTimeout(() => {
     setIsPageLoaded(true)
-  }, 8000);
+  }, 4000);
     return () => {
       window.removeEventListener('load', handleLoad);
     };

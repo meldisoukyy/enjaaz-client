@@ -20,7 +20,7 @@ const Packages = () => {
         style={lang === "ar" ? { direction: "rtl" } : { direction: "ltr" }}
       >
         <div className="container">
-          <h1 className="section-title">{t('packages.h2')}</h1>
+          <h1 className="section-title3">{t('packages.h2')}</h1>
           <p>{t('packages.p')}</p>
 
           <div className="packs">

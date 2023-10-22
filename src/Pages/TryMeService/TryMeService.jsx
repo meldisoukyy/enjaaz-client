@@ -13,7 +13,7 @@ const TryMeService = () => {
             <CommonHead title={t('Tryme.h1')} path={t('Tryme.path')} />
             <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
                 <div className="container">
-                    <h1 className='section-title'>{t('Tryme.h2')}</h1>
+                    <h1 className='section-title3'>{t('Tryme.h2')}</h1>
                     <p>{t('Tryme.p1')}</p>
                     <span>{t('Tryme.p2')}</span>
                     <div className="EnjazzFormInputs">

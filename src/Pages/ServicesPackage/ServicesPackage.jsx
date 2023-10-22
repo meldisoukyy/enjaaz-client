@@ -23,7 +23,7 @@ const ServicesPackage = () => {
             <div className='ServicesPackage' style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'><div className="container">
                 <h1>{t('package1.h2')}</h1>
                 <p>{t('package1.p')}</p>
-                <h2 className='section-title text-center my-5'>{t('package1.h3')}</h2>
+                <h2 className='section-title3 text-center my-5'>{t('package1.h3')}</h2>
                 <div className="packs">
                     <div className="pack " data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                         <div className="top">

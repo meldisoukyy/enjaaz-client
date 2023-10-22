@@ -54,7 +54,7 @@ const FreeConsulting = () => {
             <CommonHead title={t('FreeConsulting.h1')} path={t('FreeConsulting.path')} />
             <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
                 <div className="container">
-                    <h1 className='section-title'>{t('FreeConsulting.h2')}</h1>
+                    <h1 className='section-title3'>{t('FreeConsulting.h2')}</h1>
                     <p>{t('FreeConsulting.p')}</p>
                     <span>{t('form.p1')}</span>
 

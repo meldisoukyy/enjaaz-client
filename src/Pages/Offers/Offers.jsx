@@ -54,7 +54,7 @@ const Offers = () => {
             <div className='Offers' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
                 <div className="container">
                     <h1>عروضنا</h1>
-                    <h2 className='section-title text-center my-5'>العروض  الحالية</h2>
+                    <h2 className='section-title3 text-center my-5'>العروض  الحالية</h2>
                     <div className="packs">
                         {data.map((item, i) => {
                             return (

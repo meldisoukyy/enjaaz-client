@@ -50,7 +50,7 @@ const ServiceGuide = () => {
             <CommonHead title={t('guide.h1')} path={t('guide.path')} />
             <div className="guide" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
                 <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
-                    <h1 className='section-title'>{t('guide.h2')}</h1>
+                    <h1 className='section-title3'>{t('guide.h2')}</h1>
                     <div className="items">
                         {data.map((item) => {
                             return (

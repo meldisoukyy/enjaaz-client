@@ -333,6 +333,7 @@ a.active {
         margin: unset;
         @media (max-width: 992px) {
           text-align: center !important;
+          margin: auto;
         }
         @media (max-width: 767px) {
           font-size: 19px;
@@ -353,6 +354,9 @@ a.active {
             font-family: "rptBold" !important;
             font-size: 20px;
             font-weight: 600;
+            @media (max-width: 992px) {
+              font-size: 15px;
+            }
           }
         }
         .EnjazzFormInput {

@@ -16,7 +16,7 @@ const WageManagment = () => {
             <div className='WageManagment' style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'><div className="container">
                 <h1>{t('package2.h2')}</h1>
                 <p>{t('package2.p')}</p>
-                <h2 className='section-title text-center my-5'>{t('package2.h3')}</h2>
+                <h2 className='section-title3 text-center my-5'>{t('package2.h3')}</h2>
                 <div className="packs">
                     {[...Array(8)].map((item) => {
                         return (
