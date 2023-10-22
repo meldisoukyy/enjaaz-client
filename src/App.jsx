@@ -51,8 +51,14 @@ useEffect(() => {
   //   }, 3000);
   // }, []);
   useEffect(() => {
-    window.onload = () => {
+    const handleLoad = () => {
       setIsPageLoaded(true);
+    };
+  
+    window.addEventListener('load', handleLoad);
+  
+    return () => {
+      window.removeEventListener('load', handleLoad);
     };
   }, []);
 
