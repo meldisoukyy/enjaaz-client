@@ -6,17 +6,18 @@ import Calculator from '../../Components/Calculator/Calculator'
 import { useMyContext } from '../../context/MyContext'
 import { Link } from 'react-router-dom'
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 import { ServiceManagemenApi } from '../../Apis/Apis'
 const ServicesPackage = () => {
     const { lang, setlang, t, i18n } = useMyContext();
     useEffect(() => {
         AOS.init();
-      }, []);
-    //   const [data, setdata] = useState([])
-    // useEffect(() => {
-    //     ServiceManagemenApi().then((res)=>{console.log(res);setdata(res)})
-    //   }, []);
+    }, []);
+    const [data, setdata] = useState([])
+    useEffect(() => {
+        ServiceManagemenApi().then((res) => { console.log(res); setdata(res) })
+    }, []);
+
     return (
         <>
             <CommonHead title={t('package1.h1')} path={t('package1.path')} />
@@ -25,25 +26,29 @@ const ServicesPackage = () => {
                 <p>{t('package1.p')}</p>
                 <h2 className='section-title3 text-center my-5'>{t('package1.h3')}</h2>
                 <div className="packs">
-                    <div className="pack " data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
-                        <div className="top">
-                            <div className="banner">
-                                <h2>الباقة البرونزية</h2>
-                                <p>بقيمة<span>3499</span>ريال فقط</p>
-                            </div>
+                    {data.map((item,i) => {
+                        return (
+                            <div className="pack " data-aos="fade-in" data-aos-duration="2000" data-aos-delay={`${(i +1) * 100}`}>
+                                <div className="top">
+                                    <div className="banner">
+                                        <h2>الباقة البرونزية</h2>
+                                        <p>بقيمة<span>3499</span>ريال فقط</p>
+                                    </div>
 
-                            {[...Array(4)].map((item) => {
-                                return (
-                                    <PackageAcc title={"عدد الموظفين 9 فأقل"} />
-                                )
-                            })}
-                        </div>
-                        <div className="bottom">
-                        <Link to='/askforaservice'>
-                                <div>{t('subsc.h1')}</div>
-                            </Link>                        </div>
-                    </div>
-                    <div className="pack " data-aos="fade-in" data-aos-duration="2000" data-aos-delay='200'>
+                                    {[...Array(4)].map((item) => {
+                                        return (
+                                            <PackageAcc title={"عدد الموظفين 9 فأقل"} />
+                                        )
+                                    })}
+                                </div>
+                                <div className="bottom">
+                                    <Link to='/askforaservice'>
+                                        <div>{t('subsc.h1')}</div>
+                                    </Link>                        </div>
+                            </div>
+                        )
+                    })}
+                    {/* <div className="pack " data-aos="fade-in" data-aos-duration="2000" data-aos-delay='200'>
                         <div className="top">
                             <div className="banner">
                                 <h2>الباقة البرونزية</h2>
@@ -98,7 +103,7 @@ const ServicesPackage = () => {
                                 <div>{t('subsc.h1')}</div>
                             </Link>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 {/* <Calculator/> */}
             </div></div>

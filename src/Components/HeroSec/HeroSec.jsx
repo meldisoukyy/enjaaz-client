@@ -12,6 +12,7 @@ const HeroSec = () => {
     useEffect(() => {
         AOS.init();
       }, []);
+      
     return (
         <div className='HeroSec'>
             <Carousel

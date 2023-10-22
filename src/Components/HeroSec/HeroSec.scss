@@ -65,15 +65,24 @@
         background-image: url('./../../../public/images/1.png');
         background-size: cover;
         background-position: center;
+        @media (max-width:992px) {
+            background-image: url('./../../../public/images/banar/ba61beb3e69336fd038242367d2b0de5.jpg');
+        }
     }
     .slide2{
         background-image: url('./../../../public/images/2.png');
         background-size: cover;
         background-position: center;
+        @media (max-width:992px) {
+            background-image: url('./../../../public/images/banar/38d40000a7fdf6960054987d1058f735.jpg');
+        }
     }
     .slide3{
        background-image: url('./../../../public/images/3.png'); 
        background-size: cover;
        background-position: center;
+       @media (max-width:992px) {
+        background-image: url('./../../../public/images/banar/3.jpg');
+    }
     }
 }

@@ -65,7 +65,7 @@ export const ConsultationApi = (name,email,mobile,city,service_type,notes) => {
     }).then((response) => {
         return response.json();
     });
-};//x
+};//..
 export const ContactUsApi = (name,email,mobile,reason,message) => {
     return fetch('https://server.enjaaz.com.sa/api/contact-us/', {
         method: 'POST',

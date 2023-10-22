@@ -4,7 +4,7 @@ import CommonHead from '../../Components/CommonHead/CommonHead'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useMyContext } from '../../context/MyContext';
-import { ServiceManagemenApi } from '../../Apis/Apis';
+import { ConsultationApi, ServiceManagemenApi } from '../../Apis/Apis';
 import { useParams } from 'react-router-dom';
 const FreeConsulting = () => {
     // const id =useParams().id
@@ -30,13 +30,13 @@ const FreeConsulting = () => {
     const handleSubmit = () => {
         if (name !== '' && mobile !== '' && isEmailValid(email)) {
             console.log(name, email, mobile, city, service_type, notes)
-            // ServiceManagemenApi(name, email, mobile, city, service_type, notes).then((res) => { console.log(res); setdata(res); }).then(()=>data&&Swal.fire({
-            //     title: lang === "ar" ? 'تم' : 'Submited',
-            //     text: lang === "ar" ?'تم ارسال البيانات بنجاح':'Data was sent successfully',
-            //     icon: 'success',
-            //     timer: 2000,
-            //     confirmButtonText: lang === "ar" ?'الرجوع':'Return'
-            // }))
+            ConsultationApi(name, email, mobile, city, service_type, notes).then((res) => { console.log(res); setdata(res); }).then(()=>data&&Swal.fire({
+                title: lang === "ar" ? 'تم' : 'Submited',
+                text: lang === "ar" ?'تم ارسال البيانات بنجاح':'Data was sent successfully',
+                icon: 'success',
+                timer: 2000,
+                confirmButtonText: lang === "ar" ?'الرجوع':'Return'
+            }))
         }
         else {
             Swal.fire({
