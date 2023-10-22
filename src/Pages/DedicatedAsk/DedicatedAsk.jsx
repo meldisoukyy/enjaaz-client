@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import './DedicatedAsk.scss'
 import { useParams } from 'react-router-dom';
 import { useMyContext } from '../../context/MyContext';
 import Swal from 'sweetalert2';
@@ -90,7 +91,7 @@ const DedicatedAsk = () => {
         <div>
             <CommonHead title={lang === "ar" ? namear[id][0] : nameen[id][0]} path={t('askService.path')} />
             <div className="EnjazzForm" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
-                <h1 className='section-title'>{lang === "ar" ? namear[id][1] : nameen[id][1]}</h1>
+                <h1 className='section-title3'>{lang === "ar" ? namear[id][1] : nameen[id][1]}</h1>
                 <p>{lang === "ar" ? namear[id][2] : nameen[id][2]}</p>
                 <div className="container">
                     <h1 className='section-title'>{t('askService.h1')}</h1>
