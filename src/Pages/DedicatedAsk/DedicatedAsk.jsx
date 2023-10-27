@@ -6,8 +6,11 @@ import './DedicatedAsk.scss'
 import { useParams } from 'react-router-dom';
 import { useMyContext } from '../../context/MyContext';
 import Swal from 'sweetalert2';
-import { ServiceRequestApi } from '../../Apis/Apis';
+import { Helmet, HelmetAr, ServiceRequestApi } from '../../Apis/Apis';
 const DedicatedAsk = () => {
+    const { lang, setlang, t, i18n } = useMyContext();
+    lang==='ar'?HelmetAr('طلب خدمة'):
+    Helmet('Ask For A Service')
     const id =useParams().id
     const links=['service-management','register-a-trademark','establishment-of-facilities','legal-advice','all-government-services','wage-protection','reducing-financial-burdens','free-tryme-service']
     const exist =links.some((item)=>item==id)
@@ -15,7 +18,6 @@ const DedicatedAsk = () => {
     useEffect(() => {
         AOS.init();
     }, []);
-    const { lang, setlang, t, i18n } = useMyContext();
     const namear = {
         "service-management": ["طلب خدمة إدارة الخدمات","خدمة إدارة الخدمات", "نعمل كوسيط غير مباشر بينك وبين عملائك من خلال تقديم الحلول المتكاملة لتطوير وتصميم وتشغيل المنصات الإلكترونية، مع التركيز على تحسين تجربة المستخدم وضمان الأمان في عالم التحول الرقمي."],
 

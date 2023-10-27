@@ -7,8 +7,12 @@ import CommonQ from '../../Components/CommonQ/CommonQ'
 import CounterUp from '../../Components/CounterUp/CounterUp'
 import Partners from '../../Components/Partners/Partners'
 import Reviews from '../../Components/Reviews/Reviews'
+import { Helmet, HelmetAr } from '../../Apis/Apis'
+import { useMyContext } from '../../context/MyContext'
 
 const Home = () => {
+  const { lang, setlang, t, i18n } = useMyContext();
+    lang==='ar'?HelmetAr('الرئيسية'):Helmet('Home')
   return (
     <div>
       <HeroSec/>

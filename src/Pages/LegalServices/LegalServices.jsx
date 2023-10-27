@@ -1,7 +1,9 @@
 import React from 'react'
 import './LegalServices.scss'
 import CommonHead from '../../Components/CommonHead/CommonHead'
+import { Helmet } from '../../Apis/Apis'
 const LegalServices = () => {
+    Helmet('Legal Services')
     const data = [
         "عمالي",
         "حقوقي",

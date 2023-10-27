@@ -5,8 +5,12 @@ import CommonQ from '../../Components/CommonQ/CommonQ'
 import { useMyContext } from '../../context/MyContext'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import { Helmet, HelmetAr } from '../../Apis/Apis'
+import { Link } from 'react-router-dom'
 const ServiceGuide = () => {
     const { lang, setlang, t, i18n } = useMyContext();
+    lang==='ar'?HelmetAr('دليل الخدمات'):
+    Helmet('Services Guide')
     useEffect(() => {
         AOS.init();
       }, []);
@@ -52,14 +56,17 @@ const ServiceGuide = () => {
                 <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                     <h1 className='section-title3'>{t('guide.h2')}</h1>
                     <div className="items">
-                        {data.map((item) => {
+                        {data.map((item,i) => {
                             return (
+                                <Link to="/askforaservice" key={i}>
+
                                 <div className="item">
                                     <div className="icon swing-in-top-fwd">
                                         <img src="/images/tick.webp" alt="" />
                                     </div>
                                     <p>{item}</p>
                                 </div>
+                                </Link>
                             )
                         })}
 

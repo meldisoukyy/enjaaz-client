@@ -4,8 +4,12 @@ import CommonHead from '../../Components/CommonHead/CommonHead'
 import { useMyContext } from '../../context/MyContext';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import { Helmet, HelmetAr } from "../../Apis/Apis";
+
 const DesignServices = () => {
     const { lang, setlang, t, i18n } = useMyContext();
+    lang==='ar'?HelmetAr('خدمات التصميم'):
+    Helmet('Design Services')
     useEffect(() => {
         AOS.init();
       }, []);

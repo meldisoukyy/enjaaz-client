@@ -4,16 +4,18 @@ import CommonHead from '../../Components/CommonHead/CommonHead'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useMyContext } from '../../context/MyContext';
-import { ConsultationApi, ServiceManagemenApi } from '../../Apis/Apis';
+import { ConsultationApi, Helmet, HelmetAr, ServiceManagemenApi } from '../../Apis/Apis';
 import { useParams } from 'react-router-dom';
 const FreeConsulting = () => {
+    const { lang, setlang, t, i18n } = useMyContext();
+    lang==='ar'?HelmetAr('إستشارة مجانية'):
+    Helmet('Free Consultion')
     // const id =useParams().id
     // const links=['service-management','register-a-trademark','establishment-of-facilities','legal-advice','all-government-services','wage-protection','reducing-financial-burdens','free-tryme-service']
     
     useEffect(() => {
         AOS.init();
     }, []);
-    const { lang, setlang, t, i18n } = useMyContext();
     const [name, setname] = useState('')
     const [email, setemail] = useState('')
     const [mobile, setmobile] = useState('')

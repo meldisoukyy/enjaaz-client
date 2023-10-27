@@ -5,9 +5,11 @@ import { useMyContext } from '../../context/MyContext';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
-import { OffersApi } from '../../Apis/Apis';
+import { Helmet, HelmetAr, OffersApi } from '../../Apis/Apis';
 const Offers = () => {
     const { lang, setlang, t, i18n } = useMyContext();
+    lang==='ar'?HelmetAr('العروض'):
+    Helmet('Offers')
     useEffect(() => {
         AOS.init();
       }, []);

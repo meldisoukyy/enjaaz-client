@@ -2,16 +2,18 @@ import React, { useEffect, useState } from 'react'
 import './callUs.scss'
 import AOS from 'aos';
 import Swal from 'sweetalert2'
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import { useMyContext } from '../../context/MyContext';
-import { ContactUsApi } from '../../Apis/Apis';
+import { ContactUsApi, Helmet, HelmetAr } from '../../Apis/Apis';
 const CallUs = () => {
     const { lang, setlang, t, i18n } = useMyContext();
+    lang === 'ar' ? HelmetAr('اتصل بنا') :
+        Helmet('Contact')
     useEffect(() => {
         AOS.init();
-      }, []);
-      const [name, setname] = useState('')
+    }, []);
+    const [name, setname] = useState('')
     const [email, setemail] = useState('')
     const [mobile, setmobile] = useState('')
     const [reason, setreason] = useState('')
@@ -26,22 +28,22 @@ const CallUs = () => {
 
     const handleSubmit = () => {
         if (name !== '' && mobile !== '' && isEmailValid(email)) {
-            console.log(name,email,mobile,reason,message)
-            ContactUsApi(name,email,mobile,reason,message).then((res) => { console.log(res); setdata(res); }).then(()=>data.id&&Swal.fire({
+            console.log(name, email, mobile, reason, message)
+            ContactUsApi(name, email, mobile, reason, message).then((res) => { console.log(res); setdata(res); }).then(() => data.id && Swal.fire({
                 title: lang === "ar" ? 'تم' : 'Submited',
-                text: lang === "ar" ?'تم ارسال البيانات بنجاح':'Data was sent successfully',
+                text: lang === "ar" ? 'تم ارسال البيانات بنجاح' : 'Data was sent successfully',
                 icon: 'success',
                 timer: 2000,
-                confirmButtonText: lang === "ar" ?'الرجوع':'Return'
+                confirmButtonText: lang === "ar" ? 'الرجوع' : 'Return'
             }))
         }
         else {
             Swal.fire({
                 title: lang === "ar" ? '! خطأ' : 'Error!',
-                text: lang === "ar" ?`${name === ''?"لم يتم ادخال الاسم .":""} ${mobile === ''?"لم يتم ادخال رقم الهاتف .":""} ${email === ''?"لم يتم ادخال رقم البريد الالكتروني .":""} ${email!==''&&!isEmailValid(email)?"البريد الالكتروني غير صالح":""}`:`${name === ''?"The Name is Missing .":""}${email === ''?"The email is missing .":""}${mobile === ''?"The Mobile is Missing .":""}${email!==''&&!isEmailValid(email)?"The Email isn't valid .":""}`,
+                text: lang === "ar" ? `${name === '' ? "لم يتم ادخال الاسم ." : ""} ${mobile === '' ? "لم يتم ادخال رقم الهاتف ." : ""} ${email === '' ? "لم يتم ادخال رقم البريد الالكتروني ." : ""} ${email !== '' && !isEmailValid(email) ? "البريد الالكتروني غير صالح" : ""}` : `${name === '' ? "The Name is Missing ." : ""}${email === '' ? "The email is missing ." : ""}${mobile === '' ? "The Mobile is Missing ." : ""}${email !== '' && !isEmailValid(email) ? "The Email isn't valid ." : ""}`,
                 icon: 'error',
                 timer: 2000,
-                confirmButtonText: lang === "ar" ?'الرجوع':'Return'
+                confirmButtonText: lang === "ar" ? 'الرجوع' : 'Return'
             })
         }
     }

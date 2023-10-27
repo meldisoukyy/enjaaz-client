@@ -4,10 +4,12 @@ import { useMyContext } from '../../context/MyContext';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Swal from 'sweetalert2';
-import { ServiceRequestApi } from '../../Apis/Apis';
+import { Helmet, HelmetAr, ServiceRequestApi } from '../../Apis/Apis';
 
 const TryMeService = () => {
     const { lang, setlang, t, i18n } = useMyContext();
+    lang==='ar'?HelmetAr('خدمة جربني المجانية'):
+    Helmet('Try Me Service')
     useEffect(() => {
         AOS.init();
       }, []);

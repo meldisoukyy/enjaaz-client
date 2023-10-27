@@ -5,12 +5,15 @@ import 'aos/dist/aos.css';
 
 import { useMyContext } from '../../context/MyContext';
 import Swal from 'sweetalert2';
-import { ServiceRequestApi } from '../../Apis/Apis';
+import { Helmet, HelmetAr, ServiceRequestApi } from '../../Apis/Apis';
 const AskForAService = () => {
+    const { lang, setlang, t, i18n } = useMyContext();
+    
+    lang==='ar'?HelmetAr('طلب خدمة'):Helmet('Ask For A Service')
+    
     useEffect(() => {
         AOS.init();
       }, []);
-      const { lang, setlang, t, i18n } = useMyContext();
       const [name, setname] = useState('')
       const [email, setemail] = useState('')
       const [mobile, setmobile] = useState('')

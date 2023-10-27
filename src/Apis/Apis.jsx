@@ -140,3 +140,9 @@ export const WageManagementApi = () => {
         return response.json();
     });
 };//x
+export const Helmet = (title) => {
+document.title='Enjaaz Company - ' + title
+}
+export const HelmetAr = (title) => {
+document.title='شركة انجاز - ' + title
+}

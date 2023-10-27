@@ -4,9 +4,11 @@ import { useMyContext } from '../../context/MyContext';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import Swal from 'sweetalert2';
-import { JoinUsApi } from '../../Apis/Apis';
+import { Helmet, HelmetAr, JoinUsApi } from '../../Apis/Apis';
 const JoinUs = () => {
     const { lang, setlang, t, i18n } = useMyContext();
+    lang==='ar'?HelmetAr('إانضم الينا'):
+    Helmet('Join Us')
     useEffect(() => {
         AOS.init();
       }, []);
