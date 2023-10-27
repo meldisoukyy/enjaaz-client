@@ -39,6 +39,9 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "vite": "^4.4.5"
+    "file-loader": "^6.2.0",
+    "sharp": "^0.32.6",
+    "vite": "^4.4.5",
+    "webpack-webp-loader": "^0.1.0"
   }
 }
