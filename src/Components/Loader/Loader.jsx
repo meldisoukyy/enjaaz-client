@@ -4,7 +4,7 @@ const Loader = () => {
     return (
         <div className='Loader'>
             <div className="image text-focus-in">
-                <img src="/images/logobiggg.webp" alt="" />
+                <img loading="lazy" src="/images/logobiggg.webp" alt="" />
             </div>
             <p className='text-focus-in'>انجاز ، شريك رحلتك نحو التطور والتميز</p>
         </div>

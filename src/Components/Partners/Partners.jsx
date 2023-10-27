@@ -19,10 +19,10 @@ const Partners = () => {
         <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
             <h1 className='secH'>{t('partners.h1')}</h1>
             <div className="row d-flex justify-content-evenly">
-                {data.map((item)=>{
+                {data.map((item,i)=>{
                     return(
-                        <div className="image col-lg-3 col-md-6 mb-3" >
-                            <img src={item.logo} alt="" />
+                        <div className="image col-lg-3 col-md-6 mb-3" key={i} >
+                            <img loading="lazy" src={item.logo} alt="" />
                         </div>
                     )
                 })}

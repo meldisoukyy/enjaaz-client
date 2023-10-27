@@ -74,13 +74,13 @@ const Reviews = () => {
             >
                 {data.map((item,i)=>{
                     return(
-                        <div className="slide">
+                        <div className="slide" key={i}>
                             <div className="image">
-                                <img src={item.image?item.image:"/images/wired-outline-21-avatar.webp"} alt="" />
+                                <img loading="lazy" src={item.image?item.image:"/images/wired-outline-21-avatar.webp"} alt="" />
                             </div>
                             <div className="stars">
                               {[...Array(5)].map((star,i)=>{
-                                return i+1<=item.rating?(<div className="star"><AiFillStar/></div>):(<div className="star"><AiOutlineStar/></div>)
+                                return i+1<=item.rating?(<div className="star" key={i}><AiFillStar/></div>):(<div className="star" key={i}><AiOutlineStar/></div>)
                               })}
                             </div>
                             <p>{lang === "ar" ?item.review_ar:item.review_en}</p>

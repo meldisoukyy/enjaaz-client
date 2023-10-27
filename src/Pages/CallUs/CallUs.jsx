@@ -28,8 +28,11 @@ const CallUs = () => {
 
     const handleSubmit = () => {
         if (name !== '' && mobile !== '' && isEmailValid(email)) {
-            console.log(name, email, mobile, reason, message)
-            ContactUsApi(name, email, mobile, reason, message).then((res) => { console.log(res); setdata(res); }).then(() => data.id && Swal.fire({
+            // console.log(name, email, mobile, reason, message)
+            ContactUsApi(name, email, mobile, reason, message).then((res) => {
+                //  console.log(res)
+                 ; setdata(res); 
+                }).then(() => data.id && Swal.fire({
                 title: lang === "ar" ? 'تم' : 'Submited',
                 text: lang === "ar" ? 'تم ارسال البيانات بنجاح' : 'Data was sent successfully',
                 icon: 'success',
@@ -56,19 +59,19 @@ const CallUs = () => {
                         <div className="row gap-3">
                             <div className="col item">
                                 <div className="icon">
-                                    <img src="/images/carbon_home.webp" alt="" />
+                                    <img loading="lazy" src="/images/carbon_home.webp" alt="" />
                                 </div>
                                 <span>{t('callus.address')}</span>
                             </div>
                             <div className="col item">
                                 <div className="icon">
-                                    <img src="/images/carbon_phone.webp" alt="" />
+                                    <img loading="lazy" src="/images/carbon_phone.webp" alt="" />
                                 </div>
                                 <span>920013581 - 966502144449</span>
                             </div>
                             <div className="col item">
                                 <div className="icon">
-                                    <img src="/images/carbon_mail.webp" alt="" />
+                                    <img loading="lazy" src="/images/carbon_mail.webp" alt="" />
                                 </div>
                                 <span>info@enjaaz.com.sa</span>
                             </div>

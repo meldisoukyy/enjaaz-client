@@ -17,7 +17,10 @@ const WageManagment = () => {
     let dataMonth = data?.filter((item) => item?.package?.includes('Monthly'))
     let dataYear = data?.filter((item) => item?.package?.includes('Yearly'))
     useEffect(() => {
-        WageManagementApi().then((res) => { console.log(res); setdata(res) })
+        WageManagementApi().then((res) => {
+            //  console.log(res);
+              setdata(res) 
+            })
     }, []);
     const dataMonthV = {
         0: ["1-50 عامل ", "رفع ملفات الرواتب", "معالجة جميع الاخطاء", "متابعة ازاله الملاحظات"],
@@ -63,7 +66,7 @@ const WageManagment = () => {
                 <div className="packs">
                     {dataMonth?.map((item, i) => {
                         return (
-                            <div className="pack ">
+                            <div className="pack " key={i}>
                                 <div className="top">
                                     <div className="banner">
                                         <h2>{lang === "ar" ? namesar[item.package] : namesen[item.package]}</h2>
@@ -88,17 +91,17 @@ const WageManagment = () => {
                                 {lang === "ar" ? (
 
                                     <ul>
-                                        {dataMonthV[i].map((item) => {
+                                        {dataMonthV[i].map((item,i) => {
                                             return (
-                                                <li>{item}</li>
+                                                <li key={i}>{item}</li>
                                             )
                                         })}
                                     </ul>
                                 ) : (
                                     <ul>
-                                        {dataMonthVen[i].map((item) => {
+                                        {dataMonthVen[i].map((item,i) => {
                                             return (
-                                                <li>{item}</li>
+                                                <li key={i}>{item}</li>
                                             )
                                         })}
                                     </ul>
@@ -117,7 +120,7 @@ const WageManagment = () => {
                 <div className="packs">
                     {dataYear?.map((item, i) => {
                         return (
-                            <div className="pack ">
+                            <div className="pack " key={i}>
                                 <div className="top">
                                     <div className="banner">
                                         <h2>{lang === "ar" ? namesar[item.package] : namesen[item.package]}</h2>
@@ -142,17 +145,17 @@ const WageManagment = () => {
                                 {lang === "ar" ? (
 
                                     <ul>
-                                        {dataMonthV[i].map((item) => {
+                                        {dataMonthV[i].map((item,i) => {
                                             return (
-                                                <li>{item}</li>
+                                                <li key={i}>{item}</li>
                                             )
                                         })}
                                     </ul>
                                 ) : (
                                     <ul>
-                                        {dataMonthVen[i].map((item) => {
+                                        {dataMonthVen[i].map((item,i) => {
                                             return (
-                                                <li>{item}</li>
+                                                <li key={i}>{item}</li>
                                             )
                                         })}
                                     </ul>

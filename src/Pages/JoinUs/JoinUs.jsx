@@ -28,16 +28,19 @@ const JoinUs = () => {
           return emailPattern.test(email);
       }
       
-      const portfolioFile = new FormData();
-      portfolioFile.append('file', portfolio);
+      
+      
       const handleSubmit = () => {
           if (name !== '' && mobile !== '' &&partnership_type!== '' && isEmailValid(email)) {
-              console.log(name,email,mobile,city,partnership_type,notes,portfolioFile)
-              JoinUsApi(name,email,mobile,city,partnership_type,notes,portfolioFile).then((res) => { console.log(res); setdata(res); }).then(()=>data.portfolio[0]==='The submitted data was not a file. Check the encoding type on the form.'?Swal.fire({
+            //   console.log(name,email,mobile,city,partnership_type,notes,portfolio)
+              JoinUsApi(name,email,mobile,city,partnership_type,notes,portfolio).then((res) => {
+                //  console.log(res);
+                  setdata(res); 
+                }).then(()=>data.portfolio[0]==='The submitted data was not a file. Check the encoding type on the form.'?Swal.fire({
                 title: lang === "ar" ? '! خطأ' : 'Error!',
                 text: `${lang === "ar" ?"البيانات المقدمة لم تكن ملفا. يرجي التحقق منها ثانيا":data.portfolio}`,
                 icon: 'error',
-              //   timer: 2000,
+                timer: 2000,
                 confirmButtonText: lang === "ar" ?'الرجوع':'Return'
             }):Swal.fire({
                   title: lang === "ar" ? 'تم' : 'Submited',
@@ -52,7 +55,7 @@ const JoinUs = () => {
                   title: lang === "ar" ? '! خطأ' : 'Error!',
                   text: lang === "ar" ?`${name === ''?"لم يتم ادخال الاسم .":""} ${mobile === ''?"لم يتم ادخال رقم الهاتف .":""} ${email === ''?"لم يتم ادخال البريد الالكتروني  .":""} ${partnership_type === ''?"لم يتم تحديد نوع الشراكة .":""} ${email!==''&&!isEmailValid(email)?"البريد الالكتروني غير صالح":""}`:`${name === ''?"The Name is Missing .":""}${email === ''?"The email is missing .":""}${mobile === ''?"The Mobile is Missing .":""} ${partnership_type === ''?"The type of partnership is not specified .":""} ${email!==''&&!isEmailValid(email)?"The Email isn't valid .":""}`,
                   icon: 'error',
-                //   timer: 2000,
+                  timer: 2000,
                   confirmButtonText: lang === "ar" ?'الرجوع':'Return'
               })
           }
@@ -80,7 +83,7 @@ const JoinUs = () => {
                         <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details3')} onChange={(e) => setnotes(e.target.value)}></textarea>
                         <div className="EnjazzFormInput EnjazzFormInputFile">
                             <div className="icon">
-                                <img src="/images/upload.webp" alt="" />
+                                <img loading="lazy" src="/images/upload.webp" alt="" />
                             </div>
                             <p>{t('form.upload')}</p>
                             <span>{t('form.upload2')}</span>

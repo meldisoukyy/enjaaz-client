@@ -3,16 +3,17 @@ import './../DesignServices/DesignServices.scss'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import { useMyContext } from '../../context/MyContext';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 import { Helmet, HelmetAr } from '../../Apis/Apis';
+import { Link } from 'react-router-dom';
 const MarketingServices = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-    lang==='ar'?HelmetAr('خدمات التسويق'):
-    Helmet('Marketing Services')
+    lang === 'ar' ? HelmetAr('خدمات التسويق') :
+        Helmet('Marketing Services')
     useEffect(() => {
         AOS.init();
-      }, []);
-    const data =lang === "ar" ? [
+    }, []);
+    const data = lang === "ar" ? [
         {
             arTitle: 'التسويق الرقمي',
             enTitle: 'Digital Marketing',
@@ -63,7 +64,7 @@ const MarketingServices = () => {
             enTitle: 'Location-Based Marketing',
             p: 'استخدام تقنيات تحديد المواقع لتوجيه العروض والإعلانات إلى الجمهور في مواقع معينة.'
         },
-    ]:[
+    ] : [
         {
             arTitle: 'التسويق الرقمي',
             enTitle: 'Digital Marketing',
@@ -118,7 +119,7 @@ const MarketingServices = () => {
     return (
         <>
             <CommonHead title={t('package4.h1')} path={t('package4.path')} />
-            <div className='DesignServices' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}><div className="container">
+            <div className='DesignServices' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300' style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}><div className="container">
                 <h1>{t('package4.h2')}</h1>
                 <p>{t('package4.p')}</p>
                 <h2 className='section-title3 text-center my-5'>{t('package4.h3')}</h2>
@@ -129,7 +130,9 @@ const MarketingServices = () => {
                                 <h1>{item.arTitle}</h1>
                                 <h1>{item.enTitle}</h1>
                                 <p>{item.p}</p>
-                                <span>{t('subsc.h1')}</span>
+                                <Link to="/askforaservice">
+                                    <span>{t('subsc.h1')}</span>
+                                </Link>
                             </div>
                         )
                     })}

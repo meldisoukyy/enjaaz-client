@@ -81,23 +81,24 @@ export const ContactUsApi = (name,email,mobile,reason,message) => {
         return response.json();
     });
 };//..
-export const JoinUsApi = (name,email,mobile,city,partnership_type,notes,portfolio) => {
+export const JoinUsApi = (name, email, mobile, city, partnership_type, notes, portfolio) => {
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('mobile', mobile);
+    formData.append('city', city);
+    formData.append('partnership_type', partnership_type);
+    formData.append('notes', notes);
+    formData.append('portfolio', portfolio);
+
     return fetch('https://server.enjaaz.com.sa/api/join-us/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            name,
-            email,
-            mobile,
-            city,
-            partnership_type,
-            notes,
-            portfolio
-          }),
+        body: formData, // Send as FormData
     }).then((response) => {
         return response.json();
     });
-};//x
+};
+//x
 export const ServiceRequestApi = (name,email,mobile,city,service_type,notes) => {
     return fetch('https://server.enjaaz.com.sa/api/service-request/', {
         method: 'POST',

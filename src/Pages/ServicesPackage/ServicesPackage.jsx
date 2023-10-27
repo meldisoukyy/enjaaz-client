@@ -17,7 +17,10 @@ const ServicesPackage = () => {
     }, []);
     const [data, setdata] = useState([])
     useEffect(() => {
-        ServiceManagemenApi().then((res) => { console.log(res); setdata(res) })
+        ServiceManagemenApi().then((res) => {
+            //  console.log(res);
+              setdata(res) 
+            })
     }, []);
     const data1 = {
         "إصدار تأشيرات العمل (حسب ما يسمح به النظام)": "Work Visa Issuance (as allowed by the system)",

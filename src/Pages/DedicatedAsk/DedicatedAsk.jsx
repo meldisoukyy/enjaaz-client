@@ -14,7 +14,7 @@ const DedicatedAsk = () => {
     const id =useParams().id
     const links=['service-management','register-a-trademark','establishment-of-facilities','legal-advice','all-government-services','wage-protection','reducing-financial-burdens','free-tryme-service']
     const exist =links.some((item)=>item==id)
-    console.log(exist)
+    // console.log(exist)
     useEffect(() => {
         AOS.init();
     }, []);
@@ -53,7 +53,7 @@ const DedicatedAsk = () => {
         "free-tryme-service": ["Free Try Me Service", "Free Try Me Service", ""]
 
     }
-    console.log(id)
+    // console.log(id)
     const [name, setname] = useState('')
       const [email, setemail] = useState('')
       const [mobile, setmobile] = useState('')
@@ -70,8 +70,11 @@ const DedicatedAsk = () => {
   
       const handleSubmit = () => {
           if (name !== '' && mobile !== '' && isEmailValid(email)) {
-              console.log(name,email,mobile,city,service_type,notes)
-              ServiceRequestApi(name,email,mobile,city,service_type,notes).then((res) => { console.log(res); setdata(res); }).then(()=>data.id&&Swal.fire({
+            //   console.log(name,email,mobile,city,service_type,notes)
+              ServiceRequestApi(name,email,mobile,city,service_type,notes).then((res) => { 
+                // console.log(res);
+                 setdata(res); 
+                }).then(()=>data.id&&Swal.fire({
                   title: lang === "ar" ? 'تم' : 'Submited',
                   text: lang === "ar" ?'تم ارسال البيانات بنجاح':'Data was sent successfully',
                   icon: 'success',

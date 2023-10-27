@@ -38,7 +38,7 @@ const CommonQ = ({ full }) => {
             <Accordion alwaysOpen>
               {data.map((item, i) => {
                 return (
-                  <Accordion.Item eventKey={`${i}`} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                  <Accordion.Item eventKey={`${i}`} key={i} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                     <Accordion.Header>
                       <p>{lang === "ar" ?item.question_ar:item.question_en}</p>
                     </Accordion.Header>
@@ -57,7 +57,7 @@ const CommonQ = ({ full }) => {
             <Accordion alwaysOpen>
               {data.map((item, i) => {
                 return (
-                  <Accordion.Item eventKey={`${i}`} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                  <Accordion.Item eventKey={`${i}`} key={i} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                     <Accordion.Header>
                     <p>{lang === "ar" ?item.question_ar:item.question_en}</p>
                     </Accordion.Header>

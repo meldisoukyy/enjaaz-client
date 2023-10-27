@@ -29,8 +29,11 @@ const TryMeService = () => {
   
       const handleSubmit = () => {
           if (name !== '' && mobile !== '' && isEmailValid(email)) {
-              console.log(name,email,mobile,city,service_type,notes)
-              ServiceRequestApi(name,email,mobile,city,service_type,notes).then((res) => { console.log(res); setdata(res); }).then(()=>data.id&&Swal.fire({
+            //   console.log(name,email,mobile,city,service_type,notes)
+              ServiceRequestApi(name,email,mobile,city,service_type,notes).then((res) => {
+                //  console.log(res);
+                  setdata(res);
+                 }).then(()=>data.id&&Swal.fire({
                   title: lang === "ar" ? 'تم' : 'Submited',
                   text: lang === "ar" ?'تم ارسال البيانات بنجاح':'Data was sent successfully',
                   icon: 'success',

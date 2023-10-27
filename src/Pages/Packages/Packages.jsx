@@ -30,7 +30,7 @@ const Packages = () => {
             <div className="pack" >
               <div className="top">
                 <div className="image">
-                  {/* <img src="/images/packages/1.webp" alt="" /> */}
+                  {/* <img loading="lazy" src="/images/packages/1.webp" alt="" /> */}
                   <svg
                     width="176"
                     height="176"
@@ -53,7 +53,7 @@ const Packages = () => {
             <div className="pack">
               <div className="top">
                 <div className="image">
-                  {/* <img src="/images/packages/2.webp" alt="" /> */}
+                  {/* <img loading="lazy" src="/images/packages/2.webp" alt="" /> */}
                   <svg
                     width="124"
                     height="142"
@@ -76,7 +76,7 @@ const Packages = () => {
             {/* <div className="pack">
                             <div className="top">
                                 <div className="image">
-                                    <img src="/images/packages/3.webp" alt="" />
+                                    <img loading="lazy" src="/images/packages/3.webp" alt="" />
                                 </div>
                                 <p>تحتاج الشركات بشكل حاسم إلى الخدمات القانونية بمختلف أشكالها نظرًا للتعقيدات المتزايدة في البيئة التشريعية والتنظيمية.</p>
                             </div>
@@ -87,7 +87,7 @@ const Packages = () => {
             <div className="pack">
               <div className="top">
                 <div className="image">
-                  {/* <img src="/images/packages/4.webp" alt="" /> */}
+                  {/* <img loading="lazy" src="/images/packages/4.webp" alt="" /> */}
                   <svg
                     width="146"
                     height="146"
@@ -122,7 +122,7 @@ const Packages = () => {
             <div className="pack">
               <div className="top">
                 <div className="image">
-                  {/* <img src="/images/packages/5.webp" alt="" /> */}
+                  {/* <img loading="lazy" src="/images/packages/5.webp" alt="" /> */}
                   <svg
                     width="176"
                     height="136"

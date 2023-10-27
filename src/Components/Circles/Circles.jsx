@@ -19,7 +19,7 @@ const Circles = () => {
                             <Link to='/askforaservice/service-management'>
                                 <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-end" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
-                                        <img
+                                        <img loading="lazy"
                                             loading="lazy"
                                             src="/images/circles/servicemanagment.png"
                                             alt=""
@@ -31,7 +31,7 @@ const Circles = () => {
                             <Link to='/askforaservice/register-a-trademark'>
                                 <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
-                                        <img
+                                        <img loading="lazy"
                                             loading="lazy"
                                             src="/images/circles/r.png"
                                             alt=""
@@ -43,7 +43,7 @@ const Circles = () => {
                             <Link to='/askforaservice/establishment-of-facilities'>
                                 <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-end" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
-                                        <img
+                                        <img loading="lazy"
                                             loading="lazy"
                                             src="/images/circles/beldings.png"
                                             alt=""
@@ -55,20 +55,20 @@ const Circles = () => {
                         </div>
                         <div className="col-12 col-md-8 col-lg-6">
                             <div className="features-circles" >
-                                <img
+                                <img loading="lazy"
                                     loading="lazy"
                                     src="https://aait.sa/public/site/img/empty.png"
                                     alt=""
                                     className="empty"
                                 />
                                 <div className="center">
-                                    <img
+                                    <img loading="lazy"
                                         loading="lazy"
                                         src="/images/logoCircle.webp"
                                         alt=""
                                         className="img"
                                     />
-                                    <img
+                                    <img loading="lazy"
                                         loading="lazy"
                                         src="https://aait.sa/public/site/img/empty.png"
                                         alt=""
@@ -76,7 +76,7 @@ const Circles = () => {
                                     />
                                 </div>
                                 <span className="arounds">
-                                    <img
+                                    <img loading="lazy"
                                         loading="lazy"
                                         src="https://aait.sa/public/site/img/empty.png"
                                         alt=""
@@ -97,7 +97,7 @@ const Circles = () => {
                         <Link to='/askforaservice/legal-advice'>
                             <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-start" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
-                                    <img
+                                    <img loading="lazy"
                                         loading="lazy"
                                         src="/images/circles/law.png"
                                         alt=""
@@ -109,7 +109,7 @@ const Circles = () => {
                         <Link to='/askforaservice/all-government-services'>
                             <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
-                                    <img
+                                    <img loading="lazy"
                                         loading="lazy"
                                         src="/images/circles/governrate.png"
                                         alt=""
@@ -121,7 +121,7 @@ const Circles = () => {
                         <Link to='/askforaservice/wage-protection'>
                             <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-start" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
-                                    <img
+                                    <img loading="lazy"
                                         loading="lazy"
                                         src="/images/circles/wage.png"
                                         alt=""
@@ -136,7 +136,7 @@ const Circles = () => {
                     <Link to='/askforaservice/reducing-financial-burdens'>
                         <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                             <div className="img">
-                                <img
+                                <img loading="lazy"
                                     loading="lazy"
                                     src="/images/circles/free2.png"
                                     alt=""
@@ -148,7 +148,7 @@ const Circles = () => {
                     <Link to='/askforaservice/free-tryme-service'>
                         <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                             <div className="img">
-                                <img
+                                <img loading="lazy"
                                     loading="lazy"
                                     src="/images/circles/freeTry.png"
                                     alt=""
