@@ -48,7 +48,7 @@ const JoinUs = () => {
           else {
               Swal.fire({
                   title: lang === "ar" ? '! خطأ' : 'Error!',
-                  text: lang === "ar" ?`${name === ''?"لم يتم ادخال الاسم .":""} ${mobile === ''?"لم يتم ادخال رقم الهاتف .":""} ${partnership_type === ''?"لم يتم تحديد نوع الشراكة .":""} ${!isEmailValid(email)?"البريد الالكتروني غير صالح":""}`:`${name === ''?"The Name is Missing .":""}${mobile === ''?"The Mobile is Missing .":""} ${partnership_type === ''?"The type of partnership is not specified .":""} ${!isEmailValid(email)?"The Email isn't valid .":""}`,
+                  text: lang === "ar" ?`${name === ''?"لم يتم ادخال الاسم .":""} ${mobile === ''?"لم يتم ادخال رقم الهاتف .":""} ${email === ''?"لم يتم ادخال البريد الالكتروني  .":""} ${partnership_type === ''?"لم يتم تحديد نوع الشراكة .":""} ${email!==''&&!isEmailValid(email)?"البريد الالكتروني غير صالح":""}`:`${name === ''?"The Name is Missing .":""}${email === ''?"The email is missing .":""}${mobile === ''?"The Mobile is Missing .":""} ${partnership_type === ''?"The type of partnership is not specified .":""} ${email!==''&&!isEmailValid(email)?"The Email isn't valid .":""}`,
                   icon: 'error',
                 //   timer: 2000,
                   confirmButtonText: lang === "ar" ?'الرجوع':'Return'

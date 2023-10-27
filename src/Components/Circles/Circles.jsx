@@ -15,13 +15,13 @@ const Circles = () => {
                 <h2 className="section-title3 text-center mb-5">{t('circles.h1')}</h2>
                 <div className="container">
                     <div className="row align-items-center justify-content-center">
-                        <div className="col-12 col-lg-3">
+                        <div className="col-12 col-lg-3 d-flex gap-lg-4 flex-lg-column">
                             <Link to='/askforaservice/service-management'>
                                 <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-end" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
                                         <img
                                             loading="lazy"
-                                            src="/images/updateS1.png"
+                                            src="../../../public/images/circles/servicemanagment.png"
                                             alt=""
                                         />
                                     </div>
@@ -33,7 +33,7 @@ const Circles = () => {
                                     <div className="img">
                                         <img
                                             loading="lazy"
-                                            src="/images/r.png"
+                                            src="../../../public/images/circles/r.png"
                                             alt=""
                                         />
                                     </div>
@@ -45,7 +45,7 @@ const Circles = () => {
                                     <div className="img">
                                         <img
                                             loading="lazy"
-                                            src="/images/buildings.png"
+                                            src="../../../public/images/circles/beldings.png"
                                             alt=""
                                         />
                                     </div>
@@ -92,14 +92,14 @@ const Circles = () => {
                                 </span>
                             </div>
                         </div>
-                        <div className="col-12 col-lg-3 f-flex">
+                        <div className="col-12 col-lg-3 d-flex gap-lg-4 flex-lg-column">
 
                         <Link to='/askforaservice/legal-advice'>
                             <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-start" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
                                     <img
                                         loading="lazy"
-                                        src="/images/law.png"
+                                        src="../../../public/images/circles/law.png"
                                         alt=""
                                     />
                                 </div>
@@ -111,7 +111,7 @@ const Circles = () => {
                                 <div className="img">
                                     <img
                                         loading="lazy"
-                                        src="/images/governrate.png"
+                                        src="../../../public/images/circles/governrate.png"
                                         alt=""
                                     />
                                 </div>
@@ -123,7 +123,7 @@ const Circles = () => {
                                 <div className="img">
                                     <img
                                         loading="lazy"
-                                        src="/images/wage.png"
+                                        src="../../../public/images/circles/wage.png"
                                         alt=""
                                     />
                                 </div>
@@ -138,7 +138,7 @@ const Circles = () => {
                             <div className="img">
                                 <img
                                     loading="lazy"
-                                    src="/images/free2.png"
+                                    src="../../../public/images/circles/free2.png"
                                     alt=""
                                 />
                             </div>
@@ -150,7 +150,7 @@ const Circles = () => {
                             <div className="img">
                                 <img
                                     loading="lazy"
-                                    src="/images/updatef.png"
+                                    src="../../../public/images/circles/freeTry.png"
                                     alt=""
                                 />
                             </div>

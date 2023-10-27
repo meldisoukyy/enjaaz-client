@@ -80,7 +80,7 @@ const DedicatedAsk = () => {
           else {
               Swal.fire({
                   title: lang === "ar" ? '! خطأ' : 'Error!',
-                  text: lang === "ar" ?`${name === ''?"لم يتم ادخال الاسم .":""} ${mobile === ''?"لم يتم ادخال رقم الهاتف .":""} ${!isEmailValid(email)?"البريد الالكتروني غير صالح":""}`:`${name === ''?"The Name is Missing .":""}${mobile === ''?"The Mobile is Missing .":""}${!isEmailValid(email)?"The Email isn't valid .":""}`,
+                  text: lang === "ar" ?`${name === ''?"لم يتم ادخال الاسم .":""} ${email === ''?"لم يتم ادخال البريد الالكتروني .":""} ${mobile === ''?"لم يتم ادخال رقم الهاتف .":""} ${email!==''&&!isEmailValid(email)?"البريد الالكتروني غير صالح":""}`:`${name === ''?"The Name is Missing .":""}${email === ''?"The email is missing .":""}${mobile === ''?"The Mobile is Missing .":""}${email!==''&&!isEmailValid(email)?"The Email isn't valid .":""}`,
                   icon: 'error',
                   timer: 2000,
                   confirmButtonText: lang === "ar" ?'الرجوع':'Return'

@@ -10,6 +10,7 @@
       font-weight: 500;
       font-family: "rptBold";
       color: var(--mcolor);
+      text-align: center;
       @media (max-width: 992px) {
         margin: auto;
       }
@@ -89,6 +90,17 @@
               }
             }
           }
+        }
+      }
+      ul{
+        padding: 0;
+        margin: 0;
+        li{
+          list-style: disc;
+          font-size: 20px;
+          font-weight: 500;
+      font-family: "rptBold";
+      color: #221074;
         }
       }
       .bottom {

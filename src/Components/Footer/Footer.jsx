@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { SubscribersApi } from "../../Apis/Apis";
+import Swal from "sweetalert2";
 const Footer = () => {
   const { lang, setlang, t, i18n } = useMyContext();
   useEffect(() => {
@@ -21,7 +22,22 @@ const Footer = () => {
   
   const handleSubmit=()=>{
     if (isEmailValid(email)) {
-      SubscribersApi(email).then((res)=>{console.log(res);setdata(res)})
+
+      SubscribersApi(email).then((res)=>{
+        if (res.id) {
+          console.log(res);setdata(res)
+          Swal.fire({
+            title: lang === "ar" ? `تم الاشتراك بنجاح` : 'You have successfully subscribed',
+            icon: 'success',
+            timer: 2000,
+            confirmButtonText: lang === "ar" ?'الرجوع':'Return'
+        })
+    
+        }
+        else{
+          seterror('المشترك بهذا البريد الإلكتروني موجود بالفعل.')
+        }
+      })
       seterror('')
     } else {
       lang === "ar" ?seterror('أدخل بريد الكتروني صالح'):seterror('Enter a valid email')
