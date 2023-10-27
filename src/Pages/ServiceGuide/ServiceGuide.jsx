@@ -56,7 +56,7 @@ const ServiceGuide = () => {
                             return (
                                 <div className="item">
                                     <div className="icon swing-in-top-fwd">
-                                        <img src="/images/tick.png" alt="" />
+                                        <img src="/images/tick.webp" alt="" />
                                     </div>
                                     <p>{item}</p>
                                 </div>

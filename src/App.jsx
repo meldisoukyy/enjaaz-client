@@ -76,7 +76,7 @@ useEffect(() => {
             <Footer />
             <a className="whatsapp" href="https://wa.me/+966502144449" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
               <div className="image">
-                <img src="/images/whatsappi.png" alt="" />
+                <img src="/images/whatsappi.webp" alt="" />
               </div>
             </a>
           </>

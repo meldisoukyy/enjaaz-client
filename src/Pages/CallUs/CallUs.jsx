@@ -54,19 +54,19 @@ const CallUs = () => {
                         <div className="row gap-3">
                             <div className="col item">
                                 <div className="icon">
-                                    <img src="/images/carbon_home.png" alt="" />
+                                    <img src="/images/carbon_home.webp" alt="" />
                                 </div>
                                 <span>{t('callus.address')}</span>
                             </div>
                             <div className="col item">
                                 <div className="icon">
-                                    <img src="/images/carbon_phone.png" alt="" />
+                                    <img src="/images/carbon_phone.webp" alt="" />
                                 </div>
                                 <span>920013581 - 966502144449</span>
                             </div>
                             <div className="col item">
                                 <div className="icon">
-                                    <img src="/images/carbon_mail.png" alt="" />
+                                    <img src="/images/carbon_mail.webp" alt="" />
                                 </div>
                                 <span>info@enjaaz.com.sa</span>
                             </div>

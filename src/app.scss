@@ -347,7 +347,7 @@ a.active {
         select {
           appearance: none; /* Hide the default arrow */
           background-position: center;
-          background: url("./../public/images/down.png") no-repeat right center; /* Add a custom arrow */
+          background: url("./../public/images/down.webp") no-repeat right center; /* Add a custom arrow */
           background-size: 26px; /* Set the size of the custom arrow */
           background-position-x: 20px;
           option {

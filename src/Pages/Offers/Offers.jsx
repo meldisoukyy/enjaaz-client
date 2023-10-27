@@ -17,31 +17,31 @@ const Offers = () => {
       }, []);
     // const data = [
     //     {
-    //         img: '/images/1offer.png',
+    //         img: '/images/1offer.webp',
     //         title: 'الباقة البرونزية',
     //         p1: '3499',
     //         p2: '5000',
     //     },
     //     {
-    //         img: '/images/2offer.png',
+    //         img: '/images/2offer.webp',
     //         title: 'الباقة الفضية',
     //         p1: '4999',
     //         p2: '7000',
     //     },
     //     {
-    //         img: '/images/3offer.png',
+    //         img: '/images/3offer.webp',
     //         title: 'الباقة الماسية',
     //         p1: '14999',
     //         p2: '19000',
     //     },
     //     {
-    //         img: '/images/4offer.png',
+    //         img: '/images/4offer.webp',
     //         title: 'الباقة الذهبية',
     //         p1: '7999',
     //         p2: '12500',
     //     },
     //     {
-    //         img: '/images/5offer.png',
+    //         img: '/images/5offer.webp',
     //         title: 'الاستشارات القانونية',
     //         p1: '700',
     //         p2: '1000',

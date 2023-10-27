@@ -24,7 +24,7 @@ const Navbar = () => {
                 <div className="top d-flex justify-content-between align-items-end  pb-3">
                     <div className="image">
                         <Link to="/">
-                            <img src="/images/logo.png" alt="" />
+                            <img src="/images/logo.webp" alt="" />
                         </Link>
                     </div>
                     <p className='mb-0' onClick={() => {
@@ -65,13 +65,13 @@ const Navbar = () => {
                     <div className="numbers">
                         <div className="num">
                             <div className="icon">
-                                <img src="/images/phoneNav.png" alt="" />
+                                <img src="/images/phoneNav.webp" alt="" />
                             </div>
                             <p>920013581</p>
                         </div>
                         <div className="num">
                             <div className="icon">
-                                <img src="/images/whatsappnav.png" alt="" />
+                                <img src="/images/whatsappnav.webp" alt="" />
                             </div>
                             <p>+966502144449</p>
                         </div>
@@ -98,7 +98,7 @@ const Navbar = () => {
                 <Offcanvas show={isOpened} onHide={handleClose} placement='end'>
                     <Offcanvas.Header >
                         <div className="image">
-                            <img src="/images/logo.png" alt="" />
+                            <img src="/images/logo.webp" alt="" />
                         </div>
                         <div className="closeBtn" >
                             <button

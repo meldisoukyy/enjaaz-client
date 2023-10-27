@@ -64,7 +64,7 @@ const Circles = () => {
                                 <div className="center">
                                     <img
                                         loading="lazy"
-                                        src="/images/logoCircle.png"
+                                        src="/images/logoCircle.webp"
                                         alt=""
                                         className="img"
                                     />

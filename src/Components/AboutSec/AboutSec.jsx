@@ -13,7 +13,7 @@ const AboutSec = () => {
       <div className="container" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
         <h1 className='section-title3' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>{t('aboutus.h2')}</h1>
         <div className='image' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
-          <img src="/images/1.png" alt="" />
+          <img src="/images/1.webp" alt="" />
         </div>
         <p data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>{t('aboutus.p1')}</p>
         <h1 className='section-title3' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>{t('aboutus.h3')}</h1>

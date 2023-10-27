@@ -66,7 +66,7 @@ const Footer = () => {
           <div className="row d-flex ">
             <div className="part col-lg-4 col-md-6 mb-4 mb-lg-0">
               <div className="image">
-                <img src="/images/logo.png" alt="" />
+                <img src="/images/logo.webp" alt="" />
               </div>
               <h1>{t('footer.bottomh1')}</h1>
               <p>{t('footer.bottomp1')}</p>
@@ -110,46 +110,46 @@ const Footer = () => {
               <h1>{t('footer.bottomh3')}</h1>
               <div className="item">
                 <div className="icon">
-                  <img src="/images/footer1.png" alt="" />
+                  <img src="/images/footer1.webp" alt="" />
                 </div>
                 <span>{t('footer.address')}</span>
               </div>
               <div className="item">
                 <div className="icon">
-                  <img src="/images/footer2.png" alt="" />
+                  <img src="/images/footer2.webp" alt="" />
                 </div>
                 <span>920013581 - 966502144449</span>
               </div>
               <div className="item">
                 <div className="icon">
-                  <img src="/images/footer3.png" alt="" />
+                  <img src="/images/footer3.webp" alt="" />
                 </div>
                 <span>info@enjaaz.com.sa</span>
               </div>
               <div className="social">
                 <div className="image">
-                  <img src="/images/footer/FooterIcon-6.png" alt="" />
+                  <img src="/images/footer/FooterIcon-6.webp" alt="" />
                 </div>
                 <div className="image">
-                  <img src="/images/footer/FooterIcon.png" alt="" />
+                  <img src="/images/footer/FooterIcon.webp" alt="" />
                 </div>
                 <div className="image">
-                  <img src="/images/footer/FooterIcon-7.png" alt="" />
+                  <img src="/images/footer/FooterIcon-7.webp" alt="" />
                 </div>
                 <div className="image">
-                  <img src="/images/footer/FooterIcon-2.png" alt="" />
+                  <img src="/images/footer/FooterIcon-2.webp" alt="" />
                 </div>
                 <div className="image">
-                  <img src="/images/footer/FooterIcon-3.png" alt="" />
+                  <img src="/images/footer/FooterIcon-3.webp" alt="" />
                 </div>
                 <div className="image">
-                  <img src="/images/footer/FooterIcon-1.png" alt="" />
+                  <img src="/images/footer/FooterIcon-1.webp" alt="" />
                 </div>
                 <div className="image">
-                  <img src="/images/footer/FooterIcon-4.png" alt="" />
+                  <img src="/images/footer/FooterIcon-4.webp" alt="" />
                 </div>
                 <div className="image">
-                  <img src="/images/footer/FooterIcon-5.png" alt="" />
+                  <img src="/images/footer/FooterIcon-5.webp" alt="" />
                 </div>
               </div>
             </div>

@@ -13,7 +13,7 @@ const Partners = () => {
     useEffect(() => {
         PartnersApi().then((res)=>{setdata(res)})
       }, []);
-    // const data=["/images/partners/1partners.png","/images/partners/2partners.png","/images/partners/3partners.png","/images/partners/4partners.png","/images/partners/5partners.png","/images/partners/6partners.png","/images/partners/7partners.png",]
+    // const data=["/images/partners/1partners.webp","/images/partners/2partners.webp","/images/partners/3partners.webp","/images/partners/4partners.webp","/images/partners/5partners.webp","/images/partners/6partners.webp","/images/partners/7partners.webp",]
   return (
     <div className='Partners' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
         <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
