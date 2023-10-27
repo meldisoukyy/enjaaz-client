@@ -21,7 +21,7 @@ const Circles = () => {
                                     <div className="img">
                                         <img
                                             loading="lazy"
-                                            src="../../../public/images/circles/servicemanagment.png"
+                                            src="/images/circles/servicemanagment.png"
                                             alt=""
                                         />
                                     </div>
@@ -33,7 +33,7 @@ const Circles = () => {
                                     <div className="img">
                                         <img
                                             loading="lazy"
-                                            src="../../../public/images/circles/r.png"
+                                            src="/images/circles/r.png"
                                             alt=""
                                         />
                                     </div>
@@ -45,7 +45,7 @@ const Circles = () => {
                                     <div className="img">
                                         <img
                                             loading="lazy"
-                                            src="../../../public/images/circles/beldings.png"
+                                            src="/images/circles/beldings.png"
                                             alt=""
                                         />
                                     </div>
@@ -99,7 +99,7 @@ const Circles = () => {
                                 <div className="img">
                                     <img
                                         loading="lazy"
-                                        src="../../../public/images/circles/law.png"
+                                        src="/images/circles/law.png"
                                         alt=""
                                     />
                                 </div>
@@ -111,7 +111,7 @@ const Circles = () => {
                                 <div className="img">
                                     <img
                                         loading="lazy"
-                                        src="../../../public/images/circles/governrate.png"
+                                        src="/images/circles/governrate.png"
                                         alt=""
                                     />
                                 </div>
@@ -123,7 +123,7 @@ const Circles = () => {
                                 <div className="img">
                                     <img
                                         loading="lazy"
-                                        src="../../../public/images/circles/wage.png"
+                                        src="/images/circles/wage.png"
                                         alt=""
                                     />
                                 </div>
@@ -138,7 +138,7 @@ const Circles = () => {
                             <div className="img">
                                 <img
                                     loading="lazy"
-                                    src="../../../public/images/circles/free2.png"
+                                    src="/images/circles/free2.png"
                                     alt=""
                                 />
                             </div>
@@ -150,7 +150,7 @@ const Circles = () => {
                             <div className="img">
                                 <img
                                     loading="lazy"
-                                    src="../../../public/images/circles/freeTry.png"
+                                    src="/images/circles/freeTry.png"
                                     alt=""
                                 />
                             </div>
