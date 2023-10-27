@@ -4,19 +4,19 @@ import './Offers.scss'
 import { useMyContext } from '../../context/MyContext';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 import { Helmet, HelmetAr, OffersApi } from '../../Apis/Apis';
 const Offers = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-    lang==='ar'?HelmetAr('العروض'):
-    Helmet('Offers')
+    lang === 'ar' ? HelmetAr('العروض') :
+        Helmet('Offers')
     useEffect(() => {
         AOS.init();
-      }, []);
-      const [data, setdata] = useState([])
+    }, []);
+    const [data, setdata] = useState([])
     useEffect(() => {
-        OffersApi().then((res)=>{setdata(res)})
-      }, []);
+        OffersApi().then((res) => { setdata(res), console.log(res) })
+    }, []);
     // const data = [
     //     {
     //         img: '/images/1offer.webp',
@@ -49,25 +49,27 @@ const Offers = () => {
     //         p2: '1000',
     //     },
     // ]
-    
+
     return (
         <>
-            <CommonHead title="العروض" path="الصفحة الرئيسية \" />
-            <div className='Offers' style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
+            <CommonHead title={t('offers.h1')} path={t('offers.path')} />
+            <div className='Offers' style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
                 <div className="container">
-                    <h1>عروضنا</h1>
-                    <h2 className='section-title3 text-center my-5'>العروض  الحالية</h2>
+                    <h1>{t('offers.h2')}</h1>
+                    <h2 className='section-title3 text-center my-5'>{t('offers.h3')}</h2>
                     <div className="packs">
                         {data.map((item, i) => {
                             return (
                                 <div className="pack" key={i} data-aos="fade-in" data-aos-duration="2000" data-aos-delay={`${(i + 1) * 50}`}>
                                     <div className="image">
-                                        <img src={lang === "ar" ?item.image_ar:item.image_en} alt={lang === "ar" ?item.name_ar:item.name_en} />
+                                        <img src={lang === "ar" ? item.image_ar : item.image_en ? item.image_en : item.image_ar} alt={lang === "ar" ? item.name_ar : item.name_en} />
                                     </div>
-                                    <h1 className="text-center">{lang === "ar" ?item.name_ar:item.name_en}</h1>
+                                    <h1 className="text-center">{lang === "ar" ? item.name_ar : item.name_en}</h1>
                                     <div className="price">
-                                        <span>{item.price}{lang === "ar" ?'ر.س':'SAR'}</span>
-                                        <span>{item.price_before}{lang === "ar" ?'ر.س':'SAR'}</span>
+                                        <span>{item.price}{lang === "ar" ? 'ر.س' : 'SAR'}</span>
+                                        {item.price_before && (
+                                            <span className='sale'>{item.price_before}{lang === "ar" ? 'ر.س' : 'SAR'}</span>
+                                        )}
                                     </div>
                                     <Link to='/askforaservice'>
                                         <div className="bottom">

@@ -144,5 +144,5 @@ export const Helmet = (title) => {
 document.title='Enjaaz Company - ' + title
 }
 export const HelmetAr = (title) => {
-document.title='شركة انجاز - ' + title
+document.title='شركة إنجاز - ' + title
 }

@@ -10,8 +10,8 @@ import 'aos/dist/aos.css';
 import { Helmet, HelmetAr, ServiceManagemenApi } from '../../Apis/Apis'
 const ServicesPackage = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-    lang==='ar'?HelmetAr('إدارة الخدمات'):
-    Helmet('Services Managment')
+    lang === 'ar' ? HelmetAr('إدارة الخدمات') :
+        Helmet('Services Managment')
     useEffect(() => {
         AOS.init();
     }, []);
@@ -97,13 +97,17 @@ const ServicesPackage = () => {
                                 <h2>{lang === "ar" ? 'الباقة البرونزية' : 'Bronze package'}</h2>
                                 {lang === "ar" ? (
                                     <>
-                                        <p>بقيمة<span>3499</span>ريال فقط</p>
-                                        <p className='instead'>بدلا من<span>3499</span></p>
+                                        <p>بقيمة<span>{data[0]?.price}</span>ريال فقط</p>
+                                        {data[0]?.price_before && (
+                                            <p className='instead'>بدلا من<span>{data[0]?.price_before}</span></p>
+                                        )}
                                     </>
                                 ) : (
                                     <>
-                                        <p>For only <span>$3499</span></p>
-                                        <p className='instead'>Instead of <span>$3499</span></p>
+                                        <p>For only <span>{data[0]?.price}</span></p>
+                                        {data[0]?.price_before && (
+                                            <p className='instead'>Instead of <span>{data[0]?.price_before}</span></p>
+                                        )}
                                     </>
 
                                 )}
@@ -150,13 +154,17 @@ const ServicesPackage = () => {
                                 <h2>{lang === "ar" ? 'الباقة الفضية' : 'Silver package'}</h2>
                                 {lang === "ar" ? (
                                     <>
-                                        <p>بقيمة<span>3499</span>ريال فقط</p>
-                                        <p className='instead'>بدلا من<span>3499</span></p>
+                                        <p>بقيمة<span>{data[1]?.price}</span>ريال فقط</p>
+                                        {data[1]?.price_before && (
+                                            <p className='instead'>بدلا من<span>{data[1]?.price_before}</span></p>
+                                        )}
                                     </>
                                 ) : (
                                     <>
-                                        <p>For only <span>$3499</span></p>
-                                        <p className='instead'>Instead of <span>$3499</span></p>
+                                        <p>For only <span>{data[1]?.price}</span></p>
+                                        {data[1]?.price_before && (
+                                            <p className='instead'>Instead of <span>{data[1]?.price_before}</span></p>
+                                        )}
                                     </>
 
                                 )}
@@ -208,13 +216,17 @@ const ServicesPackage = () => {
                                 <h2>{lang === "ar" ? 'الباقة الذهبية' : 'Golden package'}</h2>
                                 {lang === "ar" ? (
                                     <>
-                                        <p>بقيمة<span>3499</span>ريال فقط</p>
-                                        <p className='instead'>بدلا من<span>3499</span></p>
+                                        <p>بقيمة<span>{data[2]?.price}</span>ريال فقط</p>
+                                        {data[2]?.price_before && (
+                                            <p className='instead'>بدلا من<span>{data[2]?.price_before}</span></p>
+                                        )}
                                     </>
                                 ) : (
                                     <>
-                                        <p>For only <span>$3499</span></p>
-                                        <p className='instead'>Instead of <span>$3499</span></p>
+                                        <p>For only <span>{data[2]?.price}</span></p>
+                                        {data[2]?.price_before && (
+                                            <p className='instead'>Instead of <span>{data[2]?.price_before}</span></p>
+                                        )}
                                     </>
 
                                 )}
@@ -271,13 +283,19 @@ const ServicesPackage = () => {
                                 <h2>{lang === "ar" ? 'الباقة الماسية' : 'Diamond package'}</h2>
                                 {lang === "ar" ? (
                                     <>
-                                        <p>بقيمة<span>3499</span>ريال فقط</p>
-                                        <p className='instead'>بدلا من<span>3499</span></p>
+                                        <p>بقيمة<span>{data[3]?.price}</span>ريال فقط</p>
+                                        {data[3]?.price_before && (
+
+                                            <p className='instead'>بدلا من<span>{data[3]?.price_before}</span></p>
+                                        )}
                                     </>
                                 ) : (
                                     <>
-                                        <p>For only <span>$3499</span></p>
-                                        <p className='instead'>Instead of <span>$3499</span></p>
+                                        <p>For only <span>{data[3]?.price}</span></p>
+                                        {data[3]?.price_before && (
+
+                                            <p className='instead'>Instead of <span>{data[3]?.price_before}</span></p>
+                                        )}
                                     </>
 
                                 )}

@@ -18,7 +18,7 @@
         font-size: 29px;
       }
     }
-    h2{
+    h2 {
       color: white;
     }
     p {
@@ -51,6 +51,7 @@
       justify-content: space-between;
       gap: 40px;
       height: fit-content;
+
       .top {
         width: 100%;
         display: flex;
@@ -63,6 +64,7 @@
           padding: 30px 15px 0px 15px;
           width: 100%;
           text-align: center !important;
+
           h2 {
             font-size: 32px;
             font-weight: 500;
@@ -90,21 +92,37 @@
               }
             }
           }
+          .saleWage {
+            color: rgba(138, 138, 138, 1);
+            font-size: 26px;
+            @media (max-width: 767px) {
+              font-size: 22px;
+            }
+            span {
+              color: var(--mcolor);
+              margin: 0px 5px;
+              font-size: 30px;
+              text-decoration: line-through;
+              @media (max-width: 767px) {
+                font-size: 25px;
+              }
+            }
+          }
         }
       }
-      ul{
+      ul {
         padding: 0;
         margin: 0;
-        li{
+        li {
           list-style: disc;
           font-size: 20px;
           font-weight: 500;
-      font-family: "rptBold";
-      color: #221074;
+          font-family: "rptBold";
+          color: #221074;
         }
       }
       .bottom {
-        a{
+        a {
           width: 100%;
           display: flex;
           justify-content: center;

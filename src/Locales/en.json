@@ -202,6 +202,13 @@
 "subsc": {
   "h1": "Subscribe Now"
 }
+,
+  "offers": {
+    "h1": "Offers",
+    "path": "Home /",
+    "h2": "Our Offers",
+    "h3": "Current Offers"
+  }
 
   
 }

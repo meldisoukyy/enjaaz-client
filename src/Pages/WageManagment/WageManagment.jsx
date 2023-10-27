@@ -8,8 +8,8 @@ import 'aos/dist/aos.css';
 import { Helmet, HelmetAr, WageManagementApi } from '../../Apis/Apis';
 const WageManagment = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-    lang==='ar'?HelmetAr('إدارة الأجور'):
-    Helmet('Wage Managment')
+    lang === 'ar' ? HelmetAr('إدارة الأجور') :
+        Helmet('Wage Managment')
     useEffect(() => {
         AOS.init();
     }, []);
@@ -31,26 +31,26 @@ const WageManagment = () => {
         2: ["101-500 Employees", "Upload Salary Files", "Process All Errors", "Monitor Notes Removal"],
         3: ["More than 501 Employees", "Upload Salary Files", "Process All Errors", "Monitor Notes Removal"],
     };
-const namesar={
-   "Bronze Monthly":"البرونزية",
-   "Silver Monthly":"الفضية",
-   "Gold Monthly":"الذهبية",
-   "Platinum Monthly":"البلاتينية",
-   "Bronze Yearly":"البرونزية",
-   "Silver Yearly":"الفضية",
-   "Gold Yearly":"الذهبية",
-   "Platinum Yearly":"البلاتينية",
-}
-const namesen={
-   "Bronze Monthly":"Bronze",
-   "Silver Monthly":"Silver",
-   "Gold Monthly":"Gold",
-   "Platinum Monthly":"Platinum",
-   "Bronze Yearly":"Bronze",
-   "Silver Yearly":"Silver",
-   "Gold Yearly":"Gold",
-   "Platinum Yearly":"Platinum",
-}
+    const namesar = {
+        "Bronze Monthly": "البرونزية",
+        "Silver Monthly": "الفضية",
+        "Gold Monthly": "الذهبية",
+        "Platinum Monthly": "البلاتينية",
+        "Bronze Yearly": "البرونزية",
+        "Silver Yearly": "الفضية",
+        "Gold Yearly": "الذهبية",
+        "Platinum Yearly": "البلاتينية",
+    }
+    const namesen = {
+        "Bronze Monthly": "Bronze",
+        "Silver Monthly": "Silver",
+        "Gold Monthly": "Gold",
+        "Platinum Monthly": "Platinum",
+        "Bronze Yearly": "Bronze",
+        "Silver Yearly": "Silver",
+        "Gold Yearly": "Gold",
+        "Platinum Yearly": "Platinum",
+    }
 
     return (
         <>
@@ -59,15 +59,30 @@ const namesen={
                 <h1>{t('package2.h2')}</h1>
                 <p>{t('package2.p')}</p>
                 <h2 className='section-title3 text-center my-5'>{t('package2.h3')}</h2>
-                <h2 className='secH'>{lang === "ar" ?'الشهرية':'Monthly'}</h2>
+                <h2 className='secH'>{lang === "ar" ? 'الشهرية' : 'Monthly'}</h2>
                 <div className="packs">
                     {dataMonth?.map((item, i) => {
                         return (
                             <div className="pack ">
                                 <div className="top">
                                     <div className="banner">
-                                        <h2>{lang === "ar" ?namesar[item.package]:namesen[item.package]}</h2>
-                                        <p>بقيمة<span>3499</span>ريال </p>
+                                        <h2>{lang === "ar" ? namesar[item.package] : namesen[item.package]}</h2>
+                                        {lang === "ar" ? (
+                                            <>
+                                                <p>بقيمة<span>{item.price}</span>ريال </p>
+                                                {item.price_before && item.price_before !== 0.00 && (
+                                                    <p className="saleWage">بدلا من<span>{item.price_before}</span>ريال </p>
+                                                )}
+                                            </>
+                                        ) : (
+                                            <>
+                                                <p>For only <span>{data[0]?.price}</span>SAR</p>
+                                                {data[0]?.price_before && (
+                                                    <p className='saleWage'>Instead of <span>{data[0]?.price_before}</span>SAR</p>
+                                                )}
+                                            </>
+
+                                        )}
                                     </div>
                                 </div>
                                 {lang === "ar" ? (
@@ -98,15 +113,30 @@ const namesen={
                         )
                     })}
                 </div>
-                <h2 className='secH'>{lang === "ar" ?'السنوية':'Yearly'}</h2>
+                <h2 className='secH'>{lang === "ar" ? 'السنوية' : 'Yearly'}</h2>
                 <div className="packs">
                     {dataYear?.map((item, i) => {
                         return (
                             <div className="pack ">
                                 <div className="top">
                                     <div className="banner">
-                                    <h2>{lang === "ar" ?namesar[item.package]:namesen[item.package]}</h2>
-                                        <p>بقيمة<span>3499</span>ريال </p>
+                                        <h2>{lang === "ar" ? namesar[item.package] : namesen[item.package]}</h2>
+                                        {lang === "ar" ? (
+                                            <>
+                                                <p>بقيمة<span>{item.price}</span>ريال </p>
+                                                {item.price_before && item.price_before !== 0.00 && (
+                                                    <p className="saleWage">بدلا من<span>{item.price_before}</span>ريال </p>
+                                                )}
+                                            </>
+                                        ) : (
+                                            <>
+                                                <p>For only <span>{data[0]?.price}</span>SAR</p>
+                                                {data[0]?.price_before && (
+                                                    <p className='saleWage'>Instead of <span>{data[0]?.price_before}</span>SAR</p>
+                                                )}
+                                            </>
+
+                                        )}
                                     </div>
                                 </div>
                                 {lang === "ar" ? (
