@@ -57,7 +57,7 @@ const Reviews = () => {
                 slidesToShow={num==1?num:data&&data.length==2?2:data&&data.length==1?1:num}
                 animation={'fade'}
                 speed={1000}
-                pauseOnHover={false}
+                pauseOnHover={true}
                 dragging={true}
                 autoplay={true}
                 autoplayInterval={3000}

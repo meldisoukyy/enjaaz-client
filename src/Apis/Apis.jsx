@@ -6,6 +6,14 @@ export const PartnersApi = () => {
         return response.json();
     });
 };//..
+// export const TestApi = () => {
+//     return fetch('https://f1a3-156-199-240-227.ngrok-free.app/', {
+//         method: 'GET',
+//         headers: { 'Content-Type': 'application/json' },
+//     }).then((response) => {
+//         return response.json();
+//     });
+// };//..
 export const QuestionsApi = () => {
     return fetch('https://server.enjaaz.com.sa/api/questions/', {
         method: 'GET',

@@ -17,10 +17,10 @@ const SecondSlider = () => {
                 slidesToShow={1}
                 animation={'fade'}
                 speed={1000}
-                pauseOnHover={false}
+                pauseOnHover={true}
                 dragging={true}
                 autoplay={true}
-                autoplayInterval={3000}
+                autoplayInterval={6000}
                 renderCenterLeftControls={({ previousSlide }) => (
                     <div className='arrow' onClick={previousSlide}>
                         {/* <AiOutlineArrowLeft/> */}
