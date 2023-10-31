@@ -23,17 +23,17 @@ const JoinUs = () => {
       const [data, setdata] = useState([])
   
       
-      function isEmailValid(email) {
-          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          return emailPattern.test(email);
-      }
+    //   function isEmailValid(email) {
+    //       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    //       return emailPattern.test(email);
+    //   }
       
       
       
       const handleSubmit = () => {
-          if (name !== '' && mobile !== '' &&partnership_type!== '' && isEmailValid(email)) {
+          if (name !== '' && mobile !== '' &&partnership_type!== '') {
             //   console.log(name,email,mobile,city,partnership_type,notes,portfolio)
-              JoinUsApi(name,email,mobile,city,partnership_type,notes,portfolio).then((res) => {
+              JoinUsApi(name,mobile,partnership_type,notes,portfolio).then((res) => {
                 //  console.log(res);
                   setdata(res); 
                 }).then(()=>data.portfolio[0]==='The submitted data was not a file. Check the encoding type on the form.'?Swal.fire({
@@ -53,7 +53,7 @@ const JoinUs = () => {
           else {
               Swal.fire({
                   title: lang === "ar" ? '! خطأ' : 'Error!',
-                  text: lang === "ar" ?`${name === ''?"لم يتم ادخال الاسم .":""} ${mobile === ''?"لم يتم ادخال رقم الهاتف .":""} ${email === ''?"لم يتم ادخال البريد الالكتروني  .":""} ${partnership_type === ''?"لم يتم تحديد نوع الشراكة .":""} ${email!==''&&!isEmailValid(email)?"البريد الالكتروني غير صالح":""}`:`${name === ''?"The Name is Missing .":""}${email === ''?"The email is missing .":""}${mobile === ''?"The Mobile is Missing .":""} ${partnership_type === ''?"The type of partnership is not specified .":""} ${email!==''&&!isEmailValid(email)?"The Email isn't valid .":""}`,
+                  text: lang === "ar" ?`${name === ''?"لم يتم ادخال الاسم .":""} ${mobile === ''?"لم يتم ادخال رقم الهاتف .":""} ${partnership_type === ''?"لم يتم تحديد نوع الشراكة .":""} `:`${name === ''?"The Name is Missing .":""}${mobile === ''?"The Mobile is Missing .":""} ${partnership_type === ''?"The type of partnership is not specified .":""} `,
                   icon: 'error',
                   timer: 2000,
                   confirmButtonText: lang === "ar" ?'الرجوع':'Return'
@@ -71,14 +71,14 @@ const JoinUs = () => {
 
                     <div className="EnjazzFormInputs">
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.fullName')} onChange={(e) => setname(e.target.value)} />
-                        <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span>
-                        <input className='EnjazzFormInput' type="text" placeholder={t('form.email')} onChange={(e) => setemail(e.target.value)} />
+                        {/* <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span> */}
+                        {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.email')} onChange={(e) => setemail(e.target.value)} /> */}
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} />
-                        <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span>
+                        {/* <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span> */}
 
-                        <input className='EnjazzFormInput' type="text" placeholder={t('form.city')} onChange={(e) => setcity(e.target.value)} />
+                        {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.city')} onChange={(e) => setcity(e.target.value)} /> */}
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.typeC')} onChange={(e) => setpartnership_type(e.target.value)} />
-                        <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span>
+                        {/* <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span> */}
 
                         <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details3')} onChange={(e) => setnotes(e.target.value)}></textarea>
                         <div className="EnjazzFormInput EnjazzFormInputFile">

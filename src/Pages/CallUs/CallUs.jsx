@@ -21,15 +21,15 @@ const CallUs = () => {
 
     const [data, setdata] = useState([])
 
-    function isEmailValid(email) {
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailPattern.test(email);
-    }
+    // function isEmailValid(email) {
+    //     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    //     return emailPattern.test(email);
+    // }
 
     const handleSubmit = () => {
-        if (name !== '' && mobile !== '' && isEmailValid(email)) {
+        if (name !== '' && mobile !== '') {
             // console.log(name, email, mobile, reason, message)
-            ContactUsApi(name, email, mobile, reason, message).then((res) => {
+            ContactUsApi(name, mobile, reason, message).then((res) => {
                 //  console.log(res)
                  ; setdata(res); 
                 }).then(() => data.id && Swal.fire({
@@ -43,7 +43,7 @@ const CallUs = () => {
         else {
             Swal.fire({
                 title: lang === "ar" ? '! خطأ' : 'Error!',
-                text: lang === "ar" ? `${name === '' ? "لم يتم ادخال الاسم ." : ""} ${mobile === '' ? "لم يتم ادخال رقم الهاتف ." : ""} ${email === '' ? "لم يتم ادخال رقم البريد الالكتروني ." : ""} ${email !== '' && !isEmailValid(email) ? "البريد الالكتروني غير صالح" : ""}` : `${name === '' ? "The Name is Missing ." : ""}${email === '' ? "The email is missing ." : ""}${mobile === '' ? "The Mobile is Missing ." : ""}${email !== '' && !isEmailValid(email) ? "The Email isn't valid ." : ""}`,
+                text: lang === "ar" ? `${name === '' ? "لم يتم ادخال الاسم ." : ""} ${mobile === '' ? "لم يتم ادخال رقم الهاتف ." : ""}` : `${name === '' ? "The Name is Missing ." : ""}${mobile === '' ? "The Mobile is Missing ." : ""}`,
                 icon: 'error',
                 timer: 2000,
                 confirmButtonText: lang === "ar" ? 'الرجوع' : 'Return'
@@ -90,10 +90,10 @@ const CallUs = () => {
 
                     <div className="EnjazzFormInputs">
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.fullName')} onChange={(e) => setname(e.target.value)} />
-                        <span style={{ color: 'red', marginTop: '-10px' }}>{t('form.required')}</span>
-                        <input className='EnjazzFormInput' type="text" placeholder={t('form.email')} onChange={(e) => setemail(e.target.value)} />
+                        {/* <span style={{ color: 'red', marginTop: '-10px' }}>{t('form.required')}</span> */}
+                        {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.email')} onChange={(e) => setemail(e.target.value)} /> */}
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} />
-                        <span style={{ color: 'red', marginTop: '-10px' }}>{t('form.required')}</span>
+                        {/* <span style={{ color: 'red', marginTop: '-10px' }}>{t('form.required')}</span> */}
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.reason')} onChange={(e) => setreason(e.target.value)} />
                         <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details2')} onChange={(e) => setmessage(e.target.value)}></textarea>
                     </div>

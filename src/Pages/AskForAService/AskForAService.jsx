@@ -23,15 +23,15 @@ const AskForAService = () => {
   
       const [data, setdata] = useState([])
   
-      function isEmailValid(email) {
-          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          return emailPattern.test(email);
-      }
+    //   function isEmailValid(email) {
+    //       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    //       return emailPattern.test(email);
+    //   }
   
       const handleSubmit = () => {
-          if (name !== '' && mobile !== '' && isEmailValid(email)) {
+          if (name !== '' && mobile !== '') {
             //   console.log(name,email,mobile,city,service_type,notes)
-              ServiceRequestApi(name,email,mobile,city,service_type,notes).then((res) => { 
+              ServiceRequestApi(name,mobile,service_type,notes).then((res) => { 
                 // console.log(res);
                  setdata(res); 
             }).then(()=>data.id&&Swal.fire({
@@ -45,7 +45,7 @@ const AskForAService = () => {
           else {
               Swal.fire({
                   title: lang === "ar" ? '! خطأ' : 'Error!',
-                  text: lang === "ar" ?`${name === ''?"لم يتم ادخال الاسم .":""} ${email === ''?"لم يتم ادخال البريد الالكتروني .":""} ${mobile === ''?"لم يتم ادخال رقم الهاتف .":""} ${email!==''&&!isEmailValid(email)?"البريد الالكتروني غير صالح":""}`:`${name === ''?"The Name is Missing .":""}${email === ''?"The email is missing .":""}${mobile === ''?"The Mobile is Missing .":""}${email!==''&&!isEmailValid(email)?"The Email isn't valid .":""}`,
+                  text: lang === "ar" ?`${name === ''?"لم يتم ادخال الاسم .":""} ${mobile === ''?"لم يتم ادخال رقم الهاتف .":""}`:`${name === ''?"The Name is Missing .":""}${mobile === ''?"The Mobile is Missing .":""}`,
                   icon: 'error',
                   timer: 2000,
                   confirmButtonText: lang === "ar" ?'الرجوع':'Return'
@@ -63,13 +63,13 @@ const AskForAService = () => {
 
                     <div className="EnjazzFormInputs">
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.fullName')} onChange={(e) => setname(e.target.value)} />
-                        <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span>
+                        {/* <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span>
 
-                        <input className='EnjazzFormInput' type="text" placeholder={t('form.email')} onChange={(e) => setemail(e.target.value)} />
+                        <input className='EnjazzFormInput' type="text" placeholder={t('form.email')} onChange={(e) => setemail(e.target.value)} /> */}
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} />
-                        <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span>
+                        {/* <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span> */}
 
-                        <input className='EnjazzFormInput' type="text" placeholder={t('form.city')} onChange={(e) => setcity(e.target.value)} />
+                        {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.city')} onChange={(e) => setcity(e.target.value)} /> */}
                         {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.typeS')} /> */}
                         <p>{t('form.typeS')}:</p>
                         <select className='EnjazzFormInput' onChange={(e) => setservice_type(e.target.value)}>
@@ -82,7 +82,7 @@ const AskForAService = () => {
                             <option value="reducing-financial-burdens">{t('circles.c7')}</option>
                             <option value="free-tryme-service">{t('circles.c8')}</option>
                         </select>
-                        <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span>
+                        {/* <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span> */}
 
                         <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details')} onChange={(e) => setnotes(e.target.value)}></textarea>
                     </div>
