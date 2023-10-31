@@ -18,7 +18,7 @@ const AskForAService = () => {
       const [email, setemail] = useState('')
       const [mobile, setmobile] = useState('')
       const [city, setcity] = useState('')
-      const [service_type, setservice_type] = useState('service-management')
+      const [service_type, setservice_type] = useState('service-management-yearly')
       const [notes, setnotes] = useState('')
   
       const [data, setdata] = useState([])
@@ -72,13 +72,16 @@ const AskForAService = () => {
                         {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.city')} onChange={(e) => setcity(e.target.value)} /> */}
                         {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.typeS')} /> */}
                         <p>{t('form.typeS')}:</p>
-                        <select className='EnjazzFormInput' onChange={(e) => setservice_type(e.target.value)}>
-                            <option value="service-management" selected>{t('circles.c1')}</option>
+                        <select className='EnjazzFormInput' style={lang === "ar" ?{backgroundPositionX: '3%'}:{backgroundPositionX: '97%'}} onChange={(e) => setservice_type(e.target.value)}>
+                            <option value="service-management-yearly" selected>{t('circles.c11')}</option>
+                            <option value="service-management-simi-annual" >{t('circles.c12')}</option>
+                            <option value="service-management-three-months" >{t('circles.c13')}</option>
+                            <option value="wage-protection-yearly">{t('circles.c21')}</option>
+                            <option value="wage-protection-monthly">{t('circles.c22')}</option>
                             <option value="register-a-trademark">{t('circles.c2')}</option>
                             <option value="establishment-of-facilities">{t('circles.c3')}</option>
                             <option value="legal-advice">{t('circles.c4')}</option>
                             <option value="all-government-services">{t('circles.c5')}</option>
-                            <option value="wage-protection">{t('circles.c6')}</option>
                             <option value="reducing-financial-burdens">{t('circles.c7')}</option>
                             <option value="free-tryme-service">{t('circles.c8')}</option>
                         </select>

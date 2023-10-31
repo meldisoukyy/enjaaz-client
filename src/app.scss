@@ -282,7 +282,7 @@ a.active {
     direction: rtl;
     padding: 60px 0;
     p {
-      font-size: 24px;
+      font-size: 20px !important;
       font-weight: 500;
       font-family: "rptBold";
       color: black;
@@ -346,10 +346,10 @@ a.active {
         width: 100%;
         select {
           appearance: none; /* Hide the default arrow */
-          background-position: center;
+          background-position: left;
           background: url("./../public/images/down.webp") no-repeat right center; /* Add a custom arrow */
           background-size: 26px; /* Set the size of the custom arrow */
-          background-position-x: 20px;
+          
           option {
             font-family: "rptBold" !important;
             font-size: 20px;

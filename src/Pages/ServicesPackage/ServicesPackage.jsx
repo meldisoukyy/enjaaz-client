@@ -128,23 +128,23 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"إدارة خدمات مكتب العمل"} />
                                     <PackageAcc title={"إدارة خدمات برامج الدعم"} />
                                     <PackageAcc title={"إدارة خدمات التأمين الطبي"} />
-                                    <PackageAcc empty />
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
+                                    {/* <PackageAcc empty /> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
                                 </>
                             ) : (
                                 <>
                                     <PackageAcc title={"Number of Employees 4 or Less"} />
                                     <PackageAcc title={"Human Resources Management"} data={Object.values(data1)} />
                                     <PackageAcc title={"Ministry of Commerce Services Management"} data={Object.values(data2)} />
-                                    <PackageAcc title={"Absher Services (Resident)"} data={Object.values(data3)} />
+                                    <PackageAcc title={"Absher Business Services (Resident)"} data={Object.values(data3)} />
                                     <PackageAcc title={"Municipality Services Management"} data={Object.values(data4)} />
                                     <PackageAcc title={"Chamber of Commerce Services Management"} data={Object.values(data5)} />
                                     <PackageAcc title={"Zakat and Income Services Management"} data={Object.values(data6)} />
@@ -152,16 +152,16 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"Labor Office Services Management"} />
                                     <PackageAcc title={"Support Programs Services Management"} />
                                     <PackageAcc title={"Medical Insurance Services Management"} />
-                                    <PackageAcc empty />
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
+                                    {/* <PackageAcc empty /> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
                                 </>
                             )}
                         </div>
@@ -198,7 +198,7 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"عدد الموظفين 9 فأقل"} />
                                     <PackageAcc title={"إدارة خدمات قوى"} data={Object.keys(data1)} />
                                     <PackageAcc title={"إدارة خدمات وزارة التجارة"} data={Object.keys(data2)} />
-                                    <PackageAcc title={"إدارة خدمات أبشر أعمال - مقيم"} data={Object.keys(data3)} />
+                                    <PackageAcc title={"إدارة خدمات أبشر (مقيم)"} data={Object.keys(data3)} />
                                     <PackageAcc title={"إدارة خدمات بلدي"} data={Object.keys(data4)} />
                                     <PackageAcc title={"إدارة خدمات الغرفة التجارية"} data={Object.keys(data5)} />
                                     <PackageAcc title={"إدارة خدمات الزكاة والدخل"} data={Object.keys(data6)} />
@@ -207,15 +207,15 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"إدارة خدمات التأمين الطبي"} />
                                     <PackageAcc title={"إدارة خدمات مكتب العمل"} />
                                     <PackageAcc title={"إدارة خدمات برامج الدعم"} />
-                                    <PackageAcc empty />
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
+                                    {/* <PackageAcc empty /> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
                                 </>
                             ) : (
                                 <>
@@ -231,15 +231,15 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"Medical Insurance Services Management"} />
                                     <PackageAcc title={"Labor Office Services Management"} />
                                     <PackageAcc title={"Support Programs Services Management"} />
-                                    <PackageAcc empty />
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
+                                    {/* <PackageAcc empty /> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
                                 </>
                             )}
 
@@ -278,22 +278,22 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"إدارة خدمات قوى"} data={Object.keys(data1)} />
                                     <PackageAcc title={"إدارة خدمات وزارة التجارة"} data={Object.keys(data2)} />
                                     <PackageAcc title={"إدارة خدمات أبشر (مقيم)"} data={Object.keys(data3)} />
+                                    <PackageAcc title={"إدارة خدمات بلدي"} data={Object.keys(data4)} />
                                     <PackageAcc title={"إدارة خدمات الغرفة التجارية"} data={Object.keys(data5)} />
                                     <PackageAcc title={"إدارة خدمات الزكاة والدخل"} data={Object.keys(data6)} />
                                     <PackageAcc title={"إدارة خدمات سلامة"} data={Object.keys(data7)} />
                                     <PackageAcc title={"إدارة خدمات التأمينات الإجتماعية"} />
-                                    <PackageAcc title={"إدارة خدمات بلدي"} />
                                     <PackageAcc title={"إدارة خدمات التأمين الطبي"} />
-                                    <PackageAcc title={"إدارة خد ات ناجز"} />
-                                    <PackageAcc title={"إدارة خد ات نافد"} />
+                                    <PackageAcc title={"إدارة خدمات ناجز"} />
+                                    <PackageAcc title={"إدارة خدمات نافد"} />
                                     <PackageAcc title={"اشتراك إدارة الرواتب وحماية الأجور"} />
                                     <PackageAcc title={"توثيق عقود العمل للموظفين"} />
                                     <PackageAcc title={"إدارة خدمات مكتب العمل"} />
                                     <PackageAcc title={"إدارة خدمات برامج الدعم"} />
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
                                 </>
                             ) : (
                                 <>
@@ -301,11 +301,11 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"Human Resources Management"} data={Object.values(data1)} />
                                     <PackageAcc title={"Ministry of Commerce Services Management"} data={Object.values(data2)} />
                                     <PackageAcc title={"Absher Business Services (Resident)"} data={Object.values(data3)} />
+                                    <PackageAcc title={"Municipality Services Management"} data={Object.values(data4)} />
                                     <PackageAcc title={"Chamber of Commerce Services Management"} data={Object.values(data5)} />
                                     <PackageAcc title={"Zakat and Income Services Management"} data={Object.values(data6)} />
                                     <PackageAcc title={"Safety Services Management"} data={Object.values(data7)} />
                                     <PackageAcc title={"Social Security Services Management"} />
-                                    <PackageAcc title={"Municipality Services Management"} />
                                     <PackageAcc title={"Medical Insurance Services Management"} />
                                     <PackageAcc title={"Pending Services Management"} />
                                     <PackageAcc title={"Expired Services Management"} />
@@ -313,10 +313,10 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"Documenting Employment Contracts for Employees"} />
                                     <PackageAcc title={"Labor Office Services Management"} />
                                     <PackageAcc title={"Support Programs Services Management"} />
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
-                                    <PackageAcc empty/>
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
+                                    {/* <PackageAcc empty/> */}
                                 </>
                             )}
 
@@ -355,16 +355,16 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"إدارة خدمات قوى"} data={Object.keys(data1)} />
                                     <PackageAcc title={"إدارة خدمات وزارة التجارة"} data={Object.keys(data2)} />
                                     <PackageAcc title={"إدارة خدمات أبشر (مقيم)"} data={Object.keys(data3)} />
+                                    <PackageAcc title={"إدارة خدمات بلدي"} data={Object.keys(data4)} />
                                     <PackageAcc title={"إدارة خدمات الغرفة التجارية"} data={Object.keys(data5)} />
                                     <PackageAcc title={"إدارة خدمات الزكاة والدخل"} data={Object.keys(data6)} />
                                     <PackageAcc title={"إدارة خدمات سلامة"} data={Object.keys(data7)} />
                                     <PackageAcc title={"إدارة خدمات التأمينات الإجتماعية"} />
-                                    <PackageAcc title={"إدارة خدم ات بلدي"} />
                                     <PackageAcc title={"إدارة خدمات التأمين الطبي"} />
                                     <PackageAcc title={"إدارة خدمات مكتب العمل"} />
                                     <PackageAcc title={"إدارة خدمات برامج الدعم"} />
-                                    <PackageAcc title={"إدارة خد ات ناجز"} />
-                                    <PackageAcc title={"إدارة خد ات نافد"} />
+                                    <PackageAcc title={"إدارة خدمات ناجز"} />
+                                    <PackageAcc title={"إدارة خدمات نافد"} />
                                     <PackageAcc title={"اشتراك إدارة الرواتب وحماية الأجور"} />
                                     <PackageAcc title={"توثيق عقود العمل للموظفين"} />
                                     <PackageAcc title={"تصميم موقع الكتروني"} />
@@ -378,12 +378,12 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"Human Resources Management"} data={Object.values(data1)} />
                                     <PackageAcc title={"Ministry of Commerce Services Management"} data={Object.values(data2)} />
                                     <PackageAcc title={"Absher Business Services (Resident)"} data={Object.values(data3)} />
+                                    <PackageAcc title={"Medical Insurance Services Management"} />
                                     <PackageAcc title={"Chamber of Commerce Services Management"} data={Object.values(data5)} />
                                     <PackageAcc title={"Zakat and Income Services Management"} data={Object.values(data6)} />
                                     <PackageAcc title={"Safety Services Management"} data={Object.values(data7)} />
                                     <PackageAcc title={"Social Security Services Management"} />
-                                    <PackageAcc title={"Municipality Services Management"} />
-                                    <PackageAcc title={"Medical Insurance Services Management"} />
+                                    <PackageAcc title={"Municipality Services Management"} data={Object.values(data4)} />
                                     <PackageAcc title={"Pending Services Management"} />
                                     <PackageAcc title={"Expired Services Management"} />
                                     <PackageAcc title={"Salary and Wage Protection Subscription"} />

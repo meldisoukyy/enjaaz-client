@@ -16,34 +16,32 @@ const Circles = () => {
                 <div className="container">
                     <div className="row align-items-center justify-content-center">
 
-                    <div className="d-flex justify-content-evenly mx-lg-5" >
-                    <Link to='/askforaservice/establishment-of-facilities' className='w-fet'>
-                        <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
-                            <div className="img">
-                            <img loading="lazy"
+                        <div className="d-flex justify-content-evenly mx-lg-5 order1" >
+                            <Link to='/askforaservice/establishment-of-facilities' className='w-fet'>
+                                <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                                    <div className="img">
+                                        <img loading="lazy"
                                             src="/images/circles/beldings.png"
                                             alt=""
                                         />
-                            </div>
-                            <p className="title w-100 text-center text-مل-end">{t('circles.c3')}</p>
+                                    </div>
+                                    <p className="title w-100 text-center text-lg-end">{t('circles.c3')}</p>
+                                </div>
+                            </Link>
+                            <Link to='/wagemanagment' className='w-fet'>
+                                <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                                    <div className="img">
+                                        <img loading="lazy"
+                                            src="/images/circles/wage.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <p className="title w-100 text-center text-lg-start">{t('circles.c6')}</p>
+                                </div>
+                            </Link>
                         </div>
-                    </Link>
-                    <Link to='/askforaservice/wage-protection' className='w-fet'>
-                        <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
-                            <div className="img">
-                            <img loading="lazy"
-                                        src="/images/circles/wage.png"
-                                        alt=""
-                                    />
-                            </div>
-                            <p className="title w-100 text-center text-lg-start">{t('circles.c6')}</p>
-                        </div>
-                    </Link>
-                    </div>
-
-
-                        <div className="col-12 col-lg-3 d-flex flex-lg-column gap100">
-                            <Link to='/askforaservice/service-management'>
+                        <div className="col-12 col-lg-3 d-flex flex-lg-column gap100 order2">
+                            <Link to='/servicespackage'>
                                 <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
                                         <img loading="lazy"
@@ -77,7 +75,7 @@ const Circles = () => {
                                 </div>
                             </Link> */}
                         </div>
-                        <div className="col-12 col-md-8 col-lg-6">
+                        <div className="col-12 col-md-8 col-lg-5">
                             <div className="features-circles" >
                                 <img loading="lazy"
                                     src="https://aait.sa/public/site/img/empty.png"
@@ -114,29 +112,29 @@ const Circles = () => {
                         </div>
                         <div className="col-12 col-lg-3 d-flex flex-lg-column gap100">
 
-                        <Link to='/askforaservice/legal-advice'>
-                            <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
-                                <div className="img">
-                                    <img loading="lazy"
-                                        src="/images/circles/law.png"
-                                        alt=""
-                                    />
+                            <Link to='/askforaservice/legal-advice'>
+                                <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                                    <div className="img">
+                                        <img loading="lazy"
+                                            src="/images/circles/law.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <p className="title text-center text-lg-start">{t('circles.c4')}</p>
                                 </div>
-                                <p className="title text-center text-lg-start">{t('circles.c4')}</p>
-                            </div>
-                        </Link>
-                        <Link to='/askforaservice/all-government-services'>
-                            <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
-                                <div className="img">
-                                    <img loading="lazy"
-                                        src="/images/circles/governrate.png"
-                                        alt=""
-                                    />
+                            </Link>
+                            <Link to='/askforaservice/all-government-services'>
+                                <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                                    <div className="img">
+                                        <img loading="lazy"
+                                            src="/images/circles/governrate.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <p className="title text-center">{t('circles.c5')}</p>
                                 </div>
-                                <p className="title text-center text-lg-start">{t('circles.c5')}</p>
-                            </div>
-                        </Link>
-                        {/* <Link to='/askforaservice/wage-protection'>
+                            </Link>
+                            {/* <Link to='/askforaservice/wage-protection'>
                             <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-start" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
                                     <img loading="lazy"
@@ -150,28 +148,28 @@ const Circles = () => {
                         </div>
                     </div>
                     <div className="d-flex justify-content-evenly mx-lg-5" >
-                    <Link to='/askforaservice/reducing-financial-burdens' className='w-fet'>
-                        <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
-                            <div className="img">
-                                <img loading="lazy"
-                                    src="/images/circles/free2.png"
-                                    alt=""
-                                />
+                        <Link to='/askforaservice/reducing-financial-burdens' className='w-fet'>
+                            <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                                <div className="img">
+                                    <img loading="lazy"
+                                        src="/images/circles/free2.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <p className="title w-100 text-center text-lg-end">{t('circles.c7')}</p>
                             </div>
-                            <p className="title w-100 text-center text-lg-end">{t('circles.c7')}</p>
-                        </div>
-                    </Link>
-                    <Link to='/askforaservice/free-tryme-service' className='w-fet'>
-                        <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
-                            <div className="img">
-                                <img loading="lazy"
-                                    src="/images/circles/freeTry.png"
-                                    alt=""
-                                />
+                        </Link>
+                        <Link to='/trymeservice' className='w-fet'>
+                            <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                                <div className="img">
+                                    <img loading="lazy"
+                                        src="/images/circles/freeTry.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <p className="title w-100 text-center text-lg-start">{t('circles.c8')}</p>
                             </div>
-                            <p className="title w-100 text-center text-lg-start">{t('circles.c8')}</p>
-                        </div>
-                    </Link>
+                        </Link>
                     </div>
                 </div>
             </section>

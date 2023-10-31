@@ -22,9 +22,9 @@ const PackageAcc = ({ title, data,empty }) => {
                     </div>
                 )}
             </div>
-            {open && (
+            {open && data && (
                 <div className="tail">
-                    {data.map((item, i) => {
+                    {data &&data.map((item, i) => {
                         return (
                             <div className="item" key={i}>{item}</div>
                         )
