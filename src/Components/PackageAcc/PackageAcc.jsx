@@ -4,7 +4,7 @@ import { BsCheck } from 'react-icons/bs';
 import { BsPlus } from 'react-icons/bs';
 import { BsDash } from 'react-icons/bs';
 
-const PackageAcc = ({ title, data }) => {
+const PackageAcc = ({ title, data,empty }) => {
     const [open, setopen] = useState(false)
     
     return (
@@ -14,7 +14,7 @@ const PackageAcc = ({ title, data }) => {
                     <div className="icon">
                         <BsCheck />
                     </div>
-                    <span>{title}</span>
+                    <span style={empty?{border:'1px solid #2d1989',width:'150px'}:{}}>{title}</span>
                 </div>
                 {data && (
                     <div className="right" >

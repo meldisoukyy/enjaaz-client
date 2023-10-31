@@ -4,6 +4,12 @@
     gap: 0px;
   }
 }
+.w-fet{
+  width: fit-content !important;
+  @media (max-width:992px) {
+    width: 100% !important;
+  }
+}
 .section-title3{
   font-family: "rptBold", sans-serif;
   font-size: 36px;

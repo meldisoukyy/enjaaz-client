@@ -17,7 +17,7 @@ const Circles = () => {
                     <div className="row align-items-center justify-content-center">
 
                     <div className="d-flex justify-content-evenly mx-lg-5" >
-                    <Link to='/askforaservice/establishment-of-facilities' style={{width:'fit-content'}}>
+                    <Link to='/askforaservice/establishment-of-facilities' className='w-fet'>
                         <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                             <div className="img">
                             <img loading="lazy"
@@ -25,10 +25,10 @@ const Circles = () => {
                                             alt=""
                                         />
                             </div>
-                            <p className="title w-100 text-end">{t('circles.c3')}</p>
+                            <p className="title w-100 text-center text-مل-end">{t('circles.c3')}</p>
                         </div>
                     </Link>
-                    <Link to='/askforaservice/wage-protection' style={{width:'fit-content'}}>
+                    <Link to='/askforaservice/wage-protection' className='w-fet'>
                         <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                             <div className="img">
                             <img loading="lazy"
@@ -36,7 +36,7 @@ const Circles = () => {
                                         alt=""
                                     />
                             </div>
-                            <p className="title w-100 text-start">{t('circles.c6')}</p>
+                            <p className="title w-100 text-center text-lg-start">{t('circles.c6')}</p>
                         </div>
                     </Link>
                     </div>
@@ -150,7 +150,7 @@ const Circles = () => {
                         </div>
                     </div>
                     <div className="d-flex justify-content-evenly mx-lg-5" >
-                    <Link to='/askforaservice/reducing-financial-burdens' style={{width:'fit-content'}}>
+                    <Link to='/askforaservice/reducing-financial-burdens' className='w-fet'>
                         <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                             <div className="img">
                                 <img loading="lazy"
@@ -161,7 +161,7 @@ const Circles = () => {
                             <p className="title w-100 text-center text-lg-end">{t('circles.c7')}</p>
                         </div>
                     </Link>
-                    <Link to='/askforaservice/free-tryme-service' style={{width:'fit-content'}}>
+                    <Link to='/askforaservice/free-tryme-service' className='w-fet'>
                         <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                             <div className="img">
                                 <img loading="lazy"
