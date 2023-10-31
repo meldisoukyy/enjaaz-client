@@ -1,3 +1,9 @@
+.gap100{
+  gap: 100px;
+  @media (max-width:992px) {
+    gap: 0px;
+  }
+}
 .section-title3{
   font-family: "rptBold", sans-serif;
   font-size: 36px;
@@ -199,7 +205,7 @@
   .home-features .feature-box {
     width: 115px;
     margin-bottom: 50px;
-    text-align: center !important;
+    // text-align: end !important;
     padding: 5px;
     flex: 1;
   }
