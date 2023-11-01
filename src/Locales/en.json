@@ -208,5 +208,20 @@
     "path": "Home /",
     "h2": "Our Offers",
     "h3": "Current Offers"
-  }
+  },
+  "calc": {
+    "f1": "Number of employees",
+    "f2": "Package type",
+    "f3": "Do you want to subscribe to wage protection?",
+    "f4": "Number of years",
+    "s1": "Bronze Package",
+    "s2": "Silver Package",
+    "s3": "Gold Package",
+    "s4": "Diamond Package",
+    "reset": "Reset",
+    "much": "The cost will be :",
+    "title": "Subscription Value Calculator",
+    "true": "Yes",
+    "false": "No"
+}
 }

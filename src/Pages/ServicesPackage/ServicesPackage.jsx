@@ -18,9 +18,9 @@ const ServicesPackage = () => {
     const [data, setdata] = useState([])
     useEffect(() => {
         ServiceManagemenApi().then((res) => {
-            //  console.log(res);
-              setdata(res) 
-            })
+            console.log(res);
+            setdata(res)
+        })
     }, []);
     const data1 = {
         "إصدار تأشيرات العمل (حسب ما يسمح به النظام)": "Work Visa Issuance (as allowed by the system)",
@@ -83,6 +83,24 @@ const ServicesPackage = () => {
     }
     const data7 = {
         "إصدار ترخيص سلامة": "Safety License Issuance"
+    };
+    const calc = {
+        'bronze': {
+            price: parseInt(data[0]?.price),
+            empNum: 4
+        },
+        'silver': {
+            price: parseInt(data[1]?.price),
+            empNum: 9
+        },
+        'gold': {
+            price: parseInt(data[2]?.price),
+            empNum: 9
+        },
+        'diamond': {
+            price: parseInt(data[3]?.price),
+            empNum: 9
+        }
     };
 
     return (
@@ -402,7 +420,7 @@ const ServicesPackage = () => {
                         </div>
                     </div>
                 </div>
-                {/* <Calculator/> */}
+                <Calculator data={calc} />
             </div></div >
         </>
     )
