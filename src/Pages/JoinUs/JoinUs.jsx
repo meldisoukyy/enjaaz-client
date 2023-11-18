@@ -12,6 +12,7 @@ const JoinUs = () => {
     useEffect(() => {
         AOS.init();
       }, []);
+      
       const [name, setname] = useState('')
       const [email, setemail] = useState('')
       const [mobile, setmobile] = useState('')
@@ -19,9 +20,8 @@ const JoinUs = () => {
       const [partnership_type, setpartnership_type] = useState('')
       const [notes, setnotes] = useState('')
       const [portfolio, setportfolio] = useState('')
-  
+      
       const [data, setdata] = useState([])
-  
       
     //   function isEmailValid(email) {
     //       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

@@ -10,9 +10,15 @@
   font-weight: normal; /* adjust as needed */
   font-style: normal; /* adjust as needed */
 }
+@font-face {
+  font-family: "Hanimation_Arabic_Regular";
+  src: url("./fonts/Hanimation_Arabic_Regular.ttf") format("truetype");
+  font-weight: normal; /* adjust as needed */
+  font-style: normal; /* adjust as needed */
+}
 :root {
   --mcolor: #2d1989;
-  --scolor: #02c1db;
+  --scolor: #0fa9f0;
 }
 .offcanvas {
   transition: 0.5s !important;
@@ -108,7 +114,7 @@ a.active {
   text-align: end;
   padding: 0;
   margin-bottom: 0;
-  font-family: "rptRegular", sans-serif;
+  font-family: "Hanimation_Arabic_Regular", sans-serif;
   li {
     color: white;
     list-style: none;
@@ -123,20 +129,59 @@ a.active {
 }
 .app {
   .whatsapp {
-    background-color: var(--mcolor);
+    background-color: #2FAA3F;
     position: fixed;
-    top: 30%;
+    bottom: 5%;
     padding: 10px;
-    left: 15px;
+    left: 35px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      border: 50%;
+      border: 1px solid #2FAA3F;
+      left: -20px;
+      right: -20px;
+      top: -20px;
+      bottom: -20px;
+      border-radius: 50%;
+      animation: animate 1.5s linear infinite;
+      opacity: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      border: 50%;
+      border: 1px solid #2FAA3F;
+      left: -10px;
+      right: -10px;
+      top: -10px;
+      bottom: -10px;
+      border-radius: 50%;
+      animation: animate 1.5s linear infinite;
+      opacity: 0;
+    }
     &:hover .image {
       animation: shake 0.8s infinite;
     }
-
+    @keyframes animate {
+      0%{
+        opacity: 0;
+        scale: 0.6;
+      }
+      50%{
+        opacity: 1;
+        scale: 1;
+      }
+      100% {
+        opacity: 0;
+        scale: 1.4;
+      }
+    }
     @keyframes shake {
       0%,
       100% {
@@ -218,7 +263,7 @@ a.active {
     padding: 10px 20px;
     width: max-content;
     background-color: var(--mcolor);
-    font-family: "rptBold", sans-serif;
+    font-family: "Hanimation_Arabic_Regular", sans-serif;
     font-size: 32px;
     font-weight: 500;
     margin: auto;
@@ -240,7 +285,7 @@ a.active {
   .buttons {
     display: flex;
     gap: 20px;
-    font-family: "rptRegular", sans-serif;
+    font-family: "Hanimation_Arabic_Regular", sans-serif;
     .button {
       font-size: 20px;
       font-weight: 600;
@@ -284,7 +329,7 @@ a.active {
     p {
       font-size: 20px !important;
       font-weight: 500;
-      font-family: "rptBold";
+      font-family: "Hanimation_Arabic_Regular";
       color: black;
       padding: 40px 10px;
       width: 80%;
@@ -305,7 +350,7 @@ a.active {
       h1 {
         font-size: 36px;
         font-weight: 500;
-        font-family: "rptBold";
+        font-family: "Hanimation_Arabic_Regular";
         margin: unset;
         @media (max-width: 992px) {
           text-align: center !important;
@@ -316,7 +361,7 @@ a.active {
       }
       span {
         font-weight: 500;
-        font-family: "rptBold";
+        font-family: "Hanimation_Arabic_Regular";
         font-size: 18px;
         color: #6b6b6b;
         @media (max-width: 992px) {
@@ -326,7 +371,7 @@ a.active {
       p {
         font-size: 24px;
         font-weight: 500;
-        font-family: "rptBold";
+        font-family: "Hanimation_Arabic_Regular";
         color: black;
         padding: unset;
         text-align: start;
@@ -349,9 +394,9 @@ a.active {
           background-position: left;
           background: url("./../public/images/down.webp") no-repeat right center; /* Add a custom arrow */
           background-size: 26px; /* Set the size of the custom arrow */
-          
+
           option {
-            font-family: "rptBold" !important;
+            font-family: "Hanimation_Arabic_Regular" !important;
             font-size: 20px;
             font-weight: 600;
             @media (max-width: 992px) {
@@ -365,7 +410,7 @@ a.active {
           border: 1px solid #c9c7c7;
           font-size: 20px;
           font-weight: 500;
-          font-family: "rptBold";
+          font-family: "Hanimation_Arabic_Regular";
           max-width: 75%;
           @media (max-width: 992px) {
             width: 100%;
@@ -396,7 +441,7 @@ a.active {
             color: #969696;
             font-size: 20px;
             font-weight: 500;
-            font-family: "rptBold";
+            font-family: "Hanimation_Arabic_Regular";
             width: fit-content;
             @media (max-width: 767px) {
               font-size: 16px;
@@ -405,7 +450,7 @@ a.active {
           span {
             font-size: 15px;
             font-weight: 500;
-            font-family: "rptBold";
+            font-family: "Hanimation_Arabic_Regular";
             @media (max-width: 767px) {
               font-size: 13px;
             }
@@ -426,7 +471,7 @@ a.active {
         border-radius: 16px;
         color: white;
         font-weight: 500;
-        font-family: "rptBold";
+        font-family: "Hanimation_Arabic_Regular";
         font-size: 25px;
         cursor: pointer;
         width: fit-content;
