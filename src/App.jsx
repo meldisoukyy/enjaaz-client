@@ -23,6 +23,7 @@ import { useEffect, useState } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import DedicatedAsk from "./Pages/DedicatedAsk/DedicatedAsk";
+import Footer2 from "./Components/Footer2/Footer2";
 function App() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 const location=useLocation().pathname
@@ -74,6 +75,7 @@ useEffect(() => {
             <Navbar />
             <Outlet />
             <Footer />
+            {/* <Footer2/> */}
             <a className="whatsapp" href="https://wa.me/+966502144449" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
               <div className="image">
                 <img loading="lazy" src="/images/whatsappi.webp" alt="" />

@@ -86,11 +86,20 @@
     "bottomh1": "Enjaaz Services Company",
     "bottomp1": "With the most distinguished workforce, we innovate ideas and capture attention by providing a professional, impressive service of international quality, giving our clients the opportunity to grow, evolve, and excel in the business world.",
     "bottomh2": "Important Links",
+    "bottomh4": "Services",
+    "bottomh5": "About The Company",
+    "bottomh6": "Certificates and licenses",
     "ul1": "Request Service",
     "ul2": "About Us",
     "ul3": "Frequently Asked Questions",
     "ul4": "Contact Us",
     "ul5": "Join Us",
+    "ul6": "Appointment Booking",
+    "ul7": "Online store",
+    "ul8": "Individual Services Department",
+    "ul9": "Company Policy",
+    "ul10": "Terms and Conditions",
+    "ul11": "Intellectual Property Rights",
     "bottomh3": "Contact Us",
     "address": "Main Office - Riyadh - Northern Ring Road",
     "bottomp5": "Enjaaz Services Company, a registered company with tax number: 300629475600003",
@@ -226,5 +235,5 @@
     "title": "Subscription Value Calculator",
     "true": "Yes",
     "false": "No"
-}
+  }
 }

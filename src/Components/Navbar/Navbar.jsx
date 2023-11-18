@@ -18,10 +18,46 @@ const Navbar = () => {
   const handleClose = () => setIsOpened(false);
   const handleShow = () => setIsOpened(true);
   const { lang, setlang, t, i18n } = useMyContext();
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY >= 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  const NavStyle=()=>{
+    if (lang === "ar") {
+      if (scrolled) {
+       return { direction: "rtl",position:'fixed',background:'#2d1989ef' }
+      }else{
+        return { direction: "rtl",position:'absolute' }
+      }
+    }else{
+      if (scrolled) {
+       return { direction: "ltr",position:'fixed',background:'#2d1989ef' }
+      }else{
+        return { direction: "ltr",position:'absolute' }
+      }
+
+    }
+  }
   return (
     <div
       className="Navbar pt-3"
-      style={lang === "ar" ? { direction: "rtl" } : { direction: "ltr" }}
+      style={NavStyle()}
       data-aos="fade-in"
       data-aos-duration="2000"
       data-aos-delay="300"
@@ -51,9 +87,9 @@ const Navbar = () => {
             className="floatingBtn"
             style={lang === "ar" ? { left: "21%" } : { right: "21%" }}
           >
-            <NavLink to="/offers">
+            <a href="https://enjaaz.sa/">
               <div className="sale">{t("nav.shop")}</div>
-            </NavLink>
+            </a>
             <NavLink to="/offers">
               <div className="sale1">{t("nav.offers")}</div>
             </NavLink>
@@ -187,11 +223,12 @@ const Navbar = () => {
                   {t("nav.offers")}
                 </li>
               </NavLink>
-              <NavLink to="/profile">
+              <a href="https://enjaaz.sa/">
                 <li className="sale" onClick={() => handleClose()}>
                   {t("nav.shop")}
                 </li>
-              </NavLink>
+              </a>
+
               <NavLink to="/offers">
                 <li className="sale" onClick={() => handleClose()}>
                   {t("nav.bank")}

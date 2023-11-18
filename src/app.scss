@@ -17,7 +17,7 @@
   font-style: normal; /* adjust as needed */
 }
 :root {
-  --mcolor: #2d1989;
+  --mcolor: #2d1989ef;
   --scolor: #0fa9f0;
 }
 .offcanvas {
@@ -289,8 +289,8 @@ a.active {
     .button {
       font-size: 20px;
       font-weight: 600;
-      padding: 15px 20px;
-      border: 3px solid white;
+      padding: 8px 20px;
+      border: 2px solid white;
       position: relative;
       z-index: 1;
       border-radius: 16px;
@@ -302,7 +302,7 @@ a.active {
     }
     .button1 {
       z-index: 1;
-      border-radius: 16px;
+      border-radius: 30px;
       cursor: pointer;
       &:hover {
         // border-color: var(--mcolor);
@@ -312,7 +312,7 @@ a.active {
     }
     .button2 {
       z-index: 1;
-      border-radius: 16px;
+      border-radius: 30px;
       background-color: white;
       color: var(--mcolor);
       cursor: pointer;

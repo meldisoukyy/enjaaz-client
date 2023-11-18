@@ -1,6 +1,7 @@
 .Navbar {
   direction: rtl;
   position: absolute;
+  transition: 0.5s;
   width: 100%;
   top: 0;
   z-index: 999;
@@ -19,8 +20,6 @@
       gap: 20px;
       .image {
         width: 100px;
-        background-color: #004327;
-        padding: 15px;
         @media (max-width: 767px) {
           width: 70px;
         }
@@ -29,7 +28,7 @@
         }
       }
       p {
-        font-weight: bold;
+        font-weight: 500;
         color: white;
         font-size: 16px;
         cursor: pointer;
@@ -108,7 +107,7 @@
         align-items: center;
         gap: 5px;
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 500;
         color: white;
         .icon {
           width: 20px;
