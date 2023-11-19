@@ -4,6 +4,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
 import { useMyContext } from "../../context/MyContext";
+import { IoIosArrowDown } from "react-icons/io";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const Navbar = () => {
@@ -32,28 +33,27 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const NavStyle=()=>{
+  const NavStyle = () => {
     if (lang === "ar") {
       if (scrolled) {
-       return { direction: "rtl",position:'fixed',background:'#2d1989ef' }
-      }else{
-        return { direction: "rtl",position:'absolute' }
+        return { direction: "rtl", position: "fixed", background: "#2d1989ef" };
+      } else {
+        return { direction: "rtl", position: "absolute" };
       }
-    }else{
+    } else {
       if (scrolled) {
-       return { direction: "ltr",position:'fixed',background:'#2d1989ef' }
-      }else{
-        return { direction: "ltr",position:'absolute' }
+        return { direction: "ltr", position: "fixed", background: "#2d1989ef" };
+      } else {
+        return { direction: "ltr", position: "absolute" };
       }
-
     }
-  }
+  };
   return (
     <div
       className="Navbar pt-3"
@@ -116,14 +116,23 @@ const Navbar = () => {
               <li>{t("nav.packages")}</li>
             </NavLink>
             <NavLink to="/questions">
-              <li>{t("nav.CQ")}</li>
+              <li>
+                المزيد <IoIosArrowDown />
+              </li>
             </NavLink>
-            <NavLink to="/joinus">
-              <li>{t("nav.joinus")}</li>
-            </NavLink>
-            <NavLink to="/joinus">
-              <li>{t("nav.bank")}</li>
-            </NavLink>
+            <div className="dropdown">
+              <ul>
+                <NavLink to="/questions">
+                  <li>{t("nav.CQ")}</li>
+                </NavLink>
+                <NavLink to="/joinus">
+                  <li>{t("nav.joinus")}</li>
+                </NavLink>
+                <NavLink to="/joinus">
+                  <li>{t("nav.bank")}</li>
+                </NavLink>
+              </ul>
+            </div>
             <li>
               <a
                 href="https://firebasestorage.googleapis.com/v0/b/aoe-24.appspot.com/o/cv%2FAhmed_Osama_Resume.pdf?alt=media&amp;token=91dea169-f337-4844-b901-a6e17b8938ef"
