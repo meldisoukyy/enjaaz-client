@@ -117,7 +117,7 @@ const Navbar = () => {
             </NavLink>
             <li>
             {t("nav.more")} <IoIosArrowDown />
-              <div className="dropdown">
+              <div className="dropdown" style={lang === "ar" ?{right: '40%'}:{right: '0%'}}>
                 <ul>
                   <NavLink to="/questions">
                     <li>{t("nav.CQ")}</li>
