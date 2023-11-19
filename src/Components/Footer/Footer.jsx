@@ -251,19 +251,19 @@ const Footer = () => {
               <div className="images">
                 <div className="image">
                   <img
-                    src="../../../public/images/نضيف دي معهم كصورة فقط.png"
+                    src="/images/نضيف دي معهم كصورة فقط.png"
                     alt=""
                   />
                 </div>
                 <div className="image" onClick={handleShow}>
                   <img
-                    src="../../../public/images/لوجو ضريبة القيمة المضافة يدوس علية يفتح صورة القيمة المضافة.png"
+                    src="/images/لوجو ضريبة القيمة المضافة يدوس علية يفتح صورة القيمة المضافة.png"
                     alt=""
                   />
                 </div>
                 <div className="image" onClick={handleShow2}>
                   <img
-                    src="../../../public/images/لوجو المركز السعودي للأعمال يدوس علية يفتح الصورة مباشرة.png"
+                    src="/images/لوجو المركز السعودي للأعمال يدوس علية يفتح الصورة مباشرة.png"
                     alt=""
                   />
                 </div>
