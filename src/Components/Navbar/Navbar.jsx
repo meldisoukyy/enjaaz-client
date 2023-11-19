@@ -42,13 +42,13 @@ const Navbar = () => {
   const NavStyle = () => {
     if (lang === "ar") {
       if (scrolled) {
-        return { direction: "rtl", position: "fixed", background: "#2d1989ef" };
+        return { direction: "rtl", position: "fixed", background: "rgba(45, 25, 137, 0.82)" };
       } else {
         return { direction: "rtl", position: "absolute" };
       }
     } else {
       if (scrolled) {
-        return { direction: "ltr", position: "fixed", background: "#2d1989ef" };
+        return { direction: "ltr", position: "fixed", background: "rgba(45, 25, 137, 0.82)" };
       } else {
         return { direction: "ltr", position: "absolute" };
       }
@@ -83,7 +83,7 @@ const Navbar = () => {
               <img src="/images/لوجو المملكة 2030.svg" alt="" />
             </div>
           </div>
-          <div
+          {/* <div
             className="floatingBtn"
             style={lang === "ar" ? { left: "21%" } : { right: "21%" }}
           >
@@ -93,7 +93,7 @@ const Navbar = () => {
             <NavLink to="/offers">
               <div className="sale1">{t("nav.offers")}</div>
             </NavLink>
-          </div>
+          </div> */}
         </div>
         <div className="bottom">
           <ul className="links">
@@ -115,32 +115,37 @@ const Navbar = () => {
             <NavLink to="/packages">
               <li>{t("nav.packages")}</li>
             </NavLink>
-            <NavLink to="/questions">
-              <li>
-                المزيد <IoIosArrowDown />
-              </li>
-            </NavLink>
-            <div className="dropdown">
-              <ul>
-                <NavLink to="/questions">
-                  <li>{t("nav.CQ")}</li>
-                </NavLink>
-                <NavLink to="/joinus">
-                  <li>{t("nav.joinus")}</li>
-                </NavLink>
-                <NavLink to="/joinus">
-                  <li>{t("nav.bank")}</li>
-                </NavLink>
-              </ul>
-            </div>
+            <li>
+              المزيد <IoIosArrowDown />
+              <div className="dropdown">
+                <ul>
+                  <NavLink to="/questions">
+                    <li>{t("nav.CQ")}</li>
+                  </NavLink>
+                  <NavLink to="/joinus">
+                    <li>{t("nav.joinus")}</li>
+                  </NavLink>
+                  <NavLink to="/joinus">
+                    <li>{t("nav.bank")}</li>
+                  </NavLink>
+                </ul>
+              </div>
+            </li>
             <li>
               <a
                 href="https://firebasestorage.googleapis.com/v0/b/aoe-24.appspot.com/o/cv%2FAhmed_Osama_Resume.pdf?alt=media&amp;token=91dea169-f337-4844-b901-a6e17b8938ef"
                 download="Ahmed_Osama_Resume.pdf"
+                className="sale1"
               >
                 {t("nav.profile")}
               </a>
             </li>
+            <a href="https://enjaaz.sa/">
+              <div className="sale1">{t("nav.shop")}</div>
+            </a>
+            <NavLink to="/offers">
+              <div className="sale">{t("nav.offers")}</div>
+            </NavLink>
           </ul>
           <div className="numbers">
             <div className="num">
@@ -239,7 +244,7 @@ const Navbar = () => {
               </a>
 
               <NavLink to="/offers">
-                <li className="sale" onClick={() => handleClose()}>
+                <li className="sale1" onClick={() => handleClose()}>
                   {t("nav.bank")}
                 </li>
               </NavLink>

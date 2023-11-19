@@ -83,7 +83,7 @@ const Footer = () => {
                 <img loading="lazy" src="/images/logo.webp" alt="" />
               </div>
               <h1>{t("footer.bottomh1")}</h1>
-              <p>{t("footer.bottomp1")}</p>
+              <p style={{textAlign:'unset'}}>{t("footer.bottomp1")}</p>
               <div className="social">
                 <div className="image">
                   <img
@@ -143,7 +143,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="part col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <div className="part col-lg-2 col-6 mb-4 mb-lg-0">
               <h1>{t("footer.bottomh2")}</h1>
               <ul>
                 <li>
@@ -205,7 +205,7 @@ const Footer = () => {
                 </Link>
               </ul>
             </div>
-            <div className="part col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <div className="part col-lg-2 col-6 mb-4 mb-lg-0">
               <h1>{t("footer.bottomh5")}</h1>
               <ul>
                 <Link to="/servicespackage">
@@ -330,8 +330,18 @@ const Footer = () => {
             </Modal>
           </div>
         </div>
+
         <div className="bottom">
-          <p>{t("footer.bottomp5")}</p>
+          <div className="top">
+            <p>{t("footer.bottomp5")}</p>
+            <div className="payments">
+              <img loading="lazy" src="https://aait.sa/public/site/img/icons/certificate.webp" alt="وسائل دفع أوامر الشبكة" style={{ height: "40px" }} />
+              <img loading="lazy" src="https://aait.sa/public/site/img/icons/mada.webp" alt="وسائل دفع أوامر الشبكة" />
+              <img loading="lazy" src="https://aait.sa/public/site/img/icons/visa.webp" alt="وسائل دفع أوامر الشبكة" />
+              <img loading="lazy" src="https://aait.sa/public/site/img/icons/mastercard.webp" alt="وسائل دفع أوامر الشبكة" />
+              <img loading="lazy" src="https://aait.sa/public/site/img/icons/paypal.webp" alt="وسائل دفع أوامر الشبكة" />
+            </div>
+          </div>
           <p>{t("footer.bottomp6")}</p>
         </div>
       </div>

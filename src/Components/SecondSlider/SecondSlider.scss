@@ -56,9 +56,8 @@
         }
         a{
             letter-spacing: 0px;
-            border: 3px solid white;
-            padding: 10px 20px;
-            border-radius: 16px;
+            padding: 0px 20px;
+            border-radius: 30px;
             font-family: "Hanimation_Arabic_Regular", sans-serif;
             font-size: 28px;
             line-height: 50px;
@@ -66,13 +65,17 @@
             letter-spacing: 0px;
             z-index: 1;
             text-align: start;
+            background-color: var(--scolor);
+            transition: 0.5s;
+            border: 3px solid transparent;
             @media (max-width:992px) {
                 font-size: 24px;
                 text-align: center !important;
                 line-height: 40px;
             }
             &:hover{
-                background-color: var(--mcolor);
+                background-color: transparent;
+                border: 3px solid white;
                 span{
                     color:white;
                 }

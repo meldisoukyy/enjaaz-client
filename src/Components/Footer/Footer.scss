@@ -1,5 +1,5 @@
 .Footer {
-  background: url("../../../public/images/ممكن\ ندمجها\ مع\ المكان\ الأزرق\ أسفل\ الموقع\ والموقع\ عموما.jpg.jpg");
+  background: url("../../../public/images/footerbanner.jpeg");
   direction: rtl;
   background-size: cover;
   background-position: center;
@@ -98,18 +98,21 @@
       color: #fff;
       font-size: 28px;
       font-weight: 700;
-      @media (max-width: 767px) {
-        text-align: center;
-      }
+      // @media (max-width: 767px) {
+      //   text-align: center;
+      // }
     }
+    
     .part {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      @media (max-width: 767px) {
-        justify-content: center;
-        align-items: center;
+      h1 {
+        @media (max-width: 767px) {
+          text-align: start;
+        }
       }
+      
       .social {
         display: flex;
         gap: 10px;
@@ -144,11 +147,11 @@
         display: flex;
         flex-direction: column;
         gap: 15px;
-        @media (max-width: 767px) {
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-evenly;
-        }
+        // @media (max-width: 767px) {
+        //   flex-direction: row;
+        //   flex-wrap: wrap;
+        //   justify-content: space-evenly;
+        // }
 
         li {
           color: white;
@@ -177,9 +180,9 @@
         color: white;
         font-size: 20px;
         font-weight: 400;
-        @media (max-width: 767px) {
-          text-align: center !important;
-        }
+        // @media (max-width: 767px) {
+        //   text-align: center !important;
+        // }
       }
     }
     ul {
@@ -213,11 +216,33 @@
       }
     }
   }
+  .payments{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 7px;
+    border-radius: 25px;
+    background-color: white;
+    @media (max-width:992px) {
+      margin-top: 15px;
+    }
+    img{
+      height: 25px;
+      object-fit: contain;
+    }
+  }
   .bottom {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px 0;
+    .top{
+      display: flex;
+      padding: 0;
+      border-bottom: 0;
+      align-items: center;
+    }
     p {
       color: white;
       font-size: 15px;
