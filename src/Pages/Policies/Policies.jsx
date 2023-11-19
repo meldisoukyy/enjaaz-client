@@ -9,7 +9,7 @@ const Policies = () => {
             <div className='Policies'>
                 <div className="container">
                     <h1 className="section-title3">{t('footer.ul10')}</h1>
-
+                    
                 </div>
             </div>
 

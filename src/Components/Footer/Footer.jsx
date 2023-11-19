@@ -247,7 +247,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="part col-lg-4 col-md-6 mb-4 mb-lg-0">
-              <h1>{t("footer.bottomh5")}</h1>
+              <h1>{t("footer.bottomh6")}</h1>
               <div className="images">
                 <div className="image">
                   <img
