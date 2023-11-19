@@ -116,7 +116,7 @@ const Navbar = () => {
               <li>{t("nav.packages")}</li>
             </NavLink>
             <li>
-              المزيد <IoIosArrowDown />
+            {t("nav.more")} <IoIosArrowDown />
               <div className="dropdown">
                 <ul>
                   <NavLink to="/questions">
