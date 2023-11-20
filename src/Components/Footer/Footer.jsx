@@ -208,7 +208,7 @@ const Footer = () => {
             <div className="part col-lg-2 col-6 mb-4 mb-lg-0">
               <h1>{t("footer.bottomh5")}</h1>
               <ul>
-                <Link to="/servicespackage">
+                <Link to="/company-policy">
                   <li>
                     <div className="arrow"></div>
                     {t("footer.ul9")}
