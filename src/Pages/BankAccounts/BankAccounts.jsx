@@ -43,6 +43,9 @@ const BankAccounts = () => {
                         </div>
                     </div>
                 </div>
+                <div className="container justify-content-start">
+                    <p className='pt-5 fs-5'><span className='text-danger fs-4 fw-bold'>تنوية: </span>الحسابات البنكية المشار إليها أعلاة هي الحسابات الخاصة بشركة إنجاز للخدمات فقط، نود أن نؤكد اننا غير مسئولين عن أي حسابات بنكية اخرى</p>
+                </div>
             </div>
         </>
     )

@@ -220,7 +220,7 @@ const Footer = () => {
                     {t("footer.ul10")}
                   </li>
                 </Link>
-                <Link to="/designservices">
+                <Link to="/copyrights">
                   <li>
                     <div className="arrow"></div>
                     {t("footer.ul11")}
