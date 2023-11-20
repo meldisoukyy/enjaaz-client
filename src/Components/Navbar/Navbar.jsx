@@ -62,6 +62,7 @@ const Navbar = () => {
       data-aos-duration="2000"
       data-aos-delay="300"
     >
+      <div className="blured"></div>
       <div className="container">
         <div className="top d-flex justify-content-between align-items-end gap-5 pb-4">
           <div className="image">
@@ -125,7 +126,7 @@ const Navbar = () => {
                   <NavLink to="/joinus">
                     <li>{t("nav.joinus")}</li>
                   </NavLink>
-                  <NavLink to="/joinus">
+                  <NavLink to="/bank-accounts">
                     <li>{t("nav.bank")}</li>
                   </NavLink>
                 </ul>
@@ -243,7 +244,7 @@ const Navbar = () => {
                 </li>
               </a>
 
-              <NavLink to="/offers">
+              <NavLink to="/bank-accounts">
                 <li className="sale1" onClick={() => handleClose()}>
                   {t("nav.bank")}
                 </li>

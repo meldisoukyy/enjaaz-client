@@ -25,6 +25,7 @@ import 'aos/dist/aos.css';
 import DedicatedAsk from "./Pages/DedicatedAsk/DedicatedAsk";
 import Footer2 from "./Components/Footer2/Footer2";
 import Policies from "./Pages/Policies/Policies";
+import BankAccounts from "./Pages/BankAccounts/BankAccounts";
 function App() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 const location=useLocation().pathname
@@ -108,6 +109,7 @@ useEffect(() => {
         <Route path="/freeconsulting" element={<FreeConsulting />} />
         <Route path="/trymeservice" element={<TryMeService />} />
         <Route path="/terms-and-conditions" element={<Policies />} />
+        <Route path="/bank-accounts" element={<BankAccounts />} />
       </Route>
     </Routes>
   );
