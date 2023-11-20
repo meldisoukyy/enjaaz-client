@@ -303,6 +303,7 @@ const Footer = () => {
                     width: "100%",
                     height: "100%",
                     objectFit: "contain",
+                    filter: "saturate(0.1)"
                   }}
                   alt=""
                 />
@@ -335,10 +336,11 @@ const Footer = () => {
           <div className="top">
             <p>{t("footer.bottomp5")}</p>
             <div className="payments">
-              <img loading="lazy" src="https://aait.sa/public/site/img/icons/certificate.webp" alt="وسائل دفع أوامر الشبكة" style={{ height: "40px" }} />
-              <img loading="lazy" src="https://aait.sa/public/site/img/icons/mada.webp" alt="وسائل دفع أوامر الشبكة" />
-              <img loading="lazy" src="https://aait.sa/public/site/img/icons/visa.webp" alt="وسائل دفع أوامر الشبكة" />
-              <img loading="lazy" src="https://aait.sa/public/site/img/icons/mastercard.webp" alt="وسائل دفع أوامر الشبكة" />
+              <img loading="lazy"style={{scale:'1.5',margin:'0 20px 0 0'}} src="/images/جنب صورة المدفوعات أسفل الموقع.png" />
+              <img loading="lazy" src="https://aait.sa/public/site/img/icons/certificate.webp" style={{ height: "40px" }} />
+              <img loading="lazy" src="https://aait.sa/public/site/img/icons/mada.webp" />
+              <img loading="lazy" src="https://aait.sa/public/site/img/icons/visa.webp" />
+              <img loading="lazy" src="https://aait.sa/public/site/img/icons/mastercard.webp" />
             </div>
           </div>
           <p>{t("footer.bottomp6")}</p>

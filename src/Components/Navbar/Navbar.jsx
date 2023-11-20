@@ -118,7 +118,7 @@ const Navbar = () => {
             </NavLink>
             <li>
             {t("nav.more")} <IoIosArrowDown />
-              <div className="dropdown" style={lang === "ar" ?{right: '40%'}:{right: '0%'}}>
+              <div className="dropdown" style={lang === "ar" ?{right: '50%'}:{right: '30%'}}>
                 <ul>
                   <NavLink to="/questions">
                     <li>{t("nav.CQ")}</li>
@@ -148,6 +148,19 @@ const Navbar = () => {
               <div className="sale">{t("nav.offers")}</div>
             </NavLink>
           </ul>
+          <div className="dropdown" style={lang === "ar" ?{right: '50%'}:{right: '30%'}}>
+                <ul>
+                  <NavLink to="/questions">
+                    <li>{t("nav.CQ")}</li>
+                  </NavLink>
+                  <NavLink to="/joinus">
+                    <li>{t("nav.joinus")}</li>
+                  </NavLink>
+                  <NavLink to="/bank-accounts">
+                    <li>{t("nav.bank")}</li>
+                  </NavLink>
+                </ul>
+              </div>
           <div className="numbers">
             <div className="num">
               <div className="icon">

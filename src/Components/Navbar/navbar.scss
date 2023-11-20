@@ -68,6 +68,31 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    position: relative;
+    .dropdown {
+      position: absolute;
+      top: 80%;
+      
+      border: 1px solid var(--mcolor);
+      right: 60%;
+      background-color: white;
+      padding: 25px 15px;
+      border-radius: 8px 8px 15px 15px;
+      color: black;
+      opacity: 0;
+      visibility: hidden;
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0;
+        li {
+          white-space: nowrap;
+        }
+      }
+    }
     .links {
       display: flex;
       gap: 15px;
@@ -79,27 +104,7 @@
       @media (max-width: 992px) {
         display: none;
       }
-      .dropdown {
-        position: absolute;
-        bottom: -65px;
-        border: 1px solid var(--mcolor);
-        right: 40%;
-        background-color: white;
-        padding: 25px 15px;
-        border-radius: 8px 8px 15px 15px;
-        color: black;
-        opacity: 0;
-        visibility: hidden;
-        ul {
-          display: flex;
-          align-items: center;
-          gap: 25px;
-          padding: 0;
-          li {
-            white-space: nowrap;
-          }
-        }
-      }
+      
       a {
         display: flex;
         align-items: center;
