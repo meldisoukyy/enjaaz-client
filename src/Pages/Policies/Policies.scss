@@ -1,4 +1,65 @@
-.Policies{
-    min-height: 100vh;
-    padding: 60px 0;
+.Policies {
+  min-height: 100vh;
+  padding: 60px 0;
+  direction: rtl;
+  .part {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 60px;
+    ul {
+      li {
+        list-style: disc;
+        margin-bottom: 10px;
+        font-weight: 600;
+        @media (max-width:767px) {
+            font-size: 14px;
+            margin-bottom: 7px;
+            font-weight: 700;
+          }
+      }
+    }
+    span {
+      margin-top: -10px;
+      margin-right: 20px;
+      color: var(--mcolor);
+      font-weight: 600;
+      @media (max-width:767px) {
+          font-size: 14px;
+          margin-top: -15px;
+          font-weight: 700;
+      }
+    }
+    h2 {
+      color: var(--mcolor);
+      font-family: "Hanimation_Arabic_Regular";
+      font-weight: bold;
+      @media (max-width:767px) {
+        font-size: 20px;
+        margin-top: -15px;
+      }
+    }
+    p {
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
+      font-size: 18px;
+      @media (max-width:767px) {
+        font-size: 15px;
+        gap: 10px;
+      }
+      span {
+        margin-right: 20px;
+        font-weight: 600;
+        color: black;
+        margin-top: 0px;
+        font-size: 16px;
+        @media (max-width:767px) {
+            font-size: 14px;
+          }
+      }
+    }
+  }
 }

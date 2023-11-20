@@ -339,7 +339,6 @@ const Footer = () => {
               <img loading="lazy" src="https://aait.sa/public/site/img/icons/mada.webp" alt="وسائل دفع أوامر الشبكة" />
               <img loading="lazy" src="https://aait.sa/public/site/img/icons/visa.webp" alt="وسائل دفع أوامر الشبكة" />
               <img loading="lazy" src="https://aait.sa/public/site/img/icons/mastercard.webp" alt="وسائل دفع أوامر الشبكة" />
-              <img loading="lazy" src="https://aait.sa/public/site/img/icons/paypal.webp" alt="وسائل دفع أوامر الشبكة" />
             </div>
           </div>
           <p>{t("footer.bottomp6")}</p>
