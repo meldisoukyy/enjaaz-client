@@ -336,7 +336,7 @@ const Footer = () => {
           <div className="top">
             <p>{t("footer.bottomp5")}</p>
             <div className="payments">
-              <img loading="lazy"style={{scale:'1.5',margin:'0 20px 0 0'}} src="/images/جنب صورة المدفوعات أسفل الموقع.png" />
+              <img loading="lazy"style={{scale:'1.9',margin:'0 25px 0 25px'}} src="/images/جنب صورة المدفوعات أسفل الموقع.png" />
               <img loading="lazy" src="https://aait.sa/public/site/img/icons/certificate.webp" style={{ height: "40px" }} />
               <img loading="lazy" src="https://aait.sa/public/site/img/icons/mada.webp" />
               <img loading="lazy" src="https://aait.sa/public/site/img/icons/visa.webp" />

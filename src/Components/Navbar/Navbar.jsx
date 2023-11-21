@@ -42,13 +42,13 @@ const Navbar = () => {
   const NavStyle = () => {
     if (lang === "ar") {
       if (scrolled) {
-        return { direction: "rtl", position: "fixed", background: "rgba(45, 25, 137, 0.60)" };
+        return { direction: "rtl", position: "fixed", background: "rgba(45, 25, 137, 0.60)",backdropFilter: 'blur(10px)' };
       } else {
         return { direction: "rtl", position: "absolute" };
       }
     } else {
       if (scrolled) {
-        return { direction: "ltr", position: "fixed", background: "rgba(45, 25, 137, 0.60)" };
+        return { direction: "ltr", position: "fixed", background: "rgba(45, 25, 137, 0.60)",backdropFilter: 'blur(10px)' };
       } else {
         return { direction: "ltr", position: "absolute" };
       }
