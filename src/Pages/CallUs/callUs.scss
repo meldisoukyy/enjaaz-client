@@ -29,6 +29,37 @@
         }
       }
     }
+    .switch{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      padding: 40px 0 30px 0;
+      font-family: "Hanimation_Arabic_Regular";
+      font-size: 25px;
+      @media (max-width:767px) {
+        font-size: 20px;
+        padding: 40px 0 15px 0;
+      }
+      p{
+        position: relative;
+        cursor: pointer;
+        @media (max-width:767px) {
+          font-size: 20px;
+        }
+        &:hover{
+          .line{
+            width: 100% !important;
+          }
+        }
+        .line{
+          position: absolute;
+          height: 2px;
+          transition: 0.5s;
+          background-color: var(--scolor);
+        }
+      }
+    }
     .bottom{
         display: flex;
         justify-content: center;
