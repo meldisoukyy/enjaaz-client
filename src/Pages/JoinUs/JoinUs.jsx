@@ -7,6 +7,68 @@ import Swal from 'sweetalert2';
 import { Helmet, HelmetAr, JoinUsApi } from '../../Apis/Apis';
 const JoinUs = () => {
     const { lang, setlang, t, i18n } = useMyContext();
+    const citiesName={
+        "Riyadh": "الرياض",
+        "Jeddah": "جده",
+        "Medina": "المدينه المنوره",
+        "Tabuk": "تبوك",
+        "Dammam": "الدمام",
+        "Al-Ahsa": "الاحساء",
+        "Al-Qatif": "القطيف",
+        "Khamis Mushait": "خميس مشيط",
+        "Al-Muzahmiyya": "المظيلف",
+        "Al-Hofuf": "الهفوف",
+        "Al-Mubarraz": "المبرز",
+        "Taif": "الطائف",
+        "Najran": "نجران",
+        "Hafar Al-Batin": "حفر الباطن",
+        "Jubail": "الجبيل",
+        "Duba": "ضباء",
+        "Al-Kharj": "الخرج",
+        "Ath Thuqbah": "الثقبة",
+        "Yanbu Al-Bahr": "ينبع البحر",
+        "Al Khobar": "الخبر",
+        "Arar": "عرعر",
+        "Al-Hawiyya": "الحوية",
+        "Onaizah": "عنيزه",
+        "Sakaka": "سكاكا",
+        "Jizan": "جيزان",
+        "Al-Qurayyat": "القريات",
+        "Dhahran": "الظهران",
+        "Al-Baha": "الباحة",
+        "Az Zulfi": "الزلفي",
+        "Ar Rass": "الرس",
+        "Wadi Ad-Dawasir": "وادى الدواسر",
+        "Bisha": "بيشه",
+        "Sayhat": "سيهات",
+        "Sharurah": "شروره",
+        "Bareq": "بحره",
+        "Tarout": "تاروت",
+        "Ad Dawadimi": "الدوادمى",
+        "Sabya": "صبياء",
+        "Bish": "بيش",
+        "Ahad Rafidah": "احد رفيدة",
+        "Al-Fareesh": "الفريش",
+        "Bariq": "بارق",
+        "Al-Hawtah": "الحوطه",
+        "Al-Aflaj": "الافلاج"
+      }
+      const partnerShip = {
+        "Service Provider": "مزود خدمة",
+        "Business Consultant": "مستشار أعمال",
+        "Legal Consultant": "مستشار قانوني",
+        "Strategic Partner": "شريك استراتيجي",
+        "Franchise": "الامتياز التجاري",
+        "Customer Service Specialist": "أخصائي خدمة عملاء",
+        "Legal Accounting Office": "مكتب محاسب قانوني",
+        "Commission Marketer": "مسوق بالعمولة",
+        "Zakat And Income Tax Office": "مكتب زكاة وضريبة الدخل",
+        "Electronic Services Office": "مكتب خدمات إلكترونية"
+      };
+            
+      
+      
+      
     lang==='ar'?HelmetAr('إانضم الينا'):
     Helmet('Join Us')
     useEffect(() => {
@@ -16,17 +78,17 @@ const JoinUs = () => {
       const [name, setname] = useState('')
       const [email, setemail] = useState('')
       const [mobile, setmobile] = useState('')
-      const [city, setcity] = useState('')
-      const [partnership_type, setpartnership_type] = useState('')
+      const [city, setcity] = useState('Riyadh')
+      const [partnership_type, setpartnership_type] = useState('Service Provider')
       const [notes, setnotes] = useState('')
       const [portfolio, setportfolio] = useState('')
       
       const [data, setdata] = useState([])
       
-    //   function isEmailValid(email) {
-    //       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    //       return emailPattern.test(email);
-    //   }
+      function isEmailValid(email) {
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailPattern.test(email);
+      }
       
       
       
@@ -53,7 +115,9 @@ const JoinUs = () => {
           else {
               Swal.fire({
                   title: lang === "ar" ? '! خطأ' : 'Error!',
-                  text: lang === "ar" ?`${name === ''?"لم يتم ادخال الاسم .":""} ${mobile === ''?"لم يتم ادخال رقم الهاتف .":""} ${partnership_type === ''?"لم يتم تحديد نوع الشراكة .":""} `:`${name === ''?"The Name is Missing .":""}${mobile === ''?"The Mobile is Missing .":""} ${partnership_type === ''?"The type of partnership is not specified .":""} `,
+                  text: lang === "ar" ?`${name === ''?"لم يتم ادخال الاسم .":""} ${mobile === ''?"لم يتم ادخال رقم الهاتف .":""} ${partnership_type === ''?"لم يتم تحديد نوع الشراكة .":""} ${email === ''?"لم يتم تحديد ادخال البريد الالكتروني .":""} ${!isEmailValid(email)?"أدخل بريد الكتروني صالح":""} `:`${name === ''?"The Name is Missing .":""}${mobile === ''?"The Mobile is Missing .":""} ${partnership_type === ''?"The type of partnership is not specified .":""} ${email === '' ? "The Email is Missing ." : ""}
+                  ${!isEmailValid(email) ? "Enter a valid email address." : ""}
+                   `,
                   icon: 'error',
                   timer: 2000,
                   confirmButtonText: lang === "ar" ?'الرجوع':'Return'
@@ -72,12 +136,29 @@ const JoinUs = () => {
                     <div className="EnjazzFormInputs">
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.fullName')} onChange={(e) => setname(e.target.value)} />
                         {/* <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span> */}
-                        {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.email')} onChange={(e) => setemail(e.target.value)} /> */}
+                        <input className='EnjazzFormInput' type="text" placeholder={t('form.email')} onChange={(e) => setemail(e.target.value)} />
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} />
-                        {/* <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span> */}
-
+                        <p>{t('form.city')}:</p>
+                        <select className='EnjazzFormInput' style={lang === "ar" ?{backgroundPositionX: '3%'}:{backgroundPositionX: '97%'}} onChange={(e) => setcity(e.target.value)}>
+                            {Object.entries(citiesName).map(([en,ar],i)=>{
+                                
+                                return(
+                                    <option value={en} selected={i===0}>{lang === "ar"?ar:en}</option>
+                                    )
+                                })}
+                            
+                        </select>
+                                <p>{t('form.typeC')}:</p>
+                        <select className='EnjazzFormInput' style={lang === "ar" ?{backgroundPositionX: '3%'}:{backgroundPositionX: '97%'}} onChange={(e) => setpartnership_type(e.target.value)}>
+                            {Object.entries(partnerShip).map(([en,ar],i)=>{
+                                return(
+                                    <option value={en} selected={i===0}>{lang === "ar"?ar:en}</option>
+                                )
+                            })}
+                            
+                        </select>
                         {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.city')} onChange={(e) => setcity(e.target.value)} /> */}
-                        <input className='EnjazzFormInput' type="text" placeholder={t('form.typeC')} onChange={(e) => setpartnership_type(e.target.value)} />
+                        {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.typeC')} onChange={(e) => setpartnership_type(e.target.value)} /> */}
                         {/* <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span> */}
 
                         <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details3')} onChange={(e) => setnotes(e.target.value)}></textarea>
