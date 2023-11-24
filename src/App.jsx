@@ -39,35 +39,50 @@ useEffect(() => {
 }, []);
 
   // useEffect(() => {
-  //   window.addEventListener('load', () => {
+  //   const handleLoad = () => {
   //     setIsPageLoaded(true);
-  //   });
-
-  //   // Clean up the event listener when the component unmounts
+  //   };
+  
+  //   window.addEventListener('load', handleLoad);
+  // setTimeout(() => {
+  //   setIsPageLoaded(true)
+  // }, 4000);
   //   return () => {
-  //     window.removeEventListener('load', () => {
-  //       setIsPageLoaded(true);
-  //     });
+  //     window.removeEventListener('load', handleLoad);
   //   };
   // }, []);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsPageLoaded(true);
-  //   }, 3000);
-  // }, []);
+
   useEffect(() => {
+    let loadTimeout;
+    let startLoadingTime = new Date().getTime();
+  
     const handleLoad = () => {
-      setIsPageLoaded(true);
+      clearTimeout(loadTimeout);
+  
+      let elapsedTime = new Date().getTime() - startLoadingTime;
+  
+      if (elapsedTime < 3000) {
+        loadTimeout = setTimeout(() => {
+          setIsPageLoaded(true);
+        }, 3000 - elapsedTime);
+      } else if (elapsedTime > 8000) {
+        setIsPageLoaded(true);
+      } else {
+        setIsPageLoaded(true);
+      }
     };
   
     window.addEventListener('load', handleLoad);
-  setTimeout(() => {
-    setIsPageLoaded(true)
-  }, 4000);
+  
+    loadTimeout = setTimeout(() => {
+      setIsPageLoaded(true);
+    }, 8000);
+  
     return () => {
       window.removeEventListener('load', handleLoad);
+      clearTimeout(loadTimeout);
     };
-  }, []);
+  }, [location]);
 
   const Layout = () => {
     return (

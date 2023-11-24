@@ -114,7 +114,7 @@ const ServicesPackage = () => {
 
                     <div className="pack " data-aos="fade-in" data-aos-duration="2000" data-aos-delay="100">
                         <div className="top">
-                            <div className="banner">
+                            <div className="banner" style={{backgroundColor:'#CD7F32'}}>
                                 <h2>{lang === "ar" ? 'الباقة البرونزية' : 'Bronze package'}</h2>
                                 {lang === "ar" ? (
                                     <>
@@ -191,7 +191,7 @@ const ServicesPackage = () => {
 
                     <div className="pack " data-aos="fade-in" data-aos-duration="2000" data-aos-delay='200'>
                         <div className="top">
-                            <div className="banner">
+                            <div className="banner" style={{backgroundColor:'#757575'}}>
                                 <h2>{lang === "ar" ? 'الباقة الفضية' : 'Silver package'}</h2>
                                 {lang === "ar" ? (
                                     <>
@@ -271,7 +271,7 @@ const ServicesPackage = () => {
                     </div>
                     <div className="pack " data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
                         <div className="top">
-                            <div className="banner">
+                            <div className="banner" style={{backgroundColor:'#d4af37'}}>
                                 <h2>{lang === "ar" ? 'الباقة الذهبية' : 'Golden package'}</h2>
                                 {lang === "ar" ? (
                                     <>
@@ -346,7 +346,7 @@ const ServicesPackage = () => {
                     </div>
                     <div className="pack " data-aos="fade-in" data-aos-duration="2000" data-aos-delay='400'>
                         <div className="top">
-                            <div className="banner">
+                            <div className="banner" style={{backgroundColor:'#7d1242'}}>
                                 <h2>{lang === "ar" ? 'الباقة الماسية' : 'Diamond package'}</h2>
                                 {lang === "ar" ? (
                                     <>

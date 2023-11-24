@@ -19,6 +19,32 @@ const TryMeService = () => {
       const [city, setcity] = useState('')
       const [service_type, setservice_type] = useState('free-tryme-service')
       const [notes, setnotes] = useState('')
+      const [try_service, settry_service] = useState('Issuance of Commercial Register for an Establishment')
+      const services={
+        "Issuance of Commercial Register for an Establishment": "إصدار سجل تجاري لمؤسسة",
+        "Modification of Commercial Register for an Establishment": "تعديل سجل تجاري لمؤسسة",
+        "Residence Permit Issuance": "إصدار إقامة",
+        "Residence Permit Renewal": "تجديد إقامة",
+        "Issuance of Exit and Re-Entry Visa": "إصدار تأشيرة خروج وعودة",
+        "Extension of Exit and Re-Entry Visa": "تمديد تأشيرة خروج وعودة",
+        "Issuance of Final Exit Visa": "إصدار تأشيرة خروج نهائي",
+        "Resident Report": "تقرير مقيم",
+        "Transfer of Passport Information": "نقل معلومات جوازين",
+        "Registration of an Account for the Institution at the Zakat, Tax, and Customs Authority": "تسجيل حساب للمنشأة هيئة الزكاة والضريبة والجمارك",
+        "Update of Institution Data at the Zakat, Tax, and Customs Authority": "تحديث بيانات المنشأة هيئة الزكاة والضريبة والجمارك",
+        "Issuance of Zakat and Tax Certificate": "إصدار شهادة الزكاة والضريبة",
+        "Delegation for Visa": "التفويض على تأشيرة",
+        "Request for Business Visit": "طلب زيارة تجارية",
+        "Registration on the Mudad Platform": "التسجيل في منصة مدد",
+        "Data Update": "تحديث البيانات",
+        "Opening an Institution File": "فتح ملف منشأة",
+        "Update of Data at the Labor Office": "تحديث البيانات في مكتب العمل",
+        "Issuance of Work License": "إصدار رخصة عمل",
+        "Transfer of Worker Services": "نقل خدمات عامل",
+        "Issuance of Saudi Certificate": "اصدار شهادة السعودة",
+        "Authentication of Employment Contracts": "توثيق عقود العمل",
+        "Update of Employee Data": "تحديث بيانات الموظفين"
+        }
   
       const [data, setdata] = useState([])
   
@@ -65,6 +91,15 @@ const TryMeService = () => {
 
                         {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.email')} onChange={(e) => setemail(e.target.value)} /> */}
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} />
+                        <p>{t('form.typeS')}:</p>
+                        <select className='EnjazzFormInput' style={lang === "ar" ?{backgroundPositionX: '3%'}:{backgroundPositionX: '97%'}} onChange={(e) => settry_service(e.target.value)}>
+                            {Object.entries(services).map(([en,ar],i)=>{
+                                return(
+                                    <option value={en} selected={i===0}>{lang === "ar"?ar:en}</option>
+                                )
+                            })}
+                            
+                        </select>
                         {/* <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span> */}
 
                         {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.city')} onChange={(e) => setcity(e.target.value)} /> */}
