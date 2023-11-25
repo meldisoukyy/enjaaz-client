@@ -29,6 +29,10 @@
 .circles-loader{
   min-height: 100vh;
   background-image: url('../public/images/خلفية\ افتتاح\ الشاشة\ .png');
+  background-position: bottom right;
+  @media (max-width:767px) {
+    background-position: bottom center;
+  }
   section{
     height: 100vh;
     background-color: unset !important;

@@ -52,37 +52,37 @@ useEffect(() => {
   //   };
   // }, []);
 
-  // useEffect(() => {
-  //   let loadTimeout;
-  //   let startLoadingTime = new Date().getTime();
+  useEffect(() => {
+    let loadTimeout;
+    let startLoadingTime = new Date().getTime();
   
-  //   const handleLoad = () => {
-  //     clearTimeout(loadTimeout);
+    const handleLoad = () => {
+      clearTimeout(loadTimeout);
   
-  //     let elapsedTime = new Date().getTime() - startLoadingTime;
+      let elapsedTime = new Date().getTime() - startLoadingTime;
   
-  //     if (elapsedTime < 3000) {
-  //       loadTimeout = setTimeout(() => {
-  //         setIsPageLoaded(true);
-  //       }, 3000 - elapsedTime);
-  //     } else if (elapsedTime > 6000) {
-  //       setIsPageLoaded(true);
-  //     } else {
-  //       setIsPageLoaded(true);
-  //     }
-  //   };
+      if (elapsedTime < 3000) {
+        loadTimeout = setTimeout(() => {
+          setIsPageLoaded(true);
+        }, 3000 - elapsedTime);
+      } else if (elapsedTime > 6000) {
+        setIsPageLoaded(true);
+      } else {
+        setIsPageLoaded(true);
+      }
+    };
   
-  //   window.addEventListener('load', handleLoad);
+    window.addEventListener('load', handleLoad);
   
-  //   loadTimeout = setTimeout(() => {
-  //     setIsPageLoaded(true);
-  //   }, 6000);
+    loadTimeout = setTimeout(() => {
+      setIsPageLoaded(true);
+    }, 6000);
   
-  //   return () => {
-  //     window.removeEventListener('load', handleLoad);
-  //     clearTimeout(loadTimeout);
-  //   };
-  // }, [location]);
+    return () => {
+      window.removeEventListener('load', handleLoad);
+      clearTimeout(loadTimeout);
+    };
+  }, [location]);
 
   const Layout = () => {
     return (

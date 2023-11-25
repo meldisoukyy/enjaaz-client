@@ -17,7 +17,7 @@ const Loader = () => {
         //     <p className='text-focus-in'>انجاز ، شريك رحلتك نحو التطور والتميز</p>
         // </div>
 
-        <div className='Circles circles-loader' style={{background:'url("../../../public/images/خلفية افتتاح الشاشة .png")'}} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+        <div className='Circles circles-loader' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
             <section className="home-features d-flex justify-content-center align-items-center">
                 <div className="container">
                     <div className="row align-items-center justify-content-center">
