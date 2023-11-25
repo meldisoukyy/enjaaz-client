@@ -65,7 +65,7 @@ useEffect(() => {
         loadTimeout = setTimeout(() => {
           setIsPageLoaded(true);
         }, 3000 - elapsedTime);
-      } else if (elapsedTime > 8000) {
+      } else if (elapsedTime > 6000) {
         setIsPageLoaded(true);
       } else {
         setIsPageLoaded(true);
@@ -76,7 +76,7 @@ useEffect(() => {
   
     loadTimeout = setTimeout(() => {
       setIsPageLoaded(true);
-    }, 8000);
+    }, 6000);
   
     return () => {
       window.removeEventListener('load', handleLoad);
