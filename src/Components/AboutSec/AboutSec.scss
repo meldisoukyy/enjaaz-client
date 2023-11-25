@@ -29,6 +29,9 @@
             border-radius: 10px;
             overflow: hidden;
             position: relative;
+            @media (max-width:767px) {
+                width: 80%;
+            }
             img{
                 object-fit: cover;
             }

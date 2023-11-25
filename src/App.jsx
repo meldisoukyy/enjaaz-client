@@ -61,11 +61,11 @@ useEffect(() => {
   
       let elapsedTime = new Date().getTime() - startLoadingTime;
   
-      if (elapsedTime < 3000) {
+      if (elapsedTime < 2000) {
         loadTimeout = setTimeout(() => {
           setIsPageLoaded(true);
-        }, 3000 - elapsedTime);
-      } else if (elapsedTime > 6000) {
+        }, 2000 - elapsedTime);
+      } else if (elapsedTime > 4000) {
         setIsPageLoaded(true);
       } else {
         setIsPageLoaded(true);
@@ -76,7 +76,7 @@ useEffect(() => {
   
     loadTimeout = setTimeout(() => {
       setIsPageLoaded(true);
-    }, 6000);
+    }, 4000);
   
     return () => {
       window.removeEventListener('load', handleLoad);
