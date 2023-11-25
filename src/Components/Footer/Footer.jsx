@@ -211,12 +211,6 @@ const Footer = () => {
                     {t("packages.btn3")}
                   </li>
                 </Link>
-                <Link to="/marketingservices">
-                  <li>
-                    <div className="arrow"></div>
-                    {t("packages.btn4")}
-                  </li>
-                </Link>
               </ul>
             </div>
             <div className="part col-lg-2 col-6 mb-4 mb-lg-0">
