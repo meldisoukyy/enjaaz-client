@@ -33,6 +33,27 @@
         font-size: 19px;
       }
     }
+    .title{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    ul{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      li{
+        list-style: disc;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: "Hanimation_Arabic_Regular";
+        color: #807f7f;
+        text-align: justify;
+        @media (max-width: 767px) {
+          font-size: 18px;
+        }
+      }
+    }
     .packs {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -56,6 +77,9 @@
           color: white;          
         }
         p {
+          color: #d0cfcf;
+        }
+        li{
           color: #d0cfcf;
         }
         span {

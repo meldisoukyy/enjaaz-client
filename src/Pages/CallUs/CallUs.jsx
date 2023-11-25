@@ -95,7 +95,7 @@ const CallUs = () => {
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.646291990671!2d46.7560625!3d24.8075625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2effdaaab7d58f%3A0xea15c20d6324425c!2z2LTYsdmD2Kkg2KfZhtis2KfYsiDZhNiu2K_Zhdin2Kog2KfZhNij2LnZhdin2YQ!5e0!3m2!1sar!2seg!4v1697991472116!5m2!1sar!2seg" style={{ border: '0;' }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         )}
                         {selectedMap===2&&(
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.646291990671!2d46.7560625!3d24.8075625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2effdaaab7d58f%3A0xea15c20d6324425c!2z2LTYsdmD2Kkg2KfZhtis2KfYsiDZhNiu2K_Zhdin2Kog2KfZhNij2LnZhdin2YQ!5e0!3m2!1sar!2seg!4v1700601993167!5m2!1sar!2seg" style={{ border: '0;' }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1176.4223448799537!2d42.832764!3d16.9632523!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1607f50f8ea21e17%3A0xc2e7ff403c434917!2zR05NQjYxNDjYjCA2MTQ4INi02KfYsdi5INin2YTZhdmE2YMg2LnYqNiv2KfZhNi52LLZitiy2IwgMjQ3N9iMINin2YTYrtin2YTYr9mK2KnYjCDYo9io2Ygg2LnYsdmK2LQgODQ3MTHYjCDYp9mE2LPYudmI2K_Zitip!5e1!3m2!1sar!2seg!4v1700927466974!5m2!1sar!2seg" style={{ border: '0;' }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         )}
                     </div>
                 </div>
