@@ -8,21 +8,22 @@ const BankAccounts = () => {
     return (
         <>
             <CommonHead title={t('nav.bank')} path={t('aboutus.path')} />
-            <div className="BankAccounts">
+            <div className="BankAccounts" style={lang==='ar'?{direction:'rtl'}:{direction:'ltr'}}>
                 <div className="container">
                     <div className="bank-card">
                         <div className="image">
                             <img src="/images/شعار مصرف الراجحي .png" alt="" />
                         </div>
                         <div className="item">
-                            <h5>شركة إنجاز الأعمال للخدمات التجارية</h5>
+                            <h5>{t('bank.h5')}
+                                </h5>
                         </div>
                         <div className="item">
-                            <p>رقم الحساب: </p>
+                            <p>{t('bank.p1')}</p>
                             <span>681608010088777</span>
                         </div>
                         <div className="item">
-                            <p>الآيبان: </p>
+                            <p>{t('bank.p2')}</p>
                             <span>SA0780000681608010088777</span>
                         </div>
                     </div>
@@ -31,20 +32,24 @@ const BankAccounts = () => {
                             <img src="/images/شعار حساب البنك الأهلي.png" alt="" />
                         </div>
                         <div className="item">
-                            <h5>شركة إنجاز الأعمال للخدمات التجارية</h5>
+                            <h5>{t('bank.h5')}
+                            </h5>
                         </div>
                         <div className="item">
-                            <p>رقم الحساب: </p>
+                            <p>{t('bank.p1')}</p>
                             <span>11100374759506 </span>
                         </div>
                         <div className="item">
-                            <p>الآيبان: </p>
+                            <p>{t('bank.p2')}</p>
                             <span>SA2110000011100374759506</span>
                         </div>
                     </div>
                 </div>
                 <div className="container justify-content-start">
-                    <p className='pt-5 fs-5'><span className='text-danger fs-4 fw-bold'>تنوية: </span>الحسابات البنكية المشار إليها أعلاة هي الحسابات الخاصة بشركة إنجاز للخدمات فقط، نود أن نؤكد اننا غير مسئولين عن أي حسابات بنكية اخرى</p>
+                    <p className='pt-5 fs-5'><span className='text-danger fs-4 fw-bold'>
+                    <p>{t('bank.red')}</p>
+                        </span>{t('bank.long_p')}
+                        </p>
                 </div>
             </div>
         </>
