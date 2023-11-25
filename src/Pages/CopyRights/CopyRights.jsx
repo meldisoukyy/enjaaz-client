@@ -8,11 +8,11 @@ const CopyRights = () => {
     return (
         <>
             <CommonHead title={t('footer.ul11')} path={t('aboutus.path')} />
-            <div className='Policies'>
+            <div className='Policies' style={lang==='ar'?{direction:'rtl'}:{direction:'ltr'}}>
                 <div className="container">
                     <h1 className="section-title3">{t('footer.ul11')}</h1>
                     <div className="part">
-                        <h4 className='mt-5 text-center'>نملك كافة حقوق الملكية الفكرية لموقعنا، وجميع المواد المنشورة فيه تخضع لحماية قوانين حقوق الطبع والنشر والمعاهدات العالمية، وجميع هذه الحقوق محفوظة.</h4>
+                        <h4 className='mt-5 text-center'>{t('copyrights.h4')}</h4>
                     </div>
                 </div>
             </div>

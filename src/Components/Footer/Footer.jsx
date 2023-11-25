@@ -83,36 +83,44 @@ const Footer = () => {
                 <img loading="lazy" src="/images/logo.webp" alt="" />
               </div>
               <h1>{t("footer.bottomh1")}</h1>
-              <p style={{textAlign:'unset'}}>{t("footer.bottomp1")}</p>
+              <p style={{ textAlign: 'unset' }}>{t("footer.bottomp1")}</p>
               <div className="social">
-                <div className="image">
-                  <img
-                    loading="lazy"
-                    src="/images/footer/FooterIcon-6.webp"
-                    alt=""
-                  />
-                </div>
-                <div className="image">
-                  <img
-                    loading="lazy"
-                    src="/images/footer/FooterIcon.webp"
-                    alt=""
-                  />
-                </div>
-                <div className="image">
-                  <img
-                    loading="lazy"
-                    src="/images/footer/FooterIcon-7.webp"
-                    alt=""
-                  />
-                </div>
-                <div className="image">
-                  <img
-                    loading="lazy"
-                    src="/images/footer/FooterIcon-2.webp"
-                    alt=""
-                  />
-                </div>
+                <a href="https://wa.me/+966502144449">
+                  <div className="image">
+                    <img
+                      loading="lazy"
+                      src="/images/footer/FooterIcon-6.webp"
+                      alt=""
+                    />
+                  </div>
+                </a>
+                <a href="https://www.facebook.com/Enjaaz.2/">
+                  <div className="image">
+                    <img
+                      loading="lazy"
+                      src="/images/footer/FooterIcon.webp"
+                      alt=""
+                    />
+                  </div>
+                </a>
+                <a href="https://www.instagram.com/enjaaz.2/">
+                  <div className="image">
+                    <img
+                      loading="lazy"
+                      src="/images/footer/FooterIcon-7.webp"
+                      alt=""
+                    />
+                  </div>
+                </a>
+                <a href="https://www.youtube.com/@Enjaaz_2">
+                  <div className="image">
+                    <img
+                      loading="lazy"
+                      src="/images/footer/FooterIcon-2.webp"
+                      alt=""
+                    />
+                  </div>
+                </a>
                 <div className="image">
                   <img
                     loading="lazy"
@@ -120,27 +128,33 @@ const Footer = () => {
                     alt=""
                   />
                 </div>
-                <div className="image">
-                  <img
-                    loading="lazy"
-                    src="/images/footer/FooterIcon-1.webp"
-                    alt=""
-                  />
-                </div>
-                <div className="image">
-                  <img
-                    loading="lazy"
-                    src="/images/footer/FooterIcon-4.webp"
-                    alt=""
-                  />
-                </div>
-                <div className="image">
-                  <img
-                    loading="lazy"
-                    src="/images/footer/FooterIcon-5.webp"
-                    alt=""
-                  />
-                </div>
+                <a href="https://www.snapchat.com/add/https://www.snapchat.com/add/enjaaz.2?share_id=vUU1nSI8BE4&locale=ar-EG">
+                  <div className="image">
+                    <img
+                      loading="lazy"
+                      src="/images/footer/FooterIcon-1.webp"
+                      alt=""
+                    />
+                  </div>
+                </a>
+                <a href="https://twitter.com/Enjaaz_2">
+                  <div className="image">
+                    <img
+                      loading="lazy"
+                      src="/images/footer/FooterIcon-4.webp"
+                      alt=""
+                    />
+                  </div>
+                </a>
+                <a href="https://www.tiktok.com/@enjaaz_2">
+                  <div className="image">
+                    <img
+                      loading="lazy"
+                      src="/images/footer/FooterIcon-5.webp"
+                      alt=""
+                    />
+                  </div>
+                </a>
               </div>
             </div>
             <div className="part col-lg-2 col-6 mb-4 mb-lg-0">
@@ -336,7 +350,7 @@ const Footer = () => {
           <div className="top">
             <p>{t("footer.bottomp5")}</p>
             <div className="payments">
-              <img loading="lazy"style={{scale:'1.9',margin:'0 25px 0 25px'}} src="/images/جنب صورة المدفوعات أسفل الموقع.png" />
+              <img loading="lazy" style={{ scale: '1.9', margin: '0 25px 0 25px' }} src="/images/جنب صورة المدفوعات أسفل الموقع.png" />
               <img loading="lazy" src="https://aait.sa/public/site/img/icons/certificate.webp" style={{ height: "40px" }} />
               <img loading="lazy" src="https://aait.sa/public/site/img/icons/mada.webp" />
               <img loading="lazy" src="https://aait.sa/public/site/img/icons/visa.webp" />

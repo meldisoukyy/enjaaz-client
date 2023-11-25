@@ -236,5 +236,139 @@
     "title": "Subscription Value Calculator",
     "true": "Yes",
     "false": "No"
+  },
+  "company_policy": {
+    "secH": "Privacy Policy and Confidentiality of Information",
+    "p1_1": "The (Enjaaz Services) team welcomes you and thanks you for your trust in it. (Enjaaz Services) informs you that out of its concern and full awareness that the user has rights, (Enjaaz Services) seeks to preserve the users’ information in accordance with the privacy policy and information confidentiality mechanism in place. It is in (Enjaaz Services). Accordingly, (Enjaaz Services) clarifies to you that the privacy policy and confidentiality of information according to which your information will be dealt with is as follows:",
+    "h2_1": "First: The information that Enjaaz Services obtains and maintains in its databases",
+    "h2_2": "Second: Does Enjaaz Services share this information?",
+    "h2_3": "Third: How secure is the confidentiality of the store’s information?",
+    "h2_4": "Fourth: Is there a third party in the relationship between (Enjaaz Services) and the merchant?",
+    "h2_5": "Fifth: Rules and provisions for using (Enjaaz Services):",
+    "p1_2": "\"Here, the privacy policy is specified regarding cases where there is a third party, such as marketers, technicians, the consumer, and any other person involved in the relationship.\"",
+    "p1_3_1": "All commitments of (Enjaaz Services), all user obligations, and all rights in the relationship between the user or consumer and (Enjaaz Services) are located here ",
+    "p1_3_2": ", as these rules are the \"Privacy Policy and Confidentiality of Information\" Emerging from the agreement concluded between the user and (store name) regarding the regular and legal relationship between them, the privacy policy and confidentiality of information was established to ensure the credibility and trust that (Enjaaz Services) is keen to provide to users.",
+    "span": "(Enjaaz Services) seeks to preserve the confidentiality of user information and the privacy policy and will not violate the provisions of these rules and policy. However, since it is not possible to guarantee this 100% via the Internet, the Enjaaz Services team notes the following:",
+    "part1": {
+      "1": "1. The user’s personal information, such as name, age, email, national ID number or residence number.",
+      "2": "2. As a general rule, all this information is only accessible to those responsible for (Enjaaz Services), and they will not publish or transmit it to others.",
+      "3": "3. The nature of the electronic platform may require some information related to cookies for electronic purposes that facilitate the interaction between the store and the user."
+    },
+    "part2": {
+      "1": "1. Naturally, (Enjaaz Services) seeks to retain this information in a way that preserves the user’s privacy, and (Enjaaz Services) does not retain this information except with the aim of improving the quality of the online store and facilitating dealing with (Enjaaz Services) and the user.",
+      "2": "2. The user’s personal login information, such as the user name, password, email, and the password recovery question and its answer.",
+      "3": "3. Since (Enjaaz for Services) seeks to maintain the safety of users, - in the event that (Enjaaz for Services) notices any irregular or illegal activity carried out by the user - (Enjaaz for Services) may inform the competent authorities after consulting with the attorney for (Enjaaz Services)."
+    },
+    "part3": {
+      "1": "1. (Enjaaz Services) seeks to maintain the confidentiality of users’ information and privacy policy and will not violate the provisions of these rules and policy. However, since it is not possible to guarantee this 100% via the Internet, the Enjaaz Services team notes the following:",
+      "2": "2. (Enjaaz Services) works to protect this information through “specific servers?” Protected under electronic protection systems “Software system or specific software?”",
+      "3": "3. However, given that the Internet cannot be 100% guaranteed due to any hacking or viruses that may occur on the electronic protection systems and on the firewalls in place at (Enjaaz Services), (Enjaaz Services) advises users to keep their information strictly confidential, and not to divulge any information. The user finds it very important to him, and this is out of the interest of (Enjaaz Services) in directing and advising users."
+    }
+  },"copyrights": {
+    "h4": "We own all intellectual property rights to our website, and all materials published on it are subject to protection under copyright laws and international treaties. All these rights are reserved."
+  },
+  "terms_and_conditions": {
+    "h2_1": "First: Definitions",
+    "p_1": "\"Enjaaz\": Service Provider: Enjaaz Commercial Services Company",
+    "span_1": "“Enjaaz” is a commercial services company.",
+    "p_2": "\"Injaaz Packages\":",
+    "span_2": "Human resources management service and electronic services for government agencies for establishments, where the service is only for electronic services and not for reviewing government agencies.",
+    "p_3": "\"Beneficiary\":",
+    "span_3": "The beneficiary of Enjaaz packages services.",
+    "p_4": "\"Circumstances beyond control\":",
+    "span_4": "Causes beyond reasonable control.",
+    "p_5": "\"Bronze Enjaaz Package\":",
+    "span_5": "This service allows managing the facility's electronic services, which are as follows:",
+    "p_6": "\"Silver Enjaaz Package\":",
+    "span_6": "This service allows managing the facility’s electronic services included in the Bronze Enjaaz Package, in addition to the following services:",
+    "p_7": "\"Gold Enjaaz Package\":",
+    "span_7": "This service provides a wide range of administrative services and includes all the services included in the Bronze and Silver Packages, in addition to the following services:",
+    "p_8": "\"Platinum Enjaaz Package\":",
+    "span_8": "This service provides a wide range of administrative services and includes all the services mentioned in the Bronze, Silver, and Gold packages, in addition to the following services:",
+    "part1": {
+      "1": "Management of workforce services",
+      "2": "Social insurance services management",
+      "3": "Ministry of Commerce services management",
+      "4": "Absher services management, Resident",
+      "5": "Manage my services",
+      "6": "Chamber of Commerce services management",
+      "7": "Zakat and Income services management",
+      "8": "Labor office services management",
+      "9": "Support program services management",
+      "10": "Medical insurance services management"
+    },
+    "part2": {
+      "1": "Najez services management",
+      "2": "Nafith services management"
+    },
+    "part3": {
+      "1": "Payroll management and wage protection",
+      "2": "Documenting employment contracts for employees",
+      "3": "Reducing financial burdens"
+    },
+    "part4": {
+      "1": "Website design",
+      "2": "Online store design",
+      "3": "Professional logo design",
+      "4": "E-marketing services"
+    },
+    "fifth": {
+      "1": "A - The beneficiary undertakes not to disrupt the service and to cooperate with Injaaz in providing the service to his facility as soon as possible. In the event of non-cooperation, Injaaz has the right to terminate the subscription.",
+      "2": "B - The beneficiary undertakes not to offend Enjaaz employees or the company entity and to follow the correct methods in the event of any complaints regarding the service. When he does so, he undertakes to pay the necessary compensation for any damage or losses due to that violation in accordance with what is determined by the regulations in force in the Kingdom of Saudi Arabia. The subscriber also bears all Fines issued against him by the competent authorities",
+      "3": "C - The subscriber bears all responsibilities resulting from requests issued by the employee or delegate in dealing with Enjaaz.",
+      "4": "D - The beneficiary has no right to claim any compensation from Injaaz for service delays due to technical malfunctions or other reasons.",
+      "5": "E - The beneficiary undertakes to provide Injaaz with all user names and passwords for all the establishment’s accounts in government agencies, and if they change, he will inform the company of this."
+    },
+    "ninth": {
+      "1": "1) Injaaz does not bear responsibility for problems resulting from incorrect or updated information provided to the subscriber by the competent authorities through the facility’s system.",
+      "2": "2) It is not responsible for the completion of violations that occur to the establishment for any reason, and the subscriber does not have the right to demand that it do so.",
+      "3": "3) Injaaz does not bear any responsibility for any losses incurred by the subscriber (directly or indirectly) resulting from implementing this subscription.",
+      "4": "4) Enjaaz reserves the right to restrict the use of the service by setting a maximum limit for the services provided.",
+      "5": "5) The beneficiary agrees to disclaim Injaaz responsibility for errors of telecommunications service providers or government agency websites, such as disruption of the connection to the website.",
+      "6": "6) The subscriber agreed that Enjaaz has the right to destroy or not present the original documents, and any copies of them provided by Enjaaz in this regard are considered a document with evidence of proof before the competent authorities and the judiciary as long as they bear the Enjaaz logo and seal.",
+      "7": "7) Injaz has the right to terminate the subscription if it wants not to continue without any restrictions, or if the beneficiary uses the system for a purpose other than its intended purpose, or violates one of the terms and conditions of using the service, or if the competent authorities request that the service be stopped for the beneficiary, and in this case only Refunding the amounts paid to the beneficiary for the remaining period of the subscription only without requesting any other compensation. The subscription also ends in the event of force majeure.",
+      "8": "8) The beneficiary does not have the right to request Enjaaz to review governmental or semi-governmental agencies, as the service is only for managing electronic services, and the beneficiary provides employees to carry out reviews if needed."
+    },
+    "tenth": {
+      "1": "1) All previous terms and conditions from the first to the second clause apply to the Enjaaz package subscription service security.",
+      "2": "2) The service provider has the right to change the pricing addendum for the subscription service in the packages when renewing the subscription or adding new services. The beneficiary or his representative, after continuing to subscribe after notifying him of the change, is considered to have agreed to the new value and the obligation to pay the financial amounts and fees resulting from that.",
+      "3": "3) The Ministry of Human Resources’ services management is limited to the electronic service available in the establishment’s account only in accordance with the applicable system, and the subscriber is not entitled to request that Enjaz conduct any irregular transaction.",
+      "4": "4) The Ministry of Commerce’s services management is limited to electronic services (renewal of commercial records - cancellation of commercial records - amendment of commercial records - reservation of trade names) only.",
+      "5": "5) The Social Insurance Services Department is limited to the electronic service available in the facility’s account only in accordance with the applicable system, and the subscriber is not entitled to request Enjaz to conduct any transaction that is not available in the facility’s account.",
+      "6": "6) The General Authority of Zakat and Income’s services management is limited to electronic services (submitting zakat returns - submitting tax returns - registering the establishment - deregistering the establishment).",
+      "7": "7) The Ministry of Interior’s services management is limited to the electronic service available in the establishment’s account only in Absher Business or the Muqeem service, and the subscriber has no right to request Enjaaz to perform any transaction that is not available in the Absher Business account or Muqeem service.",
+      "8": "8) My municipal services management is limited to electronic services (issuing a municipal license - renewing a municipal license - canceling a municipal license - amending a municipal license).",
+      "9": "9) The (Civil Defense) Safety Services Department is limited to electronic services (submitting a request to issue a civil defense license - renewing a civil defense license).",
+      "10": "10) The management of insurance companies’ services is limited to electronic services (issuing a medical insurance policy for workers - renewing a medical insurance policy).",
+      "11": "11) The salary management and wage protection subscription service is limited to electronic services (uploading salary files, auditing files, correcting errors and violations).",
+      "12": "12) The service of alleviating the burdens on establishments is limited to registering the participant’s establishment in government initiatives or studying the establishment in general and assisting decision makers in alleviating the financial burdens by preparing a report on this, if possible.",
+      "13": "13) The website design service is limited to creating an introductory website consisting of a group of pages. If the client desires to design a professional website or an online store, it will be under an independent contract and is not included in this subscription.",
+      "14": "14) The marketing service through social media sites is limited to creating an account for the establishment on all social media sites and linking it to the company’s website. In the event that the subscriber desires to market through sites that require payment of fees for advertising, then the person responsible for bearing these fees is the beneficiary and is not entitled to demand that Enjaz do so.",
+      "15": "15) Free features include search and reservation at the lowest available prices, but do not include the ticket price, reservation price, or insurance."
+    },"part_h2": {
+      "1": "Second: Subscription category",
+      "2": "Third: Duration of subscription",
+      "3": "Fourth: Time to provide the service",
+      "4": "Fifth: Subscriber’s obligations",
+      "5": "Sixth: The beginning of service activation",
+      "6": "Seventh: The cost of the service",
+      "7": "Eighth: Settlement of disputes",
+      "8": "Ninth: General provisions",
+      "9": "Tenth: Terms and conditions for Enjaaz packages",
+      "10": " Approval and authorization",
+      "11":" Intellectual property rights"
   }
+    ,
+    "part_p": {
+      "1": "The beneficiary must specify the subscription category he desires, which is either the Bronze Package, Silver Package, Gold Package, or Platinum Package subscription.",
+      "2": "The subscription is valid for a full calendar year from the date of transferring the package fees, and is automatically renewed unless the subscriber is notified of his desire not to renew one month before the end date of the subscription through the approved means of communication.",
+      "3": "Injaaz makes every effort to provide the service 24 hours a day and during official holidays, while not bearing responsibility if the service is not available for any reason.",
+      "4":"The service begins after paying the subscription fee for the service. If the subscriber wishes to modify the package or add new services, this will be taken into account, provided that the required documents are available and the differences for the added services are paid.",
+      "5":"The beneficiary pays the subscription value shown in the subscription form, and the subscriber does not bear any other amounts during the subscription period. The value of this subscription does not include any government fees or the like, but rather the amount in exchange for providing the service.",
+      "6":"This subscription is subject to the regulations in force in the Kingdom and is implemented and interpreted in accordance with them. Any dispute that arises from the application of this subscription or is related to it and cannot be settled will be settled in accordance with the regulations of the Kingdom of Saudi Arabia.",
+      "7":"I, the undersigned, acknowledge that I have read the terms and conditions of subscription to Enjaaz packages and agree to everything stated therein",
+      "8":"We own all intellectual property rights to our website, and all materials published on it are protected by copyright laws and international treaties, and all such rights are reserved."
+    }
+}
+
 }

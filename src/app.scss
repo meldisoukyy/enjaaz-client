@@ -28,8 +28,18 @@
 }
 .circles-loader{
   min-height: 100vh;
+  background-image: url('../public/images/خلفية\ افتتاح\ الشاشة\ .png');
   section{
     height: 100vh;
+    background-color: unset !important;
+    width: 60%;
+    @media (max-width:992px) {
+      width: 70% !important;
+    }
+    @media (max-width:767px) {
+      width: 65% !important;
+    }
+    margin: auto;
   }
 }
 a {
