@@ -86,13 +86,15 @@ export const ContactUsApi = (name,mobile,reason,message) => {
         return response.json();
     });
 };//..
-export const JoinUsApi = (name, mobile, partnership_type, notes, portfolio) => {
+export const JoinUsApi = (name, mobile, partnership_type, notes, portfolio,city,email) => {
     const formData = new FormData();
     formData.append('name', name);
     formData.append('mobile', mobile);
     formData.append('partnership_type', partnership_type);
     formData.append('notes', notes);
     formData.append('portfolio', portfolio);
+    formData.append('city', city);
+    formData.append('email', email);
 
     return fetch('https://server.enjaaz.com.sa/api/join-us/', {
         method: 'POST',

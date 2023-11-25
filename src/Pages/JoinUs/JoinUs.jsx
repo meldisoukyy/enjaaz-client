@@ -95,7 +95,7 @@ const JoinUs = () => {
       const handleSubmit = () => {
           if (name !== '' && mobile !== '' &&partnership_type!== '') {
             //   console.log(name,email,mobile,city,partnership_type,notes,portfolio)
-              JoinUsApi(name,mobile,partnership_type,notes,portfolio).then((res) => {
+              JoinUsApi(name,mobile,partnership_type,notes,portfolio,city,email).then((res) => {
                 //  console.log(res);
                   setdata(res); 
                 }).then(()=>data.portfolio[0]==='The submitted data was not a file. Check the encoding type on the form.'?Swal.fire({
