@@ -28,7 +28,7 @@ const Loader = () => {
                                     alt=""
                                     className="empty"
                                 />
-                                <div className="center">
+                                <div className="center" style={{minWidth:"30px",minHeight:'30px'}}>
                                     <img loading="lazy"
                                         src="/images/logoCircle.webp"
                                         alt=""
