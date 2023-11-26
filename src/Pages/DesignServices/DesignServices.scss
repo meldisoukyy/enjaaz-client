@@ -83,8 +83,8 @@
           color: #d0cfcf;
         }
         span {
-          color: white;
-          text-decoration: none;
+          color: var(--mcolor);
+          background-color: white;
         }
       }
       h1 {
@@ -110,11 +110,13 @@
       span {
         font-size: 20px;
         font-weight: 500;
+        background-color: var(--mcolor);
+        padding: 10px 40px;
+        border-radius: 30px;
         font-family: "Hanimation_Arabic_Regular";
-        color: var(--scolor);
+        color: white;
         text-align: center !important;
         cursor: pointer;
-        text-decoration: underline;
         @media (max-width: 767px) {
           font-size: 18px;
         }

@@ -269,7 +269,7 @@ const Footer = () => {
                     alt=""
                   />
                 </div>
-                <div className="image" onClick={handleShow2}>
+                <div className="image" onClick={handleShow2} style={{scale:"1.3"}}>
                   <img
                     src="/images/لوجو المركز السعودي للأعمال يدوس علية يفتح الصورة مباشرة.png"
                     alt=""

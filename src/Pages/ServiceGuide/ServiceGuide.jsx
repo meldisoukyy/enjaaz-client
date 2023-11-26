@@ -14,39 +14,41 @@ const ServiceGuide = () => {
     useEffect(() => {
         AOS.init();
       }, []);
-    const data = lang === "ar" ?[
-        "خدامات إدارة الرواتب نظام حماية الأجور (الشهري)",
-        "خدامات إدارة الرواتب نظام حماية الأجور(السنوي)",
-        "خدمات تأسيس المؤسسات والشركات",
-        "خدمات تحويل الهيئة القانونية للمنشآت",
-        "خدمات نقل الملكية للمنشآت والشركات",
-        "خدمات تخفيف الأعباء المالية للمنشآت",
-        "الخدمات الزكوية الضريبية",
-        "خدمات الدعم المباشر لمشاكل الوزارات الحكومية",
-        "خدمات التأمين التعاوني للمنشآت",
-        "تسجيل العلامة التجارية",
-        "إدارة الخدمات الالكترونية",
-        "خدمات استشارات الأعمال",
-        "خدمات التصميم",
-        "خدمات التسويق الالكتروني",
-        "خدمات التسجيل للعمالة ذات المهن العليا",
-    ]:[
-        "Salary Management Services Wage Protection System (Monthly)",
-        "Salary Management Services Wage Protection System (Yearly)",
-        "Incorporation Services for Institutions and Companies",
-        "Legal Entity Transformation Services for Establishments",
-        "Ownership Transfer Services for Establishments and Companies",
-        "Financial Burden Relief Services for Establishments",
-        "Zakat and Taxation Services",
-        "Direct Support Services for Government Ministries' Issues",
-        "Cooperative Insurance Services for Establishments",
-        "Trademark Registration",
-        "Electronic Services Management",
-        "Business Consultation Services",
-        "Design Services",
-        "Digital Marketing Services",
-        "Registration Services for High-Profile Skilled Workers",
-    ];
+    const data = lang === "ar" ?{
+        "salary-management-services-wage-protection-system-monthly": "خدامات إدارة الرواتب نظام حماية الأجور (الشهري)",
+        "salary-management-services-wage-protection-system-yearly": "خدامات إدارة الرواتب نظام حماية الأجور(السنوي)",
+        "incorporation-services-for-institutions-and-companies": "خدمات تأسيس المؤسسات والشركات",
+        "legal-entity-transformation-services-for-establishments": "خدمات تحويل الهيئة القانونية للمنشآت",
+        "ownership-transfer-services-for-establishments-and-companies": "خدمات نقل الملكية للمنشآت والشركات",
+        "financial-burden-relief-services-for-establishments": "خدمات تخفيف الأعباء المالية للمنشآت",
+        "zakat-and-taxation-services": "الخدمات الزكوية الضريبية",
+        "direct-support-services-for-government-ministries-issues": "خدمات الدعم المباشر لمشاكل الوزارات الحكومية",
+        "cooperative-insurance-services-for-establishments": "خدمات التأمين التعاوني للمنشآت",
+        "trademark-registration": "تسجيل العلامة التجارية",
+        "electronic-services-management": "إدارة الخدمات الالكترونية",
+        "business-consultation-services": "خدمات استشارات الأعمال",
+        "design-services": "خدمات التصميم",
+        "digital-marketing-services": "خدمات التسويق الالكتروني",
+        "registration-services-for-high-profile-skilled-workers": "خدمات التسجيل للعمالة ذات المهن العليا"
+      }
+      :{
+        "salary-management-services-wage-protection-system-monthly": "Salary Management Services Wage Protection System (Monthly)",
+        "salary-management-services-wage-protection-system-yearly": "Salary Management Services Wage Protection System (Yearly)",
+        "incorporation-services-for-institutions-and-companies": "Incorporation Services for Institutions and Companies",
+        "legal-entity-transformation-services-for-establishments": "Legal Entity Transformation Services for Establishments",
+        "ownership-transfer-services-for-establishments-and-companies": "Ownership Transfer Services for Establishments and Companies",
+        "financial-burden-relief-services-for-establishments": "Financial Burden Relief Services for Establishments",
+        "zakat-and-taxation-services": "Zakat and Taxation Services",
+        "direct-support-services-for-government-ministries-issues": "Direct Support Services for Government Ministries' Issues",
+        "cooperative-insurance-services-for-establishments": "Cooperative Insurance Services for Establishments",
+        "trademark-registration": "Trademark Registration",
+        "electronic-services-management": "Electronic Services Management",
+        "business-consultation-services": "Business Consultation Services",
+        "design-services": "Design Services",
+        "digital-marketing-services": "Digital Marketing Services",
+        "registration-services-for-high-profile-skilled-workers": "Registration Services for High-Profile Skilled Workers"
+      }
+      ;
     return (
         <div className='ServiceGuide' >
             <CommonHead title={t('guide.h1')} path={t('guide.path')} />
@@ -54,15 +56,14 @@ const ServiceGuide = () => {
                 <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                     <h1 className='section-title3'>{t('guide.h2')}</h1>
                     <div className="items">
-                        {data.map((item,i) => {
+                        {Object.entries(data).map(([key,value],i) => {
                             return (
-                                <Link to="/askforaservice" key={i}>
-
+                                <Link to={`/ask-for-aservice/${key}`} key={i}>
                                 <div className="item">
                                     <div className="icon swing-in-top-fwd">
                                         <img loading="lazy" src="/images/tick.webp" alt="" />
                                     </div>
-                                    <p>{item}</p>
+                                    <p>{value}</p>
                                 </div>
                                 </Link>
                             )

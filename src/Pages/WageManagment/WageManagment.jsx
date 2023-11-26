@@ -54,6 +54,17 @@ const WageManagment = () => {
         "Gold Yearly": "Gold",
         "Platinum Yearly": "Platinum",
     }
+    const routes=[
+        "wage-management-monthly-bronze",
+        "wage-management-monthly-silver",
+        "wage-management-monthly-gold",
+        "wage-management-monthly-platenium",
+        "wage-management-yearly-bronze",
+        "wage-management-yearly-silver",
+        "wage-management-yearly-gold",
+        "wage-management-yearly-platenium"
+      ]
+      
 
     return (
         <>
@@ -108,7 +119,7 @@ const WageManagment = () => {
 
                                 )}
                                 <div className="bottom">
-                                    <Link to='/askforaservice'>
+                                    <Link to={`/ask-for-aservice/${routes[i]}`}>
                                         <div>{t('subsc.h1')}</div>
                                     </Link>
                                 </div>
@@ -162,7 +173,7 @@ const WageManagment = () => {
 
                                 )}
                                 <div className="bottom">
-                                    <Link to='/askforaservice'>
+                                <Link to={`/ask-for-aservice/${routes[i + 4]}`}>
                                         <div>{t('subsc.h1')}</div>
                                     </Link>                                </div>
                             </div>

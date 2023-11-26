@@ -28,6 +28,7 @@ import Policies from "./Pages/Policies/Policies";
 import BankAccounts from "./Pages/BankAccounts/BankAccounts";
 import CompanysPolicy from "./Pages/CompanysPolicy/CompanysPolicy";
 import CopyRights from "./Pages/CopyRights/CopyRights";
+import RedirectFromPackages from "./Pages/RedirectFromPackages/RedirectFromPackages";
 function App() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 const location=useLocation().pathname
@@ -123,6 +124,7 @@ useEffect(() => {
         <Route path="/joinus" element={<JoinUs />} />
         <Route path="/askforaservice" element={<AskForAService />} />
         <Route path="/askforaservice/:id" element={<DedicatedAsk />} />
+        <Route path="/ask-for-aservice/:id" element={<RedirectFromPackages />} />
         <Route path="/freeconsulting" element={<FreeConsulting />} />
         <Route path="/trymeservice" element={<TryMeService />} />
         <Route path="/terms-and-conditions" element={<Policies />} />

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const DesignServices = () => {
   const { lang, setlang, t, i18n } = useMyContext();
-  lang === "ar" ? HelmetAr("خدمات التصميم") : Helmet("Design Services");
+  lang === "ar" ? HelmetAr("خدمات التصميم والتسويق") : Helmet("Design and Marketing Services");
   useEffect(() => {
     AOS.init();
   }, []);
@@ -31,7 +31,7 @@ const DesignServices = () => {
               "فيديو سلايد شو 60 ثانية فويس اوفر من اختيـارك",
               "فيديو موشن جرافيك ( ترويجي ) 30 ثانية شامل الفويس والإسكربت",
               "فيديو موشن جرافيك ( ترويجي ) 60 ثانية شامل الفويس والإسكربت",
-            ],
+            ],link:'/design-and-videos'
           },
           {
             arTitle: "ثانياً: إدارة وسائل التواصل الإجتماعي",
@@ -40,7 +40,7 @@ const DesignServices = () => {
               "تنفيذ خطة تسويقية واستراتيجية كاملة للمشروع.",
               "تنفيذ خطة محتوى إعلاني شهرية بواقع 30 بوست شهريا.",
               "إدارة منصات التواصل الاجتماعي والإعلانات.",
-            ],
+            ],link:'/social-media-management'
           },
           {
             arTitle: "ثالثاً: المواقع الإلكترونية ",
@@ -53,17 +53,18 @@ const DesignServices = () => {
               "الموقع باللغتين العربية والإنجليزية",
               "تحسين محركات البحث SEO",
               "انشاء تطبيق متوافق لأجهزة اندرويد / آبــل للموقع",
-            ],
+            ],link:'/websites'
+            
           },
           {
             arTitle: "رابعاً: تطبيقات أجهزة آبـل & أندرويد",
             enTitle: "Fourth: Applications for Apple & Android devices",
-            p: ["إنشاء تطبيق لأجهزة آبــل", "إنشاء تطبيق لأجهزة أندرويد"],
+            p: ["إنشاء تطبيق لأجهزة آبــل", "إنشاء تطبيق لأجهزة أندرويد"],link:'/applications-for-apple-android-devices'
           },
           {
             arTitle: "خامساً: إنشاء متجر إلكتروني",
             enTitle: "Fifth: Create an online store",
-            p: ["إنشاء متجر إلكتروني متوافق لجميع الأجهزة"],
+            p: ["إنشاء متجر إلكتروني متوافق لجميع الأجهزة"],link:'/create-an-online-store'
           },
         ]
       : [
@@ -82,7 +83,7 @@ const DesignServices = () => {
               "60-second voice-over slideshow video of your choice",
               "30-second promotional motion graphics video with voice and script",
               "60-second promotional motion graphics video with voice and script",
-            ],
+            ],link:'/design-and-videos'
           },
           {
             arTitle: "ثانياً: إدارة وسائل التواصل الإجتماعي",
@@ -91,7 +92,7 @@ const DesignServices = () => {
               "Implementation of a comprehensive marketing and project strategy.",
               "Execution of a monthly advertising content plan with 30 posts per month.",
               "Management of social media platforms and advertisements.",
-            ],
+            ],link:'/social-media-management'
           },
           {
             arTitle: "ثالثاً: المواقع الإلكترونية ",
@@ -104,7 +105,7 @@ const DesignServices = () => {
               "Website in both Arabic and English languages",
               "Search Engine Optimization (SEO)",
               "Create a compatible application for Android / Apple devices for the website",
-            ],
+            ],link:'/websites'
           },
           {
             arTitle: "رابعاً: تطبيقات أجهزة آبـل & أندرويد",
@@ -112,12 +113,12 @@ const DesignServices = () => {
             p: [
               "Create an application for Apple devices",
               "Create an application for Android devices",
-            ],
+            ],link:'/applications-for-apple-android-devices'
           },
           {
             arTitle: "خامساً: إنشاء متجر إلكتروني",
             enTitle: "Fifth: Create an online store",
-            p: ["Create an online store compatible with all devices"],
+            p: ["Create an online store compatible with all devices"],link:'/create-an-online-store'
           },
         ];
 
@@ -151,7 +152,7 @@ const DesignServices = () => {
                   </ul>
                   </div>
                   {/* <p>{item.p}</p> */}
-                  <Link to="/askforaservice">
+                  <Link to={`/ask-for-aservice${item.link}`}>
                     <span>{t("subsc.h1")}</span>
                   </Link>
                 </div>

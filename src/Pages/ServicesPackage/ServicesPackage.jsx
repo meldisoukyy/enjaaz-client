@@ -184,7 +184,7 @@ const ServicesPackage = () => {
                             )}
                         </div>
                         <div className="bottom">
-                            <Link to='/askforaservice'>
+                            <Link to='/ask-for-aservice/service-management-bronze'>
                                 <div>{t('subsc.h1')}</div>
                             </Link>                        </div>
                     </div>
@@ -264,7 +264,7 @@ const ServicesPackage = () => {
 
                         </div>
                         <div className="bottom">
-                            <Link to='/askforaservice'>
+                            <Link to='/ask-for-aservice/service-management-silver'>
                                 <div>{t('subsc.h1')}</div>
                             </Link>
                         </div>
@@ -340,7 +340,7 @@ const ServicesPackage = () => {
 
                         </div>
                         <div className="bottom">
-                            <Link to='/askforaservice'>
+                            <Link to='/ask-for-aservice/service-management-gold'>
                                 <div>{t('subsc.h1')}</div>
                             </Link>                        </div>
                     </div>
@@ -414,7 +414,7 @@ const ServicesPackage = () => {
                             )}
                         </div>
                         <div className="bottom">
-                            <Link to='/askforaservice'>
+                            <Link to='/ask-for-aservice/service-management-diamond'>
                                 <div>{t('subsc.h1')}</div>
                             </Link>
                         </div>
