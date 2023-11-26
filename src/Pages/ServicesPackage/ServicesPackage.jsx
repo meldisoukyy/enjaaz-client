@@ -346,7 +346,7 @@ const ServicesPackage = () => {
                     </div>
                     <div className="pack " data-aos="fade-in" data-aos-duration="2000" data-aos-delay='400'>
                         <div className="top">
-                            <div className="banner" style={{backgroundColor:'#7d1242'}}>
+                            <div className="banner" style={{backgroundColor:'#0248b8'}}>
                                 <h2>{lang === "ar" ? 'الباقة الماسية' : 'Diamond package'}</h2>
                                 {lang === "ar" ? (
                                     <>
