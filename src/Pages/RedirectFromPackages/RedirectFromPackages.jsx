@@ -12,7 +12,7 @@ const RedirectFromPackages = () => {
     const { lang, setlang, t, i18n } = useMyContext();
     lang === 'ar' ? HelmetAr('طلب خدمة') :
         Helmet('Ask For A Service')
-        const [data2, setdata2] = useState([])
+    const [data2, setdata2] = useState([])
     useEffect(() => {
         ServiceManagemenApi().then((res) => {
             setdata2(res)
@@ -176,12 +176,15 @@ const RedirectFromPackages = () => {
     const [email, setemail] = useState('')
     const [mobile, setmobile] = useState('')
     const [city, setcity] = useState('')
-    const [service_type, setservice_type] = useState(id)
+    const [changeInCalc, setchangeInCalc] = useState(null)
+    let titleId = changeInCalc ? changeInCalc : id
+    const [service_type, setservice_type] = useState(titleId)
     const [notes, setnotes] = useState('')
 
     const [data, setdata] = useState([])
 
     const handleSubmit = () => {
+        e.preventDefault()
         if (name !== '' && mobile !== '') {
             //   console.log(name,email,mobile,city,service_type,notes)
             ServiceRequestApi(name, mobile, service_type, notes).then((res) => {
@@ -209,14 +212,13 @@ const RedirectFromPackages = () => {
     useEffect(() => {
         AOS.init();
     }, []);
-
     return (
         <div>
-            <CommonHead title={lang === "ar" ? Titles[id].ar : Titles[id].en} path={t('askService.path')} />
-            <div className="redirectCont">
+            <CommonHead title={lang === "ar" ? Titles[titleId].ar : Titles[titleId].en} path={t('askService.path')} />
+            <form className="redirectCont" onSubmit={handleSubmit}>
                 {showCalc && (
-                    <div className="calcCon">
-                        <Calculator data={calc}/>
+                    <div className="calcCon wide">
+                        <Calculator data={calc} setchangeInCalc={setchangeInCalc} />
                     </div>
                 )}
                 <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
@@ -225,16 +227,21 @@ const RedirectFromPackages = () => {
                         <p>{t('askService.p')}</p>
                         <span>{t('form.p1')}</span>
                         <div className="EnjazzFormInputs">
-                            <input className='EnjazzFormInput' type="text" placeholder={t('form.fullName')} onChange={(e) => setname(e.target.value)} />
-                            <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} />
-                            <p>{t('form.typeS')}:</p>
-                            <div className="EnjazzFormInput">{lang === "ar" ? Titles[id].ar : Titles[id].en}</div>
-                            <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details')} onChange={(e) => setnotes(e.target.value)}></textarea>
+                            <input required className='EnjazzFormInput' type="text" placeholder={t('form.fullName')} onChange={(e) => setname(e.target.value)} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300' />
+                            <input required className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300' />
+                            <p data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>{t('form.typeS')}:</p>
+                            <div className="EnjazzFormInput" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>{lang === "ar" ? Titles[titleId].ar : Titles[titleId].en}</div>
+                            <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details')} onChange={(e) => setnotes(e.target.value)} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'></textarea>
                         </div>
-                        <div className="EnjazzFormBtn" onClick={() => handleSubmit()}>{t('form.send')}</div>
+                        {showCalc && (
+                            <div className="calcCon small">
+                                <Calculator data={calc} setchangeInCalc={setchangeInCalc} />
+                            </div>
+                        )}
+                        <button className="EnjazzFormBtn" type='submit' >{t('form.send')}</button>
                     </div>
                 </div>
-            </div>
+            </form>
 
         </div>
     )

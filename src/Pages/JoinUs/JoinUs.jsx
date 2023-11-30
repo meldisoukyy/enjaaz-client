@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import { useMyContext } from '../../context/MyContext';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 import Swal from 'sweetalert2';
 import { Helmet, HelmetAr, JoinUsApi } from '../../Apis/Apis';
 const JoinUs = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-    const citiesName={
+    const citiesName = {
         "Riyadh": "الرياض",
         "Jeddah": "جده",
         "Medina": "المدينه المنوره",
@@ -52,8 +52,8 @@ const JoinUs = () => {
         "Bariq": "بارق",
         "Al-Hawtah": "الحوطه",
         "Al-Aflaj": "الافلاج"
-      }
-      const partnerShip = {
+    }
+    const partnerShip = {
         "Service Provider": "مزود خدمة",
         "Business Consultant": "مستشار أعمال",
         "Legal Consultant": "مستشار قانوني",
@@ -64,70 +64,70 @@ const JoinUs = () => {
         "Commission Marketer": "مسوق بالعمولة",
         "Zakat And Income Tax Office": "مكتب زكاة وضريبة الدخل",
         "Electronic Services Office": "مكتب خدمات إلكترونية"
-      };
-            
-      
-      
-      
-    lang==='ar'?HelmetAr('إانضم الينا'):
-    Helmet('Join Us')
+    };
+
+
+
+
+    lang === 'ar' ? HelmetAr('إانضم الينا') :
+        Helmet('Join Us')
     useEffect(() => {
         AOS.init();
-      }, []);
-      
-      const [name, setname] = useState('')
-      const [email, setemail] = useState('')
-      const [mobile, setmobile] = useState('')
-      const [city, setcity] = useState('Riyadh')
-      const [partnership_type, setpartnership_type] = useState('Service Provider')
-      const [notes, setnotes] = useState('')
-      const [portfolio, setportfolio] = useState('')
-      
-      const [data, setdata] = useState([])
-      
-      function isEmailValid(email) {
-          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          return emailPattern.test(email);
-      }
-      
-      
-      
-      const handleSubmit = () => {
-          if (name !== '' && mobile !== '' &&partnership_type!== '') {
+    }, []);
+
+    const [name, setname] = useState('')
+    const [email, setemail] = useState('')
+    const [mobile, setmobile] = useState('')
+    const [city, setcity] = useState('Riyadh')
+    const [partnership_type, setpartnership_type] = useState('Service Provider')
+    const [notes, setnotes] = useState('')
+    const [portfolio, setportfolio] = useState('')
+
+    const [data, setdata] = useState([])
+
+    function isEmailValid(email) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    }
+
+
+
+    const handleSubmit = () => {
+        if (name !== '' && mobile !== '' && partnership_type !== '' && portfolio) {
             //   console.log(name,email,mobile,city,partnership_type,notes,portfolio)
-              JoinUsApi(name,mobile,partnership_type,notes,portfolio,city,email).then((res) => {
+            JoinUsApi(name, mobile, partnership_type, notes, portfolio, city, email).then((res) => {
                 //  console.log(res);
-                  setdata(res); 
-                }).then(()=>data.portfolio[0]==='The submitted data was not a file. Check the encoding type on the form.'?Swal.fire({
+                setdata(res);
+            }).then(() => data.portfolio&&data.portfolio[0] === 'The submitted data was not a file. Check the encoding type on the form.' ? Swal.fire({
                 title: lang === "ar" ? '! خطأ' : 'Error!',
-                text: `${lang === "ar" ?"البيانات المقدمة لم تكن ملفا. يرجي التحقق منها ثانيا":data.portfolio}`,
+                text: `${lang === "ar" ? "البيانات المقدمة لم تكن ملفا. يرجي التحقق منها ثانيا" : data.portfolio}`,
                 icon: 'error',
                 timer: 2000,
-                confirmButtonText: lang === "ar" ?'الرجوع':'Return'
-            }):Swal.fire({
-                  title: lang === "ar" ? 'تم' : 'Submited',
-                  text: lang === "ar" ?'تم ارسال البيانات بنجاح':'Data was sent successfully',
-                  icon: 'success',
-                  timer: 2000,
-                  confirmButtonText: lang === "ar" ?'الرجوع':'Return'
-              }))
-          }
-          else {
-              Swal.fire({
-                  title: lang === "ar" ? '! خطأ' : 'Error!',
-                  text: lang === "ar" ?`${name === ''?"لم يتم ادخال الاسم .":""} ${mobile === ''?"لم يتم ادخال رقم الهاتف .":""} ${partnership_type === ''?"لم يتم تحديد نوع الشراكة .":""} ${email === ''?"لم يتم تحديد ادخال البريد الالكتروني .":""} ${!isEmailValid(email)?"أدخل بريد الكتروني صالح":""} `:`${name === ''?"The Name is Missing .":""}${mobile === ''?"The Mobile is Missing .":""} ${partnership_type === ''?"The type of partnership is not specified .":""} ${email === '' ? "The Email is Missing ." : ""}
-                  ${!isEmailValid(email) ? "Enter a valid email address." : ""}
+                confirmButtonText: lang === "ar" ? 'الرجوع' : 'Return'
+            }) : Swal.fire({
+                title: lang === "ar" ? 'تم' : 'Submited',
+                text: lang === "ar" ? 'تم ارسال البيانات بنجاح' : 'Data was sent successfully',
+                icon: 'success',
+                timer: 2000,
+                confirmButtonText: lang === "ar" ? 'الرجوع' : 'Return'
+            }))
+        }
+        else {
+            Swal.fire({
+                title: lang === "ar" ? '! خطأ' : 'Error!',
+                text: lang === "ar" ? `${name === '' ? "لم يتم ادخال الاسم ." : ""} ${mobile === '' ? "لم يتم ادخال رقم الهاتف ." : ""} ${partnership_type === '' ? "لم يتم تحديد نوع الشراكة ." : ""} ${email === '' ? "لم يتم تحديد ادخال البريد الالكتروني ." : ""} ${!isEmailValid(email) ? "أدخل بريد الكتروني صالح" : ""} ${!portfolio ? "لم يتم رفع السيرة الذاتية " : ""} ` : `${name === '' ? "The Name is Missing ." : ""}${mobile === '' ? "The Mobile is Missing ." : ""} ${partnership_type === '' ? "The type of partnership is not specified ." : ""} ${email === '' ? "The Email is Missing ." : ""}
+                  ${!isEmailValid(email) ? "Enter a valid email address." : ""} ${!portfolio ? "The Cv Is Missing ." : ""}
                    `,
-                  icon: 'error',
-                  timer: 2000,
-                  confirmButtonText: lang === "ar" ?'الرجوع':'Return'
-              })
-          }
-      }
+                icon: 'error',
+                timer: 2000,
+                confirmButtonText: lang === "ar" ? 'الرجوع' : 'Return'
+            })
+        }
+    }
     return (
         <div>
             <CommonHead title={t('joinus.h1')} path={t('joinus.path')} />
-            <div className="EnjazzForm" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
+            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
                 <div className="container">
                     <h1 className='section-title3'>{t('joinus.h2')}</h1>
                     <p>{t('joinus.p')}</p>
@@ -136,26 +136,26 @@ const JoinUs = () => {
                     <div className="EnjazzFormInputs">
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.fullName')} onChange={(e) => setname(e.target.value)} />
                         {/* <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span> */}
-                        <input className='EnjazzFormInput' type="text" placeholder={t('form.email')} onChange={(e) => setemail(e.target.value)} />
+                        <input className='EnjazzFormInput' type="email" placeholder={t('form.email')} onChange={(e) => setemail(e.target.value)} />
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} />
                         <p>{t('form.city')}:</p>
-                        <select className='EnjazzFormInput' style={lang === "ar" ?{backgroundPositionX: '3%'}:{backgroundPositionX: '97%'}} onChange={(e) => setcity(e.target.value)}>
-                            {Object.entries(citiesName).map(([en,ar],i)=>{
-                                
-                                return(
-                                    <option value={en} selected={i===0}>{lang === "ar"?ar:en}</option>
-                                    )
-                                })}
-                            
-                        </select>
-                                <p>{t('form.typeC')}:</p>
-                        <select className='EnjazzFormInput' style={lang === "ar" ?{backgroundPositionX: '3%'}:{backgroundPositionX: '97%'}} onChange={(e) => setpartnership_type(e.target.value)}>
-                            {Object.entries(partnerShip).map(([en,ar],i)=>{
-                                return(
-                                    <option value={en} selected={i===0}>{lang === "ar"?ar:en}</option>
+                        <select className='EnjazzFormInput' style={lang === "ar" ? { backgroundPositionX: '3%' } : { backgroundPositionX: '97%' }} onChange={(e) => setcity(e.target.value)}>
+                            {Object.entries(citiesName).map(([en, ar], i) => {
+
+                                return (
+                                    <option value={en} selected={i === 0}>{lang === "ar" ? ar : en}</option>
                                 )
                             })}
-                            
+
+                        </select>
+                        <p>{t('form.typeC')}:</p>
+                        <select className='EnjazzFormInput' style={lang === "ar" ? { backgroundPositionX: '3%' } : { backgroundPositionX: '97%' }} onChange={(e) => setpartnership_type(e.target.value)}>
+                            {Object.entries(partnerShip).map(([en, ar], i) => {
+                                return (
+                                    <option value={en} selected={i === 0}>{lang === "ar" ? ar : en}</option>
+                                )
+                            })}
+
                         </select>
                         {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.city')} onChange={(e) => setcity(e.target.value)} /> */}
                         {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.typeC')} onChange={(e) => setpartnership_type(e.target.value)} /> */}
@@ -169,7 +169,7 @@ const JoinUs = () => {
                             <p>{t('form.upload')}</p>
                             <span>{t('form.upload2')}</span>
                             <span>{portfolio.name}</span>
-                            <input type="file" id="myfile" name="filename" onChange={(e) => setportfolio(e.target.files[0])}/>
+                            <input type="file" id="myfile" name="filename" onChange={(e) => setportfolio(e.target.files[0])} />
                         </div>
                     </div>
                     <div className="EnjazzFormBtn" onClick={() => handleSubmit()}>{t('form.send')}</div>

@@ -67,7 +67,8 @@ const Footer = () => {
           <div className="footer-form">
             <span className="email">
               <input
-                type="email2"
+                type="email"
+                required
                 placeholder={t("footer.topemail")}
                 onChange={(e) => setemail(e.target.value)}
               />
@@ -269,7 +270,7 @@ const Footer = () => {
                     alt=""
                   />
                 </div>
-                <div className="image" onClick={handleShow2} style={{scale:"1.3"}}>
+                <div className="image" onClick={handleShow2} style={{ scale: "1.3" }}>
                   <img
                     src="/images/لوجو المركز السعودي للأعمال يدوس علية يفتح الصورة مباشرة.png"
                     alt=""
@@ -344,8 +345,8 @@ const Footer = () => {
           <div className="top">
             <p>{t("footer.bottomp5")}</p>
             <div className="payments">
-            {/* style={{ scale: '1.9', margin: '0 25px 0 25px' }} */}
-              <img loading="lazy" style={{ width:'120px',height:'50px' }} src="/images/جنب صورة المدفوعات أسفل الموقع.png" />
+              {/* style={{ scale: '1.9', margin: '0 25px 0 25px' }} */}
+              <img loading="lazy" style={{ width: '120px', height: '50px' }} src="/images/جنب صورة المدفوعات أسفل الموقع.png" />
               <img loading="lazy" src="https://aait.sa/public/site/img/icons/certificate.webp" style={{ height: "40px" }} />
               <img loading="lazy" src="https://aait.sa/public/site/img/icons/mada.webp" />
               <img loading="lazy" src="https://aait.sa/public/site/img/icons/visa.webp" />

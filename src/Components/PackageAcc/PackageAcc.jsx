@@ -4,20 +4,20 @@ import { BsCheck } from 'react-icons/bs';
 import { BsPlus } from 'react-icons/bs';
 import { BsDash } from 'react-icons/bs';
 
-const PackageAcc = ({ title, data,empty }) => {
+const PackageAcc = ({ title, data,empty,free }) => {
     const [open, setopen] = useState(false)
     
     return (
         <div className='PackageAcc'>
             <div className="head" onClick={() => setopen(!open)}>
                 <div className="left">
-                    <div className="icon">
+                    <div className="icon" style={free?{color:'green'}:{}}>
                         <BsCheck />
                     </div>
-                    <span style={empty?{border:'1px solid #2d1989',width:'150px'}:{}}>{title}</span>
+                    <span style={free?{color:'green'}:{}}>{title}</span>
                 </div>
                 {data && (
-                    <div className="right" >
+                    <div className="right" style={free?{color:'green'}:{}} >
                         {open ? <BsDash /> : <BsPlus />}
                     </div>
                 )}

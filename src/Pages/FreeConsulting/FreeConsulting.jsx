@@ -35,7 +35,7 @@ const FreeConsulting = () => {
             ConsultationApi(name, mobile, service_type, notes).then((res) => {
                 //  console.log(res);
                 setdata(res);
-            }).then(() => data.id && Swal.fire({
+            }).then(() =>Swal.fire({
                 title: lang === "ar" ? 'تم' : 'Submited',
                 text: lang === "ar" ? 'تم ارسال البيانات بنجاح' : 'Data was sent successfully',
                 icon: 'success',
@@ -53,7 +53,31 @@ const FreeConsulting = () => {
             })
         }
     }
-
+    const services={
+        "Issuance of Commercial Register for an Establishment": "إصدار سجل تجاري لمؤسسة",
+        "Modification of Commercial Register for an Establishment": "تعديل سجل تجاري لمؤسسة",
+        "Residence Permit Issuance": "إصدار إقامة",
+        "Residence Permit Renewal": "تجديد إقامة",
+        "Issuance of Exit and Re-Entry Visa": "إصدار تأشيرة خروج وعودة",
+        "Extension of Exit and Re-Entry Visa": "تمديد تأشيرة خروج وعودة",
+        "Issuance of Final Exit Visa": "إصدار تأشيرة خروج نهائي",
+        "Resident Report": "تقرير مقيم",
+        "Transfer of Passport Information": "نقل معلومات جوازين",
+        "Registration of an Account for the Institution at the Zakat, Tax, and Customs Authority": "تسجيل حساب للمنشأة هيئة الزكاة والضريبة والجمارك",
+        "Update of Institution Data at the Zakat, Tax, and Customs Authority": "تحديث بيانات المنشأة هيئة الزكاة والضريبة والجمارك",
+        "Issuance of Zakat and Tax Certificate": "إصدار شهادة الزكاة والضريبة",
+        "Delegation for Visa": "التفويض على تأشيرة",
+        "Request for Business Visit": "طلب زيارة تجارية",
+        "Registration on the Mudad Platform": "التسجيل في منصة مدد",
+        "Data Update": "تحديث البيانات",
+        "Opening an Institution File": "فتح ملف منشأة",
+        "Update of Data at the Labor Office": "تحديث البيانات في مكتب العمل",
+        "Issuance of Work License": "إصدار رخصة عمل",
+        "Transfer of Worker Services": "نقل خدمات عامل",
+        "Issuance of Saudi Certificate": "اصدار شهادة السعودة",
+        "Authentication of Employment Contracts": "توثيق عقود العمل",
+        "Update of Employee Data": "تحديث بيانات الموظفين"
+        }
     return (
         <div>
             <CommonHead title={t('FreeConsulting.h1')} path={t('FreeConsulting.path')} />
@@ -85,6 +109,11 @@ const FreeConsulting = () => {
                             <option value="all-government-services">{t('circles.c5')}</option>
                             <option value="reducing-financial-burdens">{t('circles.c7')}</option>
                             <option value="free-tryme-service">{t('circles.c8')}</option>
+                            {Object.entries(services).map(([en,ar])=>{
+                                return(
+                                    <option value={en.toLowerCase().replaceAll(' ','-')}>{lang==='ar'?ar:en}</option>
+                                )
+                            })}
                         </select>
                         {/* <span style={{ color: 'red', marginTop: '-10px' }}>{t('form.required')}</span> */}
 

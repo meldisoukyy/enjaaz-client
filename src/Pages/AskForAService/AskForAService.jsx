@@ -88,14 +88,9 @@ const AskForAService = () => {
 
                     <div className="EnjazzFormInputs">
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.fullName')} onChange={(e) => setname(e.target.value)} />
-                        {/* <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span>
 
-                        <input className='EnjazzFormInput' type="text" placeholder={t('form.email')} onChange={(e) => setemail(e.target.value)} /> */}
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} />
-                        {/* <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span> */}
 
-                        {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.city')} onChange={(e) => setcity(e.target.value)} /> */}
-                        {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.typeS')} /> */}
                         <p>{t('form.typeS')}:</p>
                         <select className='EnjazzFormInput' style={lang === "ar" ?{backgroundPositionX: '3%'}:{backgroundPositionX: '97%'}} onChange={(e) => setservice_type(e.target.value)}>
                             <option value="service-management-yearly" selected>{t('circles.c11')}</option>
