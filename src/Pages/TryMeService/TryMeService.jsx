@@ -4,7 +4,7 @@ import { useMyContext } from '../../context/MyContext';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Swal from 'sweetalert2';
-import { Helmet, HelmetAr, ServiceRequestApi } from '../../Apis/Apis';
+import { FreeTrialRequestApi, Helmet, HelmetAr, ServiceRequestApi } from '../../Apis/Apis';
 
 const TryMeService = () => {
     const { lang, setlang, t, i18n } = useMyContext();
@@ -56,10 +56,10 @@ const TryMeService = () => {
       const handleSubmit = () => {
           if (name !== '' && mobile !== '') {
             //   console.log(name,email,mobile,city,service_type,notes)
-              ServiceRequestApi(name,mobile,service_type,notes).then((res) => {
-                //  console.log(res);
+            FreeTrialRequestApi(name,mobile,try_service,notes).then((res) => {
+                 console.log(res);
                   setdata(res);
-                 }).then(()=>data.id&&Swal.fire({
+                 }).then(()=>Swal.fire({
                   title: lang === "ar" ? 'تم' : 'Submited',
                   text: lang === "ar" ?'تم ارسال البيانات بنجاح':'Data was sent successfully',
                   icon: 'success',

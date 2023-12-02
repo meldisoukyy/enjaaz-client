@@ -45,7 +45,7 @@ const SecondSlider = () => {
                             {t('SS.h2')}
                         </h1>
                         <p data-aos="fade-in" data-aos-duration="2000" data-aos-delay='200'>{t('SS.p2')}</p>
-                        <Link to="/askforaservice" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='200'><span>{t('SS.btn')}</span></Link>
+                        <Link to="/trymeservice" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='200'><span>{t('SS.btn')}</span></Link>
                     </div>
                 </div>
 

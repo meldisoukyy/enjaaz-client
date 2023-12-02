@@ -166,13 +166,13 @@ const Navbar = () => {
               <div className="icon">
                 <img loading="lazy" src="/images/phoneNav.webp" alt="" />
               </div>
-              <p>920013581</p>
+              <a href="https://wa.me/966920013581">920013581</a>
             </div>
             <div className="num">
               <div className="icon">
                 <img loading="lazy" src="/images/whatsappnav.webp" alt="" />
               </div>
-              <p>+966502144449</p>
+              <a href="https://wa.me/966502144449">+966502144449</a>
             </div>
           </div>
           <button

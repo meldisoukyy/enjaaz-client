@@ -339,8 +339,8 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"اشتراك إدارة الرواتب وحماية الأجور"} data={Object.keys(data14)} />
                                     <PackageAcc title={"إدارة خدمات مكتب العمل"} data={Object.keys(data9)} />
                                     <PackageAcc title={"إدارة خدمات برامج الدعم"} data={Object.keys(data10)} />
-                                    <PackageAcc title={"خدمات مجانية طول فترة الاشتراك"} data={Object.keys(data15)} free />
                                     <PackageAcc title={"توثيق عقود العمل للموظفين"} />
+                                    <PackageAcc title={"خدمات مجانية طول فترة الاشتراك"} data={Object.keys(data15)} free />
 
                                 </>
                             ) : (
@@ -360,8 +360,8 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"Salary and Wage Protection Subscription"} data={Object.values(data14)} />
                                     <PackageAcc title={"Labor Office Services Management"} data={Object.values(data9)} />
                                     <PackageAcc title={"Support Programs Services Management"} data={Object.values(data10)} />
-                                    <PackageAcc title={"Free Services Throughout the Subscription Period"} data={Object.values(data15)} free />
                                     <PackageAcc title={"Documenting Employment Contracts for Employees"} />
+                                    <PackageAcc title={"Free Services Throughout the Subscription Period"} data={Object.values(data15)} free />
                                 </>
                             )}
 
@@ -411,12 +411,12 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"إدارة خدمات ناجز"} data={Object.keys(data12)} />
                                     <PackageAcc title={"إدارة خدمات نافد"} data={Object.keys(data13)} />
                                     <PackageAcc title={"اشتراك إدارة الرواتب وحماية الأجور"} data={Object.keys(data14)} />
-                                    <PackageAcc title={"خدمات مجانية طول فترة الاشتراك"} data={Object.keys(data15)} free />
                                     <PackageAcc title={"توثيق عقود العمل للموظفين"} />
                                     <PackageAcc title={"تصميم موقع الكتروني"} />
                                     <PackageAcc title={"تصميم متجر الكتروني"} />
                                     <PackageAcc title={"تصميم لوقو احترافي"} />
                                     <PackageAcc title={"التسويق"} />
+                                    <PackageAcc title={"خدمات مجانية طول فترة الاشتراك"} data={Object.keys(data15)} free />
                                 </>
                             ) : (
                                 <>
@@ -433,12 +433,12 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"Pending Services Management"} data={Object.values(data12)} />
                                     <PackageAcc title={"Expired Services Management"} data={Object.values(data13)} />
                                     <PackageAcc title={"Salary and Wage Protection Subscription"} data={Object.values(data14)} />
-                                    <PackageAcc title={"Free Services Throughout the Subscription Period"} data={Object.values(data15)} free />
                                     <PackageAcc title={"Documenting Employment Contracts for Employees"} />
                                     <PackageAcc title={"Website Design"} />
                                     <PackageAcc title={"E-commerce Store Design"} />
                                     <PackageAcc title={"Professional Logo Design"} />
                                     <PackageAcc title={"Marketing"} />
+                                    <PackageAcc title={"Free Services Throughout the Subscription Period"} data={Object.values(data15)} free />
                                 </>
                             )}
                         </div>

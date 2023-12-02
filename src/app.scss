@@ -28,8 +28,9 @@
 }
 .circles-loader{
   min-height: 100vh;
-  background-image: url('../public/images/خلفية\ افتتاح\ الشاشة\ .png');
+  background-image: url('../public/images/خلفية\ افتتاح\ الشاشة\ .webp');
   background-position: bottom right;
+  background-size: cover;
   @media (max-width:767px) {
     background-position: bottom center;
   }

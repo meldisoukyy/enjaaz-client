@@ -57,9 +57,9 @@ const AskForAService = () => {
           if (name !== '' && mobile !== '') {
             //   console.log(name,email,mobile,city,service_type,notes)
               ServiceRequestApi(name,mobile,service_type,notes).then((res) => { 
-                // console.log(res);
+                console.log(res);
                  setdata(res); 
-            }).then(()=>data.id&&Swal.fire({
+            }).then(()=>Swal.fire({
                   title: lang === "ar" ? 'تم' : 'Submited',
                   text: lang === "ar" ?'تم ارسال البيانات بنجاح':'Data was sent successfully',
                   icon: 'success',

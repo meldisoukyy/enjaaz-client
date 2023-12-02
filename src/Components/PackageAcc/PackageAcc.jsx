@@ -11,13 +11,13 @@ const PackageAcc = ({ title, data,empty,free }) => {
         <div className='PackageAcc'>
             <div className="head" onClick={() => setopen(!open)}>
                 <div className="left">
-                    <div className="icon" style={free?{color:'green'}:{}}>
+                    <div className="icon" style={free?{color:'red'}:{}}>
                         <BsCheck />
                     </div>
-                    <span style={free?{color:'green'}:{}}>{title}</span>
+                    <span style={free?{color:'red'}:{}}>{title}</span>
                 </div>
                 {data && (
-                    <div className="right" style={free?{color:'green'}:{}} >
+                    <div className="right" style={free?{color:'red'}:{}} >
                         {open ? <BsDash /> : <BsPlus />}
                     </div>
                 )}

@@ -58,7 +58,7 @@ export const SubscribersApi = (email) => {
     });
 };//..
 //   Contact
-export const ConsultationApi = (name,mobile,service_type,notes) => {
+export const ConsultationApi = (name, mobile, service_type, notes) => {
     return fetch('https://server.enjaaz.com.sa/api/consultation-request/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -72,7 +72,7 @@ export const ConsultationApi = (name,mobile,service_type,notes) => {
         return response.json();
     });
 };//..
-export const ContactUsApi = (name,mobile,reason,message) => {
+export const ContactUsApi = (name, mobile, reason, message) => {
     return fetch('https://server.enjaaz.com.sa/api/contact-us/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -81,12 +81,12 @@ export const ContactUsApi = (name,mobile,reason,message) => {
             mobile,
             reason,
             message
-          }),
+        }),
     }).then((response) => {
         return response.json();
     });
 };//..
-export const JoinUsApi = (name, mobile, partnership_type, notes, portfolio,city,email) => {
+export const JoinUsApi = (name, mobile, partnership_type, notes, portfolio, city, email) => {
     const formData = new FormData();
     formData.append('name', name);
     formData.append('mobile', mobile);
@@ -104,7 +104,7 @@ export const JoinUsApi = (name, mobile, partnership_type, notes, portfolio,city,
     });
 };
 //x
-export const ServiceRequestApi = (name,mobile,service_type,notes) => {
+export const ServiceRequestApi = (name, mobile, service_type, notes) => {
     return fetch('https://server.enjaaz.com.sa/api/service-request/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -113,7 +113,35 @@ export const ServiceRequestApi = (name,mobile,service_type,notes) => {
             mobile,
             service_type,
             notes
-          }),
+        }),
+    }).then((response) => {
+        return response.json();
+    });
+};//..
+export const ServiceRequestWithCalcApi = (name, mobile, service_type, notes, package_type, customer_count, wage_protection) => {
+    return fetch('https://server.enjaaz.com.sa/api/service-request/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            name,
+            mobile,
+            service_type,
+            notes, package_type, customer_count, wage_protection, total_price
+        }),
+    }).then((response) => {
+        return response.json();
+    });
+};//..
+export const FreeTrialRequestApi = (name, mobile, service_type, notes) => {
+    return fetch('https://server.enjaaz.com.sa/api/service-free-trial-request/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            name,
+            mobile,
+            service_type,
+            notes
+        }),
     }).then((response) => {
         return response.json();
     });
@@ -145,8 +173,8 @@ export const WageManagementApi = () => {
     });
 };//x
 export const Helmet = (title) => {
-document.title='Enjaaz Company - ' + title
+    document.title = 'Enjaaz Company - ' + title
 }
 export const HelmetAr = (title) => {
-document.title='شركة إنجاز - ' + title
+    document.title = 'شركة إنجاز - ' + title
 }
