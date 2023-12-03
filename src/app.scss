@@ -3,18 +3,21 @@
   src: url("./fonts/rpt-Bold.ttf") format("truetype");
   font-weight: normal; /* adjust as needed */
   font-style: normal; /* adjust as needed */
+  font-display: swap
 }
 @font-face {
   font-family: "rptRegular";
   src: url("./fonts/alfont_com_rpt-Regular.ttf") format("truetype");
   font-weight: normal; /* adjust as needed */
   font-style: normal; /* adjust as needed */
+  font-display: swap
 }
 @font-face {
   font-family: "Hanimation_Arabic_Regular";
   src: url("./fonts/Hanimation_Arabic_Regular.ttf") format("truetype");
   font-weight: normal; /* adjust as needed */
   font-style: normal; /* adjust as needed */
+  font-display: swap
 }
 :root {
   --mcolor: #2d1989ef;

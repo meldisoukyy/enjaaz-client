@@ -12,7 +12,7 @@ const Loader = () => {
     return (
         // <div className='Loader'>
         //     <div className="image text-focus-in">
-        //         <img loading="lazy" src="/images/logobiggg.webp" alt="" />
+        //         <img alt="Enjazz_image" loading="lazy" src="/images/logobiggg.webp" />
         //     </div>
         //     <p className='text-focus-in'>انجاز ، شريك رحلتك نحو التطور والتميز</p>
         // </div>
@@ -23,27 +23,27 @@ const Loader = () => {
                     <div className="row align-items-center justify-content-center">
                         <div className="col-11 col-md-8 col-lg-5">
                             <div className="features-circles" >
-                                <img loading="lazy"
+                                <img alt="Enjazz_image" loading="lazy"
                                     src="https://aait.sa/public/site/img/empty.png"
-                                    alt=""
+                                   
                                     className="empty"
                                 />
                                 <div className="center" style={{minWidth:"30px",minHeight:'30px'}}>
-                                    <img loading="lazy"
+                                    <img alt="Enjazz_image" loading="lazy"
                                         src="/images/logoCircle.webp"
-                                        alt=""
+                                       
                                         className="img"
                                     />
-                                    <img loading="lazy"
+                                    <img alt="Enjazz_image" loading="lazy"
                                         src="https://aait.sa/public/site/img/empty.png"
-                                        alt=""
+                                       
                                         className="empty"
                                     />
                                 </div>
                                 <span className="arounds">
-                                    <img loading="lazy"
+                                    <img alt="Enjazz_image" loading="lazy"
                                         src="https://aait.sa/public/site/img/empty.png"
-                                        alt=""
+                                       
                                         className="empty"
                                     />
                                     <span className="aroun">

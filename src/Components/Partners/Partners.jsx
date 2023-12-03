@@ -22,7 +22,7 @@ const Partners = () => {
                 {data.map((item,i)=>{
                     return(
                         <div className="image col-lg-3 col-md-6 mb-3" key={i} >
-                            <img loading="lazy" src={item.logo} alt="" />
+                            <img alt="Enjazz_image" loading="lazy" src={item.logo} />
                         </div>
                     )
                 })}

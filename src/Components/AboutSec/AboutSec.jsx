@@ -40,9 +40,9 @@ const AboutSec = () => {
                     {selectedVision===1&&(
                     <>
         <div className='image' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
-          <img loading="lazy" src="/images/2.webp" alt="" />
+          <img alt="Enjazz_image" loading="lazy" src="/images/2.webp" />
           <div className="play" onClick={handleShow}>
-            <img loading="lazy" src="/images/play-button.webp" alt="" />
+            <img alt="Enjazz_image" loading="lazy" src="/images/play-button.webp" />
           </div>
         </div>
         <Modal

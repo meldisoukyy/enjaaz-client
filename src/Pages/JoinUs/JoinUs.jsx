@@ -168,7 +168,7 @@ const JoinUs = () => {
                         <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details3')} onChange={(e) => setnotes(e.target.value)}></textarea>
                         <div className="EnjazzFormInput EnjazzFormInputFile">
                             <div className="icon">
-                                <img loading="lazy" src="/images/upload.webp" alt="" />
+                                <img alt="Enjazz_image" loading="lazy" src="/images/upload.webp" />
                             </div>
                             <p>{t('form.upload')}</p>
                             <span>{t('form.upload2')}</span>
