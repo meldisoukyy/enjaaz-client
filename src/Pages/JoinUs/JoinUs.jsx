@@ -7,6 +7,8 @@ import Swal from 'sweetalert2';
 import { Helmet, HelmetAr, JoinUsApi } from '../../Apis/Apis';
 const JoinUs = () => {
     const { lang, setlang, t, i18n } = useMyContext();
+    const [loading, setloading] = useState(false)
+
     const citiesName = {
         "Riyadh": "الرياض",
         "Jeddah": "جده",
@@ -95,10 +97,12 @@ const JoinUs = () => {
     const handleSubmit = () => {
         if (name !== '' && mobile !== '' && partnership_type !== '' && portfolio) {
             //   console.log(name,email,mobile,city,partnership_type,notes,portfolio)
+            setloading(true)
             JoinUsApi(name, mobile, partnership_type, notes, portfolio, city, email).then((res) => {
+                setloading(false)
                 //  console.log(res);
                 setdata(res);
-            }).then(() => data.portfolio&&data.portfolio[0] === 'The submitted data was not a file. Check the encoding type on the form.' ? Swal.fire({
+            }).then(() => data.portfolio && data.portfolio[0] === 'The submitted data was not a file. Check the encoding type on the form.' ? Swal.fire({
                 title: lang === "ar" ? '! خطأ' : 'Error!',
                 text: `${lang === "ar" ? "البيانات المقدمة لم تكن ملفا. يرجي التحقق منها ثانيا" : data.portfolio}`,
                 icon: 'error',
@@ -172,7 +176,14 @@ const JoinUs = () => {
                             <input type="file" id="myfile" name="filename" onChange={(e) => setportfolio(e.target.files[0])} />
                         </div>
                     </div>
-                    <div className="EnjazzFormBtn" onClick={() => handleSubmit()}>{t('form.send')}</div>
+                    <div className="EnjazzFormBtn loaderBtnCont2" onClick={() => handleSubmit()}>
+                        {!loading && (
+                            t('form.send')
+                        )}
+                        {loading && (
+                            <span class="loaderBtn2"></span>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

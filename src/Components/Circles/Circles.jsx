@@ -21,7 +21,7 @@ const Circles = () => {
                                 <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
                                         <img loading="lazy"
-                                            src="/images/circles/beldings.png"
+                                            src="/images/circles/beldings.webp"
                                             alt=""
                                         />
                                     </div>
@@ -32,7 +32,7 @@ const Circles = () => {
                                 <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
                                         <img loading="lazy"
-                                            src="/images/circles/wage.png"
+                                            src="/images/circles/wage.webp"
                                             alt=""
                                         />
                                     </div>
@@ -45,7 +45,7 @@ const Circles = () => {
                                 <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
                                         <img loading="lazy"
-                                            src="/images/circles/servicemanagment.png"
+                                            src="/images/circles/servicemanagment.webp"
                                             alt=""
                                         />
                                     </div>
@@ -56,7 +56,7 @@ const Circles = () => {
                                 <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
                                         <img loading="lazy"
-                                            src="/images/circles/r.png"
+                                            src="/images/circles/r.webp"
                                             alt=""
                                         />
                                     </div>
@@ -67,7 +67,7 @@ const Circles = () => {
                                 <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-end" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
                                         <img loading="lazy"
-                                            src="/images/circles/beldings.png"
+                                            src="/images/circles/beldings.webp"
                                             alt=""
                                         />
                                     </div>
@@ -116,7 +116,7 @@ const Circles = () => {
                                 <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
                                         <img loading="lazy"
-                                            src="/images/circles/law.png"
+                                            src="/images/circles/law.webp"
                                             alt=""
                                         />
                                     </div>
@@ -127,7 +127,7 @@ const Circles = () => {
                                 <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
                                         <img loading="lazy"
-                                            src="/images/circles/governrate.png"
+                                            src="/images/circles/governrate.webp"
                                             alt=""
                                         />
                                     </div>
@@ -138,7 +138,7 @@ const Circles = () => {
                             <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-start" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
                                     <img loading="lazy"
-                                        src="/images/circles/wage.png"
+                                        src="/images/circles/wage.webp"
                                         alt=""
                                     />
                                 </div>
@@ -152,7 +152,7 @@ const Circles = () => {
                             <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
                                     <img loading="lazy"
-                                        src="/images/circles/free2.png"
+                                        src="/images/circles/free2.webp"
                                         alt=""
                                     />
                                 </div>
@@ -163,7 +163,7 @@ const Circles = () => {
                             <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
                                     <img loading="lazy"
-                                        src="/images/circles/freeTry.png"
+                                        src="/images/circles/freeTry.webp"
                                         alt=""
                                     />
                                 </div>

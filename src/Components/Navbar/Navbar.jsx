@@ -134,8 +134,9 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="https://firebasestorage.googleapis.com/v0/b/aoe-24.appspot.com/o/cv%2FAhmed_Osama_Resume.pdf?alt=media&amp;token=91dea169-f337-4844-b901-a6e17b8938ef"
-                download="Ahmed_Osama_Resume.pdf"
+              target="_blank"
+                href="https://firebasestorage.googleapis.com/v0/b/aoe-24.appspot.com/o/Enjazz%20Portfolio.pdf?alt=media&token=8a95f4bc-37bf-4179-91ba-41188b1e0313"
+                download="Enjazz Portfolio.pdf"
                 className="sale1"
               >
                 {t("nav.profile")}

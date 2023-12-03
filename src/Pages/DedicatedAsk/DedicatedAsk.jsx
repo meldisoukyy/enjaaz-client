@@ -9,6 +9,7 @@ import Swal from 'sweetalert2';
 import { Helmet, HelmetAr, ServiceRequestApi } from '../../Apis/Apis';
 const DedicatedAsk = () => {
     const { lang, setlang, t, i18n } = useMyContext();
+    const [loading, setloading] = useState(false)
     lang==='ar'?HelmetAr('طلب خدمة'):
     Helmet('Ask For A Service')
     const id =useParams().id
@@ -71,8 +72,9 @@ const DedicatedAsk = () => {
       const handleSubmit = () => {
           if (name !== '' && mobile !== '') {
             //   console.log(name,email,mobile,city,service_type,notes)
-              ServiceRequestApi(name,mobile,service_type,notes).then((res) => { 
-                // console.log(res);
+            setloading(true)
+            ServiceRequestApi(name,mobile,service_type,notes).then((res) => { 
+                  setloading(false)
                  setdata(res); 
                 }).then(()=>Swal.fire({
                   title: lang === "ar" ? 'تم' : 'Submited',
@@ -126,7 +128,14 @@ const DedicatedAsk = () => {
 
                         <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details')} onChange={(e) => setnotes(e.target.value)}></textarea>
                     </div>
-                    <div className="EnjazzFormBtn" onClick={() => handleSubmit()}>{t('form.send')}</div>
+                    <div className="EnjazzFormBtn loaderBtnCont2" onClick={() => handleSubmit()}>
+                        {!loading && (
+                            t('form.send')
+                        )}
+                        {loading && (
+                            <span class="loaderBtn2"></span>
+                        )}
+                    </div>
                 </div>
             </div>
 

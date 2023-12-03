@@ -1,33 +1,34 @@
 import React, { useEffect, useState } from 'react'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 
 import { useMyContext } from '../../context/MyContext';
 import Swal from 'sweetalert2';
 import { Helmet, HelmetAr, ServiceRequestApi } from '../../Apis/Apis';
 const AskForAService = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-    
-    lang==='ar'?HelmetAr('طلب خدمة'):Helmet('Ask For A Service')
-    
+    const [loading, setloading] = useState(false)
+
+    lang === 'ar' ? HelmetAr('طلب خدمة') : Helmet('Ask For A Service')
+
     useEffect(() => {
         AOS.init();
-      }, []);
-      const [name, setname] = useState('')
-      const [email, setemail] = useState('')
-      const [mobile, setmobile] = useState('')
-      const [city, setcity] = useState('')
-      const [service_type, setservice_type] = useState('service-management-yearly')
-      const [notes, setnotes] = useState('')
-  
-      const [data, setdata] = useState([])
-  
+    }, []);
+    const [name, setname] = useState('')
+    const [email, setemail] = useState('')
+    const [mobile, setmobile] = useState('')
+    const [city, setcity] = useState('')
+    const [service_type, setservice_type] = useState('service-management-yearly')
+    const [notes, setnotes] = useState('')
+
+    const [data, setdata] = useState([])
+
     //   function isEmailValid(email) {
     //       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     //       return emailPattern.test(email);
     //   }
-    const services={
+    const services = {
         "Issuance of Commercial Register for an Establishment": "إصدار سجل تجاري لمؤسسة",
         "Modification of Commercial Register for an Establishment": "تعديل سجل تجاري لمؤسسة",
         "Residence Permit Issuance": "إصدار إقامة",
@@ -51,36 +52,38 @@ const AskForAService = () => {
         "Issuance of Saudi Certificate": "اصدار شهادة السعودة",
         "Authentication of Employment Contracts": "توثيق عقود العمل",
         "Update of Employee Data": "تحديث بيانات الموظفين"
-        }
-  
-      const handleSubmit = () => {
-          if (name !== '' && mobile !== '') {
+    }
+
+    const handleSubmit = () => {
+        if (name !== '' && mobile !== '') {
             //   console.log(name,email,mobile,city,service_type,notes)
-              ServiceRequestApi(name,mobile,service_type,notes).then((res) => { 
+            setloading(true)
+            ServiceRequestApi(name, mobile, service_type, notes).then((res) => {
+                setloading(false)
                 console.log(res);
-                 setdata(res); 
-            }).then(()=>Swal.fire({
-                  title: lang === "ar" ? 'تم' : 'Submited',
-                  text: lang === "ar" ?'تم ارسال البيانات بنجاح':'Data was sent successfully',
-                  icon: 'success',
-                  timer: 2000,
-                  confirmButtonText: lang === "ar" ?'الرجوع':'Return'
-              }))
-          }
-          else {
-              Swal.fire({
-                  title: lang === "ar" ? '! خطأ' : 'Error!',
-                  text: lang === "ar" ?`${name === ''?"لم يتم ادخال الاسم .":""} ${mobile === ''?"لم يتم ادخال رقم الهاتف .":""}`:`${name === ''?"The Name is Missing .":""}${mobile === ''?"The Mobile is Missing .":""}`,
-                  icon: 'error',
-                  timer: 2000,
-                  confirmButtonText: lang === "ar" ?'الرجوع':'Return'
-              })
-          }
-      }
+                setdata(res);
+            }).then(() => Swal.fire({
+                title: lang === "ar" ? 'تم' : 'Submited',
+                text: lang === "ar" ? 'تم ارسال البيانات بنجاح' : 'Data was sent successfully',
+                icon: 'success',
+                timer: 2000,
+                confirmButtonText: lang === "ar" ? 'الرجوع' : 'Return'
+            }))
+        }
+        else {
+            Swal.fire({
+                title: lang === "ar" ? '! خطأ' : 'Error!',
+                text: lang === "ar" ? `${name === '' ? "لم يتم ادخال الاسم ." : ""} ${mobile === '' ? "لم يتم ادخال رقم الهاتف ." : ""}` : `${name === '' ? "The Name is Missing ." : ""}${mobile === '' ? "The Mobile is Missing ." : ""}`,
+                icon: 'error',
+                timer: 2000,
+                confirmButtonText: lang === "ar" ? 'الرجوع' : 'Return'
+            })
+        }
+    }
     return (
         <div>
             <CommonHead title={t('askService.h1')} path={t('askService.path')} />
-            <div className="EnjazzForm" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
+            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
                 <div className="container">
                     <h1 className='section-title3'>{t('askService.h1')}</h1>
                     <p>{t('askService.p')}</p>
@@ -92,7 +95,7 @@ const AskForAService = () => {
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} />
 
                         <p>{t('form.typeS')}:</p>
-                        <select className='EnjazzFormInput' style={lang === "ar" ?{backgroundPositionX: '3%'}:{backgroundPositionX: '97%'}} onChange={(e) => setservice_type(e.target.value)}>
+                        <select className='EnjazzFormInput' style={lang === "ar" ? { backgroundPositionX: '3%' } : { backgroundPositionX: '97%' }} onChange={(e) => setservice_type(e.target.value)}>
                             <option value="service-management-yearly" selected>{t('circles.c11')}</option>
                             <option value="service-management-simi-annual" >{t('circles.c12')}</option>
                             <option value="service-management-three-months" >{t('circles.c13')}</option>
@@ -104,9 +107,9 @@ const AskForAService = () => {
                             <option value="all-government-services">{t('circles.c5')}</option>
                             <option value="reducing-financial-burdens">{t('circles.c7')}</option>
                             <option value="free-tryme-service">{t('circles.c8')}</option>
-                            {Object.entries(services).map(([en,ar])=>{
-                                return(
-                                    <option value={en.toLowerCase().replaceAll(' ','-')}>{lang==='ar'?ar:en}</option>
+                            {Object.entries(services).map(([en, ar]) => {
+                                return (
+                                    <option value={en.toLowerCase().replaceAll(' ', '-')}>{lang === 'ar' ? ar : en}</option>
                                 )
                             })}
                         </select>
@@ -114,7 +117,14 @@ const AskForAService = () => {
 
                         <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details')} onChange={(e) => setnotes(e.target.value)}></textarea>
                     </div>
-                    <div className="EnjazzFormBtn" onClick={() => handleSubmit()}>{t('form.send')}</div>
+                    <div className="EnjazzFormBtn loaderBtnCont2" onClick={() => handleSubmit()}>
+                        {!loading && (
+                            t('form.send')
+                        )}
+                        {loading && (
+                            <span class="loaderBtn2"></span>
+                        )}
+                    </div>
                 </div>
             </div>
 

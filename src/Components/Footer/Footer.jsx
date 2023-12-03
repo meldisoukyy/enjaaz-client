@@ -10,6 +10,7 @@ import Modal from "react-bootstrap/Modal";
 const Footer = () => {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
+  const [loading, setloading] = useState(false)
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -29,8 +30,10 @@ const Footer = () => {
 
   const handleSubmit = () => {
     if (isEmailValid(email)) {
+      setloading(true)
       SubscribersApi(email).then((res) => {
         if (res.id) {
+          setloading(fa)
           // console.log(res);
           setdata(res);
           Swal.fire({
@@ -43,6 +46,8 @@ const Footer = () => {
             confirmButtonText: lang === "ar" ? "الرجوع" : "Return",
           });
         } else {
+          setloading(false)
+
           seterror("المشترك بهذا البريد الإلكتروني موجود بالفعل.");
         }
       });
@@ -74,7 +79,11 @@ const Footer = () => {
               />
               {error !== "" && <p className="text-danger pt-2">{error}</p>}
             </span>
-            <div onClick={() => handleSubmit()}>{t("footer.topbtn")}</div>
+            <div className="loaderBtnCont" onClick={() => handleSubmit()}>{t("footer.topbtn")}
+            {loading&&(
+              <span class="loaderBtn"></span>
+            )}
+            </div>
           </div>
         </div>
         <div className="center">
@@ -260,19 +269,19 @@ const Footer = () => {
               <div className="images">
                 <div className="image">
                   <img
-                    src="/images/نضيف دي معهم كصورة فقط.png"
+                    src="/images/نضيف دي معهم كصورة فقط.webp"
                     alt=""
                   />
                 </div>
                 <div className="image" onClick={handleShow}>
                   <img
-                    src="/images/لوجو ضريبة القيمة المضافة يدوس علية يفتح صورة القيمة المضافة.png"
+                    src="/images/لوجو ضريبة القيمة المضافة يدوس علية يفتح صورة القيمة المضافة.webp"
                     alt=""
                   />
                 </div>
                 <div className="image" onClick={handleShow2} style={{ scale: "1.3" }}>
                   <img
-                    src="/images/لوجو المركز السعودي للأعمال يدوس علية يفتح الصورة مباشرة.png"
+                    src="/images/لوجو المركز السعودي للأعمال يدوس علية يفتح الصورة مباشرة.webp"
                     alt=""
                   />
                 </div>
@@ -346,7 +355,7 @@ const Footer = () => {
             <p>{t("footer.bottomp5")}</p>
             <div className="payments">
               {/* style={{ scale: '1.9', margin: '0 25px 0 25px' }} */}
-              <img loading="lazy" style={{ width: '120px', height: '50px' }} src="/images/جنب صورة المدفوعات أسفل الموقع.png" />
+              <img loading="lazy" style={{ width: '120px', height: '50px' }} src="/images/جنب صورة المدفوعات أسفل الموقع.webp" />
               <img loading="lazy" src="https://aait.sa/public/site/img/icons/certificate.webp" style={{ height: "40px" }} />
               <img loading="lazy" src="https://aait.sa/public/site/img/icons/mada.webp" />
               <img loading="lazy" src="https://aait.sa/public/site/img/icons/visa.webp" />

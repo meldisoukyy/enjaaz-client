@@ -42,7 +42,7 @@ const AboutSec = () => {
         <div className='image' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
           <img loading="lazy" src="/images/2.webp" alt="" />
           <div className="play" onClick={handleShow}>
-            <img loading="lazy" src="/images/play-button.png" alt="" />
+            <img loading="lazy" src="/images/play-button.webp" alt="" />
           </div>
         </div>
         <Modal

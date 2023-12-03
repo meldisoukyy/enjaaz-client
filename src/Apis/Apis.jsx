@@ -118,7 +118,7 @@ export const ServiceRequestApi = (name, mobile, service_type, notes) => {
         return response.json();
     });
 };//..
-export const ServiceRequestWithCalcApi = (name, mobile, service_type, notes, package_type, customer_count, wage_protection) => {
+export const ServiceRequestWithCalcApi = (name, mobile, service_type, notes, package_type, customer_count, wage_protection,total_price) => {
     return fetch('https://server.enjaaz.com.sa/api/service-request/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

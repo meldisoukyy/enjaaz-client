@@ -23,6 +23,8 @@ const FreeConsulting = () => {
     const [service_type, setservice_type] = useState('service-management-yearly')
     const [notes, setnotes] = useState('')
     const [data, setdata] = useState([])
+    const [loading, setloading] = useState(false)
+
 
     // function isEmailValid(email) {
     //     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -32,7 +34,9 @@ const FreeConsulting = () => {
     const handleSubmit = () => {
         if (name !== '' && mobile !== '') {
             // console.log(name, email, mobile, city, service_type, notes)
+            setloading(true)
             ConsultationApi(name, mobile, service_type, notes).then((res) => {
+                setloading(false)
                 //  console.log(res);
                 setdata(res);
             }).then(() =>Swal.fire({
@@ -119,7 +123,14 @@ const FreeConsulting = () => {
 
                         <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details')} onChange={(e) => setnotes(e.target.value)}></textarea>
                     </div>
-                    <div className="EnjazzFormBtn" onClick={() => handleSubmit()}>{t('form.send')}</div>
+                    <div className="EnjazzFormBtn loaderBtnCont2" onClick={() => handleSubmit()}>
+                        {!loading && (
+                            t('form.send')
+                        )}
+                        {loading && (
+                            <span class="loaderBtn2"></span>
+                        )}
+                    </div>
                 </div>
             </div>
 

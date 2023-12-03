@@ -12,7 +12,7 @@ const BankAccounts = () => {
                 <div className="container">
                     <div className="bank-card">
                         <div className="image">
-                            <img src="/images/شعار مصرف الراجحي .png" alt="" />
+                            <img src="/images/شعار مصرف الراجحي .webp" alt="" />
                         </div>
                         <div className="item">
                             <h5>{t('bank.h5')}
@@ -29,7 +29,7 @@ const BankAccounts = () => {
                     </div>
                     <div className="bank-card">
                         <div className="image">
-                            <img src="/images/شعار حساب البنك الأهلي.png" alt="" />
+                            <img src="/images/شعار حساب البنك الأهلي.webp" alt="" />
                         </div>
                         <div className="item">
                             <h5>{t('bank.h5')}

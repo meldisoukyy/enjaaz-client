@@ -196,6 +196,8 @@ const RedirectFromPackages = () => {
     let titleId = changeInCalc ? changeInCalc : id
     const [service_type, setservice_type] = useState(titleId)
     const [notes, setnotes] = useState('')
+    const [loading, setloading] = useState(false)
+
 
     const [data, setdata] = useState([])
 
@@ -205,7 +207,9 @@ const RedirectFromPackages = () => {
         e.preventDefault()
         if (name !== '' && mobile !== '') {
             //   console.log(name,email,mobile,city,service_type,notes)
-            ServiceRequestWithCalcApi(name, mobile, service_type, notes, packageType, numberOfEmployers, wageProtection,annualCost).then((res) => {
+            setloading(true)
+            ServiceRequestWithCalcApi(name, mobile, service_type, notes, packageType, numberOfEmployers, wageProtection, annualCost).then((res) => {
+                setloading(false)
                 console.log(res);
                 setdata(res);
             }).then(() => Swal.fire({
@@ -387,7 +391,14 @@ const RedirectFromPackages = () => {
                                 <Calculator data={calc} setchangeInCalc={setchangeInCalc} />
                             </div>
                         )}
-                        <button className="EnjazzFormBtn" onClick={handleSubmit}>{t('form.send')}</button>
+                        <div className="EnjazzFormBtn loaderBtnCont2" onClick={(e) => handleSubmit(e)}>
+                            {!loading && (
+                                t('form.send')
+                            )}
+                            {loading && (
+                                <span class="loaderBtn2"></span>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
