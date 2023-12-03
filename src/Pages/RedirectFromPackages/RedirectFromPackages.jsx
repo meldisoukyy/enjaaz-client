@@ -194,7 +194,7 @@ const RedirectFromPackages = () => {
     const [city, setcity] = useState('')
     const [changeInCalc, setchangeInCalc] = useState(null)
     let titleId = changeInCalc ? changeInCalc : id
-    const [service_type, setservice_type] = useState(titleId)
+    const [service_type, setservice_type] = useState(titleId.toUpperCase().replaceAll('-', ' '))
     const [notes, setnotes] = useState('')
     const [loading, setloading] = useState(false)
 

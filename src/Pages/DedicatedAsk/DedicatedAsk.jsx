@@ -59,7 +59,7 @@ const DedicatedAsk = () => {
       const [email, setemail] = useState('')
       const [mobile, setmobile] = useState('')
       const [city, setcity] = useState('')
-      const [service_type, setservice_type] = useState(exist?id:'service-management-yearly')
+      const [service_type, setservice_type] = useState(exist?id.toUpperCase().replaceAll('-', ' '):'service-management-yearly'.toUpperCase().replaceAll('-', ' '))
       const [notes, setnotes] = useState('')
   
       const [data, setdata] = useState([])

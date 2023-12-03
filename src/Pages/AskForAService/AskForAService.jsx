@@ -19,8 +19,12 @@ const AskForAService = () => {
     const [email, setemail] = useState('')
     const [mobile, setmobile] = useState('')
     const [city, setcity] = useState('')
-    const [service_type, setservice_type] = useState('service-management-yearly')
+    const [service_type, setservice_type] = useState('service-management-yearly'.toUpperCase().replaceAll('-', ' '))
     const [notes, setnotes] = useState('')
+    useEffect(() => {
+      console.log(service_type)
+    }, [service_type])
+    
 
     const [data, setdata] = useState([])
 
@@ -95,7 +99,7 @@ const AskForAService = () => {
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} />
 
                         <p>{t('form.typeS')}:</p>
-                        <select className='EnjazzFormInput' style={lang === "ar" ? { backgroundPositionX: '3%' } : { backgroundPositionX: '97%' }} onChange={(e) => setservice_type(e.target.value)}>
+                        <select className='EnjazzFormInput' style={lang === "ar" ? { backgroundPositionX: '3%' } : { backgroundPositionX: '97%' }} onChange={(e) => setservice_type(e.target.value.toUpperCase().replaceAll('-', ' '))}>
                             <option value="service-management-yearly" selected>{t('circles.c11')}</option>
                             <option value="service-management-simi-annual" >{t('circles.c12')}</option>
                             <option value="service-management-three-months" >{t('circles.c13')}</option>
