@@ -19,7 +19,7 @@ const AskForAService = () => {
     const [email, setemail] = useState('')
     const [mobile, setmobile] = useState('')
     const [city, setcity] = useState('')
-    const [service_type, setservice_type] = useState('service-management-yearly'.toUpperCase().replaceAll('-', ' '))
+    const [service_type, setservice_type] = useState("إدارة الخدمات - سنوي")
     const [notes, setnotes] = useState('')
     useEffect(() => {
       console.log(service_type)
@@ -99,21 +99,21 @@ const AskForAService = () => {
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} />
 
                         <p>{t('form.typeS')}:</p>
-                        <select className='EnjazzFormInput' style={lang === "ar" ? { backgroundPositionX: '3%' } : { backgroundPositionX: '97%' }} onChange={(e) => setservice_type(e.target.value.toUpperCase().replaceAll('-', ' '))}>
-                            <option value="service-management-yearly" selected>{t('circles.c11')}</option>
-                            <option value="service-management-simi-annual" >{t('circles.c12')}</option>
-                            <option value="service-management-three-months" >{t('circles.c13')}</option>
-                            <option value="wage-protection-yearly">{t('circles.c21')}</option>
-                            <option value="wage-protection-monthly">{t('circles.c22')}</option>
-                            <option value="register-a-trademark">{t('circles.c2')}</option>
-                            <option value="establishment-of-facilities">{t('circles.c3')}</option>
-                            <option value="legal-advice">{t('circles.c4')}</option>
-                            <option value="all-government-services">{t('circles.c5')}</option>
-                            <option value="reducing-financial-burdens">{t('circles.c7')}</option>
-                            <option value="free-tryme-service">{t('circles.c8')}</option>
+                        <select className='EnjazzFormInput' style={lang === "ar" ? { backgroundPositionX: '3%' } : { backgroundPositionX: '97%' }} onChange={(e) => setservice_type(e.target.value)}>
+                            <option value="إدارة الخدمات - سنوي" selected>{t('circles.c11')}</option>
+                            <option value="إدارة الخدمات - نصف سنوي" >{t('circles.c12')}</option>
+                            <option value="إدارة الخدمات - ثلاثة أشهر" >{t('circles.c13')}</option>
+                            <option value="حماية الأجور - سنوي">{t('circles.c21')}</option>
+                            <option value="حماية الأجور - شهري">{t('circles.c22')}</option>
+                            <option value="تسجيل علامة تجارية">{t('circles.c2')}</option>
+                            <option value="تأسيس المنشآت">{t('circles.c3')}</option>
+                            <option value="الاستشارات القانونية">{t('circles.c4')}</option>
+                            <option value="جميع الخدمات الحكومية">{t('circles.c5')}</option>
+                            <option value="تخفيف الاعباء المالية">{t('circles.c7')}</option>
+                            <option value="خدمة جربني المجانية">{t('circles.c8')}</option>
                             {Object.entries(services).map(([en, ar]) => {
                                 return (
-                                    <option value={en.toLowerCase().replaceAll(' ', '-')}>{lang === 'ar' ? ar : en}</option>
+                                    <option value={ar}>{lang === 'ar' ? ar : en}</option>
                                 )
                             })}
                         </select>

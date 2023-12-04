@@ -20,19 +20,19 @@ const RedirectFromPackages = () => {
         Helmet('Ask For A Service')
     const [data2, setdata2] = useState([])
     useEffect(() => {
-        console.log(numberOfEmployers)
+        // console.log(numberOfEmployers)
     }, [numberOfEmployers])
     useEffect(() => {
-        console.log(annualCost)
+        // console.log(annualCost)
     }, [annualCost])
     useEffect(() => {
-        console.log(wageProtection)
+        // console.log(wageProtection)
     }, [wageProtection])
 
     useEffect(() => {
         ServiceManagemenApi().then((res) => {
             setdata2(res)
-            console.log(res)
+            // console.log(res)
         })
     }, []);
     const id = useParams().id
@@ -186,7 +186,8 @@ const RedirectFromPackages = () => {
         }
     };
 
-
+// console.log(Titles["service-management-bronze"].ar)
+// console.log(Titles[id].ar)
     // console.log(exist)
     const [name, setname] = useState('')
     const [email, setemail] = useState('')
@@ -194,7 +195,7 @@ const RedirectFromPackages = () => {
     const [city, setcity] = useState('')
     const [changeInCalc, setchangeInCalc] = useState(null)
     let titleId = changeInCalc ? changeInCalc : id
-    const [service_type, setservice_type] = useState(titleId.toUpperCase().replaceAll('-', ' '))
+    const [service_type, setservice_type] = useState(changeInCalc?Titles[changeInCalc].ar:Titles[id].ar)
     const [notes, setnotes] = useState('')
     const [loading, setloading] = useState(false)
 
@@ -202,15 +203,15 @@ const RedirectFromPackages = () => {
     const [data, setdata] = useState([])
 
     const handleSubmit = (e) => {
-        console.log(numberOfEmployers)
-        console.log(wageProtection)
+        // console.log(numberOfEmployers)
+        // console.log(wageProtection)
         e.preventDefault()
         if (name !== '' && mobile !== '') {
-            //   console.log(name,email,mobile,city,service_type,notes)
+              console.log(name,email,mobile,city,service_type,notes)
             setloading(true)
             ServiceRequestWithCalcApi(name, mobile, service_type, notes, packageType, numberOfEmployers, wageProtection, annualCost).then((res) => {
                 setloading(false)
-                console.log(res);
+                // console.log(res);
                 setdata(res);
             }).then(() => Swal.fire({
                 title: lang === "ar" ? 'تم' : 'Submited',
@@ -310,6 +311,14 @@ const RedirectFromPackages = () => {
     useEffect(() => {
         AOS.init();
     }, []);
+    useEffect(() => {
+        changeInCalc&&setservice_type(Titles[changeInCalc].ar)
+    }, [changeInCalc])
+    useEffect(() => {
+      console.log(service_type)
+    }, [service_type])
+    
+    
 
     return (
         <div>

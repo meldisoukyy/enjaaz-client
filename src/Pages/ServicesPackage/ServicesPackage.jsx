@@ -23,7 +23,7 @@ const ServicesPackage = () => {
         })
     }, []);
     const data1 = {
-        "إصدار تأشيرات العمل (حسب ما يسمح به النظام)": "Work Visa Issuance (as allowed by the system)",
+        "إصدار تأشيرات العمل": "Work Visa Issuance",
         "إصدار رخصة عمل": "Work Permit Issuance",
         "نقل خدمات عامل (نقل كفالة)": "Worker Service Transfer (Sponsorship Transfer)",
         "شهادة السعودة": "Saudi Citizenship Certificate",

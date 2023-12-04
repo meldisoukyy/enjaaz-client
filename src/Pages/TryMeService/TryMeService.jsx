@@ -19,7 +19,7 @@ const TryMeService = () => {
     const [city, setcity] = useState('')
     const [service_type, setservice_type] = useState('free-tryme-service')
     const [notes, setnotes] = useState('')
-    const [try_service, settry_service] = useState('Issuance of Commercial Register for an Establishment')
+    const [try_service, settry_service] = useState("إصدار سجل تجاري لمؤسسة")
     const [loading, setloading] = useState(false)
 
     const services = {
@@ -99,7 +99,7 @@ const TryMeService = () => {
                         <select className='EnjazzFormInput' style={lang === "ar" ? { backgroundPositionX: '3%' } : { backgroundPositionX: '97%' }} onChange={(e) => settry_service(e.target.value)}>
                             {Object.entries(services).map(([en, ar], i) => {
                                 return (
-                                    <option value={en} selected={i === 0}>{lang === "ar" ? ar : en}</option>
+                                    <option value={ar} selected={i === 0}>{lang === "ar" ? ar : en}</option>
                                 )
                             })}
 
