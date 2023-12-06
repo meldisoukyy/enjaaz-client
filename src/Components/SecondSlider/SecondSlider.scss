@@ -91,12 +91,12 @@
             font-family: "Hanimation_Arabic_Regular", sans-serif;
             font-size: 28px;
             line-height: 60px;
-            font-weight: 600;
+            font-weight: 400;
             letter-spacing: 0px;
             z-index: 1;
             text-align: start;
             @media (max-width:992px) {
-                font-size: 24px;
+                font-size: 21px;
                 text-align: center !important;
                 line-height: 40px;
             }
@@ -141,17 +141,17 @@
         }
     }
     .slide1{
-        background-image: url('./../../../public/images/banar/new/PGe75Fq9ahuDgibc7aPGg9FcFmTiEnXihSTwUZF7.jpg');
+        background-image: url('./../../../public/images/banar/new/02.avif');
         background-size: cover;
-        background-position: top;
+        background-position: center;
     }
     .slide2{
-        background-image: url('./../../../public/images/banar/new/8EdAkw9R0vxLKDSjWaz1jZM7UzNBsiJRVPw62DVX.webp');
+        background-image: url('./../../../public/images/banar/new/PGe75Fq9ahuDgibc7aPGg9FcFmTiEnXihSTwUZF7.avif');
         background-size: cover;
-        background-position: top;
+        background-position: bottom;
     }
     .slide3{
-       background-image: url('./../../../public/images/3.webp'); 
+       background-image: url('./../../../public/images/3.avif'); 
        background-size: cover;
        background-position: center;
     }

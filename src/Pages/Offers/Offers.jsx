@@ -65,7 +65,7 @@ const Offers = () => {
                             return (
                                 <div className="pack" key={i} data-aos="fade-in" data-aos-duration="2000" data-aos-delay={`${(i + 1) * 50}`}>
                                     <div className="image">
-                                        <img loading="lazy" src={lang === "ar" ? item.image_ar : item.image_en ? item.image_en : item.image_ar} alt={lang === "ar" ? item.name_ar : item.name_en} />
+                                        <img alt="Enjazz_image" loading="lazy" src={lang === "ar" ? item.image_ar : item.image_en ? item.image_en : item.image_ar} alt={lang === "ar" ? item.name_ar : item.name_en} />
                                     </div>
                                     <h1 className="text-center">{lang === "ar" ? item.name_ar : item.name_en}</h1>
                                     <div className="price">

@@ -34,15 +34,18 @@
   }
   .bottom {
     padding-top: 40px;
+
     p {
       font-size: 18px;
       font-weight: 600;
       @media (max-width: 992px) {
-        @media (max-width: 992px) {
           text-align: center !important;
           line-height: 30px;
-        }
       }
+    }
+    .answer{
+      font-weight: 500;
+      font-size: 17px;
     }
   }
 }

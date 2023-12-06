@@ -23,7 +23,7 @@ const ServicesPackage = () => {
         })
     }, []);
     const data1 = {
-        "إصدار تأشيرات العمل (حسب ما يسمح به النظام)": "Work Visa Issuance (as allowed by the system)",
+        "إصدار تأشيرات العمل": "Work Visa Issuance",
         "إصدار رخصة عمل": "Work Permit Issuance",
         "نقل خدمات عامل (نقل كفالة)": "Worker Service Transfer (Sponsorship Transfer)",
         "شهادة السعودة": "Saudi Citizenship Certificate",
@@ -82,8 +82,73 @@ const ServicesPackage = () => {
         "إيقاف الرقم المميز": "Suspend VAT Number"
     }
     const data7 = {
-        "إصدار ترخيص سلامة": "Safety License Issuance"
-    };
+        "إصدار ترخيص سلامة": "Issue Safety License",
+        "تجديد ترخيص سلامة": "Renew Safety License",
+        "الغاء ترخيص سلامة": "Cancel Safety License"
+    }
+        ;
+    const data8 = {
+        "تسجيل/استبعاد مشترك": "Register/Exclude Subscriber",
+        "تحديث البيانات": "Update Data",
+        "إضافة/تغيير مشرف المنشأة": "Add/Change Facility Supervisor",
+        "تغيير مدير حساب الفروع": "Change Branch Account Manager",
+        "إصدار شهادة منشأة": "Issue Facility Certificate",
+        "إصدار شهادة السلامة والصحة المهنية": "Issue Occupational Safety and Health Certificate",
+        "تحديث الأجور الشهرية": "Update Monthly Salaries",
+        "نقل مشترك/مشتركين بين فروع المنشأة": "Transfer Subscriber(s) Between Facility Branches",
+        "تقديم طلب تقسيط مديونية المنشأة": "Submit Facility Debt Installment Request",
+        "تعديل بيانات مشترك": "Modify Subscriber Data",
+        "تعديل بيانات مدة الاشتراك": "Modify Subscription Duration Data",
+        "الإبلاغ عن إصابة عمل": "Report Workplace Injury",
+        "نقل ملكية منشأة": "Transfer Facility Ownership",
+        "تعديل الكيان القانوني للمنشأة": "Modify Facility Legal Entity",
+        "إنهاء نشاط منشأة": "Terminate Facility Activity"
+    }
+    const data9 = {
+        "فتح ملف منشأة": "Open Facility File",
+        "تحديث البيانات": "Update Data",
+        "تعديل نوع المنشأة": "Modify Facility Type",
+        "تغيير نشاط المنشأة": "Change Facility Activity",
+        "طلب الاعتراض والتسوية على المخالفات": "Submit Objection and Settlement Request for Violations",
+        "تحديث بيانات الموظفين": "Update Employee Data"
+    }
+    const data10 = {
+        "تسجيل المنشأة في برامج الدعم المناسبة لمنشأتك": "Register the Facility in Suitable Support Programs for Your Establishment"
+    }
+    const data11 = {
+        "تسجيل الموظفين في التأمين الطبي المناسب لمنشأتك": "Register Employees in the Suitable Medical Insurance for Your Establishment"
+    }
+    const data12 = {
+        "إصدار وكالة لقطاع الأعمال": "Issue Power of Attorney for Business Sector",
+        "إلغاء وكالة لقطاع الأعمال": "Cancel Power of Attorney for Business Sector"
+    }
+    const data13 = {
+        "إنشاء سند": "Create Document",
+        "توثيق سند": "Authenticate Document",
+        "إلغاء سند": "Cancel Document"
+    }
+    const data14 = {
+        "إصدار شهادة الالتزام": "Issue Certificate of Commitment",
+        "التسجيل في المنصة": "Register on the Platform",
+        "رفع مسيرات الرواتب الشهرية": "Submit Monthly Salary Statements",
+        "تحديث بيانات منشأة في منصة مدد": "Update Facility Data on Mudd Platform",
+        "إزالة ملاحظة حماية الأجور (حسب حالة الحساب)": "Remove Wage Protection Note (As per Account Status)",
+        "التسجيل في نظام إدارة الرواتب": "Register in Payroll Management System",
+        "فتح حسابات بنكية للعاملين": "Open Bank Accounts for Employees",
+        "فتح حساب بنكي للمنشأة": "Open Bank Account for the Establishment"
+    }
+    const data15 = {
+        "خدمة حجز الطيران بأقل الأسعار": "Lowest Price Airline Booking Service",
+        "خدمة حجز أفضل الفنادق بأقل الأسعار": "Best Price Hotel Booking Service",
+        "خدمة تأمين السيارات بأقل الأسعار المتاحة": "Car Insurance Service at the Lowest Available Prices",
+        "خدمة إصدار تأشيرات العمل والتفويض وتصديقها من الغرفة التجارية": "Service for Issuing Work Visas, Authorization, and Chamber of Commerce Authentication",
+        "خصم 30% على جميع خدمات التصميم والتسويق": "30% Discount on All Design and Marketing Services",
+        "خصم 20% عند الحاجة لبرامج محاسبية من شركة قيود": "20% Discount when in need of Accounting Software from Qiyud Company",
+        "تقديم القروض الحكومية للمنشأة": "Facilitation of Government Loans for the Establishment"
+    }
+
+
+
     const calc = {
         'bronze': {
             price: parseInt(data[0]?.price),
@@ -114,20 +179,20 @@ const ServicesPackage = () => {
 
                     <div className="pack " data-aos="fade-in" data-aos-duration="2000" data-aos-delay="100">
                         <div className="top">
-                            <div className="banner" style={{backgroundColor:'#CD7F32'}}>
+                            <div className="banner" style={{ backgroundColor: '#CD7F32' }}>
                                 <h2>{lang === "ar" ? 'الباقة البرونزية' : 'Bronze package'}</h2>
                                 {lang === "ar" ? (
                                     <>
-                                        <p>بقيمة<span>{data[0]?.price}</span>ريال فقط</p>
+                                        <p>بقيمة<span>{data[0]?.price.replace(/\.00$/, '')}</span>ريال فقط / سنويا</p>
                                         {data[0]?.price_before && (
-                                            <p className='instead'>بدلا من<span>{data[0]?.price_before}</span></p>
+                                            <p className='instead'>بدلا من<span>{data[0]?.price_before.replace(/\.00$/, '')}</span></p>
                                         )}
                                     </>
                                 ) : (
                                     <>
-                                        <p>For only <span>{data[0]?.price}</span></p>
+                                        <p>For only <span>{data[0]?.price.replace(/\.00$/, '')}</span> / Year</p>
                                         {data[0]?.price_before && (
-                                            <p className='instead'>Instead of <span>{data[0]?.price_before}</span></p>
+                                            <p className='instead'>Instead of <span>{data[0]?.price_before.replace(/\.00$/, '')}</span></p>
                                         )}
                                     </>
 
@@ -142,20 +207,11 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"إدارة خدمات بلدي"} data={Object.keys(data4)} />
                                     <PackageAcc title={"إدارة خدمات الغرفة التجارية"} data={Object.keys(data5)} />
                                     <PackageAcc title={"إدارة خدمات الزكاة والدخل"} data={Object.keys(data6)} />
-                                    <PackageAcc title={"إدارة خدمات التأمينات الإجتماعية"} />
-                                    <PackageAcc title={"إدارة خدمات مكتب العمل"} />
-                                    <PackageAcc title={"إدارة خدمات برامج الدعم"} />
-                                    <PackageAcc title={"إدارة خدمات التأمين الطبي"} />
-                                    {/* <PackageAcc empty /> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
+                                    <PackageAcc title={"إدارة خدمات التأمينات الإجتماعية"} data={Object.keys(data8)} />
+                                    <PackageAcc title={"إدارة خدمات مكتب العمل"} data={Object.keys(data9)} />
+                                    <PackageAcc title={"إدارة خدمات برامج الدعم"} data={Object.keys(data10)} />
+                                    <PackageAcc title={"إدارة خدمات التأمين الطبي"} data={Object.keys(data11)} />
+                                    <PackageAcc title={"خدمات مجانية طول فترة الاشتراك"} data={Object.keys(data15)} free />
                                 </>
                             ) : (
                                 <>
@@ -166,20 +222,11 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"Municipality Services Management"} data={Object.values(data4)} />
                                     <PackageAcc title={"Chamber of Commerce Services Management"} data={Object.values(data5)} />
                                     <PackageAcc title={"Zakat and Income Services Management"} data={Object.values(data6)} />
-                                    <PackageAcc title={"Social Security Services Management"} />
-                                    <PackageAcc title={"Labor Office Services Management"} />
-                                    <PackageAcc title={"Support Programs Services Management"} />
-                                    <PackageAcc title={"Medical Insurance Services Management"} />
-                                    {/* <PackageAcc empty /> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
+                                    <PackageAcc title={"Social Security Services Management"} data={Object.values(data8)} />
+                                    <PackageAcc title={"Labor Office Services Management"} data={Object.values(data9)} />
+                                    <PackageAcc title={"Support Programs Services Management"} data={Object.values(data10)} />
+                                    <PackageAcc title={"Medical Insurance Services Management"} data={Object.values(data11)} />
+                                    <PackageAcc title={"Free Services Throughout the Subscription Period"} data={Object.values(data15)} free />
                                 </>
                             )}
                         </div>
@@ -191,20 +238,20 @@ const ServicesPackage = () => {
 
                     <div className="pack " data-aos="fade-in" data-aos-duration="2000" data-aos-delay='200'>
                         <div className="top">
-                            <div className="banner" style={{backgroundColor:'#757575'}}>
+                            <div className="banner" style={{ backgroundColor: '#757575' }}>
                                 <h2>{lang === "ar" ? 'الباقة الفضية' : 'Silver package'}</h2>
                                 {lang === "ar" ? (
                                     <>
-                                        <p>بقيمة<span>{data[1]?.price}</span>ريال فقط</p>
+                                        <p>بقيمة<span>{data[1]?.price.replace(/\.00$/, '')}</span>ريال فقط / سنويا</p>
                                         {data[1]?.price_before && (
-                                            <p className='instead'>بدلا من<span>{data[1]?.price_before}</span></p>
+                                            <p className='instead'>بدلا من<span>{data[1]?.price_before.replace(/\.00$/, '')}</span></p>
                                         )}
                                     </>
                                 ) : (
                                     <>
-                                        <p>For only <span>{data[1]?.price}</span></p>
+                                        <p>For only <span>{data[1]?.price.replace(/\.00$/, '')}</span> / Year</p>
                                         {data[1]?.price_before && (
-                                            <p className='instead'>Instead of <span>{data[1]?.price_before}</span></p>
+                                            <p className='instead'>Instead of <span>{data[1]?.price_before.replace(/\.00$/, '')}</span></p>
                                         )}
                                     </>
 
@@ -221,19 +268,12 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"إدارة خدمات الغرفة التجارية"} data={Object.keys(data5)} />
                                     <PackageAcc title={"إدارة خدمات الزكاة والدخل"} data={Object.keys(data6)} />
                                     <PackageAcc title={"إدارة خدمات سلامة"} data={Object.keys(data7)} />
-                                    <PackageAcc title={"إدارة خدمات التأمينات الإجتماعية"} />
-                                    <PackageAcc title={"إدارة خدمات التأمين الطبي"} />
-                                    <PackageAcc title={"إدارة خدمات مكتب العمل"} />
-                                    <PackageAcc title={"إدارة خدمات برامج الدعم"} />
-                                    {/* <PackageAcc empty /> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
+                                    <PackageAcc title={"إدارة خدمات التأمينات الإجتماعية"} data={Object.keys(data8)} />
+                                    <PackageAcc title={"إدارة خدمات التأمين الطبي"} data={Object.keys(data11)} />
+                                    <PackageAcc title={"إدارة خدمات مكتب العمل"} data={Object.keys(data9)} />
+                                    <PackageAcc title={"إدارة خدمات برامج الدعم"} data={Object.keys(data10)} />
+                                    <PackageAcc title={"خدمات مجانية طول فترة الاشتراك"} data={Object.keys(data15)} free />
+
                                 </>
                             ) : (
                                 <>
@@ -245,19 +285,11 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"Chamber of Commerce Services Management"} data={Object.values(data5)} />
                                     <PackageAcc title={"Zakat and Income Services Management"} data={Object.values(data6)} />
                                     <PackageAcc title={"Safety Services Management"} data={Object.values(data7)} />
-                                    <PackageAcc title={"Social Security Services Management"} />
-                                    <PackageAcc title={"Medical Insurance Services Management"} />
-                                    <PackageAcc title={"Labor Office Services Management"} />
-                                    <PackageAcc title={"Support Programs Services Management"} />
-                                    {/* <PackageAcc empty /> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
+                                    <PackageAcc title={"Social Security Services Management"} data={Object.values(data8)} />
+                                    <PackageAcc title={"Medical Insurance Services Management"} data={Object.values(data11)} />
+                                    <PackageAcc title={"Labor Office Services Management"} data={Object.values(data9)} />
+                                    <PackageAcc title={"Support Programs Services Management"} data={Object.values(data10)} />
+                                    <PackageAcc title={"Free Services Throughout the Subscription Period"} data={Object.values(data15)} free />
                                 </>
                             )}
 
@@ -271,20 +303,20 @@ const ServicesPackage = () => {
                     </div>
                     <div className="pack " data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
                         <div className="top">
-                            <div className="banner" style={{backgroundColor:'#d4af37'}}>
+                            <div className="banner" style={{ backgroundColor: '#d4af37' }}>
                                 <h2>{lang === "ar" ? 'الباقة الذهبية' : 'Golden package'}</h2>
                                 {lang === "ar" ? (
                                     <>
-                                        <p>بقيمة<span>{data[2]?.price}</span>ريال فقط</p>
+                                        <p>بقيمة<span>{data[2]?.price.replace(/\.00$/, '')}</span>ريال فقط / سنويا</p>
                                         {data[2]?.price_before && (
-                                            <p className='instead'>بدلا من<span>{data[2]?.price_before}</span></p>
+                                            <p className='instead'>بدلا من<span>{data[2]?.price_before.replace(/\.00$/, '')}</span></p>
                                         )}
                                     </>
                                 ) : (
                                     <>
-                                        <p>For only <span>{data[2]?.price}</span></p>
+                                        <p>For only <span>{data[2]?.price.replace(/\.00$/, '')}</span> / Year</p>
                                         {data[2]?.price_before && (
-                                            <p className='instead'>Instead of <span>{data[2]?.price_before}</span></p>
+                                            <p className='instead'>Instead of <span>{data[2]?.price_before.replace(/\.00$/, '')}</span></p>
                                         )}
                                     </>
 
@@ -300,18 +332,16 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"إدارة خدمات الغرفة التجارية"} data={Object.keys(data5)} />
                                     <PackageAcc title={"إدارة خدمات الزكاة والدخل"} data={Object.keys(data6)} />
                                     <PackageAcc title={"إدارة خدمات سلامة"} data={Object.keys(data7)} />
-                                    <PackageAcc title={"إدارة خدمات التأمينات الإجتماعية"} />
-                                    <PackageAcc title={"إدارة خدمات التأمين الطبي"} />
-                                    <PackageAcc title={"إدارة خدمات ناجز"} />
-                                    <PackageAcc title={"إدارة خدمات نافد"} />
-                                    <PackageAcc title={"اشتراك إدارة الرواتب وحماية الأجور"} />
+                                    <PackageAcc title={"إدارة خدمات التأمينات الإجتماعية"} data={Object.keys(data8)} />
+                                    <PackageAcc title={"إدارة خدمات التأمين الطبي"} data={Object.keys(data11)} />
+                                    <PackageAcc title={"إدارة خدمات ناجز"} data={Object.keys(data12)} />
+                                    <PackageAcc title={"إدارة خدمات نافد"} data={Object.keys(data13)} />
+                                    <PackageAcc title={"اشتراك إدارة الرواتب وحماية الأجور"} data={Object.keys(data14)} />
+                                    <PackageAcc title={"إدارة خدمات مكتب العمل"} data={Object.keys(data9)} />
+                                    <PackageAcc title={"إدارة خدمات برامج الدعم"} data={Object.keys(data10)} />
                                     <PackageAcc title={"توثيق عقود العمل للموظفين"} />
-                                    <PackageAcc title={"إدارة خدمات مكتب العمل"} />
-                                    <PackageAcc title={"إدارة خدمات برامج الدعم"} />
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
+                                    <PackageAcc title={"خدمات مجانية طول فترة الاشتراك"} data={Object.keys(data15)} free />
+
                                 </>
                             ) : (
                                 <>
@@ -323,18 +353,15 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"Chamber of Commerce Services Management"} data={Object.values(data5)} />
                                     <PackageAcc title={"Zakat and Income Services Management"} data={Object.values(data6)} />
                                     <PackageAcc title={"Safety Services Management"} data={Object.values(data7)} />
-                                    <PackageAcc title={"Social Security Services Management"} />
-                                    <PackageAcc title={"Medical Insurance Services Management"} />
-                                    <PackageAcc title={"Pending Services Management"} />
-                                    <PackageAcc title={"Expired Services Management"} />
-                                    <PackageAcc title={"Salary and Wage Protection Subscription"} />
+                                    <PackageAcc title={"Social Security Services Management"} data={Object.values(data8)} />
+                                    <PackageAcc title={"Medical Insurance Services Management"} data={Object.values(data11)} />
+                                    <PackageAcc title={"Pending Services Management"} data={Object.values(data12)} />
+                                    <PackageAcc title={"Expired Services Management"} data={Object.values(data13)} />
+                                    <PackageAcc title={"Salary and Wage Protection Subscription"} data={Object.values(data14)} />
+                                    <PackageAcc title={"Labor Office Services Management"} data={Object.values(data9)} />
+                                    <PackageAcc title={"Support Programs Services Management"} data={Object.values(data10)} />
                                     <PackageAcc title={"Documenting Employment Contracts for Employees"} />
-                                    <PackageAcc title={"Labor Office Services Management"} />
-                                    <PackageAcc title={"Support Programs Services Management"} />
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
-                                    {/* <PackageAcc empty/> */}
+                                    <PackageAcc title={"Free Services Throughout the Subscription Period"} data={Object.values(data15)} free />
                                 </>
                             )}
 
@@ -346,22 +373,22 @@ const ServicesPackage = () => {
                     </div>
                     <div className="pack " data-aos="fade-in" data-aos-duration="2000" data-aos-delay='400'>
                         <div className="top">
-                            <div className="banner" style={{backgroundColor:'#0248b8'}}>
+                            <div className="banner" style={{ backgroundColor: '#0248b8' }}>
                                 <h2>{lang === "ar" ? 'الباقة الماسية' : 'Diamond package'}</h2>
                                 {lang === "ar" ? (
                                     <>
-                                        <p>بقيمة<span>{data[3]?.price}</span>ريال فقط</p>
+                                        <p>بقيمة<span>{data[3]?.price.replace(/\.00$/, '')}</span>ريال فقط / سنويا</p>
                                         {data[3]?.price_before && (
 
-                                            <p className='instead'>بدلا من<span>{data[3]?.price_before}</span></p>
+                                            <p className='instead'>بدلا من<span>{data[3]?.price_before.replace(/\.00$/, '')}</span></p>
                                         )}
                                     </>
                                 ) : (
                                     <>
-                                        <p>For only <span>{data[3]?.price}</span></p>
+                                        <p>For only <span>{data[3]?.price.replace(/\.00$/, '')}</span> / Year</p>
                                         {data[3]?.price_before && (
 
-                                            <p className='instead'>Instead of <span>{data[3]?.price_before}</span></p>
+                                            <p className='instead'>Instead of <span>{data[3]?.price_before.replace(/\.00$/, '')}</span></p>
                                         )}
                                     </>
 
@@ -377,18 +404,19 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"إدارة خدمات الغرفة التجارية"} data={Object.keys(data5)} />
                                     <PackageAcc title={"إدارة خدمات الزكاة والدخل"} data={Object.keys(data6)} />
                                     <PackageAcc title={"إدارة خدمات سلامة"} data={Object.keys(data7)} />
-                                    <PackageAcc title={"إدارة خدمات التأمينات الإجتماعية"} />
-                                    <PackageAcc title={"إدارة خدمات التأمين الطبي"} />
-                                    <PackageAcc title={"إدارة خدمات مكتب العمل"} />
-                                    <PackageAcc title={"إدارة خدمات برامج الدعم"} />
-                                    <PackageAcc title={"إدارة خدمات ناجز"} />
-                                    <PackageAcc title={"إدارة خدمات نافد"} />
-                                    <PackageAcc title={"اشتراك إدارة الرواتب وحماية الأجور"} />
+                                    <PackageAcc title={"إدارة خدمات التأمينات الإجتماعية"} data={Object.keys(data8)} />
+                                    <PackageAcc title={"إدارة خدمات التأمين الطبي"} data={Object.keys(data11)} />
+                                    <PackageAcc title={"إدارة خدمات مكتب العمل"} data={Object.keys(data9)} />
+                                    <PackageAcc title={"إدارة خدمات برامج الدعم"} data={Object.keys(data10)} />
+                                    <PackageAcc title={"إدارة خدمات ناجز"} data={Object.keys(data12)} />
+                                    <PackageAcc title={"إدارة خدمات نافد"} data={Object.keys(data13)} />
+                                    <PackageAcc title={"اشتراك إدارة الرواتب وحماية الأجور"} data={Object.keys(data14)} />
                                     <PackageAcc title={"توثيق عقود العمل للموظفين"} />
                                     <PackageAcc title={"تصميم موقع الكتروني"} />
                                     <PackageAcc title={"تصميم متجر الكتروني"} />
                                     <PackageAcc title={"تصميم لوقو احترافي"} />
                                     <PackageAcc title={"التسويق"} />
+                                    <PackageAcc title={"خدمات مجانية طول فترة الاشتراك"} data={Object.keys(data15)} free />
                                 </>
                             ) : (
                                 <>
@@ -396,20 +424,21 @@ const ServicesPackage = () => {
                                     <PackageAcc title={"Human Resources Management"} data={Object.values(data1)} />
                                     <PackageAcc title={"Ministry of Commerce Services Management"} data={Object.values(data2)} />
                                     <PackageAcc title={"Absher Business Services (Resident)"} data={Object.values(data3)} />
-                                    <PackageAcc title={"Medical Insurance Services Management"} />
+                                    <PackageAcc title={"Medical Insurance Services Management"} data={Object.values(data11)} />
                                     <PackageAcc title={"Chamber of Commerce Services Management"} data={Object.values(data5)} />
                                     <PackageAcc title={"Zakat and Income Services Management"} data={Object.values(data6)} />
                                     <PackageAcc title={"Safety Services Management"} data={Object.values(data7)} />
-                                    <PackageAcc title={"Social Security Services Management"} />
+                                    <PackageAcc title={"Social Security Services Management"} data={Object.values(data8)} />
                                     <PackageAcc title={"Municipality Services Management"} data={Object.values(data4)} />
-                                    <PackageAcc title={"Pending Services Management"} />
-                                    <PackageAcc title={"Expired Services Management"} />
-                                    <PackageAcc title={"Salary and Wage Protection Subscription"} />
+                                    <PackageAcc title={"Pending Services Management"} data={Object.values(data12)} />
+                                    <PackageAcc title={"Expired Services Management"} data={Object.values(data13)} />
+                                    <PackageAcc title={"Salary and Wage Protection Subscription"} data={Object.values(data14)} />
                                     <PackageAcc title={"Documenting Employment Contracts for Employees"} />
                                     <PackageAcc title={"Website Design"} />
                                     <PackageAcc title={"E-commerce Store Design"} />
                                     <PackageAcc title={"Professional Logo Design"} />
                                     <PackageAcc title={"Marketing"} />
+                                    <PackageAcc title={"Free Services Throughout the Subscription Period"} data={Object.values(data15)} free />
                                 </>
                             )}
                         </div>

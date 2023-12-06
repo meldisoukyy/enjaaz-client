@@ -7,16 +7,32 @@ import 'aos/dist/aos.css';
 import { useParams } from 'react-router-dom';
 import { useMyContext } from '../../context/MyContext';
 import Swal from 'sweetalert2';
-import { Helmet, HelmetAr, ServiceManagemenApi, ServiceRequestApi } from '../../Apis/Apis';
+import { Helmet, HelmetAr, ServiceManagemenApi, ServiceRequestApi, ServiceRequestWithCalcApi } from '../../Apis/Apis';
+import CalcRedirect from '../../Components/CalcRedirect/CalcRedirect';
+import { BsArrowCounterclockwise } from 'react-icons/bs';
 const RedirectFromPackages = () => {
+    const [numberOfEmployers, setnumberOfEmployers] = useState(0)
+    const [packageType, setpackageType] = useState('bronze')
+    const [annualCost, setAnnualCost] = useState(0)
+    const [wageProtection, setwageProtection] = useState('select')
     const { lang, setlang, t, i18n } = useMyContext();
     lang === 'ar' ? HelmetAr('طلب خدمة') :
         Helmet('Ask For A Service')
-        const [data2, setdata2] = useState([])
+    const [data2, setdata2] = useState([])
+    useEffect(() => {
+        // console.log(numberOfEmployers)
+    }, [numberOfEmployers])
+    useEffect(() => {
+        // console.log(annualCost)
+    }, [annualCost])
+    useEffect(() => {
+        // console.log(wageProtection)
+    }, [wageProtection])
+
     useEffect(() => {
         ServiceManagemenApi().then((res) => {
             setdata2(res)
-            console.log(data2[0]?.price)
+            // console.log(res)
         })
     }, []);
     const id = useParams().id
@@ -170,24 +186,34 @@ const RedirectFromPackages = () => {
         }
     };
 
-
+// console.log(Titles["service-management-bronze"].ar)
+// console.log(Titles[id].ar)
     // console.log(exist)
     const [name, setname] = useState('')
     const [email, setemail] = useState('')
     const [mobile, setmobile] = useState('')
     const [city, setcity] = useState('')
-    const [service_type, setservice_type] = useState(id)
+    const [changeInCalc, setchangeInCalc] = useState(null)
+    let titleId = changeInCalc ? changeInCalc : id
+    const [service_type, setservice_type] = useState(changeInCalc?Titles[changeInCalc].ar:Titles[id].ar)
     const [notes, setnotes] = useState('')
+    const [loading, setloading] = useState(false)
+
 
     const [data, setdata] = useState([])
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        // console.log(numberOfEmployers)
+        // console.log(wageProtection)
+        e.preventDefault()
         if (name !== '' && mobile !== '') {
-            //   console.log(name,email,mobile,city,service_type,notes)
-            ServiceRequestApi(name, mobile, service_type, notes).then((res) => {
+              console.log(name,email,mobile,city,service_type,notes)
+            setloading(true)
+            ServiceRequestWithCalcApi(name, mobile, service_type, notes, packageType, numberOfEmployers, wageProtection, annualCost).then((res) => {
+                setloading(false)
                 // console.log(res);
                 setdata(res);
-            }).then(() => data.id && Swal.fire({
+            }).then(() => Swal.fire({
                 title: lang === "ar" ? 'تم' : 'Submited',
                 text: lang === "ar" ? 'تم ارسال البيانات بنجاح' : 'Data was sent successfully',
                 icon: 'success',
@@ -196,9 +222,10 @@ const RedirectFromPackages = () => {
             }))
         }
         else {
+            // typeof myVariable === 'number'
             Swal.fire({
                 title: lang === "ar" ? '! خطأ' : 'Error!',
-                text: lang === "ar" ? `${name === '' ? "لم يتم ادخال الاسم ." : ""} ${mobile === '' ? "لم يتم ادخال رقم الهاتف ." : ""}` : `${name === '' ? "The Name is Missing ." : ""}${mobile === '' ? "The Mobile is Missing ." : ""}`,
+                text: lang === "ar" ? `${name === '' ? "لم يتم ادخال الاسم ." : ""} ${mobile === '' ? "لم يتم ادخال رقم الهاتف ." : ""} ${!numberOfEmployers ? "لم يتم ادخال عدد الموظفين ." : ""} ${numberOfEmployers && isNaN(numberOfEmployers) ? "يجب ادخال رقم صحيح" : ""} ${!wageProtection ? "لم يتم تحديد حماية الاجور" : ""}` : `${name === '' ? "The Name is Missing ." : ""}${mobile === '' ? "The Mobile is Missing ." : ""} ${!numberOfEmployers ? "Number of employees has not been entered." : ""} ${numberOfEmployers && isNaN(numberOfEmployers) ? "Please Enter A Whole Number" : ""} ${!wageProtection ? "Wage protection has not been specified." : ""}`,
                 icon: 'error',
                 timer: 2000,
                 confirmButtonText: lang === "ar" ? 'الرجوع' : 'Return'
@@ -210,13 +237,150 @@ const RedirectFromPackages = () => {
         AOS.init();
     }, []);
 
+
+    // calc
+
+    const [numberOfYears, setnumberOfYears] = useState(1)
+    const handlePrice = () => {
+        setAnnualCost(0)
+        if (numberOfEmployers <= calc[packageType].empNum) {
+            if (wageProtection === 'true') {
+                setAnnualCost((calc[packageType].price + 2000) * numberOfYears)
+            } else {
+                setAnnualCost((calc[packageType].price) * numberOfYears)
+            }
+        }
+        else {
+            if (wageProtection === 'true') {
+                setAnnualCost(((calc[packageType].price + (300 * (numberOfEmployers - calc[packageType].empNum))) + 2000) * numberOfYears)
+            } else {
+                setAnnualCost((calc[packageType].price + (300 * (numberOfEmployers - calc[packageType].empNum))) * numberOfYears)
+            }
+        }
+    }
+    useEffect(() => {
+        numberOfYears < 1 && setnumberOfYears(1)
+        numberOfEmployers !== null && numberOfEmployers < 1 && setnumberOfEmployers(null)
+        if (numberOfEmployers) {
+            handlePrice()
+        } else {
+            setAnnualCost(0)
+        }
+    }, [numberOfEmployers, packageType, wageProtection, numberOfYears])
+    useEffect(() => {
+        if (id === "service-management-bronze") {
+            setpackageType("bronze")
+        }
+        if (id === "service-management-silver") {
+            setpackageType("silver")
+        }
+        if (id === "service-management-gold") {
+            setpackageType("gold")
+        }
+        if (id === "service-management-diamond") {
+            setpackageType("diamond")
+        }
+    }, [])
+
+    useEffect(() => {
+        if (changeInCalc) {
+            switch (packageType) {
+                case "bronze":
+                    setchangeInCalc("service-management-bronze")
+                    setwageProtection(null)
+                    break;
+                case "silver":
+                    setchangeInCalc("service-management-silver")
+                    setwageProtection(null)
+
+                    break;
+                case "gold":
+                    setchangeInCalc("service-management-gold")
+                    setwageProtection("false")
+
+                    break;
+                case "diamond":
+                    setchangeInCalc("service-management-diamond")
+                    setwageProtection("false")
+                    break;
+                default:
+                    break;
+            }
+        }
+    }, [packageType])
+    useEffect(() => {
+        AOS.init();
+    }, []);
+    useEffect(() => {
+        changeInCalc&&setservice_type(Titles[changeInCalc].ar)
+    }, [changeInCalc])
+    useEffect(() => {
+      console.log(service_type)
+    }, [service_type])
+    
+    
+
     return (
         <div>
-            <CommonHead title={lang === "ar" ? Titles[id].ar : Titles[id].en} path={t('askService.path')} />
-            <div className="redirectCont">
+            <CommonHead title={lang === "ar" ? Titles[titleId].ar : Titles[titleId].en} path={t('askService.path')} />
+            <div className="redirectCont" >
                 {showCalc && (
-                    <div className="calcCon">
-                        <Calculator data={calc}/>
+                    <div className="calcCon wide">
+                        <div className='Calculator' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
+                            <div className="top">{t("calc.title")}</div>
+                            <div className="container" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
+                                <div className="bottom">
+                                    <div className="left">
+                                        <div className="item">
+                                            <label>{t("calc.f1")}</label>
+                                            <input required type="number" min={1} value={numberOfEmployers} placeholder={t("calc.f1")} onChange={(e) => { setnumberOfEmployers(e.target.value); }} />
+                                        </div>
+                                        <div className="item">
+                                            <label>{t("calc.f2")}</label>
+                                            <select style={lang === "ar" ? { backgroundPositionX: '3%' } : { backgroundPositionX: '97%' }} onChange={(e) => { setpackageType(e.target.value); }}>
+                                                <option value="bronze" selected={packageType === "bronze"}>{t("calc.s1")}</option>
+                                                <option value="silver" selected={packageType === "silver"}>{t("calc.s2")}</option>
+                                                <option value="gold" selected={packageType === "gold"}>{t("calc.s3")}</option>
+                                                <option value="diamond" selected={packageType === "diamond"}>{t("calc.s4")}</option>
+                                            </select>
+                                        </div>
+                                        <div className="item">
+                                            {(packageType !== "gold" && packageType !== "diamond") && (
+                                                <>
+                                                    <label>{t("calc.f3")}</label>
+                                                    <select style={lang === "ar" ? { backgroundPositionX: '3%' } : { backgroundPositionX: '97%' }} onChange={(e) => { setwageProtection(e.target.value); }}>
+                                                        <option value='select' selected disabled>{t("calc.choose")}</option>
+                                                        <option value='true' >{t("calc.true")}</option>
+                                                        <option value='false'>{t("calc.false")}</option>
+                                                    </select>
+                                                </>
+                                            )}
+                                        </div>
+                                        {/* <div className="item">
+                    <label>{t("calc.f4")}</label>
+                    <input required type="number" min={1} placeholder={t("calc.f4")} value={numberOfYears} onChange={(e) => { setnumberOfYears(e.target.value); }} />
+                </div> */}
+                                    </div>
+                                    <div className="right">
+                                        <div className="priceCon">
+                                            <h3>
+                                                {t("calc.much")}
+                                            </h3>
+                                            <div className="price">
+                                                <h2>{`${annualCost}`} {lang === "ar" ? 'ريال' : 'SAR'}</h2>
+                                                {/* <p>{lang === "ar" ? '/ سنويا' : '/ Yearly'}</p> */}
+                                            </div>
+                                        </div>
+                                        <button onClick={() => { setAnnualCost(0); setnumberOfEmployers(null); setwageProtection(null); setnumberOfYears(1) }}>
+                                            <div className="icon">
+                                                <BsArrowCounterclockwise />
+                                            </div>
+                                            {t("calc.reset")}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 )}
                 <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
@@ -225,13 +389,25 @@ const RedirectFromPackages = () => {
                         <p>{t('askService.p')}</p>
                         <span>{t('form.p1')}</span>
                         <div className="EnjazzFormInputs">
-                            <input className='EnjazzFormInput' type="text" placeholder={t('form.fullName')} onChange={(e) => setname(e.target.value)} />
-                            <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} />
-                            <p>{t('form.typeS')}:</p>
-                            <div className="EnjazzFormInput">{lang === "ar" ? Titles[id].ar : Titles[id].en}</div>
-                            <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details')} onChange={(e) => setnotes(e.target.value)}></textarea>
+                            <input required className='EnjazzFormInput' type="text" placeholder={t('form.fullName')} onChange={(e) => setname(e.target.value)} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300' />
+                            <input required className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300' />
+                            <p data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>{t('form.typeS')}:</p>
+                            <div className="EnjazzFormInput" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>{lang === "ar" ? Titles[titleId].ar : Titles[titleId].en}</div>
+                            <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details')} onChange={(e) => setnotes(e.target.value)} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'></textarea>
                         </div>
-                        <div className="EnjazzFormBtn" onClick={() => handleSubmit()}>{t('form.send')}</div>
+                        {showCalc && (
+                            <div className="calcCon small">
+                                <Calculator data={calc} setchangeInCalc={setchangeInCalc} />
+                            </div>
+                        )}
+                        <div className="EnjazzFormBtn loaderBtnCont2" onClick={(e) => handleSubmit(e)}>
+                            {!loading && (
+                                t('form.send')
+                            )}
+                            {loading && (
+                                <span class="loaderBtn2"></span>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
