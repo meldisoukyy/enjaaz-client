@@ -283,7 +283,7 @@ const RedirectFromPackages = () => {
     }, [])
 
     useEffect(() => {
-        if (setchangeInCalc) {
+        if (changeInCalc) {
             switch (packageType) {
                 case "bronze":
                     setchangeInCalc("service-management-bronze")

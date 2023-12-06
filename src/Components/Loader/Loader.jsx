@@ -22,39 +22,33 @@ const Loader = () => {
                 <div className="container">
                     <div className="row align-items-center justify-content-center">
                         <div className="col-11 col-md-8 col-lg-5">
-                            <div className="features-circles" >
+                            <div className="features-circles d-flex flex-column" >
                                 <img alt="Enjazz_image" loading="lazy"
                                     src="https://aait.sa/public/site/img/empty.png"
-                                   
+
                                     className="empty"
                                 />
-                                <div className="center" style={{minWidth:"30px",minHeight:'30px'}}>
+                                <div className="center" style={{ minWidth: "30px", minHeight: '30px' }}>
                                     <img alt="Enjazz_image" loading="lazy"
                                         src="/images/logoCircle.webp"
-                                       
+
                                         className="img"
                                     />
                                     <img alt="Enjazz_image" loading="lazy"
                                         src="https://aait.sa/public/site/img/empty.png"
-                                       
+
                                         className="empty"
                                     />
                                 </div>
                                 <span className="arounds">
                                     <img alt="Enjazz_image" loading="lazy"
                                         src="https://aait.sa/public/site/img/empty.png"
-                                       
+
                                         className="empty"
                                     />
-                                    <span className="aroun">
-                                        <span className="aroun">
-                                            <span className="aroun">
-                                                <span className="aroun"></span>
-                                            </span>
-                                        </span>
-                                    </span>
                                 </span>
                             </div>
+                                <p className='loaderP' style={{color:'white', fontSize:'20px', textAlign:'center'}}>شريك رحلتك نحو التطور والتميز</p>
                         </div>
                     </div>
                 </div>

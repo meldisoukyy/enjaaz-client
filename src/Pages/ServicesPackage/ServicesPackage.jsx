@@ -183,14 +183,14 @@ const ServicesPackage = () => {
                                 <h2>{lang === "ar" ? 'الباقة البرونزية' : 'Bronze package'}</h2>
                                 {lang === "ar" ? (
                                     <>
-                                        <p>بقيمة<span>{data[0]?.price}</span>ريال فقط</p>
+                                        <p>بقيمة<span>{data[0]?.price}</span>ريال فقط / سنويا</p>
                                         {data[0]?.price_before && (
                                             <p className='instead'>بدلا من<span>{data[0]?.price_before}</span></p>
                                         )}
                                     </>
                                 ) : (
                                     <>
-                                        <p>For only <span>{data[0]?.price}</span></p>
+                                        <p>For only <span>{data[0]?.price}</span> / Year</p>
                                         {data[0]?.price_before && (
                                             <p className='instead'>Instead of <span>{data[0]?.price_before}</span></p>
                                         )}
@@ -242,14 +242,14 @@ const ServicesPackage = () => {
                                 <h2>{lang === "ar" ? 'الباقة الفضية' : 'Silver package'}</h2>
                                 {lang === "ar" ? (
                                     <>
-                                        <p>بقيمة<span>{data[1]?.price}</span>ريال فقط</p>
+                                        <p>بقيمة<span>{data[1]?.price}</span>ريال فقط / سنويا</p>
                                         {data[1]?.price_before && (
                                             <p className='instead'>بدلا من<span>{data[1]?.price_before}</span></p>
                                         )}
                                     </>
                                 ) : (
                                     <>
-                                        <p>For only <span>{data[1]?.price}</span></p>
+                                        <p>For only <span>{data[1]?.price}</span> / Year</p>
                                         {data[1]?.price_before && (
                                             <p className='instead'>Instead of <span>{data[1]?.price_before}</span></p>
                                         )}
@@ -307,14 +307,14 @@ const ServicesPackage = () => {
                                 <h2>{lang === "ar" ? 'الباقة الذهبية' : 'Golden package'}</h2>
                                 {lang === "ar" ? (
                                     <>
-                                        <p>بقيمة<span>{data[2]?.price}</span>ريال فقط</p>
+                                        <p>بقيمة<span>{data[2]?.price}</span>ريال فقط / سنويا</p>
                                         {data[2]?.price_before && (
                                             <p className='instead'>بدلا من<span>{data[2]?.price_before}</span></p>
                                         )}
                                     </>
                                 ) : (
                                     <>
-                                        <p>For only <span>{data[2]?.price}</span></p>
+                                        <p>For only <span>{data[2]?.price}</span> / Year</p>
                                         {data[2]?.price_before && (
                                             <p className='instead'>Instead of <span>{data[2]?.price_before}</span></p>
                                         )}
@@ -377,7 +377,7 @@ const ServicesPackage = () => {
                                 <h2>{lang === "ar" ? 'الباقة الماسية' : 'Diamond package'}</h2>
                                 {lang === "ar" ? (
                                     <>
-                                        <p>بقيمة<span>{data[3]?.price}</span>ريال فقط</p>
+                                        <p>بقيمة<span>{data[3]?.price}</span>ريال فقط / سنويا</p>
                                         {data[3]?.price_before && (
 
                                             <p className='instead'>بدلا من<span>{data[3]?.price_before}</span></p>
@@ -385,7 +385,7 @@ const ServicesPackage = () => {
                                     </>
                                 ) : (
                                     <>
-                                        <p>For only <span>{data[3]?.price}</span></p>
+                                        <p>For only <span>{data[3]?.price}</span> / Year</p>
                                         {data[3]?.price_before && (
 
                                             <p className='instead'>Instead of <span>{data[3]?.price_before}</span></p>

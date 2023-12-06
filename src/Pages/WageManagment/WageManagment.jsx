@@ -83,14 +83,14 @@ const WageManagment = () => {
                                         <h2>{lang === "ar" ? namesar[item.package] : namesen[item.package]}</h2>
                                         {lang === "ar" ? (
                                             <>
-                                                <p>بقيمة<span>{item.price}</span>ريال </p>
+                                                <p>بقيمة<span>{item.price}</span><br/>ريال </p>
                                                 {item.price_before && item.price_before !== 0.00 && (
                                                     <p className="saleWage">بدلا من<span>{item.price_before}</span>ريال </p>
                                                 )}
                                             </>
                                         ) : (
                                             <>
-                                                <p>For only <span>{data[0]?.price}</span>SAR</p>
+                                                <p>For only <span>{data[0]?.price}</span><br/>SAR</p>
                                                 {data[0]?.price_before && (
                                                     <p className='saleWage'>Instead of <span>{data[0]?.price_before}</span>SAR</p>
                                                 )}
@@ -137,14 +137,14 @@ const WageManagment = () => {
                                         <h2>{lang === "ar" ? namesar[item.package] : namesen[item.package]}</h2>
                                         {lang === "ar" ? (
                                             <>
-                                                <p>بقيمة<span>{item.price}</span>ريال </p>
+                                                <p>بقيمة<span>{item.price}</span><br/>ريال </p>
                                                 {item.price_before && item.price_before !== 0.00 && (
                                                     <p className="saleWage">بدلا من<span>{item.price_before}</span>ريال </p>
                                                 )}
                                             </>
                                         ) : (
                                             <>
-                                                <p>For only <span>{data[0]?.price}</span>SAR</p>
+                                                <p>For only <span>{data[0]?.price}</span><br/>SAR</p>
                                                 {data[0]?.price_before && (
                                                     <p className='saleWage'>Instead of <span>{data[0]?.price_before}</span>SAR</p>
                                                 )}

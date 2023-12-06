@@ -32,10 +32,18 @@
 .circles-loader{
   min-height: 100vh;
   background-image: url('../public/images/خلفية\ افتتاح\ الشاشة\ .avif');
-  background-position: bottom right;
+  background-position: top right;
   background-size: cover;
   @media (max-width:767px) {
     background-position: bottom center;
+  }
+  .loaderP{
+    margin-top: -30px;
+    font-size: 24px !important;
+    @media (max-width:767px) {
+      margin-top: -20px;
+      font-size: 18px !important;
+    }
   }
   section{
     height: 100vh;
