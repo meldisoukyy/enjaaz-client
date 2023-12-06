@@ -21,10 +21,10 @@
     "h3": "Our Vision",
     "p1": "Pioneers with experience in the business world, where we provide quick and comprehensive solutions",
     "p2": "We will be happy to assist you and answer all your inquiries",
-    "p3": "To be the leading company in providing business services and the first choice for institutions and companies in meeting their needs and achieving their goals through innovative solutions and high-quality service.",
+    "p3": "To be the leading company in providing business services and the first choice for institutions and companies in meeting their needs and achieving their goals through innovative solutions and high-quality service",
     "btn1": "Free Consultation",
     "btn2": "Service Request"
-    },
+  },
   "circles": {
     "h1": "Enjaaz Services",
     "c11": "Service Management - Annual",
@@ -43,10 +43,10 @@
   },
   "SS": {
     "h1": "You can request a free consultation",
-    "h2": "You can request a free consultation",
-    "p1": "We provide your facility with a business consulting service with the aim of guiding and putting the facility’s management on the right path, which supports the growth of your activity in a balanced and calm work environment.",
-    "p2": "We provide your facility with a business consulting service with the aim of guiding and putting the facility’s management on the right path, which supports the growth of your activity in a balanced and calm work environment.",
-    "btn": "Order now"
+    "h2": "Try Me Service",
+    "p1": "We provide your establishment with business consulting services aimed at guiding and setting the management course of the facility in the right direction, supporting the growth of your business in a balanced and peaceful work environment.",
+    "p2": "Try Me Service is a free service offered by Injaz to its clients, allowing you to experience two services for free.",
+    "btn": "Order Now"
   },
   "why": {
     "head": "? Why Enjazz",
@@ -103,7 +103,7 @@
     "ul11": "Intellectual Property Rights",
     "bottomh3": "Contact Us",
     "address": "Main Office - Riyadh - Northern Ring Road",
-    "bottomp5": "Enjaaz Services Company, a registered company with tax number: 300629475600003",
+    "bottomp5": "Enjaaz Services Company, a registered company with tax number: 311825996500003",
     "bottomp6": "All rights reserved for Enjaaz Services Company 2023 ©"
   },
   "aboutus": {
@@ -234,6 +234,7 @@
     "reset": "Reset",
     "much": "The cost will be :",
     "title": "Subscription Value Calculator",
+    "choose": "choose",
     "true": "Yes",
     "false": "No"
   },
@@ -264,7 +265,8 @@
       "2": "2. (Enjaaz Services) works to protect this information through “specific servers?” Protected under electronic protection systems “Software system or specific software?”",
       "3": "3. However, given that the Internet cannot be 100% guaranteed due to any hacking or viruses that may occur on the electronic protection systems and on the firewalls in place at (Enjaaz Services), (Enjaaz Services) advises users to keep their information strictly confidential, and not to divulge any information. The user finds it very important to him, and this is out of the interest of (Enjaaz Services) in directing and advising users."
     }
-  },"copyrights": {
+  },
+  "copyrights": {
     "h4": "We own all intellectual property rights to our website, and all materials published on it are subject to protection under copyright laws and international treaties. All these rights are reserved."
   },
   "terms_and_conditions": {
@@ -345,7 +347,8 @@
       "13": "13) The website design service is limited to creating an introductory website consisting of a group of pages. If the client desires to design a professional website or an online store, it will be under an independent contract and is not included in this subscription.",
       "14": "14) The marketing service through social media sites is limited to creating an account for the establishment on all social media sites and linking it to the company’s website. In the event that the subscriber desires to market through sites that require payment of fees for advertising, then the person responsible for bearing these fees is the beneficiary and is not entitled to demand that Enjaz do so.",
       "15": "15) Free features include search and reservation at the lowest available prices, but do not include the ticket price, reservation price, or insurance."
-    },"part_h2": {
+    },
+    "part_h2": {
       "1": "Second: Subscription category",
       "2": "Third: Duration of subscription",
       "3": "Fourth: Time to provide the service",
@@ -356,26 +359,24 @@
       "8": "Ninth: General provisions",
       "9": "Tenth: Terms and conditions for Enjaaz packages",
       "10": " Approval and authorization",
-      "11":" Intellectual property rights"
-  }
-    ,
+      "11": " Intellectual property rights"
+    },
     "part_p": {
       "1": "The beneficiary must specify the subscription category he desires, which is either the Bronze Package, Silver Package, Gold Package, or Platinum Package subscription.",
       "2": "The subscription is valid for a full calendar year from the date of transferring the package fees, and is automatically renewed unless the subscriber is notified of his desire not to renew one month before the end date of the subscription through the approved means of communication.",
       "3": "Injaaz makes every effort to provide the service 24 hours a day and during official holidays, while not bearing responsibility if the service is not available for any reason.",
-      "4":"The service begins after paying the subscription fee for the service. If the subscriber wishes to modify the package or add new services, this will be taken into account, provided that the required documents are available and the differences for the added services are paid.",
-      "5":"The beneficiary pays the subscription value shown in the subscription form, and the subscriber does not bear any other amounts during the subscription period. The value of this subscription does not include any government fees or the like, but rather the amount in exchange for providing the service.",
-      "6":"This subscription is subject to the regulations in force in the Kingdom and is implemented and interpreted in accordance with them. Any dispute that arises from the application of this subscription or is related to it and cannot be settled will be settled in accordance with the regulations of the Kingdom of Saudi Arabia.",
-      "7":"I, the undersigned, acknowledge that I have read the terms and conditions of subscription to Enjaaz packages and agree to everything stated therein",
-      "8":"We own all intellectual property rights to our website, and all materials published on it are protected by copyright laws and international treaties, and all such rights are reserved."
+      "4": "The service begins after paying the subscription fee for the service. If the subscriber wishes to modify the package or add new services, this will be taken into account, provided that the required documents are available and the differences for the added services are paid.",
+      "5": "The beneficiary pays the subscription value shown in the subscription form, and the subscriber does not bear any other amounts during the subscription period. The value of this subscription does not include any government fees or the like, but rather the amount in exchange for providing the service.",
+      "6": "This subscription is subject to the regulations in force in the Kingdom and is implemented and interpreted in accordance with them. Any dispute that arises from the application of this subscription or is related to it and cannot be settled will be settled in accordance with the regulations of the Kingdom of Saudi Arabia.",
+      "7": "I, the undersigned, acknowledge that I have read the terms and conditions of subscription to Enjaaz packages and agree to everything stated therein",
+      "8": "We own all intellectual property rights to our website, and all materials published on it are protected by copyright laws and international treaties, and all such rights are reserved."
     }
-},"bank": {
-  "h5": "Enjaaz Business Services Company",
-  "p1": "Account Number: ",
-  "p2": "IBAN: ",
-  "red": "Notice: ",
-  "long_p": "The bank accounts mentioned above are exclusive to Achievement Services Company only. We would like to emphasize that we are not responsible for any other bank accounts."
-}
-
-
+  },
+  "bank": {
+    "h5": "Enjaaz Business Services Company",
+    "p1": "Account Number: ",
+    "p2": "IBAN: ",
+    "red": "Notice: ",
+    "long_p": "The bank accounts mentioned above are exclusive to Achievement Services Company only. We would like to emphasize that we are not responsible for any other bank accounts."
+  }
 }

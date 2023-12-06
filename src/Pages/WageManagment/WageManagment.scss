@@ -79,16 +79,16 @@
           }
           p {
             color: rgba(138, 138, 138, 1);
-            font-size: 32px;
+            font-size: 26px;
             @media (max-width: 767px) {
-              font-size: 26px;
+              font-size: 22px;
             }
             span {
               color: var(--mcolor);
               margin: 0px 5px;
-              font-size: 40px;
+              font-size: 32px;
               @media (max-width: 767px) {
-                font-size: 35px;
+                font-size: 26px;
               }
             }
           }

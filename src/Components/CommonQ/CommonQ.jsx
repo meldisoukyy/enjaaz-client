@@ -43,7 +43,7 @@ const CommonQ = ({ full }) => {
                       <p>{lang === "ar" ?item.question_ar:item.question_en}</p>
                     </Accordion.Header>
                     <Accordion.Body>
-                      <p>{lang === "ar" ?item.answer_ar:item.answer_en}</p>
+                      <p className="answer">{lang === "ar" ?item.answer_ar:item.answer_en}</p>
                     </Accordion.Body>
                   </Accordion.Item>
                 )
@@ -62,7 +62,7 @@ const CommonQ = ({ full }) => {
                     <p>{lang === "ar" ?item.question_ar:item.question_en}</p>
                     </Accordion.Header>
                     <Accordion.Body>
-                    <p>{lang === "ar" ?item.answer_ar:item.answer_en}</p>
+                    <p className="answer">{lang === "ar" ?item.answer_ar:item.answer_en}</p>
                     </Accordion.Body>
                   </Accordion.Item>
                 );

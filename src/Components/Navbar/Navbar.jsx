@@ -67,7 +67,7 @@ const Navbar = () => {
         <div className="top d-flex justify-content-between align-items-end gap-5 pb-4">
           <div className="image">
             <Link to="/">
-              <img loading="lazy" src="/images/logo.webp" alt="" />
+              <img alt="Enjazz_image" loading="lazy" src="/images/logo.webp" />
             </Link>
           </div>
           <div className="end">
@@ -81,7 +81,7 @@ const Navbar = () => {
               {t("nav.lang")}
             </p>
             <div className="image">
-              <img src="/images/لوجو المملكة 2030.svg" alt="" />
+              <img alt="Enjazz_image" src="/images/لوجو المملكة 2030.svg" />
             </div>
           </div>
           {/* <div
@@ -134,8 +134,9 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="https://firebasestorage.googleapis.com/v0/b/aoe-24.appspot.com/o/cv%2FAhmed_Osama_Resume.pdf?alt=media&amp;token=91dea169-f337-4844-b901-a6e17b8938ef"
-                download="Ahmed_Osama_Resume.pdf"
+              target="_blank"
+                href="https://firebasestorage.googleapis.com/v0/b/aoe-24.appspot.com/o/Enjazz%20Portfolio.pdf?alt=media&token=8a95f4bc-37bf-4179-91ba-41188b1e0313"
+                download="Enjazz Portfolio.pdf"
                 className="sale1"
               >
                 {t("nav.profile")}
@@ -164,15 +165,15 @@ const Navbar = () => {
           <div className="numbers">
             <div className="num">
               <div className="icon">
-                <img loading="lazy" src="/images/phoneNav.webp" alt="" />
+                <img alt="Enjazz_image" loading="lazy" src="/images/phoneNav.webp" />
               </div>
-              <p>920013581</p>
+              <a href="https://wa.me/966920013581">920013581</a>
             </div>
             <div className="num">
               <div className="icon">
-                <img loading="lazy" src="/images/whatsappnav.webp" alt="" />
+                <img alt="Enjazz_image" loading="lazy" src="/images/whatsappnav.webp" />
               </div>
-              <p>+966502144449</p>
+              <a href="https://wa.me/966502144449">+966502144449</a>
             </div>
           </div>
           <button
@@ -197,7 +198,7 @@ const Navbar = () => {
         <Offcanvas show={isOpened} onHide={handleClose} placement="end">
           <Offcanvas.Header>
             <div className="image">
-              <img loading="lazy" src="/images/logo.webp" alt="" />
+              <img alt="Enjazz_image" loading="lazy" src="/images/logo.webp" />
             </div>
             <div className="closeBtn">
               <button

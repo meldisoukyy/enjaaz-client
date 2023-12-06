@@ -10,6 +10,7 @@ import Modal from "react-bootstrap/Modal";
 const Footer = () => {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
+  const [loading, setloading] = useState(false)
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -29,8 +30,10 @@ const Footer = () => {
 
   const handleSubmit = () => {
     if (isEmailValid(email)) {
+      setloading(true)
       SubscribersApi(email).then((res) => {
         if (res.id) {
+          setloading(fa)
           // console.log(res);
           setdata(res);
           Swal.fire({
@@ -43,6 +46,8 @@ const Footer = () => {
             confirmButtonText: lang === "ar" ? "الرجوع" : "Return",
           });
         } else {
+          setloading(false)
+
           seterror("المشترك بهذا البريد الإلكتروني موجود بالفعل.");
         }
       });
@@ -67,91 +72,96 @@ const Footer = () => {
           <div className="footer-form">
             <span className="email">
               <input
-                type="email2"
+                type="email"
+                required
                 placeholder={t("footer.topemail")}
                 onChange={(e) => setemail(e.target.value)}
               />
               {error !== "" && <p className="text-danger pt-2">{error}</p>}
             </span>
-            <div onClick={() => handleSubmit()}>{t("footer.topbtn")}</div>
+            <div className="loaderBtnCont" onClick={() => handleSubmit()}>{t("footer.topbtn")}
+            {loading&&(
+              <span class="loaderBtn"></span>
+            )}
+            </div>
           </div>
         </div>
         <div className="center">
           <div className="row d-flex ">
             <div className="part col-lg-4 col-md-6 mb-4 mb-lg-0">
               <div className="image">
-                <img loading="lazy" src="/images/logo.webp" alt="" />
+                <img alt="Enjazz_image" loading="lazy" src="/images/logo.webp" />
               </div>
               <h1>{t("footer.bottomh1")}</h1>
               <p style={{ textAlign: 'unset' }}>{t("footer.bottomp1")}</p>
               <div className="social">
                 <a href="https://wa.me/+966502144449">
                   <div className="image">
-                    <img
+                    <img alt="Enjazz_image"
                       loading="lazy"
                       src="/images/footer/FooterIcon-6.webp"
-                      alt=""
+                     
                     />
                   </div>
                 </a>
                 <a href="https://www.facebook.com/Enjaaz.2/">
                   <div className="image">
-                    <img
+                    <img alt="Enjazz_image"
                       loading="lazy"
                       src="/images/footer/FooterIcon.webp"
-                      alt=""
+                     
                     />
                   </div>
                 </a>
                 <a href="https://www.instagram.com/enjaaz.2/">
                   <div className="image">
-                    <img
+                    <img alt="Enjazz_image"
                       loading="lazy"
                       src="/images/footer/FooterIcon-7.webp"
-                      alt=""
+                     
                     />
                   </div>
                 </a>
                 <a href="https://www.youtube.com/@Enjaaz_2">
                   <div className="image">
-                    <img
+                    <img alt="Enjazz_image"
                       loading="lazy"
                       src="/images/footer/FooterIcon-2.webp"
-                      alt=""
+                     
                     />
                   </div>
                 </a>
                 <div className="image">
-                  <img
+                  <img alt="Enjazz_image"
                     loading="lazy"
                     src="/images/footer/FooterIcon-3.webp"
-                    alt=""
+                   
                   />
                 </div>
                 <a href="https://www.snapchat.com/add/https://www.snapchat.com/add/enjaaz.2?share_id=vUU1nSI8BE4&locale=ar-EG">
                   <div className="image">
-                    <img
+                    <img alt="Enjazz_image"
                       loading="lazy"
                       src="/images/footer/FooterIcon-1.webp"
-                      alt=""
+                     
                     />
                   </div>
                 </a>
                 <a href="https://twitter.com/Enjaaz_2">
                   <div className="image">
-                    <img
+                    <img alt="Enjazz_image"
                       loading="lazy"
                       src="/images/footer/FooterIcon-4.webp"
-                      alt=""
+                     
                     />
                   </div>
                 </a>
                 <a href="https://www.tiktok.com/@enjaaz_2">
                   <div className="image">
-                    <img
+                    <img alt="Enjazz_image"
                       loading="lazy"
                       src="/images/footer/FooterIcon-5.webp"
-                      alt=""
+                     
                     />
                   </div>
                 </a>
@@ -258,40 +268,40 @@ const Footer = () => {
               <h1>{t("footer.bottomh6")}</h1>
               <div className="images">
                 <div className="image">
-                  <img
-                    src="/images/نضيف دي معهم كصورة فقط.png"
-                    alt=""
+                  <img alt="Enjazz_image"
+                    src="/images/نضيف دي معهم كصورة فقط.webp"
+                   
                   />
                 </div>
                 <div className="image" onClick={handleShow}>
-                  <img
-                    src="/images/لوجو ضريبة القيمة المضافة يدوس علية يفتح صورة القيمة المضافة.png"
-                    alt=""
+                  <img alt="Enjazz_image"
+                    src="/images/لوجو ضريبة القيمة المضافة يدوس علية يفتح صورة القيمة المضافة.webp"
+                   
                   />
                 </div>
-                <div className="image" onClick={handleShow2} style={{scale:"1.3"}}>
-                  <img
-                    src="/images/لوجو المركز السعودي للأعمال يدوس علية يفتح الصورة مباشرة.png"
-                    alt=""
+                <div className="image" onClick={handleShow2} style={{ scale: "1.3" }}>
+                  <img alt="Enjazz_image"
+                    src="/images/لوجو المركز السعودي للأعمال يدوس علية يفتح الصورة مباشرة.webp"
+                   
                   />
                 </div>
               </div>
               <h1>{t("footer.bottomh3")}</h1>
               <div className="item">
                 <div className="icon">
-                  <img loading="lazy" src="/images/footer1.webp" alt="" />
+                  <img alt="Enjazz_image" loading="lazy" src="/images/footer1.webp" />
                 </div>
                 <span>{t("footer.address")}</span>
               </div>
               <div className="item">
                 <div className="icon">
-                  <img loading="lazy" src="/images/footer2.webp" alt="" />
+                  <img alt="Enjazz_image" loading="lazy" src="/images/footer2.webp" />
                 </div>
                 <span>920013581 - 966502144449</span>
               </div>
               <div className="item">
                 <div className="icon">
-                  <img loading="lazy" src="/images/footer3.webp" alt="" />
+                  <img alt="Enjazz_image" loading="lazy" src="/images/footer3.webp" />
                 </div>
                 <span>info@enjaaz.com.sa</span>
               </div>
@@ -305,15 +315,15 @@ const Footer = () => {
             >
               <Modal.Header closeButton></Modal.Header>
               <Modal.Body>
-                <img
+                <img alt="Enjazz_image"
                   src="/images/القيمة المضافة .webp"
                   style={{
                     width: "100%",
                     height: "100%",
                     objectFit: "contain",
-                    filter: "saturate(0.1)"
+                    // filter: "saturate(0.1)"
                   }}
-                  alt=""
+                 
                 />
               </Modal.Body>
             </Modal>
@@ -326,14 +336,14 @@ const Footer = () => {
             >
               <Modal.Header closeButton></Modal.Header>
               <Modal.Body>
-                <img
+                <img alt="Enjazz_image"
                   src="/images/المركز السعودي للأعمال أسفل الموقع.webp"
                   style={{
                     width: "100%",
                     height: "100%",
                     objectFit: "contain",
                   }}
-                  alt=""
+                 
                 />
               </Modal.Body>
             </Modal>
@@ -344,12 +354,12 @@ const Footer = () => {
           <div className="top">
             <p>{t("footer.bottomp5")}</p>
             <div className="payments">
-            {/* style={{ scale: '1.9', margin: '0 25px 0 25px' }} */}
-              <img loading="lazy" style={{ width:'120px',height:'50px' }} src="/images/جنب صورة المدفوعات أسفل الموقع.png" />
-              <img loading="lazy" src="https://aait.sa/public/site/img/icons/certificate.webp" style={{ height: "40px" }} />
-              <img loading="lazy" src="https://aait.sa/public/site/img/icons/mada.webp" />
-              <img loading="lazy" src="https://aait.sa/public/site/img/icons/visa.webp" />
-              <img loading="lazy" src="https://aait.sa/public/site/img/icons/mastercard.webp" />
+              {/* style={{ scale: '1.9', margin: '0 25px 0 25px' }} */}
+              <img alt="Enjazz_image" loading="lazy" style={{ width: '120px', height: '50px' }} src="/images/جنب صورة المدفوعات أسفل الموقع.webp" />
+              <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/site/img/icons/certificate.webp" style={{ height: "40px" }} />
+              <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/site/img/icons/mada.webp" />
+              <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/site/img/icons/visa.webp" />
+              <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/site/img/icons/mastercard.webp" />
             </div>
           </div>
           <p>{t("footer.bottomp6")}</p>

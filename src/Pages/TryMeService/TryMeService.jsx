@@ -4,23 +4,25 @@ import { useMyContext } from '../../context/MyContext';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Swal from 'sweetalert2';
-import { Helmet, HelmetAr, ServiceRequestApi } from '../../Apis/Apis';
+import { FreeTrialRequestApi, Helmet, HelmetAr, ServiceRequestApi } from '../../Apis/Apis';
 
 const TryMeService = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-    lang==='ar'?HelmetAr('خدمة جربني المجانية'):
-    Helmet('Try Me Service')
+    lang === 'ar' ? HelmetAr('خدمة جربني المجانية') :
+        Helmet('Try Me Service')
     useEffect(() => {
         AOS.init();
-      }, []);
-      const [name, setname] = useState('')
-      const [email, setemail] = useState('')
-      const [mobile, setmobile] = useState('')
-      const [city, setcity] = useState('')
-      const [service_type, setservice_type] = useState('free-tryme-service')
-      const [notes, setnotes] = useState('')
-      const [try_service, settry_service] = useState('Issuance of Commercial Register for an Establishment')
-      const services={
+    }, []);
+    const [name, setname] = useState('')
+    const [email, setemail] = useState('')
+    const [mobile, setmobile] = useState('')
+    const [city, setcity] = useState('')
+    const [service_type, setservice_type] = useState('free-tryme-service')
+    const [notes, setnotes] = useState('')
+    const [try_service, settry_service] = useState("إصدار سجل تجاري لمؤسسة")
+    const [loading, setloading] = useState(false)
+
+    const services = {
         "Issuance of Commercial Register for an Establishment": "إصدار سجل تجاري لمؤسسة",
         "Modification of Commercial Register for an Establishment": "تعديل سجل تجاري لمؤسسة",
         "Residence Permit Issuance": "إصدار إقامة",
@@ -44,39 +46,41 @@ const TryMeService = () => {
         "Issuance of Saudi Certificate": "اصدار شهادة السعودة",
         "Authentication of Employment Contracts": "توثيق عقود العمل",
         "Update of Employee Data": "تحديث بيانات الموظفين"
-        }
-  
-      const [data, setdata] = useState([])
-  
+    }
+
+    const [data, setdata] = useState([])
+
     //   function isEmailValid(email) {
     //       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     //       return emailPattern.test(email);
     //   }
-  
-      const handleSubmit = () => {
-          if (name !== '' && mobile !== '') {
+
+    const handleSubmit = () => {
+        if (name !== '' && mobile !== '') {
             //   console.log(name,email,mobile,city,service_type,notes)
-              ServiceRequestApi(name,mobile,service_type,notes).then((res) => {
-                //  console.log(res);
-                  setdata(res);
-                 }).then(()=>data.id&&Swal.fire({
-                  title: lang === "ar" ? 'تم' : 'Submited',
-                  text: lang === "ar" ?'تم ارسال البيانات بنجاح':'Data was sent successfully',
-                  icon: 'success',
-                  timer: 2000,
-                  confirmButtonText: lang === "ar" ?'الرجوع':'Return'
-              }))
-          }
-          else {
-              Swal.fire({
-                  title: lang === "ar" ? '! خطأ' : 'Error!',
-                  text: lang === "ar" ?`${name === ''?"لم يتم ادخال الاسم .":""} ${mobile === ''?"لم يتم ادخال رقم الهاتف .":""}`:`${name === ''?"The Name is Missing .":""}${mobile === ''?"The Mobile is Missing .":""}`,
-                  icon: 'error',
-                  timer: 2000,
-                  confirmButtonText: lang === "ar" ?'الرجوع':'Return'
-              })
-          }
-      }
+            setloading(true)
+            FreeTrialRequestApi(name, mobile, try_service, notes).then((res) => {
+                setloading(false)
+                console.log(res);
+                setdata(res);
+            }).then(() => Swal.fire({
+                title: lang === "ar" ? 'تم' : 'Submited',
+                text: lang === "ar" ? 'تم ارسال البيانات بنجاح' : 'Data was sent successfully',
+                icon: 'success',
+                timer: 2000,
+                confirmButtonText: lang === "ar" ? 'الرجوع' : 'Return'
+            }))
+        }
+        else {
+            Swal.fire({
+                title: lang === "ar" ? '! خطأ' : 'Error!',
+                text: lang === "ar" ? `${name === '' ? "لم يتم ادخال الاسم ." : ""} ${mobile === '' ? "لم يتم ادخال رقم الهاتف ." : ""}` : `${name === '' ? "The Name is Missing ." : ""}${mobile === '' ? "The Mobile is Missing ." : ""}`,
+                icon: 'error',
+                timer: 2000,
+                confirmButtonText: lang === "ar" ? 'الرجوع' : 'Return'
+            })
+        }
+    }
     return (
         <div >
             <CommonHead title={t('Tryme.h1')} path={t('Tryme.path')} />
@@ -92,13 +96,13 @@ const TryMeService = () => {
                         {/* <input className='EnjazzFormInput' type="text" placeholder={t('form.email')} onChange={(e) => setemail(e.target.value)} /> */}
                         <input className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} />
                         <p>{t('form.typeS')}:</p>
-                        <select className='EnjazzFormInput' style={lang === "ar" ?{backgroundPositionX: '3%'}:{backgroundPositionX: '97%'}} onChange={(e) => settry_service(e.target.value)}>
-                            {Object.entries(services).map(([en,ar],i)=>{
-                                return(
-                                    <option value={en} selected={i===0}>{lang === "ar"?ar:en}</option>
+                        <select className='EnjazzFormInput' style={lang === "ar" ? { backgroundPositionX: '3%' } : { backgroundPositionX: '97%' }} onChange={(e) => settry_service(e.target.value)}>
+                            {Object.entries(services).map(([en, ar], i) => {
+                                return (
+                                    <option value={ar} selected={i === 0}>{lang === "ar" ? ar : en}</option>
                                 )
                             })}
-                            
+
                         </select>
                         {/* <span style={{color:'red', marginTop:'-10px'}}>{t('form.required')}</span> */}
 
@@ -119,7 +123,14 @@ const TryMeService = () => {
 
                         <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details')} onChange={(e) => setnotes(e.target.value)}></textarea>
                     </div>
-                    <div className="EnjazzFormBtn" onClick={() => handleSubmit()}>{t('form.send')}</div>
+                    <div className="EnjazzFormBtn loaderBtnCont2" onClick={() => handleSubmit()}>
+                        {!loading && (
+                             t('form.send') 
+                        )}
+                        {loading && (
+                            <span class="loaderBtn2"></span>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

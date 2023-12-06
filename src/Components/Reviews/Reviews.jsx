@@ -76,7 +76,7 @@ const Reviews = () => {
                     return(
                         <div className="slide" key={i}>
                             <div className="image">
-                                <img loading="lazy" src={item.image?item.image:"/images/wired-outline-21-avatar.webp"} alt="" />
+                                <img alt="Enjazz_image" loading="lazy" src={item.image?item.image:"/images/wired-outline-21-avatar.webp"} />
                             </div>
                             <div className="stars">
                               {[...Array(5)].map((star,i)=>{
