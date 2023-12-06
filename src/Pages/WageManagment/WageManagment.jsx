@@ -90,9 +90,9 @@ const WageManagment = () => {
                                             </>
                                         ) : (
                                             <>
-                                                <p>For only <span>{data[0]?.price.replace(/\.00$/, '')}</span>SAR</p>
-                                                {data[0]?.price_before && (
-                                                    <p className='saleWage'>Instead of <span>{data[0]?.price_before.replace(/\.00$/, '')}</span>SAR</p>
+                                                <p>For only <span>{item?.price.replace(/\.00$/, '')}</span>SAR</p>
+                                                {item?.price_before && (
+                                                    <p className='saleWage'>Instead of <span>{item?.price_before.replace(/\.00$/, '')}</span>SAR</p>
                                                 )}
                                             </>
 
@@ -144,9 +144,9 @@ const WageManagment = () => {
                                             </>
                                         ) : (
                                             <>
-                                                <p>For only <span>{data[0]?.price.replace(/\.00$/, '')}</span>SAR</p>
-                                                {data[0]?.price_before && (
-                                                    <p className='saleWage'>Instead of <span>{data[0]?.price_before.replace(/\.00$/, '')}</span>SAR</p>
+                                                <p>For only <span>{item?.price.replace(/\.00$/, '')}</span>SAR</p>
+                                                {item?.price_before && (
+                                                    <p className='saleWage'>Instead of <span>{item?.price_before.replace(/\.00$/, '')}</span>SAR</p>
                                                 )}
                                             </>
 
