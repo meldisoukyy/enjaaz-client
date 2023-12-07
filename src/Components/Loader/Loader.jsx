@@ -14,7 +14,7 @@ const Loader = () => {
             <div className="bigCircle">
                 <div className="smallcircle">
                     <div className="image">
-                        <img alt="Enjazz_image"
+                        <img loading="lazy" alt="Enjazz_image"
                             src="/images/logoCircle.webp"
                             className="img"
                         />

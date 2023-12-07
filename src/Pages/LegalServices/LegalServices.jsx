@@ -61,7 +61,7 @@ const LegalServices = () => {
                             return (
                                 <div className="item" key={i}>
                                     <div className="icon swing-in-top-fwd">
-                                        <img alt="Enjazz_image"  src="/images/tick.webp" />
+                                        <img loading="lazy" alt="Enjazz_image"  src="/images/tick.webp" />
                                     </div>
                                     <p>{item}</p>
                                 </div>

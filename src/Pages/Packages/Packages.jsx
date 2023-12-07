@@ -27,7 +27,7 @@ const Packages = () => {
             <div className="pack" >
               <div className="top">
                 <div className="image">
-                  <img alt="Enjazz_image"  src="/images/packages/لوجو إدراة الخدمات.svg" />
+                  <img loading="lazy" alt="Enjazz_image"  src="/images/packages/لوجو إدراة الخدمات.svg" />
                   {/* <svg
                     width="176"
                     height="176"
@@ -51,7 +51,7 @@ const Packages = () => {
             <div className="pack">
               <div className="top">
                 <div className="image">
-                  <img alt="Enjazz_image"  src="/images/packages/لوجو حماية الأجور.svg" />
+                  <img loading="lazy" alt="Enjazz_image"  src="/images/packages/لوجو حماية الأجور.svg" />
                   {/* <svg
                     width="124"
                     height="142"
@@ -74,7 +74,7 @@ const Packages = () => {
             {/* <div className="pack">
                             <div className="top">
                                 <div className="image">
-                                    <img alt="Enjazz_image"  src="/images/packages/3.webp" />
+                                    <img loading="lazy" alt="Enjazz_image"  src="/images/packages/3.webp" />
                                 </div>
                                 <p>تحتاج الشركات بشكل حاسم إلى الخدمات القانونية بمختلف أشكالها نظرًا للتعقيدات المتزايدة في البيئة التشريعية والتنظيمية.</p>
                             </div>
@@ -85,7 +85,7 @@ const Packages = () => {
             <div className="pack">
               <div className="top">
                 <div className="image">
-                  <img alt="Enjazz_image"  src="/images/packages/لوجو التصميم والتسويق.svg" />
+                  <img loading="lazy" alt="Enjazz_image"  src="/images/packages/لوجو التصميم والتسويق.svg" />
                   {/* <svg
                     width="146"
                     height="146"

@@ -59,7 +59,7 @@ const ServiceGuide = () => {
                                 <Link to={`/ask-for-aservice/${key}`} key={i}>
                                 <div className="item">
                                     <div className="icon swing-in-top-fwd">
-                                        <img alt="Enjazz_image"  src="/images/tick.webp" />
+                                        <img loading="lazy" alt="Enjazz_image"  src="/images/tick.webp" />
                                     </div>
                                     <p>{value}</p>
                                 </div>

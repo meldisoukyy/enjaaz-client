@@ -16,7 +16,7 @@ const Different = () => {
         <div className="row">
           <div className="Diffcard col-lg-3 col-md-6 col-12" >
             <div className="image">
-              {/* <img alt="Enjazz_image"  src="/images/1st1st.webp" /> */}
+              {/* <img loading="lazy" alt="Enjazz_image"  src="/images/1st1st.webp" /> */}
               <svg
                 width="62"
                 height="64"
@@ -35,7 +35,7 @@ const Different = () => {
           </div>
           <div className="Diffcard col-lg-3 col-md-6 col-12" >
             <div className="image">
-              {/* <img alt="Enjazz_image"  src="/images/2st2st.webp" /> */}
+              {/* <img loading="lazy" alt="Enjazz_image"  src="/images/2st2st.webp" /> */}
               <svg
                 width="70"
                 height="64"
@@ -54,7 +54,7 @@ const Different = () => {
           </div>
           <div className="Diffcard col-lg-3 col-md-6 col-12" >
             <div className="image">
-              {/* <img alt="Enjazz_image"  src="/images/3333.webp" /> */}
+              {/* <img loading="lazy" alt="Enjazz_image"  src="/images/3333.webp" /> */}
               <svg
                 width="66"
                 height="56"
@@ -85,7 +85,7 @@ const Different = () => {
           </div>
           <div className="Diffcard col-lg-3 col-md-6 col-12" >
             <div className="image">
-              {/* <img alt="Enjazz_image"  src="/images/4444.webp" /> */}
+              {/* <img loading="lazy" alt="Enjazz_image"  src="/images/4444.webp" /> */}
               <svg
                 width="66"
                 height="66"

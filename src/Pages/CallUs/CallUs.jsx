@@ -61,19 +61,19 @@ const CallUs = () => {
                         <div className="row gap-3">
                             <div className="col item">
                                 <div className="icon">
-                                    <img alt="Enjazz_image"  src="/images/carbon_home.webp" />
+                                    <img loading="lazy" alt="Enjazz_image"  src="/images/carbon_home.webp" />
                                 </div>
                                 <span>{t('callus.address')}</span>
                             </div>
                             <div className="col item">
                                 <div className="icon">
-                                    <img alt="Enjazz_image"  src="/images/carbon_phone.webp" />
+                                    <img loading="lazy" alt="Enjazz_image"  src="/images/carbon_phone.webp" />
                                 </div>
                                 <span>920013581 - 966502144449</span>
                             </div>
                             <div className="col item">
                                 <div className="icon">
-                                    <img alt="Enjazz_image"  src="/images/carbon_mail.webp" />
+                                    <img loading="lazy" alt="Enjazz_image"  src="/images/carbon_mail.webp" />
                                 </div>
                                 <span>info@enjaaz.com.sa</span>
                             </div>
