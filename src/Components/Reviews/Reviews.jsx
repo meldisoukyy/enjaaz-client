@@ -89,7 +89,7 @@ const Reviews = () => {
                     return i + 1 <= item.rating ? (<div className="star" key={i}><AiFillStar /></div>) : (<div className="star" key={i}><AiOutlineStar /></div>)
                   })}
                 </div>
-                <p>{lang === "ar" ? item.review_ar : item.review_en}</p>
+                <p style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>{lang === "ar" ? item.review_ar : item.review_en}</p>
               </div>
             )
           })}
