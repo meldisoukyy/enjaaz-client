@@ -45,7 +45,7 @@ const CounterUp = () => {
                 <div className="row">
                     <div ref={scrolled} className="col-lg-3 col-md-6 d-flex flex-column gap-3 justify-content-center align-items-center mt-4">
                         <div className="image">
-                            <img alt="Enjazz_image" loading="lazy" src="/images/count1.webp" />
+                            <img alt="Enjazz_image"  src="/images/count1.webp" />
                         </div>
                         <h1>
                             {scrolledToSection && (
@@ -62,7 +62,7 @@ const CounterUp = () => {
                     </div>
                     <div className="col-lg-3 col-md-6 d-flex flex-column gap-3 justify-content-center align-items-center mt-4">
                         <div className="image">
-                            <img alt="Enjazz_image" loading="lazy" src="/images/count2.webp" />
+                            <img alt="Enjazz_image"  src="/images/count2.webp" />
                         </div>
                         <h1>{scrolledToSection && (
 
@@ -77,7 +77,7 @@ const CounterUp = () => {
                     </div>
                     <div className="col-lg-3 col-md-6 d-flex flex-column gap-3 justify-content-center align-items-center mt-4">
                         <div className="image">
-                            <img alt="Enjazz_image" loading="lazy" src="/images/count3.webp" />
+                            <img alt="Enjazz_image"  src="/images/count3.webp" />
                         </div>
                         <h1>{scrolledToSection && (
 
@@ -92,7 +92,7 @@ const CounterUp = () => {
                     </div>
                     <div className="col-lg-3 col-md-6 d-flex flex-column gap-3 justify-content-center align-items-center mt-4">
                         <div className="image">
-                            <img alt="Enjazz_image" loading="lazy" src="/images/count4.webp" />
+                            <img alt="Enjazz_image"  src="/images/count4.webp" />
                         </div>
                         <h1>{scrolledToSection && (
 

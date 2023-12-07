@@ -90,7 +90,7 @@ const Footer = () => {
           <div className="row d-flex ">
             <div className="part col-lg-4 col-md-6 mb-4 mb-lg-0">
               <div className="image">
-                <img alt="Enjazz_image" loading="lazy" src="/images/logo.webp" />
+                <img alt="Enjazz_image"  src="/images/logo.webp" />
               </div>
               <h1>{t("footer.bottomh1")}</h1>
               <p style={{ textAlign: 'unset' }}>{t("footer.bottomp1")}</p>
@@ -98,7 +98,7 @@ const Footer = () => {
                 <a href="https://wa.me/+966502144449">
                   <div className="image">
                     <img alt="Enjazz_image"
-                      loading="lazy"
+                      
                       src="/images/footer/FooterIcon-6.webp"
                      
                     />
@@ -107,7 +107,7 @@ const Footer = () => {
                 <a href="https://www.facebook.com/Enjaaz.2/">
                   <div className="image">
                     <img alt="Enjazz_image"
-                      loading="lazy"
+                      
                       src="/images/footer/FooterIcon.webp"
                      
                     />
@@ -116,7 +116,7 @@ const Footer = () => {
                 <a href="https://www.instagram.com/enjaaz.2/">
                   <div className="image">
                     <img alt="Enjazz_image"
-                      loading="lazy"
+                      
                       src="/images/footer/FooterIcon-7.webp"
                      
                     />
@@ -125,7 +125,7 @@ const Footer = () => {
                 <a href="https://www.youtube.com/@Enjaaz_2">
                   <div className="image">
                     <img alt="Enjazz_image"
-                      loading="lazy"
+                      
                       src="/images/footer/FooterIcon-2.webp"
                      
                     />
@@ -133,7 +133,7 @@ const Footer = () => {
                 </a>
                 <div className="image">
                   <img alt="Enjazz_image"
-                    loading="lazy"
+                    
                     src="/images/footer/FooterIcon-3.webp"
                    
                   />
@@ -141,7 +141,7 @@ const Footer = () => {
                 <a href="https://www.snapchat.com/add/https://www.snapchat.com/add/enjaaz.2?share_id=vUU1nSI8BE4&locale=ar-EG">
                   <div className="image">
                     <img alt="Enjazz_image"
-                      loading="lazy"
+                      
                       src="/images/footer/FooterIcon-1.webp"
                      
                     />
@@ -150,7 +150,7 @@ const Footer = () => {
                 <a href="https://twitter.com/Enjaaz_2">
                   <div className="image">
                     <img alt="Enjazz_image"
-                      loading="lazy"
+                      
                       src="/images/footer/FooterIcon-4.webp"
                      
                     />
@@ -159,7 +159,7 @@ const Footer = () => {
                 <a href="https://www.tiktok.com/@enjaaz_2">
                   <div className="image">
                     <img alt="Enjazz_image"
-                      loading="lazy"
+                      
                       src="/images/footer/FooterIcon-5.webp"
                      
                     />
@@ -289,19 +289,19 @@ const Footer = () => {
               <h1>{t("footer.bottomh3")}</h1>
               <div className="item">
                 <div className="icon">
-                  <img alt="Enjazz_image" loading="lazy" src="/images/footer1.webp" />
+                  <img alt="Enjazz_image"  src="/images/footer1.webp" />
                 </div>
                 <span>{t("footer.address")}</span>
               </div>
               <div className="item">
                 <div className="icon">
-                  <img alt="Enjazz_image" loading="lazy" src="/images/footer2.webp" />
+                  <img alt="Enjazz_image"  src="/images/footer2.webp" />
                 </div>
                 <span>920013581 - 966502144449</span>
               </div>
               <div className="item">
                 <div className="icon">
-                  <img alt="Enjazz_image" loading="lazy" src="/images/footer3.webp" />
+                  <img alt="Enjazz_image"  src="/images/footer3.webp" />
                 </div>
                 <span>info@enjaaz.com.sa</span>
               </div>
@@ -355,11 +355,11 @@ const Footer = () => {
             <p>{t("footer.bottomp5")}</p>
             <div className="payments">
               {/* style={{ scale: '1.9', margin: '0 25px 0 25px' }} */}
-              <img alt="Enjazz_image" loading="lazy" style={{ width: '120px', height: '50px' }} src="/images/جنب صورة المدفوعات أسفل الموقع.webp" />
-              <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/site/img/icons/certificate.webp" style={{ height: "40px" }} />
-              <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/site/img/icons/mada.webp" />
-              <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/site/img/icons/visa.webp" />
-              <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/site/img/icons/mastercard.webp" />
+              <img alt="Enjazz_image"  style={{ width: '120px', height: '50px' }} src="/images/جنب صورة المدفوعات أسفل الموقع.webp" />
+              <img alt="Enjazz_image"  src="https://aait.sa/public/site/img/icons/certificate.webp" style={{ height: "40px" }} />
+              <img alt="Enjazz_image"  src="https://aait.sa/public/site/img/icons/mada.webp" />
+              <img alt="Enjazz_image"  src="https://aait.sa/public/site/img/icons/visa.webp" />
+              <img alt="Enjazz_image"  src="https://aait.sa/public/site/img/icons/mastercard.webp" />
             </div>
           </div>
           <p>{t("footer.bottomp6")}</p>

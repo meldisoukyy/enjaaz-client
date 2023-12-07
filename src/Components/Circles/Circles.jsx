@@ -20,7 +20,7 @@ const Circles = () => {
                             <Link to='/askforaservice/establishment-of-facilities' className='w-fet'>
                                 <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
-                                        <img alt="Enjazz_image" loading="lazy"
+                                        <img alt="Enjazz_image" 
                                             src="/images/circles/beldings.webp"
                                            
                                         />
@@ -31,7 +31,7 @@ const Circles = () => {
                             <Link to='/wagemanagment' className='w-fet'>
                                 <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
-                                        <img alt="Enjazz_image" loading="lazy"
+                                        <img alt="Enjazz_image" 
                                             src="/images/circles/wage.webp"
                                            
                                         />
@@ -44,7 +44,7 @@ const Circles = () => {
                             <Link to='/servicespackage'>
                                 <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
-                                        <img alt="Enjazz_image" loading="lazy"
+                                        <img alt="Enjazz_image" 
                                             src="/images/circles/servicemanagment.webp"
                                            
                                         />
@@ -55,7 +55,7 @@ const Circles = () => {
                             <Link to='/askforaservice/register-a-trademark'>
                                 <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
-                                        <img alt="Enjazz_image" loading="lazy"
+                                        <img alt="Enjazz_image" 
                                             src="/images/circles/r.webp"
                                            
                                         />
@@ -66,7 +66,7 @@ const Circles = () => {
                             {/* <Link to='/askforaservice/establishment-of-facilities'>
                                 <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-end" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
-                                        <img alt="Enjazz_image" loading="lazy"
+                                        <img alt="Enjazz_image" 
                                             src="/images/circles/beldings.webp"
                                            
                                         />
@@ -77,27 +77,25 @@ const Circles = () => {
                         </div>
                         <div className="col-12 col-md-8 col-lg-5">
                             <div className="features-circles" >
-                                <img alt="Enjazz_image" loading="lazy"
+                                <img alt="Enjazz_image"
                                     src="https://aait.sa/public/site/img/empty.png"
                                    
                                     className="empty"
                                 />
-                                <div className="center" style={{minWidth:"30px",minHeight:'30px'}}>
-                                    <img alt="Enjazz_image" loading="lazy"
+                                <div className="center" style={{minWidth:"30%",minHeight:'30%'}}>
+                                    <img alt="Enjazz_image"
                                         src="/images/logoCircle.webp"
                                        
                                         className="img"
                                     />
-                                    <img alt="Enjazz_image" loading="lazy"
+                                    <img alt="Enjazz_image"
                                         src="https://aait.sa/public/site/img/empty.png"
-                                       
                                         className="empty"
                                     />
                                 </div>
                                 <span className="arounds">
-                                    <img alt="Enjazz_image" loading="lazy"
+                                    <img alt="Enjazz_image"
                                         src="https://aait.sa/public/site/img/empty.png"
-                                       
                                         className="empty"
                                     />
                                     <span className="around">
@@ -115,7 +113,7 @@ const Circles = () => {
                             <Link to='/askforaservice/legal-advice'>
                                 <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
-                                        <img alt="Enjazz_image" loading="lazy"
+                                        <img alt="Enjazz_image" 
                                             src="/images/circles/law.webp"
                                            
                                         />
@@ -126,7 +124,7 @@ const Circles = () => {
                             <Link to='/askforaservice/all-government-services'>
                                 <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                     <div className="img">
-                                        <img alt="Enjazz_image" loading="lazy"
+                                        <img alt="Enjazz_image" 
                                             src="/images/circles/governrate.webp"
                                            
                                         />
@@ -137,7 +135,7 @@ const Circles = () => {
                             {/* <Link to='/askforaservice/wage-protection'>
                             <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-start" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
-                                    <img alt="Enjazz_image" loading="lazy"
+                                    <img alt="Enjazz_image" 
                                         src="/images/circles/wage.webp"
                                        
                                     />
@@ -151,7 +149,7 @@ const Circles = () => {
                         <Link to='/askforaservice/reducing-financial-burdens' className='w-fet'>
                             <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
-                                    <img alt="Enjazz_image" loading="lazy"
+                                    <img alt="Enjazz_image" 
                                         src="/images/circles/free2.webp"
                                        
                                     />
@@ -162,7 +160,7 @@ const Circles = () => {
                         <Link to='/trymeservice' className='w-fet'>
                             <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
                                 <div className="img">
-                                    <img alt="Enjazz_image" loading="lazy"
+                                    <img alt="Enjazz_image" 
                                         src="/images/circles/freeTry.webp"
                                        
                                     />

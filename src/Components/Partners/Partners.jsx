@@ -55,7 +55,7 @@ const Partners = () => {
                 <Slider {...settings}>
                     {data.map((item, i) => (
                         <div className="image col-lg-3 col-md-6 mb-3" key={i}>
-                            <img alt="Enjazz_image" loading="lazy" src={item.logo} />
+                            <img alt="Enjazz_image" src={item.logo} />
                         </div>
                     ))}
                 </Slider>

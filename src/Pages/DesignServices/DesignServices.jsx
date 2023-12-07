@@ -4,12 +4,10 @@ import CommonHead from "../../Components/CommonHead/CommonHead";
 import { useMyContext } from "../../context/MyContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Helmet, HelmetAr } from "../../Apis/Apis";
 import { Link } from "react-router-dom";
 
 const DesignServices = () => {
   const { lang, setlang, t, i18n } = useMyContext();
-  lang === "ar" ? HelmetAr("خدمات التصميم والتسويق") : Helmet("Design and Marketing Services");
   useEffect(() => {
     AOS.init();
   }, []);
