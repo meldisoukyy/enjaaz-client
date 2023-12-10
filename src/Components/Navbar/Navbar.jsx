@@ -67,7 +67,7 @@ const Navbar = () => {
         <div className="top d-flex justify-content-between align-items-end gap-5 pb-4">
           <div className="image">
             <Link to="/">
-              <img alt="Enjazz_image" loading="lazy" src="/images/logo.webp" />
+              <img loading="lazy" alt="Enjazz_image"  src="/images/logo.webp" />
             </Link>
           </div>
           <div className="end">
@@ -81,7 +81,7 @@ const Navbar = () => {
               {t("nav.lang")}
             </p>
             <div className="image">
-              <img alt="Enjazz_image" src="/images/لوجو المملكة 2030.svg" />
+              <img loading="lazy" alt="Enjazz_image" src="/images/لوجو المملكة 2030.svg" />
             </div>
           </div>
           {/* <div
@@ -165,13 +165,13 @@ const Navbar = () => {
           <div className="numbers">
             <div className="num">
               <div className="icon">
-                <img alt="Enjazz_image" loading="lazy" src="/images/phoneNav.webp" />
+                <img loading="lazy" alt="Enjazz_image"  src="/images/phoneNav.webp" />
               </div>
               <a href="https://wa.me/966920013581">920013581</a>
             </div>
             <div className="num">
               <div className="icon">
-                <img alt="Enjazz_image" loading="lazy" src="/images/whatsappnav.webp" />
+                <img loading="lazy" alt="Enjazz_image"  src="/images/whatsappnav.webp" />
               </div>
               <a href="https://wa.me/966502144449">+966502144449</a>
             </div>
@@ -198,7 +198,7 @@ const Navbar = () => {
         <Offcanvas show={isOpened} onHide={handleClose} placement="end">
           <Offcanvas.Header>
             <div className="image">
-              <img alt="Enjazz_image" loading="lazy" src="/images/logo.webp" />
+              <img loading="lazy" alt="Enjazz_image"  src="/images/logo.webp" />
             </div>
             <div className="closeBtn">
               <button

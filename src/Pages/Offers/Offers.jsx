@@ -5,11 +5,10 @@ import { useMyContext } from '../../context/MyContext';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Helmet, HelmetAr, OffersApi } from '../../Apis/Apis';
+import {OffersApi } from '../../Apis/Apis';
 const Offers = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-    lang === 'ar' ? HelmetAr('العروض') :
-        Helmet('Offers')
+
     useEffect(() => {
         AOS.init();
     }, []);
@@ -65,7 +64,7 @@ const Offers = () => {
                             return (
                                 <div className="pack" key={i} data-aos="fade-in" data-aos-duration="2000" data-aos-delay={`${(i + 1) * 50}`}>
                                     <div className="image">
-                                        <img alt="Enjazz_image" loading="lazy" src={lang === "ar" ? item.image_ar : item.image_en ? item.image_en : item.image_ar} alt={lang === "ar" ? item.name_ar : item.name_en} />
+                                        <img loading="lazy" src={lang === "ar" ? item.image_ar : item.image_en ? item.image_en : item.image_ar} alt={lang === "ar" ? item.name_ar : item.name_en} />
                                     </div>
                                     <h1 className="text-center">{lang === "ar" ? item.name_ar : item.name_en}</h1>
                                     <div className="price">

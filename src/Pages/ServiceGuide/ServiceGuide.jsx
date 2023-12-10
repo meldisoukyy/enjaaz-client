@@ -5,12 +5,10 @@ import CommonQ from '../../Components/CommonQ/CommonQ'
 import { useMyContext } from '../../context/MyContext'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
-import { Helmet, HelmetAr } from '../../Apis/Apis'
 import { Link } from 'react-router-dom'
 const ServiceGuide = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-    lang==='ar'?HelmetAr('دليل الخدمات'):
-    Helmet('Services Guide')
+
     useEffect(() => {
         AOS.init();
       }, []);
@@ -61,7 +59,7 @@ const ServiceGuide = () => {
                                 <Link to={`/ask-for-aservice/${key}`} key={i}>
                                 <div className="item">
                                     <div className="icon swing-in-top-fwd">
-                                        <img alt="Enjazz_image" loading="lazy" src="/images/tick.webp" />
+                                        <img loading="lazy" alt="Enjazz_image"  src="/images/tick.webp" />
                                     </div>
                                     <p>{value}</p>
                                 </div>

@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 import { useParams } from 'react-router-dom';
 import { useMyContext } from '../../context/MyContext';
 import Swal from 'sweetalert2';
-import { Helmet, HelmetAr, ServiceManagemenApi, ServiceRequestApi, ServiceRequestWithCalcApi } from '../../Apis/Apis';
+import {ServiceManagemenApi, ServiceRequestApi, ServiceRequestWithCalcApi } from '../../Apis/Apis';
 import CalcRedirect from '../../Components/CalcRedirect/CalcRedirect';
 import { BsArrowCounterclockwise } from 'react-icons/bs';
 const RedirectFromPackages = () => {
@@ -16,8 +16,7 @@ const RedirectFromPackages = () => {
     const [annualCost, setAnnualCost] = useState(0)
     const [wageProtection, setwageProtection] = useState('select')
     const { lang, setlang, t, i18n } = useMyContext();
-    lang === 'ar' ? HelmetAr('طلب خدمة') :
-        Helmet('Ask For A Service')
+
     const [data2, setdata2] = useState([])
     useEffect(() => {
         // console.log(numberOfEmployers)

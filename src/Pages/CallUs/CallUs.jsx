@@ -5,11 +5,8 @@ import Swal from 'sweetalert2'
 import 'aos/dist/aos.css';
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import { useMyContext } from '../../context/MyContext';
-import { ContactUsApi, Helmet, HelmetAr } from '../../Apis/Apis';
 const CallUs = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-    lang === 'ar' ? HelmetAr('اتصل بنا') :
-        Helmet('Contact')
     useEffect(() => {
         AOS.init();
     }, []);
@@ -64,19 +61,19 @@ const CallUs = () => {
                         <div className="row gap-3">
                             <div className="col item">
                                 <div className="icon">
-                                    <img alt="Enjazz_image" loading="lazy" src="/images/carbon_home.webp" />
+                                    <img loading="lazy" alt="Enjazz_image"  src="/images/carbon_home.webp" />
                                 </div>
                                 <span>{t('callus.address')}</span>
                             </div>
                             <div className="col item">
                                 <div className="icon">
-                                    <img alt="Enjazz_image" loading="lazy" src="/images/carbon_phone.webp" />
+                                    <img loading="lazy" alt="Enjazz_image"  src="/images/carbon_phone.webp" />
                                 </div>
                                 <span>920013581 - 966502144449</span>
                             </div>
                             <div className="col item">
                                 <div className="icon">
-                                    <img alt="Enjazz_image" loading="lazy" src="/images/carbon_mail.webp" />
+                                    <img loading="lazy" alt="Enjazz_image"  src="/images/carbon_mail.webp" />
                                 </div>
                                 <span>info@enjaaz.com.sa</span>
                             </div>
@@ -96,10 +93,10 @@ const CallUs = () => {
                     </div>
                     <div className="bottom">
                         {selectedMap === 1 && (
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.646291990671!2d46.7560625!3d24.8075625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2effdaaab7d58f%3A0xea15c20d6324425c!2z2LTYsdmD2Kkg2KfZhtis2KfYsiDZhNiu2K_Zhdin2Kog2KfZhNij2LnZhdin2YQ!5e0!3m2!1sar!2seg!4v1697991472116!5m2!1sar!2seg" style={{ border: '0;' }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.646291990671!2d46.7560625!3d24.8075625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2effdaaab7d58f%3A0xea15c20d6324425c!2z2LTYsdmD2Kkg2KfZhtis2KfYsiDZhNiu2K_Zhdin2Kog2KfZhNij2LnZhdin2YQ!5e0!3m2!1sar!2seg!4v1697991472116!5m2!1sar!2seg" style={{ border: '0;' }} allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
                         )}
                         {selectedMap === 2 && (
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1176.4223448799537!2d42.832764!3d16.9632523!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1607f50f8ea21e17%3A0xc2e7ff403c434917!2zR05NQjYxNDjYjCA2MTQ4INi02KfYsdi5INin2YTZhdmE2YMg2LnYqNiv2KfZhNi52LLZitiy2IwgMjQ3N9iMINin2YTYrtin2YTYr9mK2KnYjCDYo9io2Ygg2LnYsdmK2LQgODQ3MTHYjCDYp9mE2LPYudmI2K_Zitip!5e1!3m2!1sar!2seg!4v1700927466974!5m2!1sar!2seg" style={{ border: '0;' }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1176.4223448799537!2d42.832764!3d16.9632523!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1607f50f8ea21e17%3A0xc2e7ff403c434917!2zR05NQjYxNDjYjCA2MTQ4INi02KfYsdi5INin2YTZhdmE2YMg2LnYqNiv2KfZhNi52LLZitiy2IwgMjQ3N9iMINin2YTYrtin2YTYr9mK2KnYjCDYo9io2Ygg2LnYsdmK2LQgODQ3MTHYjCDYp9mE2LPYudmI2K_Zitip!5e1!3m2!1sar!2seg!4v1700927466974!5m2!1sar!2seg" style={{ border: '0;' }} allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
                         )}
                     </div>
                 </div>
