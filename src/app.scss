@@ -159,6 +159,7 @@ a.active {
   }
 }
 .app {
+  overflow-x: hidden !important;
   .whatsapp {
     background-color: #2FAA3F;
     position: fixed;

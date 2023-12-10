@@ -8,7 +8,7 @@ const Footer2 = () => {
                 <div className="row justify-content-between">
                     <div className="col-12 col-lg-4">
                         <a href="https://aait.sa" className="logo">
-                            <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/site/img/colored-logo.webp" alt=" أوامر الشبكة"/>
+                            <img loading="lazy" alt="Enjazz_image"  src="https://aait.sa/public/site/img/colored-logo.webp" alt=" أوامر الشبكة"/>
                         </a>
                         <p className="info-content m-0">شركة تدعم المشاركة في العالم الرقمي والتواجد حيث يتواجد العملاء وتعلو المنافسة بين الشركات والنشاطات التجارية ، تقدم جميع خدمات البرمجة والتصميم والتسويق الالكتروني .</p>
                         <p className="info-content mt-3">المملكة العربية السعودية -  الرياض - حي السليمانية - شارع الملك عبد العزيز - بجوار شركة الناغي للسيارات - مبنى B الدور الثاني</p>
@@ -86,15 +86,15 @@ const Footer2 = () => {
                         <p className="foot-title mt-4">الايزو </p>
                         <div className="iso">
                             <a href="https://aait.sa/public/Iso9001.pdf" target="_blank">
-                                <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/Iso9001.webp" alt="Iso9001" style={{height: "100%"}} className="w-100"/>
+                                <img loading="lazy" alt="Enjazz_image"  src="https://aait.sa/public/Iso9001.webp" alt="Iso9001" style={{height: "100%"}} className="w-100"/>
                             </a>
                         </div>
                         <div className="adress">
                             <p className="foot-title">الشهادات والتراخيص </p>
                             <div className="address-imgs">
-                                <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/site/img/qr.jpg" style={{width: "120px"}} alt=" أوامر الشبكة" className="ident ml-2"/>
+                                <img loading="lazy" alt="Enjazz_image"  src="https://aait.sa/public/site/img/qr.jpg" style={{width: "120px"}} alt=" أوامر الشبكة" className="ident ml-2"/>
                                 <a href="https://www.google.com/partners/agency?id=8520472356" className="d-inline">
-                                    <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/site/img/google-partner.webp" alt=" أوامر الشبكة" style={{width: "120px"}} className="ident"/>
+                                    <img loading="lazy" alt="Enjazz_image"  src="https://aait.sa/public/site/img/google-partner.webp" alt=" أوامر الشبكة" style={{width: "120px"}} className="ident"/>
                                 </a>
                             </div>
                         </div>
@@ -110,12 +110,12 @@ const Footer2 = () => {
                 </p>
                 <div className="payments">
                     <a href="https://aait.sa/public/site/certificate.pdf" target="_blank">
-                        <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/site/img/icons/certificate.webp" alt="وسائل دفع أوامر الشبكة" style={{height: "40px"}}/>
+                        <img loading="lazy" alt="Enjazz_image"  src="https://aait.sa/public/site/img/icons/certificate.webp" alt="وسائل دفع أوامر الشبكة" style={{height: "40px"}}/>
                     </a>
-                    <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/site/img/icons/mada.webp" alt="وسائل دفع أوامر الشبكة"/>
-                    <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/site/img/icons/visa.webp" alt="وسائل دفع أوامر الشبكة"/>
-                    <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/site/img/icons/mastercard.webp" alt="وسائل دفع أوامر الشبكة"/>
-                    <img alt="Enjazz_image" loading="lazy" src="https://aait.sa/public/site/img/icons/paypal.webp" alt="وسائل دفع أوامر الشبكة"/>
+                    <img loading="lazy" alt="Enjazz_image"  src="https://aait.sa/public/site/img/icons/mada.webp" alt="وسائل دفع أوامر الشبكة"/>
+                    <img loading="lazy" alt="Enjazz_image"  src="https://aait.sa/public/site/img/icons/visa.webp" alt="وسائل دفع أوامر الشبكة"/>
+                    <img loading="lazy" alt="Enjazz_image"  src="https://aait.sa/public/site/img/icons/mastercard.webp" alt="وسائل دفع أوامر الشبكة"/>
+                    <img loading="lazy" alt="Enjazz_image"  src="https://aait.sa/public/site/img/icons/paypal.webp" alt="وسائل دفع أوامر الشبكة"/>
                 </div>
             </div>
         </div>

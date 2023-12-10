@@ -1,9 +1,7 @@
 import React from 'react'
 import './LegalServices.scss'
 import CommonHead from '../../Components/CommonHead/CommonHead'
-import { Helmet } from '../../Apis/Apis'
 const LegalServices = () => {
-    Helmet('Legal Services')
     const data = [
         "عمالي",
         "حقوقي",
@@ -63,7 +61,7 @@ const LegalServices = () => {
                             return (
                                 <div className="item" key={i}>
                                     <div className="icon swing-in-top-fwd">
-                                        <img alt="Enjazz_image" loading="lazy" src="/images/tick.webp" />
+                                        <img loading="lazy" alt="Enjazz_image"  src="/images/tick.webp" />
                                     </div>
                                     <p>{item}</p>
                                 </div>

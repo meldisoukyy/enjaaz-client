@@ -98,7 +98,7 @@ useEffect(() => {
             {/* <Footer2/> */}
             <a className="whatsapp" href="https://wa.me/+966502144449" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
               <div className="image">
-                <img alt="Enjazz_image" loading="lazy" src="/images/whatsappi.webp" />
+                <img loading="lazy" alt="Enjazz_image"  src="/images/whatsappi.webp" />
               </div>
             </a>
           </>

@@ -6,12 +6,9 @@ import './DedicatedAsk.scss'
 import { useParams } from 'react-router-dom';
 import { useMyContext } from '../../context/MyContext';
 import Swal from 'sweetalert2';
-import { Helmet, HelmetAr, ServiceRequestApi } from '../../Apis/Apis';
 const DedicatedAsk = () => {
     const { lang, setlang, t, i18n } = useMyContext();
     const [loading, setloading] = useState(false)
-    lang === 'ar' ? HelmetAr('طلب خدمة') :
-        Helmet('Ask For A Service')
     const id = useParams().id
     const links =
     {

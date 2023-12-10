@@ -5,11 +5,9 @@ import { useMyContext } from '../../context/MyContext';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Helmet, HelmetAr, WageManagementApi } from '../../Apis/Apis';
+import {WageManagementApi } from '../../Apis/Apis';
 const WageManagment = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-    lang === 'ar' ? HelmetAr('إدارة الأجور') :
-        Helmet('Wage Managment')
     useEffect(() => {
         AOS.init();
     }, []);
