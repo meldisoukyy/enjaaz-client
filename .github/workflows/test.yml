@@ -1,0 +1,20 @@
+name: CD | Test
+
+on:
+  push:
+    branches:
+      - test
+  workflow_dispatch:
+
+jobs:
+  deployment:
+    runs-on: test
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm install
+      - name: Build and Run Server
+        run: npm run build
+        env:
+          CI: ""
