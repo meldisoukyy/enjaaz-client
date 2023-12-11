@@ -4,6 +4,7 @@ import { useMyContext } from '../../context/MyContext';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
+import xx from './logo.webp'
 const Loader = () => {
     const { lang, setlang, t, i18n } = useMyContext();
     useEffect(() => {
@@ -15,7 +16,7 @@ const Loader = () => {
                 <div className="smallcircle">
                     <div className="image">
                         <img loading="lazy" alt="Enjazz_image"
-                            src="/images/logoCircle.webp"
+                            src={xx}
                             className="img"
                         />
                     </div>

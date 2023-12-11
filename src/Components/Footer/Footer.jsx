@@ -33,7 +33,7 @@ const Footer = () => {
       setloading(true)
       SubscribersApi(email).then((res) => {
         if (res.id) {
-          setloading(fa)
+          setloading(false)
           // console.log(res);
           setdata(res);
           Swal.fire({

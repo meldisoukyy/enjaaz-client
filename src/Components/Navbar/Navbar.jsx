@@ -5,6 +5,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
 import { useMyContext } from "../../context/MyContext";
 import { IoIosArrowDown } from "react-icons/io";
+import xx from "./logo.webp"
 import AOS from "aos";
 import "aos/dist/aos.css";
 const Navbar = () => {
@@ -67,14 +68,14 @@ const Navbar = () => {
         <div className="top d-flex justify-content-between align-items-end gap-5 pb-4">
           <div className="image">
             <Link to="/">
-              <img loading="lazy" alt="Enjazz_image"  src="/images/logo.webp" />
+              <img loading="lazy" alt="Enjazz_image"  src={xx} />
             </Link>
           </div>
           <div className="end">
             <p
               className="mb-0"
               onClick={() => {
-                setlang(lang === "ar" ? "en" : "ar"),
+                setlang(lang === "ar" ? "en" : "ar");
                   i18n.changeLanguage(lang === "en" ? "ar" : "en");
               }}
             >
@@ -275,7 +276,7 @@ const Navbar = () => {
               <li
                 className="sale"
                 onClick={() => {
-                  setlang(lang === "ar" ? "en" : "ar"),
+                  setlang(lang === "ar" ? "en" : "ar");
                     i18n.changeLanguage(lang === "en" ? "ar" : "en");
                   handleClose();
                 }}

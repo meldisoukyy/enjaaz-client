@@ -5,6 +5,7 @@ import Swal from 'sweetalert2'
 import 'aos/dist/aos.css';
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import { useMyContext } from '../../context/MyContext';
+import { ContactUsApi } from '../../Apis/Apis';
 const CallUs = () => {
     const { lang, setlang, t, i18n } = useMyContext();
     useEffect(() => {
