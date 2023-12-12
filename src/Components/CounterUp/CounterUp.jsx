@@ -2,8 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import './CounterUp.scss'
 import CountUp from 'react-countup';
 import { useMyContext } from "../../context/MyContext";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+
 import { StatisticsApi } from '../../Apis/Apis';
 import count1 from "../../assets/images/count1.webp"
 import count2 from "../../assets/images/count2.webp"
@@ -38,15 +37,12 @@ const CounterUp = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-    useEffect(() => {
-        AOS.init();
-      }, []);
       const [data, setdata] = useState([])
     useEffect(() => {
         StatisticsApi().then((res)=>{setdata(res)})
       }, []);
     return (
-        <div className='CounterUp' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
+        <div className='CounterUp'>
             <div className="container">
                 <div className="row">
                     <div ref={scrolled} className="col-lg-3 col-md-6 d-flex flex-column gap-3 justify-content-center align-items-center mt-4">

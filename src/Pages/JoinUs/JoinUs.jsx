@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import { useMyContext } from '../../context/MyContext';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 import Swal from 'sweetalert2';
 import { JoinUsApi } from '../../Apis/Apis';
 import upload from "../../assets/images/upload.webp";
@@ -70,11 +69,6 @@ const JoinUs = () => {
         "Electronic Services Office": "مكتب خدمات إلكترونية"
     };
 
-
-    useEffect(() => {
-        AOS.init();
-    }, []);
-
     const [name, setname] = useState('')
     const [email, setemail] = useState('')
     const [mobile, setmobile] = useState('')
@@ -129,7 +123,7 @@ const JoinUs = () => {
     return (
         <div>
             <CommonHead title={t('joinus.h1')} path={t('joinus.path')} />
-            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
+            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
                 <div className="container">
                     <h1 className='section-title3'>{t('joinus.h2')}</h1>
                     <p>{t('joinus.p')}</p>

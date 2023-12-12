@@ -5,8 +5,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
 import { useMyContext } from "../../context/MyContext";
 import { IoIosArrowDown } from "react-icons/io";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 // Import all images and svgs here
 import logoWebp from "../../assets/images/logo.webp";
 import enjazzImage from "../../assets/images/لوجو المملكة 2030.svg";
@@ -14,9 +13,7 @@ import phoneNavWebp from "../../assets/images/phoneNav.webp";
 import whatsappNavWebp from "../../assets/images/whatsappnav.webp";
 import firebaselogoWebp from "../../assets/images/logo.webp";
 const Navbar = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+
   const [isOpened, setIsOpened] = useState(false);
 
   const toggleMenu = () => {
@@ -64,9 +61,6 @@ const Navbar = () => {
     <div
       className="Navbar pt-3"
       style={NavStyle()}
-      data-aos="fade-in"
-      data-aos-duration="2000"
-      data-aos-delay="300"
     >
       <div className="blured"></div>
       <div className="container">

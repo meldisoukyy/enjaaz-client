@@ -3,14 +3,11 @@ import "./CommonQ.scss";
 import Accordion from "react-bootstrap/Accordion";
 import { useMyContext } from "../../context/MyContext";
 import { Link } from "react-router-dom";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 import { PopularQuestionsApi, QuestionsApi } from "../../Apis/Apis";
 const CommonQ = ({ full }) => {
   const { lang, setlang, t, i18n } = useMyContext();
-  useEffect(() => {
-    AOS.init();
-  }, []);
+
   const [data, setdata] = useState([])
   useEffect(() => {
     if (full) {
@@ -20,7 +17,7 @@ const CommonQ = ({ full }) => {
     }
   }, []);
   return (
-    <div className="CommonQ" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='200'>
+    <div className="CommonQ" >
       <div
         className="container"
         style={lang === "ar" ? { direction: "rtl" } : { direction: "ltr" }}
@@ -38,7 +35,7 @@ const CommonQ = ({ full }) => {
             <Accordion alwaysOpen>
               {data.map((item, i) => {
                 return (
-                  <Accordion.Item eventKey={`${i}`} key={i} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                  <Accordion.Item eventKey={`${i}`} key={i} >
                     <Accordion.Header>
                       <p>{lang === "ar" ?item.question_ar:item.question_en}</p>
                     </Accordion.Header>
@@ -57,7 +54,7 @@ const CommonQ = ({ full }) => {
             <Accordion alwaysOpen>
               {data.map((item, i) => {
                 return (
-                  <Accordion.Item eventKey={`${i}`} key={i} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                  <Accordion.Item eventKey={`${i}`} key={i}>
                     <Accordion.Header>
                     <p>{lang === "ar" ?item.question_ar:item.question_en}</p>
                     </Accordion.Header>

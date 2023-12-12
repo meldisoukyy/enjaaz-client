@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Partners.scss';
 import { useMyContext } from '../../context/MyContext';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 import Slider from 'react-slick';
 import { PartnersApi } from '../../Apis/Apis';
 
@@ -11,10 +10,6 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const Partners = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-
-    useEffect(() => {
-        AOS.init();
-    }, []);
 
     const [data, setdata] = useState([]);
 
@@ -49,7 +44,7 @@ const Partners = () => {
     };
 
     return (
-        <div className='Partners' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
+        <div className='Partners'>
             <div className="container" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
                 <h1 className='secH'>{t('partners.h1')}</h1>
                 <Slider {...settings}>

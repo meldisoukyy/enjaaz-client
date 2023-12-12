@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import CommonHead from '../../Components/CommonHead/CommonHead'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import './DedicatedAsk.scss'
 import { useParams } from 'react-router-dom';
 import { useMyContext } from '../../context/MyContext';
@@ -25,9 +23,6 @@ const DedicatedAsk = () => {
 
     const exist = Object.entries(links).some((item) => item[0] == id)
     // console.log(links['register-a-trademark'])
-    useEffect(() => {
-        AOS.init();
-    }, []);
     const namear = {
         "service-management": ["طلب خدمة إدارة الخدمات", "خدمة إدارة الخدمات", "نعمل كوسيط غير مباشر بينك وبين عملائك من خلال تقديم الحلول المتكاملة لتطوير وتصميم وتشغيل المنصات الإلكترونية، مع التركيز على تحسين تجربة المستخدم وضمان الأمان في عالم التحول الرقمي."],
 
@@ -157,7 +152,7 @@ const DedicatedAsk = () => {
     return (
         <div>
             <CommonHead title={lang === "ar" ? namear[id][0] : nameen[id][0]} path={t('askService.path')} />
-            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
+            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
                 <h1 className='section-title3'>{lang === "ar" ? namear[id][1] : nameen[id][1]}</h1>
                 <p>{lang === "ar" ? namear[id][2] : nameen[id][2]}</p>
                 <div className="container">

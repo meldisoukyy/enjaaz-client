@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import { useMyContext } from "../../context/MyContext";
 import "./Footer.scss";
 import { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { SubscribersApi } from "../../Apis/Apis";
 import Swal from "sweetalert2";
 import Modal from "react-bootstrap/Modal";
@@ -36,9 +34,6 @@ const Footer = () => {
   const handleClose2 = () => setShow2(false);
   const handleShow2 = () => setShow2(true);
   const { lang, setlang, t, i18n } = useMyContext();
-  useEffect(() => {
-    AOS.init();
-  }, []);
   const [email, setemail] = useState("");
   const [error, seterror] = useState("");
   const [data, setdata] = useState([]);
@@ -81,10 +76,7 @@ const Footer = () => {
     <div className="Footer">
       <div
         className="container"
-        data-aos="fade-in"
-        data-aos-duration="2000"
-        data-aos-delay="300"
-        style={lang === "ar" ? { direction: "rtl" } : { direction: "ltr" }}
+        style={lang === "ar" ? { direction: "rtl",position:'relative' } : { direction: "ltr",position:'relative' }}
       >
         <div className="top">
           <h1>{t("footer.toph1")}</h1>

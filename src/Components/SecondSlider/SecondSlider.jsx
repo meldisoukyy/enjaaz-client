@@ -3,13 +3,10 @@ import Carousel from 'nuka-carousel';
 import './SecondSlider.scss'
 import { Link } from 'react-router-dom';
 import { useMyContext } from '../../context/MyContext';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+
 const SecondSlider = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-    useEffect(() => {
-        AOS.init();
-      }, []);
+
     return (
         <div className='SecondSlider'>
             <Carousel
@@ -34,18 +31,18 @@ const SecondSlider = () => {
             >
                 <div className="slide slide1">
                     <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
-                        <h1 data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>{t('SS.h1')}</h1>
-                        <p data-aos="fade-in" data-aos-duration="2000" data-aos-delay='200'>{t('SS.p1')}</p>
-                        <Link to="/askforaservice" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='200'><span>{t('SS.btn')}</span></Link>
+                        <h1>{t('SS.h1')}</h1>
+                        <p>{t('SS.p1')}</p>
+                        <Link to="/askforaservice"><span>{t('SS.btn')}</span></Link>
                     </div>
                 </div>
                 <div className="slide slide2">
                     <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
-                        <h1 data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                        <h1>
                             {t('SS.h2')}
                         </h1>
-                        <p data-aos="fade-in" data-aos-duration="2000" data-aos-delay='200'>{t('SS.p2')}</p>
-                        <Link to="/trymeservice" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='200'><span>{t('SS.btn')}</span></Link>
+                        <p>{t('SS.p2')}</p>
+                        <Link to="/trymeservice"><span>{t('SS.btn')}</span></Link>
                     </div>
                 </div>
 

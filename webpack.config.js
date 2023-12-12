@@ -3,20 +3,21 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
-// npx webpack serve --config webpack.config.js --open
+const ImageminPlugin = require("imagemin-webpack-plugin").default;
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+
 module.exports = {
   mode: "production",
   entry: "./src/index.js",
- 
+
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
-    port: 3000
-    ,
+    port: 3000,
     open: true
   },
- 
+
   output: {
     publicPath: "/",
     path: path.resolve(__dirname, "dist"),
@@ -108,5 +109,9 @@ module.exports = {
       template: "./public/index.html",
     }),
     new ReactRefreshWebpackPlugin(),
+    new ImageminPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+    }), // Add this line for imagemin-webpack-plugin
+    new BundleAnalyzerPlugin(), // Add this line for webpack-bundle-analyzer
   ],
 };

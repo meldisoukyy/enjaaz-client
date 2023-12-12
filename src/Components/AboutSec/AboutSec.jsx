@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './AboutSec.scss'
 import { useMyContext } from '../../context/MyContext';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 import Modal from "react-bootstrap/Modal";
 import webp2 from "../../assets/images/2.webp"
 import play from "../../assets/images/play-button.webp"
@@ -12,15 +11,13 @@ const AboutSec = () => {
   const { lang, setlang, t, i18n } = useMyContext();
   const [selectedVision, setselectedVision] = useState(1)
 
-  useEffect(() => {
-    AOS.init();
-  }, []);
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div className='AboutSec' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
+    <div className='AboutSec'>
       <div className="container" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
         {/* <h1 className='section-title3' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>{t('aboutus.h2')}</h1> */}
         <div className="switch" >
@@ -42,7 +39,7 @@ const AboutSec = () => {
                     </div>
                     {selectedVision===1&&(
                     <>
-        <div className='image' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+        <div className='image'>
           <img loading="lazy" alt="Enjazz_image"  src={webp2} />
           <div className="play" onClick={handleShow}>
 
@@ -60,17 +57,17 @@ const AboutSec = () => {
           <Modal.Body>
             <iframe width="100%" height="400" src="https://www.youtube.com/embed/LlxxMIuIWBI" frameborder="0" allowfullscreen></iframe>              </Modal.Body>
         </Modal>
-        <p data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>{t('aboutus.p1')}</p>
+        <p >{t('aboutus.p1')}</p>
                     </>
                     )}
         
         {/* <h1 className='section-title3' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>{t('aboutus.h3')}</h1> */}
         {selectedVision===2&&(
-        <p data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>{t('aboutus.p2')}</p>
+        <p >{t('aboutus.p2')}</p>
         )}
         {/* <h1 className='section-title3' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>{t('aboutus.h4')}</h1> */}
         {selectedVision===3&&(
-        <p data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>{t('aboutus.p3')}</p>
+        <p>{t('aboutus.p3')}</p>
         )}
       </div>
     </div>
