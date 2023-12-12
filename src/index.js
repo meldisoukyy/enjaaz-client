@@ -12,9 +12,10 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <MyContextProvidor>
-        <App />
+        <div>
+          <App />
+        </div>
       </MyContextProvidor>
     </BrowserRouter>
   </React.StrictMode>
 );
-
