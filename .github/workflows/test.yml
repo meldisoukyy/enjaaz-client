@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout Code Repository
         uses: actions/checkout@v4
+        with:
+          ref: 'test'
       - name: Install dependencies
         run: npm install
       - name: Build and Run Server
