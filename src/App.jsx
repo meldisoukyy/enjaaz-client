@@ -63,7 +63,7 @@ useEffect(() => {
         loadTimeout = setTimeout(() => {
           setIsPageLoaded(true);
         }, 2000 - elapsedTime);
-      } else if (elapsedTime > 4000) {
+      } else if (elapsedTime > 10000) {
         setIsPageLoaded(true);
       } else {
         setIsPageLoaded(true);
