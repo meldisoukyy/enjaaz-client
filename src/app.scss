@@ -31,7 +31,7 @@
 }
 .circles-loader{
   min-height: 100vh;
-  background-image: url('../public/images/خلفية\ افتتاح\ الشاشة\ .avif');
+  background-image: url('./assets/images/خلفية\ افتتاح\ الشاشة\ .avif');
   background-position: top right;
   background-size: cover;
   @media (max-width:767px) {
@@ -424,7 +424,7 @@ a.active {
         select {
           appearance: none; /* Hide the default arrow */
           background-position: left;
-          background: url("./../public/images/down.webp") no-repeat right center; /* Add a custom arrow */
+          background: url("./assets/images/down.webp") no-repeat right center; /* Add a custom arrow */
           background-size: 26px; /* Set the size of the custom arrow */
 
           option {

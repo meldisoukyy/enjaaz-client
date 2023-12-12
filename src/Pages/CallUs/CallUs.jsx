@@ -6,6 +6,10 @@ import 'aos/dist/aos.css';
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import { useMyContext } from '../../context/MyContext';
 import { ContactUsApi } from '../../Apis/Apis';
+// Import images here
+import carbonHome from '../../assets/images/carbon_home.webp';
+import carbonPhone from '../../assets/images/carbon_phone.webp';
+import carbonMail from '../../assets/images/carbon_mail.webp';
 const CallUs = () => {
     const { lang, setlang, t, i18n } = useMyContext();
     useEffect(() => {
@@ -62,19 +66,19 @@ const CallUs = () => {
                         <div className="row gap-3">
                             <div className="col item">
                                 <div className="icon">
-                                    <img loading="lazy" alt="Enjazz_image"  src="/images/carbon_home.webp" />
+                                    <img loading="lazy" alt="Enjazz_image"  src={carbonHome} />
                                 </div>
                                 <span>{t('callus.address')}</span>
                             </div>
                             <div className="col item">
                                 <div className="icon">
-                                    <img loading="lazy" alt="Enjazz_image"  src="/images/carbon_phone.webp" />
+                                    <img loading="lazy" alt="Enjazz_image"  src={carbonPhone} />
                                 </div>
                                 <span>920013581 - 966502144449</span>
                             </div>
                             <div className="col item">
                                 <div className="icon">
-                                    <img loading="lazy" alt="Enjazz_image"  src="/images/carbon_mail.webp" />
+                                    <img loading="lazy" alt="Enjazz_image"  src={carbonMail} />
                                 </div>
                                 <span>info@enjaaz.com.sa</span>
                             </div>

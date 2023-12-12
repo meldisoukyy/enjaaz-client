@@ -4,6 +4,9 @@ import { useMyContext } from '../../context/MyContext';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Modal from "react-bootstrap/Modal";
+import webp2 from "../../assets/images/2.webp"
+import play from "../../assets/images/play-button.webp"
+
 
 const AboutSec = () => {
   const { lang, setlang, t, i18n } = useMyContext();
@@ -40,10 +43,10 @@ const AboutSec = () => {
                     {selectedVision===1&&(
                     <>
         <div className='image' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
-          <img loading="lazy" alt="Enjazz_image"  src="/images/2.webp" />
+          <img loading="lazy" alt="Enjazz_image"  src={webp2} />
           <div className="play" onClick={handleShow}>
 
-            <img loading="lazy" alt="Enjazz_image"  src="/images/play-button.webp" />
+            <img loading="lazy" alt="Enjazz_image"  src={play} />
           </div>
         </div>
         <Modal

@@ -5,6 +5,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Swal from 'sweetalert2';
 import { JoinUsApi } from '../../Apis/Apis';
+import upload from "../../assets/images/upload.webp";
+
 const JoinUs = () => {
     const { lang, setlang, t, i18n } = useMyContext();
     const [loading, setloading] = useState(false)
@@ -164,7 +166,7 @@ const JoinUs = () => {
                         <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details3')} onChange={(e) => setnotes(e.target.value)}></textarea>
                         <div className="EnjazzFormInput EnjazzFormInputFile">
                             <div className="icon">
-                                <img loading="lazy" alt="Enjazz_image"  src="/images/upload.webp" />
+                                <img loading="lazy" alt="Enjazz_image"  src={upload} />
                             </div>
                             <p>{t('form.upload')}</p>
                             <span>{t('form.upload2')}</span>

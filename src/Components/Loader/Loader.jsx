@@ -4,7 +4,7 @@ import { useMyContext } from '../../context/MyContext';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
-import xx from './logo.webp'
+import xx from './../../assets/images/logoCircle.webp'
 const Loader = () => {
     const { lang, setlang, t, i18n } = useMyContext();
     useEffect(() => {

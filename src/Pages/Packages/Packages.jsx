@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import { useMyContext } from "../../context/MyContext";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import enjazzImage1 from "../../assets/images/packages/لوجو إدراة الخدمات.svg";
+import enjazzImage2 from "../../assets/images/packages/لوجو حماية الأجور.svg";
+import enjazzImage3 from "../../assets/images/packages/لوجو التصميم والتسويق.svg";
 const Packages = () => {
   const { lang, setlang, t, i18n } = useMyContext();
   useEffect(() => {
@@ -27,7 +30,7 @@ const Packages = () => {
             <div className="pack" >
               <div className="top">
                 <div className="image">
-                  <img loading="lazy" alt="Enjazz_image"  src="/images/packages/لوجو إدراة الخدمات.svg" />
+                  <img loading="lazy" alt="Enjazz_image"  src={enjazzImage1} />
                   {/* <svg
                     width="176"
                     height="176"
@@ -51,7 +54,7 @@ const Packages = () => {
             <div className="pack">
               <div className="top">
                 <div className="image">
-                  <img loading="lazy" alt="Enjazz_image"  src="/images/packages/لوجو حماية الأجور.svg" />
+                  <img loading="lazy" alt="Enjazz_image"  src={enjazzImage2} />
                   {/* <svg
                     width="124"
                     height="142"
@@ -74,7 +77,7 @@ const Packages = () => {
             {/* <div className="pack">
                             <div className="top">
                                 <div className="image">
-                                    <img loading="lazy" alt="Enjazz_image"  src="/images/packages/3.webp" />
+                                    <img loading="lazy" alt="Enjazz_image"  src="../../assets/images/packages/3.webp" />
                                 </div>
                                 <p>تحتاج الشركات بشكل حاسم إلى الخدمات القانونية بمختلف أشكالها نظرًا للتعقيدات المتزايدة في البيئة التشريعية والتنظيمية.</p>
                             </div>
@@ -85,7 +88,7 @@ const Packages = () => {
             <div className="pack">
               <div className="top">
                 <div className="image">
-                  <img loading="lazy" alt="Enjazz_image"  src="/images/packages/لوجو التصميم والتسويق.svg" />
+                  <img loading="lazy" alt="Enjazz_image"  src={enjazzImage3} />
                   {/* <svg
                     width="146"
                     height="146"

@@ -29,6 +29,8 @@ import BankAccounts from "./Pages/BankAccounts/BankAccounts";
 import CompanysPolicy from "./Pages/CompanysPolicy/CompanysPolicy";
 import CopyRights from "./Pages/CopyRights/CopyRights";
 import RedirectFromPackages from "./Pages/RedirectFromPackages/RedirectFromPackages";
+import whatsappi from "./assets/images/whatsappi.webp"
+
 function App() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 const location=useLocation().pathname
@@ -98,7 +100,7 @@ useEffect(() => {
             {/* <Footer2/> */}
             <a className="whatsapp" href="https://wa.me/+966502144449" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
               <div className="image">
-                <img loading="lazy" alt="Enjazz_image"  src="/images/whatsappi.webp" />
+                <img loading="lazy" alt="Enjazz_image"  src={whatsappi} />
               </div>
             </a>
           </>

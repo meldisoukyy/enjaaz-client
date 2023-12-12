@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
-
+// npx webpack serve --config webpack.config.js --open
 module.exports = {
   mode: "production",
   entry: "./src/index.js",
@@ -12,7 +12,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
-    port: 3093
+    port: 3053
     ,
     open: true
   },

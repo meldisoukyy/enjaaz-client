@@ -9,6 +9,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ReviewsApi } from '../../Apis/Apis';
 import Slider from 'react-slick';
+import rev from "../../assets/images/wired-outline-21-avatar.webp";
 const Reviews = () => {
   const [num, setNum] = useState(3);
   const { lang, setlang, t, i18n } = useMyContext();
@@ -21,24 +22,24 @@ const Reviews = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    centerPadding:true,
+    centerPadding: true,
     autoplay: true,  // Enable auto-scroll
     autoplaySpeed: 3000,  // Set the auto-scroll speed (in milliseconds)
     responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
-            },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
         },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1,
-            },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
         },
+      },
     ],
-};
+  };
   useEffect(() => {
     const screenWidth = window.innerWidth;
 
@@ -78,11 +79,11 @@ const Reviews = () => {
         <h1 className='secH' style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>{t('reviews.h1')}</h1>
 
         <Slider {...settings}>
-        {data?.map((item, i) => {
+          {data?.map((item, i) => {
             return (
               <div className="slide" key={i}>
                 <div className="image">
-                  <img loading="lazy" alt="Enjazz_image" src={item.image ? item.image : "/images/wired-outline-21-avatar.webp"} />
+                  <img loading="lazy" alt="Enjazz_image" src={item.image ? item.image : rev} />
                 </div>
                 <div className="stars">
                   {[...Array(5)].map((star, i) => {
