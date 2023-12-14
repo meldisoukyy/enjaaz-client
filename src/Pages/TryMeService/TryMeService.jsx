@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import { useMyContext } from '../../context/MyContext';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import Swal from 'sweetalert2';
 import { FreeTrialRequestApi,ServiceRequestApi } from '../../Apis/Apis';
 
 const TryMeService = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-
-    useEffect(() => {
-        AOS.init();
-    }, []);
     const [name, setname] = useState('')
     const [email, setemail] = useState('')
     const [mobile, setmobile] = useState('')
@@ -83,7 +77,7 @@ const TryMeService = () => {
     return (
         <div >
             <CommonHead title={t('Tryme.h1')} path={t('Tryme.path')} />
-            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
+            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
                 <div className="container">
                     <h1 className='section-title3'>{t('Tryme.h2')}</h1>
                     <p>{t('Tryme.p1')}</p>

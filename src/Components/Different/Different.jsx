@@ -1,15 +1,12 @@
 import React, { useEffect } from "react";
 import "./Different.scss";
 import { useMyContext } from "../../context/MyContext";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+
 const Different = () => {
   const { lang, setlang, t, i18n } = useMyContext();
-  useEffect(() => {
-    AOS.init();
-  }, []);
+
   return (
-    <div className="Different" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='200'>
+    <div className="Different">
       <h2 className="section-title3 text-center mb-5">{t('why.head')}</h2>
 
       <div className="container">

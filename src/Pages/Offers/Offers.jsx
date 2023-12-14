@@ -3,15 +3,11 @@ import CommonHead from '../../Components/CommonHead/CommonHead'
 import './Offers.scss'
 import { useMyContext } from '../../context/MyContext';
 import { Link } from 'react-router-dom';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 import {OffersApi } from '../../Apis/Apis';
 const Offers = () => {
     const { lang, setlang, t, i18n } = useMyContext();
 
-    useEffect(() => {
-        AOS.init();
-    }, []);
     const [data, setdata] = useState([])
     useEffect(() => {
         OffersApi().then((res) => {
@@ -55,14 +51,14 @@ const Offers = () => {
     return (
         <>
             <CommonHead title={t('offers.h1')} path={t('offers.path')} />
-            <div className='Offers' style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
+            <div className='Offers' style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
                 <div className="container">
                     <h1>{t('offers.h2')}</h1>
                     <h2 className='section-title3 text-center my-5'>{t('offers.h3')}</h2>
                     <div className="packs">
                         {data.map((item, i) => {
                             return (
-                                <div className="pack" key={i} data-aos="fade-in" data-aos-duration="2000" data-aos-delay={`${(i + 1) * 50}`}>
+                                <div className="pack" key={i}>
                                     <div className="image">
                                         <img loading="lazy" src={lang === "ar" ? item.image_ar : item.image_en ? item.image_en : item.image_ar} alt={lang === "ar" ? item.name_ar : item.name_en} />
                                     </div>

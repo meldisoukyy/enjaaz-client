@@ -3,15 +3,12 @@ import './ServiceGuide.scss'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import CommonQ from '../../Components/CommonQ/CommonQ'
 import { useMyContext } from '../../context/MyContext'
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+
 import { Link } from 'react-router-dom'
+import tick from "../../assets/images/tick.webp";
+
 const ServiceGuide = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-
-    useEffect(() => {
-        AOS.init();
-      }, []);
     const data = lang === "ar" ?{
         "salary-management-services-wage-protection-system-monthly": "خدامات إدارة الرواتب نظام حماية الأجور (الشهري)",
         "salary-management-services-wage-protection-system-yearly": "خدامات إدارة الرواتب نظام حماية الأجور(السنوي)",
@@ -50,7 +47,7 @@ const ServiceGuide = () => {
     return (
         <div className='ServiceGuide' >
             <CommonHead title={t('guide.h1')} path={t('guide.path')} />
-            <div className="guide" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
+            <div className="guide">
                 <div className="container" style={lang === "ar" ? {direction: 'rtl'} : {direction: 'ltr'}}>
                     <h1 className='section-title3'>{t('guide.h2')}</h1>
                     <div className="items">
@@ -59,7 +56,7 @@ const ServiceGuide = () => {
                                 <Link to={`/ask-for-aservice/${key}`} key={i}>
                                 <div className="item">
                                     <div className="icon swing-in-top-fwd">
-                                        <img loading="lazy" alt="Enjazz_image"  src="/images/tick.webp" />
+                                        <img loading="lazy" alt="Enjazz_image"  src={tick} />
                                     </div>
                                     <p>{value}</p>
                                 </div>

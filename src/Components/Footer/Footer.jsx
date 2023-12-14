@@ -2,11 +2,28 @@ import { Link } from "react-router-dom";
 import { useMyContext } from "../../context/MyContext";
 import "./Footer.scss";
 import { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { SubscribersApi } from "../../Apis/Apis";
 import Swal from "sweetalert2";
 import Modal from "react-bootstrap/Modal";
+// Import statements for images
+import enjazzImage from "../../assets/images/logo.webp";
+import footerIcon6 from "../../assets/images/footer/FooterIcon-6.webp";
+import footerIcon from "../../assets/images/footer/FooterIcon.webp";
+import footerIcon7 from "../../assets/images/footer/FooterIcon-7.webp";
+import footerIcon2 from "../../assets/images/footer/FooterIcon-2.webp";
+import footerIcon3 from "../../assets/images/footer/FooterIcon-3.webp";
+import footerIcon1 from "../../assets/images/footer/FooterIcon-1.webp";
+import footerIcon4 from "../../assets/images/footer/FooterIcon-4.webp";
+import footerIcon5 from "../../assets/images/footer/FooterIcon-5.webp";
+import enjazzImage2 from "../../assets/images/نضيف دي معهم كصورة فقط.webp";
+import vatLogo from "../../assets/images/لوجو ضريبة القيمة المضافة يدوس علية يفتح صورة القيمة المضافة.webp";
+import saudiBusinessCenterLogo from "../../assets/images/لوجو المركز السعودي للأعمال يدوس علية يفتح الصورة مباشرة.webp";
+import footer1 from "../../assets/images/footer1.webp";
+import footer2 from "../../assets/images/footer2.webp";
+import footer3 from "../../assets/images/footer3.webp";
+import vatImage from "../../assets/images/القيمة المضافة .webp";
+import saudiBusinessCenterImage from "../../assets/images/المركز السعودي للأعمال أسفل الموقع.webp";
+import paymentsImage from "../../assets/images/جنب صورة المدفوعات أسفل الموقع.webp";
 const Footer = () => {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
@@ -17,9 +34,6 @@ const Footer = () => {
   const handleClose2 = () => setShow2(false);
   const handleShow2 = () => setShow2(true);
   const { lang, setlang, t, i18n } = useMyContext();
-  useEffect(() => {
-    AOS.init();
-  }, []);
   const [email, setemail] = useState("");
   const [error, seterror] = useState("");
   const [data, setdata] = useState([]);
@@ -33,7 +47,7 @@ const Footer = () => {
       setloading(true)
       SubscribersApi(email).then((res) => {
         if (res.id) {
-          setloading(fa)
+          setloading(false)
           // console.log(res);
           setdata(res);
           Swal.fire({
@@ -62,10 +76,7 @@ const Footer = () => {
     <div className="Footer">
       <div
         className="container"
-        data-aos="fade-in"
-        data-aos-duration="2000"
-        data-aos-delay="300"
-        style={lang === "ar" ? { direction: "rtl" } : { direction: "ltr" }}
+        style={lang === "ar" ? { direction: "rtl",position:'relative' } : { direction: "ltr",position:'relative' }}
       >
         <div className="top">
           <h1>{t("footer.toph1")}</h1>
@@ -90,7 +101,7 @@ const Footer = () => {
           <div className="row d-flex ">
             <div className="part col-lg-4 col-md-6 mb-4 mb-lg-0">
               <div className="image">
-                <img loading="lazy" alt="Enjazz_image"  src="/images/logo.webp" />
+                <img loading="lazy" alt="Enjazz_image"  src={enjazzImage} />
               </div>
               <h1>{t("footer.bottomh1")}</h1>
               <p style={{ textAlign: 'unset' }}>{t("footer.bottomp1")}</p>
@@ -99,7 +110,7 @@ const Footer = () => {
                   <div className="image">
                     <img loading="lazy" alt="Enjazz_image"
                       
-                      src="/images/footer/FooterIcon-6.webp"
+                      src={footerIcon6}
                      
                     />
                   </div>
@@ -108,7 +119,7 @@ const Footer = () => {
                   <div className="image">
                     <img loading="lazy" alt="Enjazz_image"
                       
-                      src="/images/footer/FooterIcon.webp"
+                      src={footerIcon}
                      
                     />
                   </div>
@@ -117,7 +128,7 @@ const Footer = () => {
                   <div className="image">
                     <img loading="lazy" alt="Enjazz_image"
                       
-                      src="/images/footer/FooterIcon-7.webp"
+                      src={footerIcon7}
                      
                     />
                   </div>
@@ -126,7 +137,7 @@ const Footer = () => {
                   <div className="image">
                     <img loading="lazy" alt="Enjazz_image"
                       
-                      src="/images/footer/FooterIcon-2.webp"
+                      src={footerIcon2}
                      
                     />
                   </div>
@@ -134,7 +145,7 @@ const Footer = () => {
                 <div className="image">
                   <img loading="lazy" alt="Enjazz_image"
                     
-                    src="/images/footer/FooterIcon-3.webp"
+                    src={footerIcon3}
                    
                   />
                 </div>
@@ -142,7 +153,7 @@ const Footer = () => {
                   <div className="image">
                     <img loading="lazy" alt="Enjazz_image"
                       
-                      src="/images/footer/FooterIcon-1.webp"
+                      src={footerIcon1}
                      
                     />
                   </div>
@@ -151,7 +162,7 @@ const Footer = () => {
                   <div className="image">
                     <img loading="lazy" alt="Enjazz_image"
                       
-                      src="/images/footer/FooterIcon-4.webp"
+                      src={footerIcon4}
                      
                     />
                   </div>
@@ -160,7 +171,7 @@ const Footer = () => {
                   <div className="image">
                     <img loading="lazy" alt="Enjazz_image"
                       
-                      src="/images/footer/FooterIcon-5.webp"
+                      src={footerIcon5}
                      
                     />
                   </div>
@@ -269,19 +280,19 @@ const Footer = () => {
               <div className="images">
                 <div className="image">
                   <img loading="lazy" alt="Enjazz_image"
-                    src="/images/نضيف دي معهم كصورة فقط.webp"
+                    src={enjazzImage2}
                    
                   />
                 </div>
                 <div className="image" onClick={handleShow}>
                   <img loading="lazy" alt="Enjazz_image"
-                    src="/images/لوجو ضريبة القيمة المضافة يدوس علية يفتح صورة القيمة المضافة.webp"
+                    src={vatLogo}
                    
                   />
                 </div>
                 <div className="image" onClick={handleShow2} style={{ scale: "1.3" }}>
                   <img loading="lazy" alt="Enjazz_image"
-                    src="/images/لوجو المركز السعودي للأعمال يدوس علية يفتح الصورة مباشرة.webp"
+                    src={saudiBusinessCenterLogo}
                    
                   />
                 </div>
@@ -289,19 +300,19 @@ const Footer = () => {
               <h1>{t("footer.bottomh3")}</h1>
               <div className="item">
                 <div className="icon">
-                  <img loading="lazy" alt="Enjazz_image"  src="/images/footer1.webp" />
+                  <img loading="lazy" alt="Enjazz_image"  src={footer1} />
                 </div>
                 <span>{t("footer.address")}</span>
               </div>
               <div className="item">
                 <div className="icon">
-                  <img loading="lazy" alt="Enjazz_image"  src="/images/footer2.webp" />
+                  <img loading="lazy" alt="Enjazz_image"  src={footer2} />
                 </div>
                 <span>920013581 - 966502144449</span>
               </div>
               <div className="item">
                 <div className="icon">
-                  <img loading="lazy" alt="Enjazz_image"  src="/images/footer3.webp" />
+                  <img loading="lazy" alt="Enjazz_image"  src={footer3} />
                 </div>
                 <span>info@enjaaz.com.sa</span>
               </div>
@@ -316,7 +327,7 @@ const Footer = () => {
               <Modal.Header closeButton></Modal.Header>
               <Modal.Body>
                 <img loading="lazy" alt="Enjazz_image"
-                  src="/images/القيمة المضافة .webp"
+                  src={vatImage}
                   style={{
                     width: "100%",
                     height: "100%",
@@ -337,7 +348,7 @@ const Footer = () => {
               <Modal.Header closeButton></Modal.Header>
               <Modal.Body>
                 <img loading="lazy" alt="Enjazz_image"
-                  src="/images/المركز السعودي للأعمال أسفل الموقع.webp"
+                  src={saudiBusinessCenterImage}
                   style={{
                     width: "100%",
                     height: "100%",
@@ -355,7 +366,7 @@ const Footer = () => {
             <p>{t("footer.bottomp5")}</p>
             <div className="payments">
               {/* style={{ scale: '1.9', margin: '0 25px 0 25px' }} */}
-              <img loading="lazy" alt="Enjazz_image"  style={{ width: '120px', height: '50px' }} src="/images/جنب صورة المدفوعات أسفل الموقع.webp" />
+              <img loading="lazy" alt="Enjazz_image"  style={{ width: '120px', height: '50px' }} src={paymentsImage} />
               <img loading="lazy" alt="Enjazz_image"  src="https://aait.sa/public/site/img/icons/certificate.webp" style={{ height: "40px" }} />
               <img loading="lazy" alt="Enjazz_image"  src="https://aait.sa/public/site/img/icons/mada.webp" />
               <img loading="lazy" alt="Enjazz_image"  src="https://aait.sa/public/site/img/icons/visa.webp" />

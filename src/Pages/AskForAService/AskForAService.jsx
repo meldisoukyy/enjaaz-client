@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import CommonHead from '../../Components/CommonHead/CommonHead'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 import { useMyContext } from '../../context/MyContext';
 import Swal from 'sweetalert2';
+import { ServiceRequestApi } from '../../Apis/Apis';
 const AskForAService = () => {
     const { lang, setlang, t, i18n } = useMyContext();
     const [loading, setloading] = useState(false)
 
-
-    useEffect(() => {
-        AOS.init();
-    }, []);
     const [name, setname] = useState('')
     const [email, setemail] = useState('')
     const [mobile, setmobile] = useState('')
@@ -85,7 +80,7 @@ const AskForAService = () => {
     return (
         <div>
             <CommonHead title={t('askService.h1')} path={t('askService.path')} />
-            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
+            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
                 <div className="container">
                     <h1 className='section-title3'>{t('askService.h1')}</h1>
                     <p>{t('askService.p')}</p>

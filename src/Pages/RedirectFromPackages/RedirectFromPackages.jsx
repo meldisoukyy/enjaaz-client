@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import Calculator from '../../Components/Calculator/Calculator'
 import './RedirectFromPackages.scss'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { useParams } from 'react-router-dom';
 import { useMyContext } from '../../context/MyContext';
 import Swal from 'sweetalert2';
@@ -232,9 +230,6 @@ const RedirectFromPackages = () => {
         }
     }
 
-    useEffect(() => {
-        AOS.init();
-    }, []);
 
 
     // calc
@@ -308,9 +303,6 @@ const RedirectFromPackages = () => {
         }
     }, [packageType])
     useEffect(() => {
-        AOS.init();
-    }, []);
-    useEffect(() => {
         changeInCalc&&setservice_type(Titles[changeInCalc].ar)
     }, [changeInCalc])
     useEffect(() => {
@@ -325,7 +317,7 @@ const RedirectFromPackages = () => {
             <div className="redirectCont" >
                 {showCalc && (
                     <div className="calcCon wide">
-                        <div className='Calculator' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
+                        <div className='Calculator'>
                             <div className="top">{t("calc.title")}</div>
                             <div className="container" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
                                 <div className="bottom">
@@ -382,17 +374,17 @@ const RedirectFromPackages = () => {
                         </div>
                     </div>
                 )}
-                <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
+                <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
                     <div className="container">
                         <h1 className='section-title3'>{t('askService.h1')}</h1>
                         <p>{t('askService.p')}</p>
                         <span>{t('form.p1')}</span>
                         <div className="EnjazzFormInputs">
-                            <input required className='EnjazzFormInput' type="text" placeholder={t('form.fullName')} onChange={(e) => setname(e.target.value)} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300' />
-                            <input required className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300' />
-                            <p data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>{t('form.typeS')}:</p>
-                            <div className="EnjazzFormInput" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>{lang === "ar" ? Titles[titleId].ar : Titles[titleId].en}</div>
-                            <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details')} onChange={(e) => setnotes(e.target.value)} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'></textarea>
+                            <input required className='EnjazzFormInput' type="text" placeholder={t('form.fullName')} onChange={(e) => setname(e.target.value)} />
+                            <input required className='EnjazzFormInput' type="text" placeholder={t('form.phone')} onChange={(e) => setmobile(e.target.value)} />
+                            <p>{t('form.typeS')}:</p>
+                            <div className="EnjazzFormInput">{lang === "ar" ? Titles[titleId].ar : Titles[titleId].en}</div>
+                            <textarea className='EnjazzFormInput' cols="30" rows="4" placeholder={t('form.details')} onChange={(e) => setnotes(e.target.value)}></textarea>
                         </div>
                         {showCalc && (
                             <div className="calcCon small">

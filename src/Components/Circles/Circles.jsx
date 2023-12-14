@@ -1,16 +1,23 @@
 import React, { useEffect } from 'react'
 import './circles.scss'
 import { useMyContext } from '../../context/MyContext';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 import { Link } from 'react-router-dom';
+import beldings from "../../assets/images/circles/beldings.webp"
+import wage from "../../assets/images/circles/wage.webp"
+import servicemanagment from "../../assets/images/circles/servicemanagment.webp"
+import r from "../../assets/images/circles/r.webp"
+import logoCircle from "../../assets/images/logoCircle.webp"
+import law from "../../assets/images/circles/law.webp"
+import governrate from "../../assets/images/circles/governrate.webp"
+import free2 from "../../assets/images/circles/free2.webp"
+import freeTry from "../../assets/images/circles/freeTry.webp"
+
 const Circles = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-    useEffect(() => {
-        AOS.init();
-    }, []);
+
     return (
-        <div className='Circles' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+        <div className='Circles'>
             <section className="home-features">
                 <h2 className="section-title3 text-center mb-5">{t('circles.h1')}</h2>
                 <div className="container">
@@ -18,10 +25,10 @@ const Circles = () => {
 
                         <div className="d-flex justify-content-evenly mx-lg-5 order1" >
                             <Link to='/askforaservice/establishment-of-facilities' className='w-fet'>
-                                <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                                <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column" >
                                     <div className="img">
                                         <img loading="lazy" alt="Enjazz_image"
-                                            src="/images/circles/beldings.webp"
+                                            src={beldings}
 
                                         />
                                     </div>
@@ -29,10 +36,10 @@ const Circles = () => {
                                 </div>
                             </Link>
                             <Link to='/wagemanagment' className='w-fet'>
-                                <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                                <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column" >
                                     <div className="img">
                                         <img loading="lazy" alt="Enjazz_image"
-                                            src="/images/circles/wage.webp"
+                                            src={wage}
 
                                         />
                                     </div>
@@ -42,10 +49,10 @@ const Circles = () => {
                         </div>
                         <div className="col-12 col-lg-3 d-flex flex-lg-column gap100 order2">
                             <Link to='/servicespackage'>
-                                <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                                <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-center">
                                     <div className="img">
                                         <img loading="lazy" alt="Enjazz_image"
-                                            src="/images/circles/servicemanagment.webp"
+                                            src={servicemanagment}
 
                                         />
                                     </div>
@@ -53,10 +60,10 @@ const Circles = () => {
                                 </div>
                             </Link>
                             <Link to='/askforaservice/register-a-trademark'>
-                                <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                                <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center" >
                                     <div className="img">
                                         <img loading="lazy" alt="Enjazz_image"
-                                            src="/images/circles/r.webp"
+                                            src={r}
 
                                         />
                                     </div>
@@ -64,10 +71,10 @@ const Circles = () => {
                                 </div>
                             </Link>
                             {/* <Link to='/askforaservice/establishment-of-facilities'>
-                                <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-end" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                                <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-end">
                                     <div className="img">
                                         <img loading="lazy" alt="Enjazz_image" 
-                                            src="/images/circles/beldings.webp"
+                                            src="../../assets/images/circles/beldings.webp"
                                            
                                         />
                                     </div>
@@ -81,7 +88,7 @@ const Circles = () => {
 
                                 <div className="center" style={{minWidth:"30%",minHeight:'30%'}}>
                                     <img loading="lazy" alt="Enjazz_image"
-                                        src="/images/logoCircle.webp"
+                                        src={logoCircle}
                                        
                                         className="img"
                                     />
@@ -107,10 +114,10 @@ const Circles = () => {
                         <div className="col-12 col-lg-3 d-flex flex-lg-column gap100">
 
                             <Link to='/askforaservice/legal-advice'>
-                                <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                                <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-center">
                                     <div className="img">
                                         <img loading="lazy" alt="Enjazz_image"
-                                            src="/images/circles/law.webp"
+                                            src={law}
 
                                         />
                                     </div>
@@ -118,10 +125,10 @@ const Circles = () => {
                                 </div>
                             </Link>
                             <Link to='/askforaservice/all-government-services'>
-                                <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                                <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center">
                                     <div className="img">
                                         <img loading="lazy" alt="Enjazz_image"
-                                            src="/images/circles/governrate.webp"
+                                            src={governrate}
 
                                         />
                                     </div>
@@ -129,10 +136,10 @@ const Circles = () => {
                                 </div>
                             </Link>
                             {/* <Link to='/askforaservice/wage-protection'>
-                            <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-start" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                            <div className="feature-box w-100 d-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-start">
                                 <div className="img">
                                     <img loading="lazy" alt="Enjazz_image" 
-                                        src="/images/circles/wage.webp"
+                                        src="../../assets/images/circles/wage.webp"
                                        
                                     />
                                 </div>
@@ -143,10 +150,10 @@ const Circles = () => {
                     </div>
                     <div className="d-flex justify-content-evenly mx-lg-5" >
                         <Link to='/askforaservice/reducing-financial-burdens' className='w-fet'>
-                            <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                            <div className="feature-box w-auto mb-0 d-flex justify-content-center align-items-center flex-column">
                                 <div className="img">
                                     <img loading="lazy" alt="Enjazz_image"
-                                        src="/images/circles/free2.webp"
+                                        src={free2}
 
                                     />
                                 </div>
@@ -154,10 +161,10 @@ const Circles = () => {
                             </div>
                         </Link>
                         <Link to='/trymeservice' className='w-fet'>
-                            <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='100'>
+                            <div className="feature-box w-auto d-flex justify-content-center align-items-center flex-column">
                                 <div className="img">
                                     <img loading="lazy" alt="Enjazz_image"
-                                        src="/images/circles/freeTry.webp"
+                                        src={freeTry}
 
                                     />
                                 </div>

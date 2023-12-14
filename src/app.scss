@@ -31,7 +31,7 @@
 }
 .circles-loader{
   min-height: 100vh;
-  background-image: url('../public/images/خلفية\ افتتاح\ الشاشة\ .avif');
+  background-image: url('./assets/images/خلفية\ افتتاح\ الشاشة\ .avif');
   background-position: top right;
   background-size: cover;
   @media (max-width:767px) {
@@ -74,7 +74,7 @@ a.active {
 .accordion-button {
   background-color: #2d188814 !important;
   border-radius: 16px 16px 0 0 !important;
-  padding: 20px 60px !important;
+  padding: 20px 60px 20px 30px !important;
 }
 .accordion-button::after {
   display: none;
@@ -424,7 +424,7 @@ a.active {
         select {
           appearance: none; /* Hide the default arrow */
           background-position: left;
-          background: url("./../public/images/down.webp") no-repeat right center; /* Add a custom arrow */
+          background: url("./assets/images/down.webp") no-repeat right center; /* Add a custom arrow */
           background-size: 26px; /* Set the size of the custom arrow */
 
           option {
