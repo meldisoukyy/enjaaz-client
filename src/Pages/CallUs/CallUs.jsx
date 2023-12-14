@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import './callUs.scss'
-import AOS from 'aos';
 import Swal from 'sweetalert2'
-import 'aos/dist/aos.css';
 import CommonHead from '../../Components/CommonHead/CommonHead'
 import { useMyContext } from '../../context/MyContext';
+import { ContactUsApi } from '../../Apis/Apis';
+// Import images here
+import carbonHome from '../../assets/images/carbon_home.webp';
+import carbonPhone from '../../assets/images/carbon_phone.webp';
+import carbonMail from '../../assets/images/carbon_mail.webp';
 const CallUs = () => {
     const { lang, setlang, t, i18n } = useMyContext();
-    useEffect(() => {
-        AOS.init();
-    }, []);
+
     const [name, setname] = useState('')
     const [email, setemail] = useState('')
     const [mobile, setmobile] = useState('')
@@ -55,25 +56,25 @@ const CallUs = () => {
     return (
         <div className='CallUs'>
             <CommonHead title={t('callus.h1')} path={t('callus.path')} />
-            <div className="Map" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
+            <div className="Map">
                 <div className="container" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
                     <div className="top">
                         <div className="row gap-3">
                             <div className="col item">
                                 <div className="icon">
-                                    <img loading="lazy" alt="Enjazz_image"  src="/images/carbon_home.webp" />
+                                    <img loading="lazy" alt="Enjazz_image"  src={carbonHome} />
                                 </div>
                                 <span>{t('callus.address')}</span>
                             </div>
                             <div className="col item">
                                 <div className="icon">
-                                    <img loading="lazy" alt="Enjazz_image"  src="/images/carbon_phone.webp" />
+                                    <img loading="lazy" alt="Enjazz_image"  src={carbonPhone} />
                                 </div>
                                 <span>920013581 - 966502144449</span>
                             </div>
                             <div className="col item">
                                 <div className="icon">
-                                    <img loading="lazy" alt="Enjazz_image"  src="/images/carbon_mail.webp" />
+                                    <img loading="lazy" alt="Enjazz_image"  src={carbonMail} />
                                 </div>
                                 <span>info@enjaaz.com.sa</span>
                             </div>
@@ -101,7 +102,7 @@ const CallUs = () => {
                     </div>
                 </div>
             </div>
-            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
+            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
                 <div className="container">
                     <h1 className='section-title3'>{t('callus.h2')}</h1>
                     <p>{t('callus.p')}</p>

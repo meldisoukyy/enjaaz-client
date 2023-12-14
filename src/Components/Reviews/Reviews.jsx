@@ -5,40 +5,38 @@ import { Link } from 'react-router-dom'
 import { AiFillStar, AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import { AiOutlineStar } from 'react-icons/ai';
 import { useMyContext } from '../../context/MyContext';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 import { ReviewsApi } from '../../Apis/Apis';
 import Slider from 'react-slick';
+import rev from "../../assets/images/wired-outline-21-avatar.webp";
 const Reviews = () => {
   const [num, setNum] = useState(3);
   const { lang, setlang, t, i18n } = useMyContext();
-  useEffect(() => {
-    AOS.init();
-  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    centerPadding:true,
+    centerPadding: true,
     autoplay: true,  // Enable auto-scroll
     autoplaySpeed: 3000,  // Set the auto-scroll speed (in milliseconds)
     responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
-            },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
         },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1,
-            },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
         },
+      },
     ],
-};
+  };
   useEffect(() => {
     const screenWidth = window.innerWidth;
 
@@ -73,16 +71,16 @@ const Reviews = () => {
     ReviewsApi().then((res) => { setdata(res) })
   }, []);
   return (
-    <div className='Reviews' data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
+    <div className='Reviews'>
       <div className="container" >
         <h1 className='secH' style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>{t('reviews.h1')}</h1>
 
         <Slider {...settings}>
-        {data?.map((item, i) => {
+          {data?.map((item, i) => {
             return (
               <div className="slide" key={i}>
                 <div className="image">
-                  <img loading="lazy" alt="Enjazz_image" src={item.image ? item.image : "/images/wired-outline-21-avatar.webp"} />
+                  <img loading="lazy" alt="Enjazz_image" src={item.image ? item.image : rev} />
                 </div>
                 <div className="stars">
                   {[...Array(5)].map((star, i) => {

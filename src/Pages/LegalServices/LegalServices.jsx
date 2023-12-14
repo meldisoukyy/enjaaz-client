@@ -1,6 +1,8 @@
 import React from 'react'
 import './LegalServices.scss'
 import CommonHead from '../../Components/CommonHead/CommonHead'
+import tick from "../../assets/images/tick.webp";
+
 const LegalServices = () => {
     const data = [
         "عمالي",
@@ -61,7 +63,7 @@ const LegalServices = () => {
                             return (
                                 <div className="item" key={i}>
                                     <div className="icon swing-in-top-fwd">
-                                        <img loading="lazy" alt="Enjazz_image"  src="/images/tick.webp" />
+                                        <img loading="lazy" alt="Enjazz_image"  src={tick} />
                                     </div>
                                     <p>{item}</p>
                                 </div>

@@ -5,12 +5,15 @@ import { AiOutlineClose } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
 import { useMyContext } from "../../context/MyContext";
 import { IoIosArrowDown } from "react-icons/io";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
+// Import all images and svgs here
+import logoWebp from "../../assets/images/logo.webp";
+import enjazzImage from "../../assets/images/لوجو المملكة 2030.svg";
+import phoneNavWebp from "../../assets/images/phoneNav.webp";
+import whatsappNavWebp from "../../assets/images/whatsappnav.webp";
+import firebaselogoWebp from "../../assets/images/logo.webp";
 const Navbar = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+
   const [isOpened, setIsOpened] = useState(false);
 
   const toggleMenu = () => {
@@ -58,30 +61,27 @@ const Navbar = () => {
     <div
       className="Navbar pt-3"
       style={NavStyle()}
-      data-aos="fade-in"
-      data-aos-duration="2000"
-      data-aos-delay="300"
     >
       <div className="blured"></div>
       <div className="container">
         <div className="top d-flex justify-content-between align-items-end gap-5 pb-4">
           <div className="image">
             <Link to="/">
-              <img loading="lazy" alt="Enjazz_image"  src="/images/logo.webp" />
+              <img loading="lazy" alt="Enjazz_image"  src={logoWebp} />
             </Link>
           </div>
           <div className="end">
             <p
               className="mb-0"
               onClick={() => {
-                setlang(lang === "ar" ? "en" : "ar"),
+                setlang(lang === "ar" ? "en" : "ar");
                   i18n.changeLanguage(lang === "en" ? "ar" : "en");
               }}
             >
               {t("nav.lang")}
             </p>
             <div className="image">
-              <img loading="lazy" alt="Enjazz_image" src="/images/لوجو المملكة 2030.svg" />
+              <img loading="lazy" alt="Enjazz_image" src={enjazzImage} />
             </div>
           </div>
           {/* <div
@@ -165,13 +165,13 @@ const Navbar = () => {
           <div className="numbers">
             <div className="num">
               <div className="icon">
-                <img loading="lazy" alt="Enjazz_image"  src="/images/phoneNav.webp" />
+                <img loading="lazy" alt="Enjazz_image"  src={phoneNavWebp} />
               </div>
               <a href="https://wa.me/966920013581">920013581</a>
             </div>
             <div className="num">
               <div className="icon">
-                <img loading="lazy" alt="Enjazz_image"  src="/images/whatsappnav.webp" />
+                <img loading="lazy" alt="Enjazz_image"  src={whatsappNavWebp} />
               </div>
               <a href="https://wa.me/966502144449">+966502144449</a>
             </div>
@@ -198,7 +198,7 @@ const Navbar = () => {
         <Offcanvas show={isOpened} onHide={handleClose} placement="end">
           <Offcanvas.Header>
             <div className="image">
-              <img loading="lazy" alt="Enjazz_image"  src="/images/logo.webp" />
+              <img loading="lazy" alt="Enjazz_image"  src={firebaselogoWebp} />
             </div>
             <div className="closeBtn">
               <button
@@ -275,7 +275,7 @@ const Navbar = () => {
               <li
                 className="sale"
                 onClick={() => {
-                  setlang(lang === "ar" ? "en" : "ar"),
+                  setlang(lang === "ar" ? "en" : "ar");
                     i18n.changeLanguage(lang === "en" ? "ar" : "en");
                   handleClose();
                 }}

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Swal from 'sweetalert2'
 import CommonHead from '../../Components/CommonHead/CommonHead'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { useMyContext } from '../../context/MyContext';
 import { ConsultationApi, ServiceManagemenApi } from '../../Apis/Apis';
 import { useParams } from 'react-router-dom';
@@ -11,9 +9,6 @@ const FreeConsulting = () => {
     // const id =useParams().id
     // const links=['service-management','register-a-trademark','establishment-of-facilities','legal-advice','all-government-services','wage-protection','reducing-financial-burdens','free-tryme-service']
 
-    useEffect(() => {
-        AOS.init();
-    }, []);
     const [name, setname] = useState('')
     const [email, setemail] = useState('')
     const [mobile, setmobile] = useState('')
@@ -86,7 +81,7 @@ const FreeConsulting = () => {
     return (
         <div>
             <CommonHead title={t('FreeConsulting.h1')} path={t('FreeConsulting.path')} />
-            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }} data-aos="fade-in" data-aos-duration="2000" data-aos-delay='300'>
+            <div className="EnjazzForm" style={lang === "ar" ? { direction: 'rtl' } : { direction: 'ltr' }}>
                 <div className="container">
                     <h1 className='section-title3'>{t('FreeConsulting.h2')}</h1>
                     <p>{t('FreeConsulting.p')}</p>

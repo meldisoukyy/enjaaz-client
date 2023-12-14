@@ -20,8 +20,6 @@ import MarketingServices from "./Pages/MarketingServices/MarketingServices";
 import Offers from "./Pages/Offers/Offers";
 import Loader from "./Components/Loader/Loader";
 import { useEffect, useState } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
 import DedicatedAsk from "./Pages/DedicatedAsk/DedicatedAsk";
 import Footer2 from "./Components/Footer2/Footer2";
 import Policies from "./Pages/Policies/Policies";
@@ -29,15 +27,14 @@ import BankAccounts from "./Pages/BankAccounts/BankAccounts";
 import CompanysPolicy from "./Pages/CompanysPolicy/CompanysPolicy";
 import CopyRights from "./Pages/CopyRights/CopyRights";
 import RedirectFromPackages from "./Pages/RedirectFromPackages/RedirectFromPackages";
+import whatsappi from "./assets/images/whatsappi.webp"
+
 function App() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 const location=useLocation().pathname
 useEffect(() => {
   window.scrollTo(0,0)
 }, [location])
-useEffect(() => {
-  AOS.init();
-}, []);
 
   // useEffect(() => {
   //   const handleLoad = () => {
@@ -66,7 +63,7 @@ useEffect(() => {
         loadTimeout = setTimeout(() => {
           setIsPageLoaded(true);
         }, 2000 - elapsedTime);
-      } else if (elapsedTime > 4000) {
+      } else if (elapsedTime > 10000) {
         setIsPageLoaded(true);
       } else {
         setIsPageLoaded(true);
@@ -96,9 +93,9 @@ useEffect(() => {
             <Outlet />
             <Footer />
             {/* <Footer2/> */}
-            <a className="whatsapp" href="https://wa.me/+966502144449" data-aos="fade-in" data-aos-duration="2000" data-aos-delay='500'>
+            <a className="whatsapp" href="https://wa.me/+966502144449">
               <div className="image">
-                <img loading="lazy" alt="Enjazz_image"  src="/images/whatsappi.webp" />
+                <img loading="lazy" alt="Enjazz_image"  src={whatsappi} />
               </div>
             </a>
           </>
